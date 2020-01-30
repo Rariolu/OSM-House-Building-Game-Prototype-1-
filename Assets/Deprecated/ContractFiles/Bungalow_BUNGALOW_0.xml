@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contract>
+	<name>Bungalow</name>
+	<finishedconstruction>BUNGALOW</finishedconstruction>
+	<budget>40</budget>
+	<fixtures>37</fixtures>
+	<positionstaken />
+	<prefabcollections>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="2.67" z="0" />
+					<rotation x="-90" y="90" z="0" />
+					<scale x="0.0254" y="0.0254" z="0.0254" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+			</prefab>
+			<positions />
+			<quantity>11</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="2.67" z="0" />
+					<rotation x="-90" y="0" z="0" />
+					<scale x="0.0254" y="0.0254" z="0.0254" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+			</prefab>
+			<positions />
+			<quantity>18</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="2.67" z="0" />
+					<rotation x="-90" y="270" z="0" />
+					<scale x="0.0254" y="0.0254" z="0.0254" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_SECOND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+			</prefab>
+			<positions />
+			<quantity>15</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="2.67" z="0" />
+					<rotation x="-90" y="0" z="0" />
+					<scale x="0.0254" y="0.0254" z="0.0254" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_SIDE_SECOND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+			</prefab>
+			<positions />
+			<quantity>15</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="-90" y="0" z="0" />
+					<scale x="0.0254" y="0.0254" z="0.0254" />
+				</prefaboffset>
+				<properties />
+				<snaptype>FLOOR</snaptype>
+				<prefabtype>PANEL_FLOOR_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+			</prefab>
+			<positions />
+			<quantity>30</quantity>
+		</prefabcollection>
+	</prefabcollections>
+	<standards>
+		<standard rating="0.980000019073486" type="SAFETY" />
+	</standards>
+	<tasks>
+		<task number="3" type="BEDROOM_QUANTITY" />
+		<task number="40" type="HOUSE_HEIGHT" />
+		<task number="300" type="HOUSE_WIDTH" />
+		<task number="300" type="HOUSE_DEPTH" />
+	</tasks>
+</contract>

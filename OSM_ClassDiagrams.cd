@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="39.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAgAAAAEAAAAgAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntegratedSoundManager" Collapsed="true">
+    <Position X="45" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAQAAAAAABAQAAACIAAgAAABACAAAAAAAAAIAAgA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sound" Collapsed="true">
+    <Position X="38" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAFAAAgAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateableAudioSource" Collapsed="true">
+    <Position X="45" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAAAAAAAAiSAAAAAAAACAgAAAEAAgoEAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Audio\UpdateableAudioSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultitonClass&lt;T, U&gt;" Collapsed="true">
+    <Position X="41.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAABAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultitonScript&lt;T, U&gt;" Collapsed="true">
+    <Position X="12.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAABAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultitonUIButton&lt;T, U&gt;" Collapsed="true">
+    <Position X="23.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAABAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NullableInstanceClassSingleton&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceClassSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NullableInstanceScriptSingleton&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourceLoader" Collapsed="true">
+    <Position X="41.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAADQAEA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RescItem&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FontRescItem" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectRescItem" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialRescItem" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeshRescItem" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteRescItem" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourceManager" Collapsed="true">
+    <Position X="43.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAEAAAAgAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneObjectScript" Collapsed="true">
+    <Position X="10.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\SceneObjectScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringBuilderPro" Collapsed="true">
+    <Position X="43.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAGAAgAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\StringBuilderPro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Util" Collapsed="true">
+    <Position X="46.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wgBgIACABAIAgAoAAAAACgAgAEoEAIAIAgCigAAAIQA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewableStack&lt;T&gt;" Collapsed="true">
+    <Position X="38" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ViewableStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotationButton" Collapsed="true">
+    <Position X="26.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Camera\CameraRotationButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OtherCameraTest" Collapsed="true">
+    <Position X="7.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAEAAAASAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Camera\OtherCameraTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="buildSystem" Collapsed="true">
+    <Position X="9.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIIAAAAQQAAAAAAAAAAAAAAAAAAAACAQAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Construction\buildSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConstructionUtil" Collapsed="true">
+    <Position X="7.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAABACAA=</HashCode>
+      <FileName>Assets\Scripts\Construction\ConstructionUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnapPoint" Collapsed="true">
+    <Position X="45" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAgAAIQAAAAAAAAIAAAAgAgAAAkAAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Construction\SnapPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnapPointTrigger" Collapsed="true">
+    <Position X="46.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAIAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Construction\SnapPointTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Contract" Collapsed="true">
+    <Position X="39.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAkkAAAgAAAAAAEAIgAAACAAAAAAiA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\Contract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContractManager" Collapsed="true">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAADgAAACCAA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\ContractManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContractSelection" Collapsed="true">
+    <Position X="45" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAgEAAgAAAAgAAAkEIAAAACgA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\ContractSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContractEditing" Collapsed="true">
+    <Position X="41.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EditorScripts\ContractEditing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndUtil" Collapsed="true">
+    <Position X="46.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EndCondition\EndUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndSessionBtn" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBAQACAAAAAAAQAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EndSession\EndSessionBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExitMiniGame" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fixings" Collapsed="true">
+    <Position X="12.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAQAgAACAAAAAAAAAAAAEAQIAAgAAAAIEA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\Fixings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fixings_Count" Collapsed="true">
+    <Position X="38" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\Fixings_Count.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FixingsScene" Collapsed="true">
+    <Position X="39.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\FixingsScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FixingsUtil" Collapsed="true">
+    <Position X="5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\FixingsUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intersection" Collapsed="true">
+    <Position X="46.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAEAAAAAAAAAAAAABAEwAAAkAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\Intersection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntersectionComponent" Collapsed="true">
+    <Position X="38" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Fixings_MiniGames\IntersectionComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Floor" Collapsed="true">
+    <Position X="15" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAiAAAACCICAAAYAAAQiCAQAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\FloorChange\Floor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackButton" Collapsed="true">
+    <Position X="33.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAQgAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\BackButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BrochureSceneScript" Collapsed="true">
+    <Position X="38" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAgSAAAAAAAAAAAAAAAAACAABAAAAACAAICEA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Brochure\BrochureSceneScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BrochureUtil" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAAAgAAAAAAAAAAAgAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Brochure\BrochureUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HouseDemo" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Brochure\HouseDemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompartPrefabSystem" Collapsed="true">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\CompartPrefabSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompartSystemToggle" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\CompartSystemToggle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContractViewportScript" Collapsed="true">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\ContractViewportScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloorButton" Collapsed="true">
+    <Position X="22" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAQAAAAARAAAAAAAgAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\FloorButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HouseNamingScript" Collapsed="true">
+    <Position X="41.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACACAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\HouseNamingScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HouseViewerButton" Collapsed="true">
+    <Position X="31" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\HouseViewerButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuitButton" Collapsed="true">
+    <Position X="35.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Menu\QuitButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneLoadButton" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Menu\SceneLoadButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartButton" Collapsed="true">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Menu\StartButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIButton" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Menu\UIButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OptionsSceneScript" Collapsed="true">
+    <Position X="43.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Options\OptionsSceneScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContinueButton" Collapsed="true">
+    <Position X="19.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\PauseUI\ContinueButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseButton" Collapsed="true">
+    <Position X="28.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\PauseUI\PauseButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabIconMultipler" Collapsed="true">
+    <Position X="45" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABCAAgBAgBoAICAQAAAAAEgAAAkACAIAAAgA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\PrefabIconMultiple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabSelectionButton" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAgACAIQCAAGICAAAkREAMIAAAgAAEACABABEg=</HashCode>
+      <FileName>Assets\Scripts\GameUI\PrefabSelectionButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UndoButton" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\UndoButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HouseViewSingle" Collapsed="true">
+    <Position X="2.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HouseViewing\HouseViewSingle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HouseViewSceneScript" Collapsed="true">
+    <Position X="43.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HouseViewing\Monobehaviours\HouseViewSceneScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InGameSceneScript" Collapsed="true">
+    <Position X="5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgACABAAVCICBAAAAAAAAAgAAAAAAAEAAAABAIAAAUA=</HashCode>
+      <FileName>Assets\Scripts\InGameSceneScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuScript" Collapsed="true">
+    <Position X="39.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\MenuScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpecTestScript" Collapsed="true">
+    <Position X="41.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAAAAAAAACAAAAACAAAgAEAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Misc\SpecTestScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabOffsetProperties" Collapsed="true">
+    <Position X="46.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABBAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabOffsetProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabPlacedObject" Collapsed="true">
+    <Position X="38" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAgAAAAIAAQAAAAhAAgAAAAABAQAAAAgAAEIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabPlacedObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabPlacementScript" Collapsed="true">
+    <Position X="39.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabPlacementScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrefabView" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABCAAAAAAAAAAAAEAAAABAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XMLUtil" Collapsed="true">
+    <Position X="39.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAEAFIGCYBQQAACDCAqhYSAUABgIiAIEGAAIBAGEA=</HashCode>
+      <FileName>Assets\Scripts\XML\XMLUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="RescItemKey" Collapsed="true">
+    <Position X="43.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SceneStruct" Collapsed="true">
+    <Position X="45" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\SceneStruct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Standard" Collapsed="true">
+    <Position X="46.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAQABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\Standard.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Task" Collapsed="true">
+    <Position X="38" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAEAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\Task.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="House" Collapsed="true">
+    <Position X="38" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HouseViewing\House.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Prefab" Collapsed="true">
+    <Position X="39.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAKAAAAAAAAAAQAEAAAAAAAQAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\Prefab.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PrefabCollection" Collapsed="true">
+    <Position X="41.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAIAAAAAAACAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabCollection.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="CONSTRUCTION_IMAGE_TYPE" Collapsed="true">
+    <Position X="38" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FINISHED_CONSTRUCTION" Collapsed="true">
+    <Position X="39.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAIAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FIXINGSECTION" Collapsed="true">
+    <Position X="41.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAACAAAAAAAIAACAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FLOORTYPE" Collapsed="true">
+    <Position X="43.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LAYER" Collapsed="true">
+    <Position X="45" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PREFABTYPE" Collapsed="true">
+    <Position X="38" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEEAJgCAFAIAACgCAQAAhADAAAQAEAAgAABIABEAAI=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PREFAB_COMPART" Collapsed="true">
+    <Position X="46.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAgACAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SCENE" Collapsed="true">
+    <Position X="39.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAEAAAQAQAKCQAEBAAAAABAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SoundType" Collapsed="true">
+    <Position X="43.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="STANDARDTYPE" Collapsed="true">
+    <Position X="45" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TAG" Collapsed="true">
+    <Position X="46.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TASKTYPE" Collapsed="true">
+    <Position X="38" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAABCAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SNAP_POINT_TYPE" Collapsed="true">
+    <Position X="41.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgACAA=</HashCode>
+      <FileName>Assets\Scripts\Architecture Stuff\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="ContractClick" Collapsed="true">
+    <Position X="38" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ContractStuff\ContractSelection.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="UIButtonClick" Collapsed="true">
+    <Position X="43.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\Menu\UIButton.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="PrefabIconMultiplierClick" Collapsed="true">
+    <Position X="39.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameUI\PrefabIconMultiple.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="PrefabPlacementClick" Collapsed="true">
+    <Position X="41.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PrefabStuff\PrefabPlacementScript.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

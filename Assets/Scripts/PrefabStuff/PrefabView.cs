@@ -1,0 +1,52 @@
+﻿#pragma warning disable IDE0017
+#pragma warning disable IDE0018
+#pragma warning disable IDE0039
+#pragma warning disable IDE0044
+#pragma warning disable IDE1005
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+[RequireComponent(typeof(Image))]
+public class PrefabView : NullableInstanceScriptSingleton<PrefabView>
+{
+    Image image;
+    Image Image
+    {
+        get
+        {
+            return image ?? (image = GetComponent<Image>());
+        }
+    }
+
+    private void Awake()
+    {
+        SetInstance(this);
+        DeActivate();
+    }
+
+    /// <summary>
+    /// Set the game object to be inactive.
+    /// </summary>
+    public void DeActivate()
+    {
+        gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Set the prefab to be displayed and
+    /// set the game object to be active.
+    /// </summary>
+    /// <param name="prefab"></param>
+    public void SetPrefab(Prefab prefab)
+    {
+        gameObject.SetActive(true);
+        Sprite spr;
+        if (ResourceManager.GetItem(prefab.type, out spr))
+        {
+            Image.sprite = spr;
+        }
+    }
+}
