@@ -15,6 +15,7 @@ public class ContractViewportScript : UIButton
 
     void ContractButton_Click(UIButton sender)
     {
+        //
         Debug.Log("Contract button clicked");
         if (Util.IsPaused)
         {
