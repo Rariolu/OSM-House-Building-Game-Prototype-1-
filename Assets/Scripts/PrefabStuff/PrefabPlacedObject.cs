@@ -143,24 +143,9 @@ public class PrefabPlacedObject
         Intersection intersection;
         if (gameScene.AddIntersection(Prefab.floorType, intersectionPosition, out intersection))
         {
-            //Intersection intersection = new Intersection();
-            //intersection.SetParent(gameObject.transform);
-            //intersection.SetPosition(intersectionPosition);
             intersections.Add(intersection);
         }
         intersectionPoints.Add(intersectionPosition);
-        //Vector3 objPos = gameObject.transform.position + new Vector3(offset.x * 5f, 0f, offset.y * 5f);
-        //if (sType != Prefab.snapType)
-        //{
-        //    Debug.LogFormat("Trying {0}", objPos);
-        //}
-        //if (gameScene.PositionTaken(objPos,sType))
-        //{
-        //    Intersection intersection = new Intersection();
-        //    intersection.SetParent(gameObject.transform);
-        //    intersection.SetPosition(Util.MidPoint(roundedPosition, objPos));
-        //    intersections.Add(intersection);
-        //}
     }
 
     /// <summary>
@@ -175,20 +160,10 @@ public class PrefabPlacedObject
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
         }
         intersectionPoints.Clear();
-        //foreach(Intersection intersection in intersections)
-        //{
-        //    intersection.Destroy();
-        //}
-        //intersections.Clear();
     }
 
     public void SetSceneParent()
     {
-        //Floor floor;
-        //if (Floor.InstanceExists(Prefab.floorType, out floor))
-        //{
-        //    gameObject.transform.SetParent(floor.transform);
-        //}
         SceneObjectScript gameScene;
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
