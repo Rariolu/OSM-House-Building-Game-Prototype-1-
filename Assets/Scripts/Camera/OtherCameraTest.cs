@@ -58,4 +58,43 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
     {
         transform.position = new Vector3(transform.position.x, 8.8f + y, transform.position.z);
     }
+    
+        void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            MouseDown();
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            MouseUp();
+        }
+    }
+
+    Vector3 originalMousePosition;
+    bool storedMousePos = false;
+    public float minSwipeDistance = 10f;
+
+    void MouseDown()
+    {
+        originalMousePosition = Input.mousePosition;
+        storedMousePos = true;
+    }
+
+    void MouseUp()
+    {
+        Vector3 newPos = Input.mousePosition;
+        if (storedMousePos)
+        {
+            if (Vector3.Distance(originalMousePosition, newPos) > minSwipeDistance)
+            {
+                Vector3 dir = Vector3.Normalize(newPos - originalMousePosition);
+                float angle = dir.x > 0 ? 90f : -90f;
+                RotateCamera(angle);
+
+            }
+            storedMousePos = false;
+
+        }
+    }
 }
