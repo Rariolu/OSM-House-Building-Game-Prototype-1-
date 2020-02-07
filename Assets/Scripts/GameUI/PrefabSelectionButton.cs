@@ -166,6 +166,7 @@ public class PrefabSelectionButton : MultitonUIButton<PrefabSelectionButton, PRE
             Prefab prev;
             if (bs.PrefabAvailable(out prev))
             {
+                SnapPoint.HideSnapPoints(prev.snapType);
                 AddPrefab(prev);
             }
             Prefab prefab = icon.Prefab;
