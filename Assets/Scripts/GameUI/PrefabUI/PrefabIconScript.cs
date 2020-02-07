@@ -39,6 +39,11 @@ public class PrefabIconScript : UIButton
                     lblCounter.text = counter.GetCount(prefab).ToString();
                 }
             }
+            Sprite sprite;
+            if (ResourceManager.GetItem(prefab.type,out sprite))
+            {
+                Image.sprite = sprite;
+            }
         }
     }
 

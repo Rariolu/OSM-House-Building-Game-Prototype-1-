@@ -40,6 +40,7 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
             foreach (PrefabCollection collection in collections)
             {
                 counter.SetCount(collection.prefab, collection.quantity);
+                AddPrefabToDict(collection.prefab);
             }
             //Dictionary<PREFAB_COMPART, List<PrefabCollection>> prefabCollectionsComparted = new Dictionary<PREFAB_COMPART, List<PrefabCollection>>();
             //foreach(PrefabCollection collection in collections)
@@ -81,7 +82,7 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
     public void SwitchIcons(PREFAB_COMPART compart, FLOORTYPE floor)
     {
         List<Prefab> prefabs = GetPrefabs(compart, floor);
-        List<PrefabIconScript> icons = PrefabIconsScript.PrefabIcons;
+        List<PrefabIconScript> icons = PrefabIconScript.PrefabIcons;
         for (int i = 0; i < icons.Count; i++)
         {
             if (i < prefabs.Count)

@@ -93,6 +93,7 @@ public class SnapPointTrigger : MonoBehaviour
                             gameSceneScript.AddPlacement(ppo);
                         }
                         isSnapped = true;
+                        counter.DecrementCount(currentPrefab);
                     }
                 }
             }
