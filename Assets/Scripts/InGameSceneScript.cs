@@ -89,6 +89,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     void Awake()
     {
         SetInstance(this);
+        PrefabCounter.CreatePrefabCounter();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
         if (ConstructionUtil.InstanceAvailable(out util))

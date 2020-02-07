@@ -24,4 +24,16 @@ public struct Prefab
         }
         return sb.ToString();
     }
+    public static bool operator==(Prefab p1, Prefab p2)
+    {
+        bool compartEqual = p1.compart == p2.compart;
+        bool floorTypeEqual = p1.floorType == p2.floorType;
+        bool snapTypeEqual = p1.snapType == p2.snapType;
+        bool prefabTypeEqual = p1.type == p2.type;
+        return compartEqual && floorTypeEqual && snapTypeEqual && prefabTypeEqual;
+    }
+    public static bool operator !=(Prefab p1, Prefab p2)
+    {
+        return !(p1 == p2);
+    }
 }

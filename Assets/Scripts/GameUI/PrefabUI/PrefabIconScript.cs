@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void PrefabIconScriptClick(PrefabIconScript sender);
-
-public class PrefabIconScript : MonoBehaviour
+public class PrefabIconScript : UIButton
 {
     Prefab prefab;
     public Prefab Prefab
@@ -19,22 +17,18 @@ public class PrefabIconScript : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+        Click += PrefabIconScript_Click;
     }
 
-    void OnMouseDown()
+    void PrefabIconScript_Click(UIButton sender)
     {
-
+        PrefabCounter counter;
+        if (PrefabCounter.InstanceAvailable(out counter))
+        {
+            counter.SelectPrefab(Prefab);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 }

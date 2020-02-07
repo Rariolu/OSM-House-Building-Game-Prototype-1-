@@ -1,0 +1,84 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+/// <summary>
+/// Singleton used to keep a count of the amount of each prefab that there is available.
+/// </summary>
+public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
+{
+    Dictionary<Prefab, int> availablePrefabCount = new Dictionary<Prefab, int>();
+    bool prefabSelected = false;
+    Prefab selectedPrefab;
+
+    private PrefabCounter()
+    {
+        
+    }
+
+    public static void CreatePrefabCounter()
+    {
+        SetInstance(new PrefabCounter());
+    }
+
+
+    public int GetCount(Prefab prefab)
+    {
+        if (availablePrefabCount.ContainsKey(prefab))
+        {
+            return availablePrefabCount[prefab];
+        }
+        return 0;
+    }
+
+    public void IncrementCount(Prefab prefab)
+    {
+        int count = GetCount(prefab);
+        SetCount(prefab, count + 1);
+    }
+
+    /// <summary>
+    /// Reduces the count of a given prefab by 1.
+    /// If the count reaches 0 and the given
+    /// prefab is the selected one, it is unselected.
+    /// </summary>
+    /// <param name="prefab"></param>
+    public void DecrementCount(Prefab prefab)
+    {
+        int count = GetCount(prefab);
+        SetCount(prefab, count - 1);
+        if (count-1 <= 0)
+        {
+            if (prefab == selectedPrefab)
+            {
+                prefabSelected = false;
+            }
+        }
+    }
+
+    public void SetCount(Prefab prefab, int count)
+    {
+        if (availablePrefabCount.ContainsKey(prefab))
+        {
+            availablePrefabCount[prefab] = count;
+        }
+        else
+        {
+            availablePrefabCount.Add(prefab, count);
+        }
+    }
+    
+    public bool PrefabAvailable(out Prefab prefab)
+    {
+        prefab = selectedPrefab;
+        return prefabSelected;
+    }
+
+
+    public void SelectPrefab(Prefab prefab)
+    {
+        selectedPrefab = prefab;
+        prefabSelected = true;
+    }
+}
