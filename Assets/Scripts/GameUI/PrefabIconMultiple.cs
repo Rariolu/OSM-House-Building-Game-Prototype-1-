@@ -163,7 +163,6 @@ public class PrefabIconMultipler
         GameObject labelObject = new GameObject();
         labelObject.transform.SetParent(gameObject.transform);
         label = labelObject.AddComponent<Text>();
-        //label.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
         Font f = Font.CreateDynamicFontFromOSFont("Arial", 15);
         label.alignment = TextAnchor.LowerRight;
         label.color = Color.black;

@@ -93,12 +93,9 @@ public class PrefabPlacedObject
                 break;
             }
         }
-        //float offset = -((int)prefab.snapType * 2.5f);
-        Vector3 roundPos = position.RoundToNearestMultiple(5);//, offset);
+        Vector3 roundPos = position.RoundToNearestMultiple(5);
         roundPos += offset;
-        //roundPos.z += offset;
         gameObject.transform.position = roundPos;
-        //gameObject.AddComponent<BoxCollider>();
         prefab.offset.ApplyOffset(gameObject.transform);
         roundPos = gameObject.transform.position;
         gameObject.name = prefab.type.ToString();
@@ -115,17 +112,12 @@ public class PrefabPlacedObject
                     {
                         case SNAP_POINT_TYPE.EDGE:
                         {
-                            
                             AddIntersection(new Vector2(i/2f, 0), prefab.snapType);
-                            //AddIntersection(new Vector2(i, 0), prefab.snapType);
-                            //AddIntersection(new Vector2(0, i * 1.5f), SNAP_POINT_TYPE.CENTRE);
                             break;
                         }
                         case SNAP_POINT_TYPE.CENTRE:
                         {
                             AddIntersection(new Vector2(0, i / 2f), prefab.snapType);
-                            //AddIntersection(new Vector2(0, i), prefab.snapType);
-                            //AddIntersection(new Vector2(i * 1.5f, 0), SNAP_POINT_TYPE.EDGE);
                             break;
                         }
                     }

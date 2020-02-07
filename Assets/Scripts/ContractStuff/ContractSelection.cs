@@ -117,8 +117,8 @@ public class ContractSelection
     public void SetPosition(Vector2 vec2)
     {
         float y = 1f - (vec2.y + 0.3f);
-        rectTransform.anchorMin = new Vector2(vec2.x, 0f);//(1f - (vec2.y+0.3f)));
-        rectTransform.anchorMax = new Vector2(vec2.x + 0.3f, 1f);// y + 0.3f);
+        rectTransform.anchorMin = new Vector2(vec2.x, 0f);
+        rectTransform.anchorMax = new Vector2(vec2.x + 0.3f, 1f);
         rectTransform.anchoredPosition = new Vector2();
     }
 }

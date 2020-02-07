@@ -237,7 +237,7 @@ public class PrefabSelectionButton : MultitonUIButton<PrefabSelectionButton, PRE
             y += a;
             if ((i+1)%maxColumnLength == 0)
             {
-                y = initialYvalue;//0.5f;
+                y = initialYvalue;
                 x += iconSize.x + 0.01f;
             }
         }

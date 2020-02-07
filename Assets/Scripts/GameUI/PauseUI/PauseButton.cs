@@ -27,14 +27,12 @@ public class PauseButton : UIButton
     void Resume()
     {
         pauseMenuUI.SetActive(false);
-        //Time.timeScale = 1f;
         Util.IsPaused = false;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        //Time.timeScale = 0f;
         Util.IsPaused = true;
     }
 }

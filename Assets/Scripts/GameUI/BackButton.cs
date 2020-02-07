@@ -28,11 +28,9 @@ public class BackButton : UIButton
     //public for now but this is only due to Unity being annoying
     public void BackButton_Click(UIButton sender)
     {
-        //Debug.Log("Back button click");
         SceneObjectScript prev;
         if (SceneObjectScript.InstanceExists(previousScene,out prev))
         {
-            //Debug.Log("got to this bit");
             prev.SetActive(true);
             SceneObjectScript uiScene;
             if (previousScene == SCENE.InGame && SceneObjectScript.InstanceExists(SCENE.InGameUI,out uiScene))

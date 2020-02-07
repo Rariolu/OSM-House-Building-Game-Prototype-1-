@@ -32,8 +32,8 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
         while (d < angle)
         {
             float a = angle * Time.deltaTime;
-            d += a*speed;
-            transform.RotateAround(floorPos,floorUp, a*mult*speed);
+            d += a * speed;
+            transform.RotateAround(floorPos, floorUp, a * mult * speed);
             yield return 0;
         }
         canRotate = true;
@@ -58,8 +58,8 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
     {
         transform.position = new Vector3(transform.position.x, 8.8f + y, transform.position.z);
     }
-    
-        void Update()
+
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {

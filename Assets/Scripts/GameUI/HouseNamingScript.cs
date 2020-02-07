@@ -20,7 +20,6 @@ public class HouseNamingScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Return))
         {
             Util.LoadScene(SCENE.EndScene);
-            //Application.LoadLevel("EndScene");
         }
     }
 

@@ -65,7 +65,7 @@ public class BrochureSceneScript : MonoBehaviour
             }
             if (lblPrefabs != null)
             {
-                lblPrefabs.text = contract.prefabCollections.GetCollectionString("Prefabs:");//.prefabs.GetCollectionString("Prefabs:");
+                lblPrefabs.text = contract.prefabCollections.GetCollectionString("Prefabs:");
             }
             if (lblStandards != null)
             {

@@ -14,7 +14,6 @@ public class ContinueButton : UIButton
     void ContinueButton_Click(UIButton sender)
     {
         pauseMenuUI.SetActive(false);
-        //Time.timeScale = 1;
         Util.IsPaused = false;
     }
 }

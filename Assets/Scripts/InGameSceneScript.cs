@@ -58,7 +58,6 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             intersection.SetPosition(position);
             if (Floor.InstanceExists(floor, out floorInst))
             {
-                //intersection.SetPosition(new Vector3(position.x,floorInst.transform.position.y,position.z));
                 intersection.SetParent(floorInst.transform);
             }
             
