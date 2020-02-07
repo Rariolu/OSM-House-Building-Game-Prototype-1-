@@ -742,10 +742,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: e6ce20ea-605e-4c27-b2c4-62b13819b6ec
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: OSM House Building Game Prototype (1)
-  organizationId: osm_organisation
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
