@@ -18,10 +18,6 @@ public class ConstructionUtil : NullableInstanceClassSingleton<ConstructionUtil>
     {
         contract = c;
     }
-    public static void Clear()
-    {
-        SetInstance(null);
-    }
     public static void SetContract(Contract c)
     {
         SetInstance(new ConstructionUtil(c));

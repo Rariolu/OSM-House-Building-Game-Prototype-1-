@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void CounterChanged(Prefab prefab, int count);
 
 /// <summary>
 /// Singleton used to keep a count of the amount of each prefab that there is available.
@@ -9,6 +10,7 @@ using UnityEngine;
 public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
 {
     Dictionary<Prefab, int> availablePrefabCount = new Dictionary<Prefab, int>();
+    public CounterChanged CounterChanged;
     bool prefabSelected = false;
     Prefab selectedPrefab;
 
@@ -66,6 +68,10 @@ public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
         else
         {
             availablePrefabCount.Add(prefab, count);
+        }
+        if (CounterChanged != null)
+        {
+            CounterChanged(prefab, count);
         }
     }
     

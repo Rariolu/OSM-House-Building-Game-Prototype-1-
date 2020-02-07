@@ -12,12 +12,14 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
     void Start()
     {
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        PrefabCounter counter;
+        if (ConstructionUtil.InstanceAvailable(out util) && PrefabCounter.InstanceAvailable(out counter))
         {
             PrefabCollection[] collections = util.Contract.prefabCollections;
             Dictionary<PREFAB_COMPART, List<PrefabCollection>> prefabCollectionsComparted = new Dictionary<PREFAB_COMPART, List<PrefabCollection>>();
             foreach(PrefabCollection collection in collections)
             {
+                counter.SetCount(collection.prefab, collection.quantity);
                 PREFAB_COMPART pc = collection.prefab.compart;
                 if (prefabCollectionsComparted.ContainsKey(pc))
                 {
