@@ -36,4 +36,12 @@ public struct Prefab
     {
         return !(p1 == p2);
     }
+    public override bool Equals(object obj)
+    {
+        if (obj is Prefab)
+        {
+            return (Prefab)obj == this;
+        }
+        return false;
+    }
 }
