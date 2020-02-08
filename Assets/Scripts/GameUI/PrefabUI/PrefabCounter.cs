@@ -92,5 +92,10 @@ public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
         selectedPrefab = prefab;
         prefabSelected = true;
         SnapPoint.ShowSnapPoints(prefab.snapType);
+        PrefabView prefabView;
+        if (PrefabView.InstanceAvailable(out prefabView))
+        {
+            prefabView.SetPrefab(prefab);
+        }
     }
 }

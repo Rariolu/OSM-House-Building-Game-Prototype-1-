@@ -83,6 +83,7 @@ public enum PREFAB_COMPART
     WALL,
     FLOOR,
     ROOF,
+    NONE
 }
 
 /// <summary>

@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PrefabIconScript : UIButton
+public class PrefabIconScript : MultitonUIButton<PrefabIconScript,int>//UIButton
 {
-    static List<PrefabIconScript> prefabIcons = new List<PrefabIconScript>();
-    public static List<PrefabIconScript> PrefabIcons
-    {
-        get
-        {
-            return prefabIcons;
-        }
-    }
+    //static List<PrefabIconScript> prefabIcons = new List<PrefabIconScript>();
+    //public static List<PrefabIconScript> PrefabIcons
+    //{
+    //    get
+    //    {
+    //        return prefabIcons;
+    //    }
+    //}
 
-    public static void ClearIcons()
-    {
-        prefabIcons.Clear();
-    }
+    //public static void ClearIcons()
+    //{
+    //    prefabIcons.Clear();
+    //}
 
+    public int index;
     public Text lblCounter;
 
     Prefab prefab;
@@ -49,12 +50,45 @@ public class PrefabIconScript : UIButton
 
     void Awake()
     {
-        prefabIcons.Add(this);
+        SetIndex();
+        SetInstance(index, this);
+        //prefabIcons.Add(this);
     }
+    void SetIndex()
+    {
+        string name = gameObject.name;
 
+        int openBracketIndex = name.LastIndexOf('(');
+        int closeBracketIndex = name.LastIndexOf(')');
+        if (openBracketIndex > -1 && closeBracketIndex > -1 && closeBracketIndex > openBracketIndex)
+        {
+            int startIndex = openBracketIndex + 1;
+            int length = closeBracketIndex - startIndex;
+            string numStr = name.Substring(startIndex, length);
+            int n;
+            if (int.TryParse(numStr, out n))
+            {
+                index = n;
+            }
+            else
+            {
+                Debug.LogFormat("Num str was {0}.", numStr);
+            }
+        }
+    }
+    void SetLabel()
+    {
+        Text label = GetComponentInChildren<Text>();
+        lblCounter = label;
+        if (label != null)
+        {
+            label.name = "lblPrefabIconCounter ({0})".Format(index);
+        }
+    }
     protected override void Start()
     {
         base.Start();
+        SetLabel();
         Click += PrefabIconScript_Click;
         PrefabCounter counter;
         if (PrefabCounter.InstanceAvailable(out counter))
@@ -65,6 +99,7 @@ public class PrefabIconScript : UIButton
                 lblCounter.text = counter.GetCount(prefab).ToString();
             }
         }
+        gameObject.SetActive(false);
     }
 
     void CounterChanged(Prefab changedPrefab, int counter)
@@ -75,6 +110,7 @@ public class PrefabIconScript : UIButton
             {
                 lblCounter.text = counter.ToString();
             }
+
         }
     }
 

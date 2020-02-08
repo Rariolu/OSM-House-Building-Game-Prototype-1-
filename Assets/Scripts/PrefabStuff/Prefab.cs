@@ -44,4 +44,8 @@ public struct Prefab
         }
         return false;
     }
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
 }
