@@ -81,21 +81,32 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
     }
     public void SwitchIcons(PREFAB_COMPART compart, FLOORTYPE floor)
     {
-        List<Prefab> prefabs = GetPrefabs(compart, floor);
-        //PrefabIconScript[] icons = PrefabIconScript.Values;//PrefabIcons;
-        for (int i = 0; i < PrefabIconScript.Length; i++)
+        PrefabCounter counter;
+        if (PrefabCounter.InstanceAvailable(out counter))
         {
-            PrefabIconScript icon;
-            if (PrefabIconScript.InstanceExists(i, out icon))
+            List<Prefab> prefabs = GetPrefabs(compart, floor);
+            //PrefabIconScript[] icons = PrefabIconScript.Values;//PrefabIcons;
+            for (int i = 0; i < PrefabIconScript.Length; i++)
             {
-                if (i < prefabs.Count)
+                PrefabIconScript icon;
+                if (PrefabIconScript.InstanceExists(i, out icon))
                 {
-                    icon.gameObject.SetActive(true);
-                    icon.Prefab = prefabs[i];
-                }
-                else
-                {
-                    icon.gameObject.SetActive(false);
+                    if (i < prefabs.Count)
+                    {
+                        if (counter.GetCount(prefabs[i]) > 0)
+                        {
+                            icon.gameObject.SetActive(true);
+                            icon.Prefab = prefabs[i];
+                        }
+                        else
+                        {
+                            icon.gameObject.SetActive(false);
+                        }
+                    }
+                    else
+                    {
+                        icon.gameObject.SetActive(false);
+                    }
                 }
             }
         }

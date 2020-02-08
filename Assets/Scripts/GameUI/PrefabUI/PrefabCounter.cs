@@ -55,6 +55,7 @@ public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
             if (prefab == selectedPrefab)
             {
                 prefabSelected = false;
+                SnapPoint.HideSnapPoints(prefab.snapType);
             }
         }
     }

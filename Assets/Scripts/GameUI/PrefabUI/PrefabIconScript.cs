@@ -110,7 +110,7 @@ public class PrefabIconScript : MultitonUIButton<PrefabIconScript,int>//UIButton
             {
                 lblCounter.text = counter.ToString();
             }
-
+            gameObject.SetActive(counter > 0);
         }
     }
 
