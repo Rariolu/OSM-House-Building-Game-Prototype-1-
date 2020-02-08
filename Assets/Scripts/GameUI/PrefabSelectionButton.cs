@@ -268,7 +268,7 @@ public class PrefabSelectionButton : MultitonUIButton<PrefabSelectionButton, PRE
     void SetParentActive(bool active)
     {
         parentObject.SetActive(active);
-        string textureName = "{0}_{1}".Format(prefabCompart, active ? "active" : "inactive");
+        string textureName = "{0}_{1}".FormatText(prefabCompart, active ? "active" : "inactive");
         Sprite spr;
         if (ResourceManager.GetItem(textureName, out spr))
         {
@@ -284,7 +284,7 @@ public class PrefabSelectionButton : MultitonUIButton<PrefabSelectionButton, PRE
     {
         base.Start();
         Click += PrefabSelectionButton_Click;
-        string textureName = "{0}_inactive".Format(prefabCompart);
+        string textureName = "{0}_inactive".FormatText(prefabCompart);
         Sprite spr;
         if (ResourceManager.GetItem(textureName, out spr))
         {

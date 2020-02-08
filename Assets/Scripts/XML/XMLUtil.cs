@@ -60,7 +60,7 @@ public static class XMLUtil
             Debug.LogFormat("\"{0}\" doesn't exist.",xmlDirectory);
             return;
         }
-        string file = "{0}\\{1}_{2}_{3}.xml".Format(xmlDirectory, contract.name, contract.finishedConstruction,aggr);
+        string file = "{0}\\{1}_{2}_{3}.xml".FormatText(xmlDirectory, contract.name, contract.finishedConstruction,aggr);
         Debug.Log(file);
         XmlWriterSettings config = new XmlWriterSettings();
         config.Indent = true;

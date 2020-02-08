@@ -46,7 +46,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         for (int x = minBound; x <= maxBound; x++)
         {
             GameObject snapRow = new GameObject();
-            snapRow.name = "Snap Row {0}".Format(x);
+            snapRow.name = "Snap Row {0}".FormatText(x);
             snapRow.transform.SetParent(transform);
             for (int z = minBound; z <= maxBound; z++)
             {

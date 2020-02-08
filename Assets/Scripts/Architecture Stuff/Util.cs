@@ -126,7 +126,7 @@ public static class Util
     /// <param name="text"></param>
     /// <param name="args"></param>
     /// <returns></returns>
-    public static string Format(this string text, params object[] args)
+    public static string FormatText(this string text, params object[] args)
     {
         return string.Format(text, args);
     }

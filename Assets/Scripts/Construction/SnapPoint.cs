@@ -102,7 +102,7 @@ public class SnapPoint
             }
 
             Material mat;
-            if (ResourceManager.GetItem("SnapPoint_{0}".Format(type), out mat))
+            if (ResourceManager.GetItem("SnapPoint_{0}".FormatText(type), out mat))
             {
                 renderer.material = mat;
             }
@@ -149,6 +149,6 @@ public class SnapPoint
     public void SetPosition(Vector3 pos)
     {
         gameObject.transform.position = pos;
-        gameObject.name = "SnapTrigger {0}_{1}_{2}".Format(pos.x, pos.y, pos.z);
+        gameObject.name = "SnapTrigger {0}_{1}_{2}".FormatText(pos.x, pos.y, pos.z);
     }
 }

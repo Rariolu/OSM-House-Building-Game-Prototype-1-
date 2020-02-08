@@ -82,7 +82,7 @@ public class PrefabIconScript : MultitonUIButton<PrefabIconScript,int>//UIButton
         lblCounter = label;
         if (label != null)
         {
-            label.name = "lblPrefabIconCounter ({0})".Format(index);
+            label.name = "lblPrefabIconCounter ({0})".FormatText(index);
         }
     }
     protected override void Start()
