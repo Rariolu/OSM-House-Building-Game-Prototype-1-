@@ -43,7 +43,7 @@ public class SetPrefabIconIndexes : ScriptableObject
             icon.lblCounter = label;
             if (label != null)
             {
-                label.name = "lblPrefabIconCounter ({0})".Format(icon.index);
+                label.name = "lblPrefabIconCounter ({0})".FormatText(icon.index);
             }
         }
     }
