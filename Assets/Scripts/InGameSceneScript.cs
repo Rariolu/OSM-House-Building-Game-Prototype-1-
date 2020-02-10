@@ -38,7 +38,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
     Dictionary<FLOORTYPE, Dictionary<Vector3, int>> intersectionMapping = new Dictionary<FLOORTYPE, Dictionary<Vector3, int>>();
     Dictionary<Vector3, Intersection> intersections = new Dictionary<Vector3, Intersection>();
-
+    public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
     public bool AddIntersection(FLOORTYPE floor, Vector3 position, out Intersection intersection)
     {
         if (!intersectionMapping.ContainsKey(floor))
@@ -96,6 +96,18 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             currentContract = util.Contract;
             availableFixtures = currentContract.fixtures;
         }
+#if UNITY_EDITOR
+        else
+        {
+            Contract contract;
+            Debug.LogFormat("Attempting to load \"{0}\".", xmlBackupFile);
+            if (XMLUtil.LoadContract(xmlBackupFile, out contract))
+            {
+                Debug.Log("Loaded xml file.");
+                ConstructionUtil.SetContract(contract);
+            }
+        }
+#endif
     }
 
     public bool PositionTaken(Vector3 v3, SNAP_POINT_TYPE snapType)
