@@ -97,6 +97,8 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             availableFixtures = currentContract.fixtures;
         }
 #if UNITY_EDITOR
+        //Load a contract from the given XML file and set that as the contract
+        //that's being constructed.
         else
         {
             Contract contract;
