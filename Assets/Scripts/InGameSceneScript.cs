@@ -159,10 +159,16 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             Prefab prefab = ppo.Prefab;
             takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
 
-            PrefabSelectionButton selectionButton;
-            if (PrefabSelectionButton.InstanceExists(prefab.compart,out selectionButton))
+            //PrefabSelectionButton selectionButton;
+            //if (PrefabSelectionButton.InstanceExists(prefab.compart,out selectionButton))
+            //{
+            //    selectionButton.AddPrefab(prefab);
+            //}
+
+            PrefabCounter counter;
+            if (PrefabCounter.InstanceAvailable(out counter))
             {
-                selectionButton.AddPrefab(prefab);
+                counter.IncrementCount(prefab);
             }
 
             ppo.Destroy();
