@@ -85,7 +85,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             takenPositions.Add(ppo.Prefab.snapType, new List<Vector3>() { ppo.RoundedPosition });
         }
     }
-
+    public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
     void Awake()
     {
         SetInstance(this);
@@ -97,6 +97,18 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             currentContract = util.Contract;
             availableFixtures = currentContract.fixtures;
         }
+#if UNITY_EDITOR
+        else
+        {
+            Contract contract;
+            Debug.LogFormat("Attempting to load \"{0}\".", xmlBackupFile);
+            if (XMLUtil.LoadContract(xmlBackupFile, out contract))
+            {
+                Debug.Log("Loaded xml file.");
+                ConstructionUtil.SetContract(contract);
+            }
+        }
+#endif
     }
 
     public bool PositionTaken(Vector3 v3, SNAP_POINT_TYPE snapType)
