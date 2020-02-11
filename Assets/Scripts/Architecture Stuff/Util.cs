@@ -201,7 +201,7 @@ public static class Util
         Vector3 bottomLeftCorner = cam.ViewportToScreenPoint(new Vector3());
         return new Rect(bottomLeftCorner.x, bottomLeftCorner.y, bottomLeftCorner.x + Screen.width, bottomLeftCorner.y + Screen.height);
     }
-    
+
     /// <summary>
     /// Open the UI scene over the current one.
     /// </summary>
@@ -209,6 +209,7 @@ public static class Util
     {
         LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
     }
+
 
     /// <summary>
     /// Load a given scene either to replace the current one or to be open alongside it.
@@ -303,6 +304,21 @@ public static class Util
             //Close the executable.
             Application.Quit();
         #endif
+    }
+
+    public static void ReturnToPreviousScene()
+    {
+        if (sceneStack.Count > 0)
+        {
+            SCENE prevSceneEnum = sceneStack.Previous();
+            SceneObjectScript prevScene;
+            if (SceneObjectScript.InstanceExists(prevSceneEnum, out prevScene))
+            {
+                prevScene.SetActive(true);
+                SCENE currentScene = sceneStack.Pop();
+                UnloadScene(currentScene);
+            }
+        }
     }
 
     /// <summary>
