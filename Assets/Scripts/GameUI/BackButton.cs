@@ -32,11 +32,11 @@ public class BackButton : UIButton
         if (SceneObjectScript.InstanceExists(previousScene,out prev))
         {
             prev.SetActive(true);
-            SceneObjectScript uiScene;
-            if (previousScene == SCENE.InGame && SceneObjectScript.InstanceExists(SCENE.InGameUI,out uiScene))
-            {
-                uiScene.SetActive(true);
-            }
+            //SceneObjectScript uiScene;
+            //if (previousScene == SCENE.InGame && SceneObjectScript.InstanceExists(SCENE.InGameUI,out uiScene))
+            //{
+            //    uiScene.SetActive(true);
+            //}
             Util.UnloadScene(currentScene);
         }
         else

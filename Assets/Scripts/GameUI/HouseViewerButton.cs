@@ -40,9 +40,9 @@ public class HouseViewerButton : UIButton
         {
             gameScene.SetActive(false);
         }
-        if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-        {
-            gameUIScene.SetActive(false);
-        }
+        //if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
+        //{
+        //    gameUIScene.SetActive(false);
+        //}
     }
 }
