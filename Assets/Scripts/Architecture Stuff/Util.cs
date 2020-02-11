@@ -216,9 +216,12 @@ public static class Util
     /// </summary>
     /// <param name="scene">The name of the scene to be loaded</param>
     /// <param name="loadSceneMode">The scene mode, determines whether the scene replaces the current one (Single) or opens alongside it (Additive).</param>
-    public static void LoadScene(SCENE scene, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+    public static void LoadScene(SCENE scene, LoadSceneMode loadSceneMode = LoadSceneMode.Single, bool appendToStack = true)
     {
-        PushScene(scene);
+        if (appendToStack)
+        {
+            PushScene(scene);
+        }
         SceneManager.LoadScene(scene.ToString(),loadSceneMode);
 
     }
@@ -306,6 +309,11 @@ public static class Util
         #endif
     }
 
+    /// <summary>
+    /// Return to the previously open scene (the second-to-top scene on the stack).
+    /// Reactivate its game objects if the scene is still open, or load the scene
+    /// if it isn't.
+    /// </summary>
     public static void ReturnToPreviousScene()
     {
         if (sceneStack.Count > 0)
@@ -315,9 +323,13 @@ public static class Util
             if (SceneObjectScript.InstanceExists(prevSceneEnum, out prevScene))
             {
                 prevScene.SetActive(true);
-                SCENE currentScene = sceneStack.Pop();
-                UnloadScene(currentScene);
             }
+            else
+            {
+                Util.LoadScene(prevSceneEnum,LoadSceneMode.Single,false);
+            }
+            SCENE currentScene = sceneStack.Pop();
+            UnloadScene(currentScene);
         }
     }
 
