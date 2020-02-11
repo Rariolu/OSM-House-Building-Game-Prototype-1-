@@ -35,7 +35,7 @@ public class HouseViewerButton : UIButton
     void DeActivateGameScenes()
     {
         SceneObjectScript gameScene;
-        SceneObjectScript gameUIScene;
+        //SceneObjectScript gameUIScene;
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
             gameScene.SetActive(false);
