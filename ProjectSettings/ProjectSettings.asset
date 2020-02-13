@@ -811,7 +811,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Hub: 0
     UNet: 1
@@ -834,10 +834,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: b25eef54-d74a-47f0-86dc-ced1d10bbf45
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: OSM House Building Game Prototype
+  organizationId: osm_organisation
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
