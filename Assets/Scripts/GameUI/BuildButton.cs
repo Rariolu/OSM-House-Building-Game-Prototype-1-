@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildButton : MonoBehaviour
 {
 
-    public bool IsBuildActive;
+    bool IsBuildActive = false;
     public GameObject btnWallPrefabs;
     public GameObject btnFloorPrefabs;
     public GameObject btnRoofPrefabs;
@@ -26,15 +26,16 @@ public class BuildButton : MonoBehaviour
 
     public void BuildActive()
     {
-        {
-            btnWallPrefabs.SetActive(true);
-        }
-        {
-            btnFloorPrefabs.SetActive(true);
-        }
-        {
-            btnRoofPrefabs.SetActive(true);
-        }
+        IsBuildActive = !IsBuildActive;
+        
+        btnWallPrefabs.SetActive(IsBuildActive);
+        
+        
+        btnFloorPrefabs.SetActive(IsBuildActive);
+        
+        
+        btnRoofPrefabs.SetActive(IsBuildActive);
+        
     }
 
 }
