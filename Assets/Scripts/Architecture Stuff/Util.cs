@@ -38,7 +38,8 @@ public static class Util
     /// The scenes that have been loaded, used to preserve scene continuity
     /// so that the "previous" scene can be easily identified.
     /// </summary>
-    static ViewableStack<SceneStruct> sceneStack = new ViewableStack<SceneStruct>();
+    //static ViewableStack<SceneStruct> sceneStack = new ViewableStack<SceneStruct>();
+    static ViewableStack<SCENE> sceneStack = new ViewableStack<SCENE>();
 
     /// <summary>
     /// The amount of scenes on the stact.
@@ -64,11 +65,11 @@ public static class Util
         {
             gameScene.SetActive(false);
         }
-        SceneObjectScript gameUIScene;
-        if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-        {
-            gameUIScene.SetActive(false);
-        }
+        //SceneObjectScript gameUIScene;
+        //if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
+        //{
+        //    gameUIScene.SetActive(false);
+        //}
        
     }
 
@@ -200,7 +201,7 @@ public static class Util
         Vector3 bottomLeftCorner = cam.ViewportToScreenPoint(new Vector3());
         return new Rect(bottomLeftCorner.x, bottomLeftCorner.y, bottomLeftCorner.x + Screen.width, bottomLeftCorner.y + Screen.height);
     }
-    
+
     /// <summary>
     /// Open the UI scene over the current one.
     /// </summary>
@@ -209,14 +210,18 @@ public static class Util
         LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
     }
 
+
     /// <summary>
     /// Load a given scene either to replace the current one or to be open alongside it.
     /// </summary>
     /// <param name="scene">The name of the scene to be loaded</param>
     /// <param name="loadSceneMode">The scene mode, determines whether the scene replaces the current one (Single) or opens alongside it (Additive).</param>
-    public static void LoadScene(SCENE scene, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+    public static void LoadScene(SCENE scene, LoadSceneMode loadSceneMode = LoadSceneMode.Single, bool appendToStack = true)
     {
-        PushScene(scene);
+        if (appendToStack)
+        {
+            PushScene(scene);
+        }
         SceneManager.LoadScene(scene.ToString(),loadSceneMode);
 
     }
@@ -260,7 +265,7 @@ public static class Util
     {
         if (sceneStack.Count > 1)
         {
-            return sceneStack.Previous().mainScene;
+            return sceneStack.Previous();//.mainScene;
         }
         Debug.Log("Not enough elements on Stack");
         return 0;
@@ -272,15 +277,17 @@ public static class Util
     /// <param name="scene"></param>
     public static void PushScene(SCENE scene)
     {
-        if (scene != SCENE.InGameUI || StackCount < 1)
-        {
-            sceneStack.Push(new SceneStruct(scene));
-        }
-        else
-        {
-            SceneStruct topStruct = sceneStack.Pop();
-            topStruct.scenes.Add(scene);
-        }
+        sceneStack.Push(scene);
+        //if (scene != SCENE.InGameUI || StackCount < 1)
+        //{
+        //    sceneStack.Push(scene);//(new SceneStruct(scene));
+        //}
+        //else
+        //{
+        //    SCENE top = sceneStack.Pop();
+        //    //SceneStruct topStruct = sceneStack.Pop();
+        //    topStruct.scenes.Add(scene);
+        //}
     }
 
     /// <summary>
@@ -300,6 +307,30 @@ public static class Util
             //Close the executable.
             Application.Quit();
         #endif
+    }
+
+    /// <summary>
+    /// Return to the previously open scene (the second-to-top scene on the stack).
+    /// Reactivate its game objects if the scene is still open, or load the scene
+    /// if it isn't.
+    /// </summary>
+    public static void ReturnToPreviousScene()
+    {
+        if (sceneStack.Count > 0)
+        {
+            SCENE prevSceneEnum = sceneStack.Previous();
+            SceneObjectScript prevScene;
+            if (SceneObjectScript.InstanceExists(prevSceneEnum, out prevScene))
+            {
+                prevScene.SetActive(true);
+            }
+            else
+            {
+                Util.LoadScene(prevSceneEnum,LoadSceneMode.Single,false);
+            }
+            SCENE currentScene = sceneStack.Pop();
+            UnloadScene(currentScene);
+        }
     }
 
     /// <summary>

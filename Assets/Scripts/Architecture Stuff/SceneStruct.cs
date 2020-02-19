@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+#if SCENESTRUCT
+
 public struct SceneStruct
 {
     public SCENE mainScene;
@@ -12,3 +14,5 @@ public struct SceneStruct
         scenes = new List<SCENE>() { scene };
     }
 }
+
+#endif

@@ -23,7 +23,9 @@ public class SnapPoint
     /// The associated GameObject which exists in the game world and allows the SnapPoint to be clicked.
     /// </summary>
     GameObject gameObject;
-    
+
+    SnapPointTrigger trigger;
+
     /// <summary>
     /// The snap type of this SnapPoint instance.
     /// </summary>
@@ -74,7 +76,10 @@ public class SnapPoint
     {
         foreach (SnapPoint snapPoint in snapPointInstances[snapType])
         {
-            snapPoint.SetActive(active);
+            if (!active || !snapPoint.IsSnapped)
+            {
+                snapPoint.SetActive(active);
+            }
         }
     }
     
@@ -85,9 +90,15 @@ public class SnapPoint
         snapType = type;
         
         GameObject sphereObj;
-        if (ResourceManager.GetItem("SnapPoint", out sphereObj))
+
+        string snapPointGameObjName = "SnapPoint_" + type;
+        if (ResourceManager.GetItem(snapPointGameObjName,out sphereObj))
         {
-            gameObject = GameObject.Instantiate(sphereObj);
+            gameObject = Object.Instantiate(sphereObj);
+        }
+        else if (ResourceManager.GetItem("SnapPoint", out sphereObj))
+        {
+            gameObject = Object.Instantiate(sphereObj);
         }
         else
         {
@@ -112,15 +123,27 @@ public class SnapPoint
         gameObject.name = "SnapPoint";
         gameObject.tag = TAG.TESTTAG.ToString();
 
-        SphereCollider collider = gameObject.AddComponent<SphereCollider>();
-        collider.radius = 1f;
-        collider.isTrigger = false;
+        if (gameObject.GetComponent<Collider>() == null)
+        {
+            SphereCollider collider = gameObject.AddComponent<SphereCollider>();
+            collider.radius = 1f;
+            collider.isTrigger = false;
+        }
 
-        SnapPointTrigger trigger = gameObject.AddComponent<SnapPointTrigger>();
+        //Attempt to retrieve snaptrigger or add one if there isn't one present.
+        trigger = gameObject.GetComponent<SnapPointTrigger>() ?? gameObject.AddComponent<SnapPointTrigger>();
         trigger.snapType = type;
 
 
         gameObject.SetActive(false);
+    }
+
+    public bool IsSnapped
+    {
+        get
+        {
+            return trigger.Snapped;
+        }
     }
 
     /// <summary>

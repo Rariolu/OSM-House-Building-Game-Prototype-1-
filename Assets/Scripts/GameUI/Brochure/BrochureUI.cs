@@ -47,7 +47,8 @@ public class BrochureUI : MonoBehaviour
     }
 
     public void SellHouse()
-            {
-        Application.LoadLevel("ContractSelection");
+    {
+        Util.LoadScene(SCENE.ContractSelection);
+        //Application.LoadLevel("ContractSelection");
     }
 }
