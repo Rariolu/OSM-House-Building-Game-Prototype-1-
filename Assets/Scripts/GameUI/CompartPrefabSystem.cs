@@ -42,28 +42,6 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
                 counter.SetCount(collection.prefab, collection.quantity);
                 AddPrefabToDict(collection.prefab);
             }
-            //Dictionary<PREFAB_COMPART, List<PrefabCollection>> prefabCollectionsComparted = new Dictionary<PREFAB_COMPART, List<PrefabCollection>>();
-            //foreach(PrefabCollection collection in collections)
-            //{
-
-            //    PREFAB_COMPART pc = collection.prefab.compart;
-            //    if (prefabCollectionsComparted.ContainsKey(pc))
-            //    {
-            //        prefabCollectionsComparted[pc].Add(collection);
-            //    }
-            //    else
-            //    {
-            //        prefabCollectionsComparted.Add(pc, new List<PrefabCollection>() { collection });
-            //    }
-            //}
-            //foreach (PREFAB_COMPART key in PrefabSelectionButton.Keys)
-            //{
-            //    PrefabSelectionButton psButton;
-            //    if (PrefabSelectionButton.InstanceExists(key, out psButton) && prefabCollectionsComparted.ContainsKey(key))
-            //    {
-            //        psButton.AddPrefabs(prefabCollectionsComparted[key]);
-            //    }
-            //}
         }
 
     }
@@ -86,27 +64,25 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
         {
             List<Prefab> prefabs = GetPrefabs(compart, floor);
             //PrefabIconScript[] icons = PrefabIconScript.Values;//PrefabIcons;
-            for (int i = 0; i < PrefabIconScript.Length; i++)
+            PrefabIconScript[] icons = PrefabIconScript.GetIcons(compart);
+            for (int i = 0; i < icons.Length; i++)
             {
-                PrefabIconScript icon;
-                if (PrefabIconScript.InstanceExists(i, out icon))
+                PrefabIconScript icon = icons[i];
+                if (i < prefabs.Count)
                 {
-                    if (i < prefabs.Count)
+                    if (counter.GetCount(prefabs[i]) > 0)
                     {
-                        if (counter.GetCount(prefabs[i]) > 0)
-                        {
-                            icon.gameObject.SetActive(true);
-                            icon.Prefab = prefabs[i];
-                        }
-                        else
-                        {
-                            icon.gameObject.SetActive(false);
-                        }
+                        icon.gameObject.SetActive(true);
+                        icon.Prefab = prefabs[i];
                     }
                     else
                     {
                         icon.gameObject.SetActive(false);
                     }
+                }
+                else
+                {
+                    icon.gameObject.SetActive(false);
                 }
             }
         }

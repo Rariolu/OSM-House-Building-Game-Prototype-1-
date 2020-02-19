@@ -147,7 +147,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             groundFloor.Focus();
         }
         //Open UI scene over this one.
-        Util.LoadGameUI();
+        //Util.LoadGameUI();
     }
 
     public void Undo()

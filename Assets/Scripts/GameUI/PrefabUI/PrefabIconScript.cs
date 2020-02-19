@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PrefabIconScript : MultitonUIButton<PrefabIconScript,int>//UIButton
+public class PrefabIconScript : UIButton//MultitonUIButton<PrefabIconScript,int>//
 {
-    //static List<PrefabIconScript> prefabIcons = new List<PrefabIconScript>();
-    //public static List<PrefabIconScript> PrefabIcons
-    //{
-    //    get
-    //    {
-    //        return prefabIcons;
-    //    }
-    //}
-
-    //public static void ClearIcons()
-    //{
-    //    prefabIcons.Clear();
-    //}
+    static Dictionary<PREFAB_COMPART, AutoList<PrefabIconScript>> icons = new Dictionary<PREFAB_COMPART, AutoList<PrefabIconScript>>();
+    static void AddIcon(PREFAB_COMPART compart, int index, PrefabIconScript icon)
+    {
+        if (icons.ContainsKey(compart))
+        {
+            icons[compart].AddOutboundElement(index, icon);
+        }
+        else
+        {
+            AutoList<PrefabIconScript> list = new AutoList<PrefabIconScript>();
+            list.AddOutboundElement(index, icon);
+            icons.Add(compart, list);
+        }
+    }
+    public static PrefabIconScript[] GetIcons(PREFAB_COMPART compart)
+    {
+        if (!icons.ContainsKey(compart))
+        {
+            return new PrefabIconScript[0];
+        }
+        return icons[compart].ToArray();
+    }
 
     public int index;
+    public PREFAB_COMPART compart;
     public Text lblCounter;
 
     Prefab prefab;
@@ -51,7 +61,8 @@ public class PrefabIconScript : MultitonUIButton<PrefabIconScript,int>//UIButton
     void Awake()
     {
         SetIndex();
-        SetInstance(index, this);
+        AddIcon(compart, index, this);
+        //SetInstance(index, this);
         //prefabIcons.Add(this);
     }
     void SetIndex()
