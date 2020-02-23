@@ -72,7 +72,7 @@
 				<prefabposition>EXTERIOR</prefabposition>
 			</prefab>
 			<positions />
-			<quantity>5</quantity>
+			<quantity>10</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
@@ -107,23 +107,6 @@
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
-		</prefabcollection>
-		<prefabcollection>
-			<prefab>
-				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
-					<rotation x="-90" y="0" z="0" />
-					<scale x="5" y="5" z="5" />
-				</prefaboffset>
-				<properties />
-				<snaptype>CENTRE</snaptype>
-				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
-				<floortype>GROUND_FLOOR</floortype>
-				<compart>WALL</compart>
-				<prefabposition>EXTERIOR</prefabposition>
-			</prefab>
-			<positions />
-			<quantity>5</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
