@@ -4,6 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public enum CAMERA_DIR
+{
+    LEFT = -1,
+    RIGHT = 1
+}
+
 public enum CONSTRUCTION_IMAGE_TYPE
 {
     BLUEPRINT
