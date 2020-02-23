@@ -45,6 +45,7 @@ public static class XMLUtil
     const string task = "task";
     const string floortype = "floortype";
     const string compart = "compart";
+    const string prefabPosition = "prefabposition";
     #endregion
 
     /// <summary>
@@ -166,6 +167,26 @@ public static class XMLUtil
 
     #region XMLReading
 
+    /// <summary>
+    /// Read an element's value if it is of the given enum type.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="element"></param>
+    /// <param name="value"></param>
+    /// <param name="reader"></param>
+    /// <returns></returns>
+    static bool ReadEnumValue<T>(string element,out T value, ref XmlReader reader) where T :struct
+    {
+        if (reader.IsStartElement(element))
+        {
+            reader.Read();
+            string val = reader.Value;
+            return Util.EnumTryParse(val, out value);
+        }
+        value = default(T);
+        return false;
+    }
+
     static PrefabOffsetProperties ReadOffset(XmlReader subtree)
     {
         PrefabOffsetProperties pop = new PrefabOffsetProperties();
@@ -241,6 +262,12 @@ public static class XMLUtil
                 {
                     prefab.compart = pc;
                 }
+            }
+
+            PREFAB_POSITION pos;
+            if (ReadEnumValue(prefabPosition,out pos,ref subtree))
+            {
+                prefab.position = pos;
             }
         }
         return prefab;
@@ -436,6 +463,10 @@ public static class XMLUtil
 
         xmlWriter.WriteStartElement(compart);
         xmlWriter.WriteValue(prefab.compart.ToString());
+        xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(prefabPosition);
+        xmlWriter.WriteValue(prefab.position.ToString());
         xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
