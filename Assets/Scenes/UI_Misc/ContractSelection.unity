@@ -481,14 +481,14 @@ MonoBehaviour:
         properties: []
         snapType: 0
         type: 22
-      quantity: 1
+      quantity: 2
     - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
         offset:
-          offsetPosition: {x: 0, y: 2.8665, z: 0}
-          offsetRotation: {x: -90, y: 90, z: 0}
+          offsetPosition: {x: 0, y: -2.8665, z: 0}
+          offsetRotation: {x: -90, y: 270, z: 0}
           offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
@@ -501,7 +501,7 @@ MonoBehaviour:
         floorType: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
-          offsetRotation: {x: -90, y: 90, z: 0}
+          offsetRotation: {x: -90, y: 270, z: 0}
           offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
@@ -533,7 +533,7 @@ MonoBehaviour:
         properties: []
         snapType: 0
         type: 19
-      quantity: 3
+      quantity: 6
     - positionsTakenWithinContract: []
       prefab:
         compart: 1
@@ -631,52 +631,13 @@ MonoBehaviour:
         floorType: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
-          offsetRotation: {x: -90, y: 90, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
-        position: 0
-        properties: []
-        snapType: 0
-        type: 22
-      quantity: 1
-    - positionsTakenWithinContract: []
-      prefab:
-        compart: 1
-        floorType: 1
-        offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
           offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
         type: 16
-      quantity: 4
-    - positionsTakenWithinContract: []
-      prefab:
-        compart: 1
-        floorType: 1
-        offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
-          offsetRotation: {x: -90, y: -90, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
-        position: 0
-        properties: []
-        snapType: 0
-        type: 19
-      quantity: 3
-    - positionsTakenWithinContract: []
-      prefab:
-        compart: 1
-        floorType: 1
-        offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
-          offsetRotation: {x: -90, y: 0, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
-        position: 0
-        properties: []
-        snapType: 1
-        type: 16
-      quantity: 4
+      quantity: 8
     - positionsTakenWithinContract: []
       prefab:
         compart: 1
