@@ -103,16 +103,22 @@ public static class XMLUtil
                 contract.name = name;
             }
 
-            if (xmlReader.IsStartElement(finishedconstruction))
+            FINISHED_CONSTRUCTION fconEnum;
+            if (ReadEnumValue(finishedconstruction,out fconEnum,ref xmlReader))
             {
-                xmlReader.Read();
-                string fcon = xmlReader.Value;
-                FINISHED_CONSTRUCTION fconEnum;
-                if (Util.EnumTryParse(fcon, out fconEnum))
-                {
-                    contract.finishedConstruction = fconEnum;
-                }
+                contract.finishedConstruction = fconEnum;
             }
+
+            //if (xmlReader.IsStartElement(finishedconstruction))
+            //{
+            //    xmlReader.Read();
+            //    string fcon = xmlReader.Value;
+            //    FINISHED_CONSTRUCTION fconEnum;
+            //    if (Util.EnumTryParse(fcon, out fconEnum))
+            //    {
+            //        contract.finishedConstruction = fconEnum;
+            //    }
+            //}
 
             if (xmlReader.IsStartElement(budget))
             {
@@ -223,46 +229,70 @@ public static class XMLUtil
                 XmlReader propSubtree = subtree.ReadSubtree();
                 prefab.properties = ReadStandardArray(propSubtree);
             }
-            if (subtree.IsStartElement(snapType))
+            SNAP_POINT_TYPE spt;
+            if (ReadEnumValue(snapType,out spt,ref subtree))
             {
-                subtree.Read();
-                string st = subtree.Value;
-                SNAP_POINT_TYPE spt;
-                if (Util.EnumTryParse(st, out spt))
-                {
-                    prefab.snapType = spt;
-                }
+                prefab.snapType = spt;
             }
-            if (subtree.IsStartElement(prefabtype))
+            //if (subtree.IsStartElement(snapType))
+            //{
+            //    subtree.Read();
+            //    string st = subtree.Value;
+            //    SNAP_POINT_TYPE spt;
+            //    if (Util.EnumTryParse(st, out spt))
+            //    {
+            //        prefab.snapType = spt;
+            //    }
+            //}
+
+            PREFABTYPE pt;
+            if (ReadEnumValue(prefabtype,out pt,ref subtree))
             {
-                subtree.Read();
-                string strPT = subtree.Value;
-                PREFABTYPE pt;
-                if (Util.EnumTryParse(strPT, out pt))
-                {
-                    prefab.type = pt;
-                }
+                prefab.snapType = spt;
             }
-            if (subtree.IsStartElement(floortype))
+            //if (subtree.IsStartElement(prefabtype))
+            //{
+            //    subtree.Read();
+            //    string strPT = subtree.Value;
+            //    PREFABTYPE pt;
+            //    if (Util.EnumTryParse(strPT, out pt))
+            //    {
+            //        prefab.type = pt;
+            //    }
+            //}
+
+            FLOORTYPE ft;
+            if (ReadEnumValue(floortype,out ft,ref subtree))
             {
-                subtree.Read();
-                string strFT = subtree.Value;
-                FLOORTYPE ft;
-                if (Util.EnumTryParse(strFT, out ft))
-                {
-                    prefab.floorType = ft;
-                }
+                prefab.floorType = ft;
             }
-            if (subtree.IsStartElement(compart))
+
+            //if (subtree.IsStartElement(floortype))
+            //{
+            //    subtree.Read();
+            //    string strFT = subtree.Value;
+            //    FLOORTYPE ft;
+            //    if (Util.EnumTryParse(strFT, out ft))
+            //    {
+            //        prefab.floorType = ft;
+            //    }
+            //}
+
+            PREFAB_COMPART pc;
+            if (ReadEnumValue(compart,out pc,ref subtree))
             {
-                subtree.Read();
-                string strCompart = subtree.Value;
-                PREFAB_COMPART pc;
-                if (Util.EnumTryParse(strCompart, out pc))
-                {
-                    prefab.compart = pc;
-                }
+                prefab.compart = pc;
             }
+            //if (subtree.IsStartElement(compart))
+            //{
+            //    subtree.Read();
+            //    string strCompart = subtree.Value;
+            //    PREFAB_COMPART pc;
+            //    if (Util.EnumTryParse(strCompart, out pc))
+            //    {
+            //        prefab.compart = pc;
+            //    }
+            //}
 
             PREFAB_POSITION pos;
             if (ReadEnumValue(prefabPosition,out pos,ref subtree))
