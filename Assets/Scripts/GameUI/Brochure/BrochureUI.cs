@@ -13,13 +13,13 @@ public class BrochureUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        BrochureMenuCanvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsBrochureActive)
+        /*if (IsBrochureActive)
         {
             BrochureMenuCanvas.SetActive(true);
             Time.timeScale = 0;
@@ -32,13 +32,19 @@ public class BrochureUI : MonoBehaviour
             Time.timeScale = 1;
           //  Cursor.visible = false;
         }
-        if (Input.GetKeyDown(KeyCode.R))
+         if (Input.GetKeyDown(KeyCode.R))
+         {
+             IsBrochureActive = !IsBrochureActive;
+             Time.timeScale = 0;
+         }*/
+    }
+    public void BrochureActive()
+    {
         {
-            IsBrochureActive = !IsBrochureActive;
-            Time.timeScale = 0;
+            BrochureMenuCanvas.SetActive(true);
+
         }
     }
-
     public void Continue()
     {
         IsBrochureActive = false;
@@ -51,4 +57,5 @@ public class BrochureUI : MonoBehaviour
         Util.LoadScene(SCENE.ContractSelection);
         //Application.LoadLevel("ContractSelection");
     }
+
 }
