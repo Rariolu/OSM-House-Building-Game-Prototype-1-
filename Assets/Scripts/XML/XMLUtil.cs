@@ -58,10 +58,10 @@ public static class XMLUtil
     {
         if (!Directory.Exists(xmlDirectory))
         {
-            Debug.LogFormat("\"{0}\" doesn't exist.",xmlDirectory);
+            Debug.LogFormat("\"{0}\" doesn't exist.", xmlDirectory);
             return;
         }
-        string file = "{0}\\{1}_{2}_{3}.xml".Format(xmlDirectory, contract.name, contract.finishedConstruction,aggr);
+        string file = "{0}\\{1}_{2}_{3}.xml".Format(xmlDirectory, contract.name, contract.finishedConstruction, aggr);
         Debug.Log(file);
         XmlWriterSettings config = new XmlWriterSettings();
         config.Indent = true;
@@ -94,7 +94,7 @@ public static class XMLUtil
         contract = new Contract();
 
         XmlReader xmlReader = XmlReader.Create(file);
-        while(xmlReader.Read())
+        while (xmlReader.Read())
         {
             if (xmlReader.IsStartElement(contractName))
             {
@@ -103,22 +103,16 @@ public static class XMLUtil
                 contract.name = name;
             }
 
-            FINISHED_CONSTRUCTION fconEnum;
-            if (ReadEnumValue(finishedconstruction,out fconEnum,ref xmlReader))
+            if (xmlReader.IsStartElement(finishedconstruction))
             {
-                contract.finishedConstruction = fconEnum;
+                xmlReader.Read();
+                string fcon = xmlReader.Value;
+                FINISHED_CONSTRUCTION fconEnum;
+                if (Util.EnumTryParse(fcon, out fconEnum))
+                {
+                    contract.finishedConstruction = fconEnum;
+                }
             }
-
-            //if (xmlReader.IsStartElement(finishedconstruction))
-            //{
-            //    xmlReader.Read();
-            //    string fcon = xmlReader.Value;
-            //    FINISHED_CONSTRUCTION fconEnum;
-            //    if (Util.EnumTryParse(fcon, out fconEnum))
-            //    {
-            //        contract.finishedConstruction = fconEnum;
-            //    }
-            //}
 
             if (xmlReader.IsStartElement(budget))
             {
@@ -173,26 +167,6 @@ public static class XMLUtil
 
     #region XMLReading
 
-    /// <summary>
-    /// Read an element's value if it is of the given enum type.
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="element"></param>
-    /// <param name="value"></param>
-    /// <param name="reader"></param>
-    /// <returns></returns>
-    static bool ReadEnumValue<T>(string element,out T value, ref XmlReader reader) where T :struct
-    {
-        if (reader.IsStartElement(element))
-        {
-            reader.Read();
-            string val = reader.Value;
-            return Util.EnumTryParse(val, out value);
-        }
-        value = default(T);
-        return false;
-    }
-
     static PrefabOffsetProperties ReadOffset(XmlReader subtree)
     {
         PrefabOffsetProperties pop = new PrefabOffsetProperties();
@@ -229,75 +203,55 @@ public static class XMLUtil
                 XmlReader propSubtree = subtree.ReadSubtree();
                 prefab.properties = ReadStandardArray(propSubtree);
             }
-            SNAP_POINT_TYPE spt;
-            if (ReadEnumValue(snapType,out spt,ref subtree))
+            if (subtree.IsStartElement(snapType))
             {
-                prefab.snapType = spt;
+                subtree.Read();
+                string st = subtree.Value;
+                SNAP_POINT_TYPE spt;
+                if (Util.EnumTryParse(st, out spt))
+                {
+                    prefab.snapType = spt;
+                }
             }
-            //if (subtree.IsStartElement(snapType))
-            //{
-            //    subtree.Read();
-            //    string st = subtree.Value;
-            //    SNAP_POINT_TYPE spt;
-            //    if (Util.EnumTryParse(st, out spt))
-            //    {
-            //        prefab.snapType = spt;
-            //    }
-            //}
-
-            PREFABTYPE pt;
-            if (ReadEnumValue(prefabtype,out pt,ref subtree))
+            if (subtree.IsStartElement(prefabtype))
             {
-                prefab.snapType = spt;
+                subtree.Read();
+                string strPT = subtree.Value;
+                PREFABTYPE pt;
+                if (Util.EnumTryParse(strPT, out pt))
+                {
+                    prefab.type = pt;
+                }
             }
-            //if (subtree.IsStartElement(prefabtype))
-            //{
-            //    subtree.Read();
-            //    string strPT = subtree.Value;
-            //    PREFABTYPE pt;
-            //    if (Util.EnumTryParse(strPT, out pt))
-            //    {
-            //        prefab.type = pt;
-            //    }
-            //}
-
-            FLOORTYPE ft;
-            if (ReadEnumValue(floortype,out ft,ref subtree))
+            if (subtree.IsStartElement(floortype))
             {
-                prefab.floorType = ft;
+                subtree.Read();
+                string strFT = subtree.Value;
+                FLOORTYPE ft;
+                if (Util.EnumTryParse(strFT, out ft))
+                {
+                    prefab.floorType = ft;
+                }
             }
-
-            //if (subtree.IsStartElement(floortype))
-            //{
-            //    subtree.Read();
-            //    string strFT = subtree.Value;
-            //    FLOORTYPE ft;
-            //    if (Util.EnumTryParse(strFT, out ft))
-            //    {
-            //        prefab.floorType = ft;
-            //    }
-            //}
-
-            PREFAB_COMPART pc;
-            if (ReadEnumValue(compart,out pc,ref subtree))
+            if (subtree.IsStartElement(compart))
             {
-                prefab.compart = pc;
+                subtree.Read();
+                string strCompart = subtree.Value;
+                PREFAB_COMPART pc;
+                if (Util.EnumTryParse(strCompart, out pc))
+                {
+                    prefab.compart = pc;
+                }
             }
-            //if (subtree.IsStartElement(compart))
-            //{
-            //    subtree.Read();
-            //    string strCompart = subtree.Value;
-            //    PREFAB_COMPART pc;
-            //    if (Util.EnumTryParse(strCompart, out pc))
-            //    {
-            //        prefab.compart = pc;
-            //    }
-            //}
-
-            PREFAB_POSITION pos;
-            if (ReadEnumValue(prefabPosition,out pos,ref subtree))
+            if (subtree.IsStartElement(prefabPosition))
             {
-                prefab.position = pos;
+                subtree.Read();
+                string strPrefabPosition = subtree.Value;
+                PREFAB_POSITION pp;
+                if (Util.EnumTryParse(strPrefabPosition, out pp))
+                {
+                    prefab.position = pp;
+                }
             }
         }
         return prefab;
@@ -396,7 +350,7 @@ public static class XMLUtil
     static Task[] ReadTasks(XmlReader subtree)
     {
         List<Task> tasks = new List<Task>();
-        while(subtree.Read())
+        while (subtree.Read())
         {
             if (subtree.IsStartElement(task))
             {
@@ -412,7 +366,7 @@ public static class XMLUtil
         string strY = reader["y"];
         string strZ = reader["z"];
         float x, y, z;
-        float.TryParse(strX,out x);
+        float.TryParse(strX, out x);
         float.TryParse(strY, out y);
         float.TryParse(strZ, out z);
         return new Vector3(x, y, z);
@@ -421,7 +375,7 @@ public static class XMLUtil
     static Vector3[] ReadVec3Array(XmlReader subtree)
     {
         List<Vector3> vec3s = new List<Vector3>();
-        while(subtree.Read())
+        while (subtree.Read())
         {
             if (subtree.IsStartElement(vec3))
             {
@@ -463,7 +417,7 @@ public static class XMLUtil
         WriteVector3Array(ref xmlWriter, positionstaken, contract.positionsTaken);
 
         WritePrefabCollections(ref xmlWriter, prefabcollections, contract.prefabCollections);
-        
+
         WriteStandardArray(ref xmlWriter, standards, contract.standards);
 
         WriteTaskArray(ref xmlWriter, tasks, contract.tasks);
@@ -585,7 +539,7 @@ public static class XMLUtil
     {
         xmlWriter.WriteStartElement(elementName);
 
-        foreach(Vector3 vec3 in vec3Array)
+        foreach (Vector3 vec3 in vec3Array)
         {
             WriteVector3(ref xmlWriter, XMLUtil.vec3, vec3);
         }
