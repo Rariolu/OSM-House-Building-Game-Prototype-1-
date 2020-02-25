@@ -45,6 +45,7 @@ public static class XMLUtil
     const string task = "task";
     const string floortype = "floortype";
     const string compart = "compart";
+    const string prefabPosition = "prefabposition";
     #endregion
 
     /// <summary>
@@ -57,10 +58,10 @@ public static class XMLUtil
     {
         if (!Directory.Exists(xmlDirectory))
         {
-            Debug.LogFormat("\"{0}\" doesn't exist.",xmlDirectory);
+            Debug.LogFormat("\"{0}\" doesn't exist.", xmlDirectory);
             return;
         }
-        string file = "{0}\\{1}_{2}_{3}.xml".Format(xmlDirectory, contract.name, contract.finishedConstruction,aggr);
+        string file = "{0}\\{1}_{2}_{3}.xml".Format(xmlDirectory, contract.name, contract.finishedConstruction, aggr);
         Debug.Log(file);
         XmlWriterSettings config = new XmlWriterSettings();
         config.Indent = true;
@@ -93,7 +94,7 @@ public static class XMLUtil
         contract = new Contract();
 
         XmlReader xmlReader = XmlReader.Create(file);
-        while(xmlReader.Read())
+        while (xmlReader.Read())
         {
             if (xmlReader.IsStartElement(contractName))
             {
@@ -242,6 +243,16 @@ public static class XMLUtil
                     prefab.compart = pc;
                 }
             }
+            if (subtree.IsStartElement(prefabPosition))
+            {
+                subtree.Read();
+                string strPrefabPosition = subtree.Value;
+                PREFAB_POSITION pp;
+                if (Util.EnumTryParse(strPrefabPosition, out pp))
+                {
+                    prefab.position = pp;
+                }
+            }
         }
         return prefab;
     }
@@ -339,7 +350,7 @@ public static class XMLUtil
     static Task[] ReadTasks(XmlReader subtree)
     {
         List<Task> tasks = new List<Task>();
-        while(subtree.Read())
+        while (subtree.Read())
         {
             if (subtree.IsStartElement(task))
             {
@@ -355,7 +366,7 @@ public static class XMLUtil
         string strY = reader["y"];
         string strZ = reader["z"];
         float x, y, z;
-        float.TryParse(strX,out x);
+        float.TryParse(strX, out x);
         float.TryParse(strY, out y);
         float.TryParse(strZ, out z);
         return new Vector3(x, y, z);
@@ -364,7 +375,7 @@ public static class XMLUtil
     static Vector3[] ReadVec3Array(XmlReader subtree)
     {
         List<Vector3> vec3s = new List<Vector3>();
-        while(subtree.Read())
+        while (subtree.Read())
         {
             if (subtree.IsStartElement(vec3))
             {
@@ -406,7 +417,7 @@ public static class XMLUtil
         WriteVector3Array(ref xmlWriter, positionstaken, contract.positionsTaken);
 
         WritePrefabCollections(ref xmlWriter, prefabcollections, contract.prefabCollections);
-        
+
         WriteStandardArray(ref xmlWriter, standards, contract.standards);
 
         WriteTaskArray(ref xmlWriter, tasks, contract.tasks);
@@ -436,6 +447,10 @@ public static class XMLUtil
 
         xmlWriter.WriteStartElement(compart);
         xmlWriter.WriteValue(prefab.compart.ToString());
+        xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(prefabPosition);
+        xmlWriter.WriteValue(prefab.position.ToString());
         xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
@@ -524,7 +539,7 @@ public static class XMLUtil
     {
         xmlWriter.WriteStartElement(elementName);
 
-        foreach(Vector3 vec3 in vec3Array)
+        foreach (Vector3 vec3 in vec3Array)
         {
             WriteVector3(ref xmlWriter, XMLUtil.vec3, vec3);
         }

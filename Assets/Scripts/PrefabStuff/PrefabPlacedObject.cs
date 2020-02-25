@@ -80,6 +80,13 @@ public class PrefabPlacedObject
             case SNAP_POINT_TYPE.CENTRE:
             {
                 offset = new Vector3(-2.5f, 0, -2.5f);
+                //if (prefab.position == PREFAB_POSITION.EXTERIOR)
+                //{
+                //    if (position.x > 0)
+                //    {
+                //        gameObject.transform.Rotate(Vector3.up, 180f);
+                //    }
+                //}
                 break;
             }
             case SNAP_POINT_TYPE.FLOOR:
@@ -87,17 +94,38 @@ public class PrefabPlacedObject
                 offset = new Vector3(0, 0, -2.5f);
                 break;
             }
+            //case SNAP_POINT_TYPE.EDGE:
+            //{
+            //    offset = new Vector3();
+            //    if (prefab.position == PREFAB_POSITION.EXTERIOR)
+            //    {
+            //        if (position.z < 0)
+            //        {
+            //            gameObject.transform.Rotate(Vector3.up, 180f);
+            //        }
+            //    }
+            //    break;
+            //}
             default:
             {
                 offset = new Vector3();
                 break;
             }
         }
+
+
         Vector3 roundPos = position.RoundToNearestMultiple(5);
         roundPos += offset;
         gameObject.transform.position = roundPos;
         prefab.offset.ApplyOffset(gameObject.transform);
+
         roundPos = gameObject.transform.position;
+        if (prefab.position == PREFAB_POSITION.EXTERIOR && ((prefab.snapType == SNAP_POINT_TYPE.CENTRE && position.x > 0) || (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0)))
+        {
+            gameObject.transform.Rotate(0, 180f, 0, Space.World);
+            //gameObject.transform.Rotate(gameObject.transform.up, 180f);
+            //Debug.LogFormat("Name: {0}; Up: {1};", gameObject.name, gameObject.transform.up);
+        }
         gameObject.name = prefab.type.ToString();
         gameObject.tag = TAG.TESTTAG.ToString();
 
@@ -125,8 +153,8 @@ public class PrefabPlacedObject
             }
         }
 
-        PrefabPlacementScript pps = gameObject.AddComponent<PrefabPlacementScript>();
-
+        //Get the PrefabPlacementScript component or add one if there is none.
+        PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)

@@ -85,6 +85,12 @@ public enum PREFAB_COMPART
     ROOF,
 }
 
+public enum PREFAB_POSITION
+{
+    EXTERIOR,
+    INTERIOR
+}
+
 /// <summary>
 /// An enum representing all the different
 /// "scenes" that can be loaded by the Unity

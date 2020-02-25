@@ -10,6 +10,7 @@ public struct Prefab
     public PREFAB_COMPART compart;
     public FLOORTYPE floorType;
     public PrefabOffsetProperties offset;
+    public PREFAB_POSITION position;
     public Standard[] properties;
     public SNAP_POINT_TYPE snapType;
     public PREFABTYPE type;
