@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotationButton.cs" />
+    <Compile Include="Assets\Scripts\Camera\CamSwitch.cs" />
     <Compile Include="Assets\Scripts\Camera\OtherCameraTest.cs" />
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
     <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
