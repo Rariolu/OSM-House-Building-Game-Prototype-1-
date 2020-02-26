@@ -11,6 +11,6 @@ public struct Standard
     public STANDARDTYPE type;
     public override string ToString()
     {
-        return "{0}: {1};".Format(type, rating);
+        return "{0}: {1};".FormatText(type, rating);
     }
 }

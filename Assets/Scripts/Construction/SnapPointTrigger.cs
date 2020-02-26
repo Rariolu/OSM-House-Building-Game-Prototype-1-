@@ -41,15 +41,50 @@ public class SnapPointTrigger : MonoBehaviour
     {
         if (!Snapped)
         {
-            buildSystem bs;
-            if (buildSystem.InstanceAvailable(out bs))
+            //    buildSystem bs;
+            //    if (buildSystem.InstanceAvailable(out bs))
+            //    {
+            //        if (bs.PrefabSnapType == snapType)
+            //        {
+            //            Prefab prefab;
+            //            if (bs.PrefabAvailable(out prefab))
+            //            {
+            //                PrefabPlacedObject ppo = new PrefabPlacedObject(prefab, transform.position);
+            //                ppo.SnapPointTrigger = this;
+            //                ppo.SetSceneParent();
+            //                InGameSceneScript gameSceneScript;
+            //                if (InGameSceneScript.InstanceAvailable(out gameSceneScript))
+            //                {
+            //                    gameSceneScript.AddPlacement(ppo);
+            //                }
+            //                PrefabView pv;
+            //                if (PrefabView.InstanceAvailable(out pv))
+            //                {
+            //                    pv.DeActivate();
+            //                }
+            //                isSnapped = true;
+            //                SnapPoint.HideSnapPoints(snapType);
+            //            }
+            //            else
+            //            {
+            //                Debug.Log("No prefab selected");
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Debug.Log("No build system");
+            //    }
+            //}
+            PrefabCounter counter;
+            if (PrefabCounter.InstanceAvailable(out counter))
             {
-                if (bs.PrefabSnapType == snapType)
+                Prefab currentPrefab;
+                if (counter.PrefabAvailable(out currentPrefab))
                 {
-                    Prefab prefab;
-                    if (bs.PrefabAvailable(out prefab))
+                    if (currentPrefab.snapType == snapType)
                     {
-                        PrefabPlacedObject ppo = new PrefabPlacedObject(prefab, transform.position);
+                        PrefabPlacedObject ppo = new PrefabPlacedObject(currentPrefab, transform.position);
                         ppo.SnapPointTrigger = this;
                         ppo.SetSceneParent();
                         InGameSceneScript gameSceneScript;
@@ -57,23 +92,10 @@ public class SnapPointTrigger : MonoBehaviour
                         {
                             gameSceneScript.AddPlacement(ppo);
                         }
-                        PrefabView pv;
-                        if (PrefabView.InstanceAvailable(out pv))
-                        {
-                            pv.DeActivate();
-                        }
                         isSnapped = true;
-                        SnapPoint.HideSnapPoints(snapType);
-                    }
-                    else
-                    {
-                        Debug.Log("No prefab selected");
+                        counter.DecrementCount(currentPrefab);
                     }
                 }
-            }
-            else
-            {
-                Debug.Log("No build system");
             }
         }
     }

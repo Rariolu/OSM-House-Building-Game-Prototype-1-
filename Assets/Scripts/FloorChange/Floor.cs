@@ -46,7 +46,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         for (int x = minBound; x <= maxBound; x++)
         {
             GameObject snapRow = new GameObject();
-            snapRow.name = "Snap Row {0}".Format(x);
+            snapRow.name = "Snap Row {0}".FormatText(x);
             snapRow.transform.SetParent(transform);
             for (int z = minBound; z <= maxBound; z++)
             {
@@ -80,12 +80,19 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         //correct prefabs.
         PrefabSelectionButton.SetCurrentFloorAllButtons(floorType);
 
-        OtherCameraTest camControl;
-        if (OtherCameraTest.InstanceAvailable(out camControl))
+        //OtherCameraTest camControl;
+        //if (OtherCameraTest.InstanceAvailable(out camControl))
+        //{
+        //    camControl.SetFloor(transform.position.y);
+
+        //}
+
+        CameraMovementScript camControl;
+        if (CameraMovementScript.InstanceAvailable(out camControl))
         {
             camControl.SetFloor(transform.position.y);
-            
         }
+
         for(int i = 0; i < 3; i++)
         {
             FLOORTYPE ftype = (FLOORTYPE)i;

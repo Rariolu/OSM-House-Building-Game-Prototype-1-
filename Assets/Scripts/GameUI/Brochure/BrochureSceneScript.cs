@@ -53,12 +53,12 @@ public class BrochureSceneScript : MonoBehaviour
             }
             if (lblBudget != null)
             {
-                lblBudget.text = "Budget: {0};".Format(contract.budget);
+                lblBudget.text = "Budget: {0};".FormatText(contract.budget);
             }
             if (pbBlueprint != null)
             {
                 Sprite sprite;
-                if (ResourceManager.GetItem("{0}_{1}".Format(contract.finishedConstruction, CONSTRUCTION_IMAGE_TYPE.BLUEPRINT), out sprite))
+                if (ResourceManager.GetItem("{0}_{1}".FormatText(contract.finishedConstruction, CONSTRUCTION_IMAGE_TYPE.BLUEPRINT), out sprite))
                 {
                     pbBlueprint.sprite = sprite;
                 }

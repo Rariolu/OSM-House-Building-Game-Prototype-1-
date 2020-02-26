@@ -4,6 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public enum CAMERA_DIR
+{
+    LEFT = -1,
+    RIGHT = 1
+}
+
 public enum CONSTRUCTION_IMAGE_TYPE
 {
     BLUEPRINT
@@ -83,6 +89,13 @@ public enum PREFAB_COMPART
     WALL,
     FLOOR,
     ROOF,
+    NONE
+}
+
+public enum PREFAB_POSITION
+{
+    EXTERIOR,
+    INTERIOR
 }
 
 /// <summary>

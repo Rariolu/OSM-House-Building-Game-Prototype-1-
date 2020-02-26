@@ -38,7 +38,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
     Dictionary<FLOORTYPE, Dictionary<Vector3, int>> intersectionMapping = new Dictionary<FLOORTYPE, Dictionary<Vector3, int>>();
     Dictionary<Vector3, Intersection> intersections = new Dictionary<Vector3, Intersection>();
-    public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
+
     public bool AddIntersection(FLOORTYPE floor, Vector3 position, out Intersection intersection)
     {
         if (!intersectionMapping.ContainsKey(floor))
@@ -85,10 +85,11 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             takenPositions.Add(ppo.Prefab.snapType, new List<Vector3>() { ppo.RoundedPosition });
         }
     }
-
+    public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
     void Awake()
     {
         SetInstance(this);
+        PrefabCounter.CreatePrefabCounter();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
         if (ConstructionUtil.InstanceAvailable(out util))
@@ -97,8 +98,6 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             availableFixtures = currentContract.fixtures;
         }
 #if UNITY_EDITOR
-        //Load a contract from the given XML file and set that as the contract
-        //that's being constructed.
         else
         {
             Contract contract;
@@ -160,10 +159,16 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             Prefab prefab = ppo.Prefab;
             takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
 
-            PrefabSelectionButton selectionButton;
-            if (PrefabSelectionButton.InstanceExists(prefab.compart,out selectionButton))
+            //PrefabSelectionButton selectionButton;
+            //if (PrefabSelectionButton.InstanceExists(prefab.compart,out selectionButton))
+            //{
+            //    selectionButton.AddPrefab(prefab);
+            //}
+
+            PrefabCounter counter;
+            if (PrefabCounter.InstanceAvailable(out counter))
             {
-                selectionButton.AddPrefab(prefab);
+                counter.IncrementCount(prefab);
             }
 
             ppo.Destroy();

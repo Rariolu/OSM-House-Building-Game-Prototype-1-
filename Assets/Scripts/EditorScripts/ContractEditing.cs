@@ -33,7 +33,7 @@ public class ContractEditing : ScriptableObject
                     {
                         foreach (Contract contract in contracts)
                         {
-                            string typename = "{0}_{1}".Format(contract.name, contract.finishedConstruction);
+                            string typename = "{0}_{1}".FormatText(contract.name, contract.finishedConstruction);
                             string aggr;
                             if (typenames.ContainsKey(typename))
                             {

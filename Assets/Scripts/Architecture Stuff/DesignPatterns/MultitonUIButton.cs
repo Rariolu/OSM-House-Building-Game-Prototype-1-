@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -47,6 +48,21 @@ public abstract class MultitonUIButton<T, U> : UIButton where T : UIButton
         else
         {
             instances.Add(key, obj);
+        }
+    }
+
+    public static int Length
+    {
+        get
+        {
+            return instances.Count;
+        }
+    }
+    public static T[] Values
+    {
+        get
+        {
+            return instances.Values.ToArray();
         }
     }
 }

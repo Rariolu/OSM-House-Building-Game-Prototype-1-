@@ -14,13 +14,23 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
     {
         SetInstance(this);
     }
+
+    public static Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Quaternion rotation)
+    {
+        return rotation * (point - pivot) + pivot;
+    }
+    Vector3 rotatePointAroundAxis(Vector3 point, float angle, Vector3 axis)
+    {
+        Quaternion q = Quaternion.AngleAxis(angle, axis);
+        return q * point; //Note: q must be first (point * q wouldn't compile)
+    }
     /// <summary>
     /// Rotate around the current floor by a given angle (within a time limit).
     /// </summary>
     /// <param name="angle"></param>
     /// <param name="time"></param>
     /// <returns></returns>
-    IEnumerator Rotate(float angle, float time)
+    IEnumerator Rotate(int angle, float time)
     {
         canRotate = false;
         float d = 0;
@@ -29,20 +39,33 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
         Transform floorTransform = Floor.FocusedFloor.transform;
         Vector3 floorUp = floorTransform.up;
         Vector3 floorPos = floorTransform.position;
+        
+        float current = 0;
+        //Vector3 fullRotation = RotatePointAroundPivot(transform.position, floorUp, Quaternion.Euler(0, angle*mult,0));
+        Vector3 fullRotation = rotatePointAroundAxis(transform.position, angle * mult, floorUp);
         while (d < angle)
         {
             float a = angle * Time.deltaTime;
             d += a * speed;
-            transform.RotateAround(floorPos, floorUp, a * mult * speed);
+            float c = a * mult * speed;
+            current += c;
+            transform.RotateAround(floorPos, floorUp, c);
             yield return 0;
         }
+        angle = angle * mult;
+        float rest = angle > 0 ? angle - current : current - (float)angle;
+        Debug.LogFormat("Rest: {0}; Current: {1}; Angle: {2};", rest.ToString(),current.ToString(),angle.ToString());
+        transform.RotateAround(floorPos, floorUp, rest);
+
+        //transform.position = fullRotation;
+        //transform.LookAt(floorPos);
         canRotate = true;
     }
     /// <summary>
     /// Rotate around the current floor by a given angle.
     /// </summary>
     /// <param name="angle"></param>
-    public void RotateCamera(float angle)
+    public void RotateCamera(int angle)
     {
         if (canRotate)
         {
@@ -89,7 +112,7 @@ public class OtherCameraTest : NullableInstanceScriptSingleton<OtherCameraTest>
             if (Vector3.Distance(originalMousePosition, newPos) > minSwipeDistance)
             {
                 Vector3 dir = Vector3.Normalize(newPos - originalMousePosition);
-                float angle = dir.x > 0 ? 90f : -90f;
+                int angle = dir.x > 0 ? 90 : -90;
                 RotateCamera(angle);
 
             }

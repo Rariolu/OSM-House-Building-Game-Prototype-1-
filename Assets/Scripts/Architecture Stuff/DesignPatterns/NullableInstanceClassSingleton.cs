@@ -16,6 +16,11 @@ public abstract class NullableInstanceClassSingleton<T> where T : class
     /// </summary>
     private static T instance;
 
+    public static void Clear()
+    {
+        SetInstance(null);
+    }
+
     /// <summary>
     /// A boolean method which returns true if an instance
     /// of this class has been assigned. It also outputs

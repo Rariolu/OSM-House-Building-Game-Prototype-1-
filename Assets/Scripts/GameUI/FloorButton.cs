@@ -15,6 +15,18 @@ using UnityEngine.UI;
 public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
 {
     public FLOORTYPE floorType;
+    static FLOORTYPE currentFloor = FLOORTYPE.GROUND_FLOOR;
+    public static FLOORTYPE CurrentFloor
+    {
+        get
+        {
+            return currentFloor;
+        }
+        private set
+        {
+            currentFloor = value;
+        }
+    }
     public bool initiallyVisible = false;
     void Awake()
     {
@@ -32,11 +44,20 @@ public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
     {
         MakeVisible(false);
 
+        CurrentFloor = floorType;
+
         Floor floor;
 
         if (Floor.InstanceExists(floorType, out floor))
         {
             floor.Focus();
+        }
+
+        CompartPrefabSystem compartSystem;
+        if (CompartPrefabSystem.InstanceAvailable(out compartSystem))
+        {
+            compartSystem.SwitchFloors(floorType);
+            //compartSystem.SwitchIcons()
         }
 
         const int floorQuantity = 3;

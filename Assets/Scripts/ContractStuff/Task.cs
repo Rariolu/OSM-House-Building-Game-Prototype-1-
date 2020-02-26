@@ -11,6 +11,6 @@ public struct Task
     public TASKTYPE type;
     public override string ToString()
     {
-        return "{0}: {1};".Format(type, number);
+        return "{0}: {1};".FormatText(type, number);
     }
 }

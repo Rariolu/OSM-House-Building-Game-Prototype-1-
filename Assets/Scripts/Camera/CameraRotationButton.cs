@@ -9,7 +9,7 @@ public class CameraRotationButton : UIButton
     /// <summary>
     /// The angle of rotation around the floor's axis.
     /// </summary>
-    public float rotationAngle = 90f;
+    public int rotationAngle = 90;
     // Use this for initialization
     protected override void Start()
     {
