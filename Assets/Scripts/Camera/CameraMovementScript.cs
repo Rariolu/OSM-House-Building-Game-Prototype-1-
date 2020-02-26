@@ -14,9 +14,31 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
     Vector3 originalMousePosition;
     public float speed = 2;
     bool storedMousePos = false;
+
+    /// <summary>
+    /// A bool which determines whether or not the camera changes
+    /// its y position when the floor is changed.
+    /// </summary>
+    public bool moveY = true;
+    float yIntercept;
+    float originalY;
     private void Awake()
     {
         SetInstance(this);
+        
+    }
+    private void Start()
+    {
+        originalY = transform.position.y;
+        Floor ground;
+        if (Floor.InstanceExists(FLOORTYPE.GROUND_FLOOR,out ground))
+        {
+            yIntercept = originalY - ground.transform.position.y;
+        }
+        else
+        {
+            yIntercept = 8.8f;
+        }
     }
     void MouseDown()
     {
@@ -62,7 +84,9 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
             yield return 0;
         }
         currentPosition = newIndex;
-        transform.position = newPosition.position;
+        Vector3 newPos = newPosition.position;
+        newPos.y = moveY ? floorPos.y + yIntercept : originalY;
+        transform.position = newPos;//newPosition.position;
         transform.rotation = Quaternion.Euler(newPosition.rotation);
         canRotate = true;
     }
@@ -104,7 +128,10 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
     /// <param name="y"></param>
     public void SetFloor(float y)
     {
-        transform.position = new Vector3(transform.position.x, 8.8f + y, transform.position.z);
+        if (moveY)
+        {
+            transform.position = new Vector3(transform.position.x, y + yIntercept, transform.position.z);
+        }
     }
 
     // Update is called once per frame

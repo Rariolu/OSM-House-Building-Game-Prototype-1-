@@ -1283,8 +1283,9 @@ MonoBehaviour:
     rotation: {x: 5, y: -180, z: -5}
   - position: {x: -11.5, y: 11.3014, z: -20.3}
     rotation: {x: 5, y: -90, z: -5}
-  minSwipeDistance: 10
+  minSwipeDistance: 30
   speed: 2
+  moveY: 1
 --- !u!4 &153405619
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,7 +1294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153405617}
   m_LocalRotation: {x: 0.043577887, y: 0.0019026523, z: -0.043577887, w: 0.99809736}
-  m_LocalPosition: {x: -20.3, y: 7.2, z: 11.5}
+  m_LocalPosition: {x: -20.3, y: 11.3014, z: 11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
