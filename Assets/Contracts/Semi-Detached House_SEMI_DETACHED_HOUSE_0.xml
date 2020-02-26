@@ -390,4 +390,5 @@
 		<task number="300" type="HOUSE_WIDTH" />
 		<task number="300" type="HOUSE_DEPTH" />
 	</tasks>
+	<time>4</time>
 </contract>

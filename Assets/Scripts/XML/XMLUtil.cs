@@ -46,6 +46,7 @@ public static class XMLUtil
     const string floortype = "floortype";
     const string compart = "compart";
     const string prefabPosition = "prefabposition";
+    const string time = "time";
     #endregion
 
     /// <summary>
@@ -158,6 +159,17 @@ public static class XMLUtil
             {
                 XmlReader tasksSubTree = xmlReader.ReadSubtree();
                 contract.tasks = ReadTasks(tasksSubTree);
+            }
+
+            if (xmlReader.IsStartElement(time))
+            {
+                xmlReader.Read();
+                string strTime = xmlReader.Value;
+                uint time;
+                if (uint.TryParse(strTime,out time))
+                {
+                    contract.time = time;
+                }
             }
         }
 
@@ -421,6 +433,10 @@ public static class XMLUtil
         WriteStandardArray(ref xmlWriter, standards, contract.standards);
 
         WriteTaskArray(ref xmlWriter, tasks, contract.tasks);
+
+        xmlWriter.WriteStartElement(time);
+        xmlWriter.WriteValue(contract.time.ToString());
+        xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
     }
