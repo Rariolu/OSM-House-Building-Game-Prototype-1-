@@ -42,18 +42,23 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
     {
         canRotate = false;
         float d = 0;
-        float time = 1f / speed;
-        CameraPosition cPosition = cameraPositions[currentPosition % cameraPositions.Length];
+        int mult = (int)cameraDir;
+        const int angle = 90;
+        Transform floorTransform = Floor.FocusedFloor.transform;
+        Vector3 floorUp = floorTransform.up;
+        Vector3 floorPos = floorTransform.position;
         int newIndex = currentPosition + (int)cameraDir;
         newIndex = newIndex < 0 ? cameraPositions.Length + newIndex : newIndex;
-        Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex,newIndex % cameraPositions.Length);
+        Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex, newIndex % cameraPositions.Length);
         CameraPosition newPosition = cameraPositions[newIndex % cameraPositions.Length];
-        while (d < time)
+        float current = 0;
+        while (d < angle)
         {
-            d += Time.deltaTime;
-            transform.position = Vector3.Lerp(cPosition.position, newPosition.position, d / time);
-            Vector3 vec3Rotation = Vector3.Lerp(cPosition.rotation, newPosition.rotation, d / time);
-            transform.rotation = Quaternion.Euler(vec3Rotation);
+            float a = angle * Time.deltaTime;
+            d += a * speed;
+            float c = a * mult * speed;
+            current += c;
+            transform.RotateAround(floorPos, floorUp, c);
             yield return 0;
         }
         currentPosition = newIndex;
@@ -61,6 +66,29 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         transform.rotation = Quaternion.Euler(newPosition.rotation);
         canRotate = true;
     }
+    //IEnumerator Rotate(CAMERA_DIR cameraDir, float speed)
+    //{
+    //    canRotate = false;
+    //    float d = 0;
+    //    float time = 1f / speed;
+    //    CameraPosition cPosition = cameraPositions[currentPosition % cameraPositions.Length];
+    //    int newIndex = currentPosition + (int)cameraDir;
+    //    newIndex = newIndex < 0 ? cameraPositions.Length + newIndex : newIndex;
+    //    Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex,newIndex % cameraPositions.Length);
+    //    CameraPosition newPosition = cameraPositions[newIndex % cameraPositions.Length];
+    //    while (d < time)
+    //    {
+    //        d += Time.deltaTime;
+    //        transform.position = Vector3.Lerp(cPosition.position, newPosition.position, d / time);
+    //        Vector3 vec3Rotation = Vector3.Lerp(cPosition.rotation, newPosition.rotation, d / time);
+    //        transform.rotation = Quaternion.Euler(vec3Rotation);
+    //        yield return 0;
+    //    }
+    //    currentPosition = newIndex;
+    //    transform.position = newPosition.position;
+    //    transform.rotation = Quaternion.Euler(newPosition.rotation);
+    //    canRotate = true;
+    //}
     public void RotateCamera(CAMERA_DIR cameraDir)
     {
         if (canRotate)
@@ -68,6 +96,17 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
             StartCoroutine(Rotate(cameraDir, speed));
         }
     }
+
+    /// <summary>
+    /// Navigate the camera towards a given y position
+    /// (used to alternate between the different floors of the building.
+    /// </summary>
+    /// <param name="y"></param>
+    public void SetFloor(float y)
+    {
+        transform.position = new Vector3(transform.position.x, 8.8f + y, transform.position.z);
+    }
+
     // Update is called once per frame
     void Update()
     {

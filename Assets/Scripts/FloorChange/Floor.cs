@@ -80,12 +80,19 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         //correct prefabs.
         PrefabSelectionButton.SetCurrentFloorAllButtons(floorType);
 
-        OtherCameraTest camControl;
-        if (OtherCameraTest.InstanceAvailable(out camControl))
+        //OtherCameraTest camControl;
+        //if (OtherCameraTest.InstanceAvailable(out camControl))
+        //{
+        //    camControl.SetFloor(transform.position.y);
+
+        //}
+
+        CameraMovementScript camControl;
+        if (CameraMovementScript.InstanceAvailable(out camControl))
         {
             camControl.SetFloor(transform.position.y);
-            
         }
+
         for(int i = 0; i < 3; i++)
         {
             FLOORTYPE ftype = (FLOORTYPE)i;

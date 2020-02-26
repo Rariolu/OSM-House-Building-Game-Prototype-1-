@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\StringBuilderPro.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Util.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ViewableStack.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotationButton.cs" />
     <Compile Include="Assets\Scripts\Camera\OtherCameraTest.cs" />
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
