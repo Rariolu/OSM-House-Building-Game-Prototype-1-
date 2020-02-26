@@ -42,6 +42,7 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
                 counter.SetCount(collection.prefab, collection.quantity);
                 AddPrefabToDict(collection.prefab);
             }
+            SwitchFloors(FLOORTYPE.GROUND_FLOOR);
         }
 
     }
@@ -57,34 +58,75 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
         }
         return new List<Prefab>();
     }
-    public void SwitchIcons(PREFAB_COMPART compart, FLOORTYPE floor)
+    public void SwitchFloors(FLOORTYPE floor)
     {
-        PrefabCounter counter;
-        if (PrefabCounter.InstanceAvailable(out counter))
+        foreach (PREFAB_COMPART compart in Util.GetEnumValues<PREFAB_COMPART>())
         {
             List<Prefab> prefabs = GetPrefabs(compart, floor);
-            //PrefabIconScript[] icons = PrefabIconScript.Values;//PrefabIcons;
-            PrefabIconScript[] icons = PrefabIconScript.GetIcons(compart);
-            for (int i = 0; i < icons.Length; i++)
+            PrefabIconGrid grid;
+            if (PrefabIconGrid.InstanceExists(compart, out grid))
             {
-                PrefabIconScript icon = icons[i];
-                if (i < prefabs.Count)
-                {
-                    if (counter.GetCount(prefabs[i]) > 0)
-                    {
-                        icon.gameObject.SetActive(true);
-                        icon.Prefab = prefabs[i];
-                    }
-                    else
-                    {
-                        icon.gameObject.SetActive(false);
-                    }
-                }
-                else
-                {
-                    icon.gameObject.SetActive(false);
-                }
+                grid.SetPrefabs(prefabs);
             }
         }
     }
+
+    public void SwitchCompart(PREFAB_COMPART compart)
+    {
+        foreach (PREFAB_COMPART c in Util.GetEnumValues<PREFAB_COMPART>())
+        {
+            PrefabIconGrid grid;
+            if (PrefabIconGrid.InstanceExists(c,out grid))
+            {
+                grid.SetActive(c == compart);
+            }
+        }
+    }
+
+    //public void SwitchIcons(PREFAB_COMPART compart, FLOORTYPE floor)
+    //{
+    //    PrefabCounter counter;
+    //    if (PrefabCounter.InstanceAvailable(out counter))
+    //    {
+    //        List<Prefab> prefabs = GetPrefabs(compart, floor);
+    //        foreach(PREFAB_COMPART c in Util.GetEnumValues<PREFAB_COMPART>())
+    //        {
+    //            PrefabIconGrid grid;
+    //            if (PrefabIconGrid.InstanceExists(c, out grid))
+    //            {
+    //                if (c == compart)
+    //                {
+    //                    grid.SetPrefabs(prefabs);
+    //                    grid.SetActive(true);
+    //                }
+    //                else
+    //                {
+    //                    grid.SetActive(false);
+    //                }
+    //            }
+    //        }
+    //        //PrefabIconScript[] icons = PrefabIconScript.Values;//PrefabIcons;
+    //        //PrefabIconScript[] icons = PrefabIconScript.GetIcons(compart);
+    //        //for (int i = 0; i < icons.Length; i++)
+    //        //{
+    //        //    PrefabIconScript icon = icons[i];
+    //        //    if (i < prefabs.Count)
+    //        //    {
+    //        //        if (counter.GetCount(prefabs[i]) > 0)
+    //        //        {
+    //        //            icon.gameObject.SetActive(true);
+    //        //            icon.Prefab = prefabs[i];
+    //        //        }
+    //        //        else
+    //        //        {
+    //        //            icon.gameObject.SetActive(false);
+    //        //        }
+    //        //    }
+    //        //    else
+    //        //    {
+    //        //        icon.gameObject.SetActive(false);
+    //        //    }
+    //        //}
+    //    }
+    //}
 }
