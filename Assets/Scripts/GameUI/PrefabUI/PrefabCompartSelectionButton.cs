@@ -57,7 +57,18 @@ public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelect
         
         if (CompartPrefabSystem.InstanceAvailable(out compartSystem))
         {
-            compartSystem.SwitchCompart(compart);
+            if (currentlyActive)
+            {
+                compartSystem.SwitchCompart(compart);
+            }
+            else
+            {
+                PrefabIconGrid grid;
+                if (PrefabIconGrid.InstanceExists(compart, out grid))
+                {
+                    grid.SetActive(false);
+                }
+            }
             //compartSystem.SwitchIcons(currentlyActive ? compart : PREFAB_COMPART.NONE, FloorButton.CurrentFloor);
         }
     }
