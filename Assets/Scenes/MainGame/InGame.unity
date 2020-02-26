@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  minSwipeDistance: 10
+  minSwipeDistance: 30
 --- !u!1001 &154996052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5134,7 +5134,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.7e-44, y: 3e-45, z: 1e-45, w: 0}
+  m_BoundingSphereOverride: {x: 0.03125, y: 0.171875, z: 0.03515625, w: -0.0390625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9

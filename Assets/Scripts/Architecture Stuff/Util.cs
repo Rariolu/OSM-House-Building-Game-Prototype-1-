@@ -104,6 +104,7 @@ public static class Util
     /// <returns>True if a valid match is found, false if not</returns>
     public static bool EnumTryParse<T>(this string text, out T value) where T : struct
     {
+        //
         value = default(T);
         Type type = typeof(T);
         if (!type.IsEnum || text == null)

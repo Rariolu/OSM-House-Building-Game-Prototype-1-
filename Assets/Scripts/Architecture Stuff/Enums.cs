@@ -86,6 +86,12 @@ public enum PREFAB_COMPART
     NONE
 }
 
+public enum PREFAB_POSITION
+{
+    EXTERIOR,
+    INTERIOR
+}
+
 /// <summary>
 /// An enum representing all the different
 /// "scenes" that can be loaded by the Unity

@@ -39,18 +39,23 @@ public class Contract
     /// </summary>
     public string name;
 
+
+    public Vector3[] positionsTaken;
     /// <summary>
     /// The prefabs that the player has available to them.
     /// </summary>
-    //public Prefab[] prefabs;
-    public Vector3[] positionsTaken;
     public PrefabCollection[] prefabCollections;
     public Standard[] standards;
     public Task[] tasks;
 
+    /// <summary>
+    /// The ideal amount of time to deliver the contract in.
+    /// </summary>
+    [SerializeField]
+    public uint time;
+
     public override bool Equals(object obj)
     {
-
         if (obj is Contract)
         {
             return this == (obj as Contract);
