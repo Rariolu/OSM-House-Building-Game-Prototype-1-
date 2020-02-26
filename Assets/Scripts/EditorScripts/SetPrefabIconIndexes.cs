@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 public class SetPrefabIconIndexes : ScriptableObject
 {
     [MenuItem("Tools/PrefabIcons/SetIndexes")]
@@ -48,3 +50,5 @@ public class SetPrefabIconIndexes : ScriptableObject
         }
     }
 }
+
+#endif
