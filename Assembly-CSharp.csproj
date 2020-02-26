@@ -67,6 +67,7 @@
     <Compile Include="Assets\IconGenerator\TextureScale.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Audio\UpdateableAudioSource.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\AutoList.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonClass.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonScript.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
@@ -81,8 +82,6 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\StringBuilderPro.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Util.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ViewableStack.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotationButton.cs" />
     <Compile Include="Assets\Scripts\Camera\OtherCameraTest.cs" />
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
@@ -95,6 +94,7 @@
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
     <Compile Include="Assets\Scripts\EndCondition\EndUtil.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
@@ -126,6 +126,11 @@
     <Compile Include="Assets\Scripts\GameUI\PauseUI\PauseButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabIconMultiple.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabSelectionButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCompartSelectionButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabSelectionButtonIndex.cs" />
     <Compile Include="Assets\Scripts\GameUI\UndoButton.cs" />
     <Compile Include="Assets\Scripts\HouseViewing\House.cs" />
     <Compile Include="Assets\Scripts\HouseViewing\HouseViewSingle.cs" />

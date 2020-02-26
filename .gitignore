@@ -58,3 +58,10 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+/Unity.CollabProxy.Editor.csproj
+/Unity.TextMeshPro.Editor.csproj
+/Unity.Rider.Editor.csproj
+/Unity.TextMeshPro.csproj
+/UnityEditor.TestRunner.csproj
+/Unity.VSCode.Editor.csproj
+/UnityEngine.TestRunner.csproj

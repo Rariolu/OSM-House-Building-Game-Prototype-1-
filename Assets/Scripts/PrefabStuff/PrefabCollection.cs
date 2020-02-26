@@ -25,6 +25,6 @@ public struct PrefabCollection
 
     public override string ToString()
     {
-        return "\"{0}\" x {1};".Format(prefab.ToString(), quantity);
+        return "\"{0}\" x {1};".FormatText(prefab.ToString(), quantity);
     }
 }

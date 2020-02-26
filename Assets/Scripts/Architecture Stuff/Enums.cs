@@ -89,6 +89,13 @@ public enum PREFAB_COMPART
     WALL,
     FLOOR,
     ROOF,
+    NONE
+}
+
+public enum PREFAB_POSITION
+{
+    EXTERIOR,
+    INTERIOR
 }
 
 /// <summary>
