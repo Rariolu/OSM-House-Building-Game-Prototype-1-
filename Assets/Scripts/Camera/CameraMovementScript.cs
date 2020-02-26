@@ -9,7 +9,14 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
 {
     bool canRotate = true;
     int currentPosition = 0;
+
+    /// <summary>
+    /// The camera positions in anti-clockwise order.
+    /// Used to guarantee that the camera gets to the correct
+    /// position after rotation.
+    /// </summary>
     public CameraPosition[] cameraPositions;
+
     public float minSwipeDistance = 10f;
     Vector3 originalMousePosition;
     public float speed = 2;
@@ -86,33 +93,11 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         currentPosition = newIndex;
         Vector3 newPos = newPosition.position;
         newPos.y = moveY ? floorPos.y + yIntercept : originalY;
-        transform.position = newPos;//newPosition.position;
+        transform.position = newPos;
         transform.rotation = Quaternion.Euler(newPosition.rotation);
         canRotate = true;
     }
-    //IEnumerator Rotate(CAMERA_DIR cameraDir, float speed)
-    //{
-    //    canRotate = false;
-    //    float d = 0;
-    //    float time = 1f / speed;
-    //    CameraPosition cPosition = cameraPositions[currentPosition % cameraPositions.Length];
-    //    int newIndex = currentPosition + (int)cameraDir;
-    //    newIndex = newIndex < 0 ? cameraPositions.Length + newIndex : newIndex;
-    //    Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex,newIndex % cameraPositions.Length);
-    //    CameraPosition newPosition = cameraPositions[newIndex % cameraPositions.Length];
-    //    while (d < time)
-    //    {
-    //        d += Time.deltaTime;
-    //        transform.position = Vector3.Lerp(cPosition.position, newPosition.position, d / time);
-    //        Vector3 vec3Rotation = Vector3.Lerp(cPosition.rotation, newPosition.rotation, d / time);
-    //        transform.rotation = Quaternion.Euler(vec3Rotation);
-    //        yield return 0;
-    //    }
-    //    currentPosition = newIndex;
-    //    transform.position = newPosition.position;
-    //    transform.rotation = Quaternion.Euler(newPosition.rotation);
-    //    canRotate = true;
-    //}
+
     public void RotateCamera(CAMERA_DIR cameraDir)
     {
         if (canRotate)
