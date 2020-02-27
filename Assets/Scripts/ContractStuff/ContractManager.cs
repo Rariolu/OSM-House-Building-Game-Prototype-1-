@@ -28,21 +28,32 @@ public class ContractManager : MonoBehaviour
     }
     private void Start()
     {
-        foreach (Contract contract in contracts)
+        ContractSelectionScript[] contractSelections = GetComponentsInChildren<ContractSelectionScript>();
+        for (int i = 0; i < contractSelections.Length; i++)
+        //foreach (Contract contract in contracts)
         {
-            ContractSelection cs = new ContractSelection(contract);
-            cs.Click += ContractSelection_Click;
-            cs.SetParent(transform);
-            cs.SetPosition(new Vector2(x, y));
-            if (x < (1f-add))
+            if (i < contracts.Length)
             {
-                x += add;
+                Contract contract = contracts[i];
+                contractSelections[i].SetContract(contract);
             }
             else
             {
-                y += add+0.05f;
-                x = 0f;
+                contractSelections[i].SetActive(false);
             }
+            //ContractSelection cs = new ContractSelection(contract);
+            //cs.Click += ContractSelection_Click;
+            //cs.SetParent(transform);
+            //cs.SetPosition(new Vector2(x, y));
+            //if (x < (1f-add))
+            //{
+            //    x += add;
+            //}
+            //else
+            //{
+            //    y += add+0.05f;
+            //    x = 0f;
+            //}
         }
     }
 }

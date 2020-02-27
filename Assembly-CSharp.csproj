@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\ContractStuff\Contract.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelection.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />

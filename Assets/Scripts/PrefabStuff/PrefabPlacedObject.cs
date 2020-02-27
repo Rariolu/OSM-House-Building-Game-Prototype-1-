@@ -180,6 +180,11 @@ public class PrefabPlacedObject
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
         }
         intersectionPoints.Clear();
+        ConstructionUtil util;
+        if (ConstructionUtil.InstanceAvailable(out util))
+        {
+            util.IncrementDestruction();
+        }
     }
 
     public void SetSceneParent()
