@@ -14,11 +14,22 @@ public class ConstructionUtil : NullableInstanceClassSingleton<ConstructionUtil>
             return contract;
         }
     }
+    int destroyed = 0;
+    public int Destroyed
+    {
+        get
+        {
+            return destroyed;
+        }
+    }
     ConstructionUtil(Contract c)
     {
         contract = c;
     }
-
+    public void IncrementDestruction()
+    {
+        destroyed++;
+    }
     public static void SetContract(Contract c)
     {
         SetInstance(new ConstructionUtil(c));
