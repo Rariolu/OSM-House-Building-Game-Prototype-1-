@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{76BFAD19-78B2-3693-EE48-A14176CFBD29}</ProjectGuid>
+    <ProjectGuid>{0EF0840C-274B-573E-61AE-3A400990D66D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
