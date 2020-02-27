@@ -10,7 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{0EF0840C-274B-573E-61AE-3A400990D66D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -95,7 +96,6 @@
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelection.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
-    <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionWrapper.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
