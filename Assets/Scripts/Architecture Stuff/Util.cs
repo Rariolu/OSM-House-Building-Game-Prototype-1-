@@ -204,6 +204,25 @@ public static class Util
     }
 
     /// <summary>
+    /// Returns true if a prefab has been destroyed in the current game.
+    /// </summary>
+    /// <returns></returns>
+    public static bool PrefabHasBeenDestroyed()
+    {
+        //Finds construction util and uses that to determine if
+        //a prefab has been destroyed.
+        ConstructionUtil util;
+        if (ConstructionUtil.InstanceAvailable(out util))
+        {
+            return util.Destroyed > 0;
+        }
+        //This shouldn't be possible if the game has begun,
+        //but if a util isn't available then it's presumed
+        //that a prefab hasn't been destroyed.
+        return false;
+    }
+
+    /// <summary>
     /// Open the UI scene over the current one.
     /// </summary>
     public static void LoadGameUI()
