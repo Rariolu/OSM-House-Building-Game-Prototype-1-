@@ -146,8 +146,6 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         {
             groundFloor.Focus();
         }
-        //Open UI scene over this one.
-        //Util.LoadGameUI();
     }
 
     public void Undo()
@@ -158,12 +156,6 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             ppo.SnapPointTrigger.Snapped = false;
             Prefab prefab = ppo.Prefab;
             takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
-
-            //PrefabSelectionButton selectionButton;
-            //if (PrefabSelectionButton.InstanceExists(prefab.compart,out selectionButton))
-            //{
-            //    selectionButton.AddPrefab(prefab);
-            //}
 
             PrefabCounter counter;
             if (PrefabCounter.InstanceAvailable(out counter))

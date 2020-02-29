@@ -47,9 +47,4 @@ public class ContractSelectionScript : MonoBehaviour
             Debug.Log("Contract was null.");
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

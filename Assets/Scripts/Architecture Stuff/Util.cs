@@ -38,7 +38,6 @@ public static class Util
     /// The scenes that have been loaded, used to preserve scene continuity
     /// so that the "previous" scene can be easily identified.
     /// </summary>
-    //static ViewableStack<SceneStruct> sceneStack = new ViewableStack<SceneStruct>();
     static ViewableStack<SCENE> sceneStack = new ViewableStack<SCENE>();
 
     /// <summary>
@@ -65,12 +64,6 @@ public static class Util
         {
             gameScene.SetActive(false);
         }
-        //SceneObjectScript gameUIScene;
-        //if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-        //{
-        //    gameUIScene.SetActive(false);
-        //}
-       
     }
 
     /// <summary>
@@ -298,16 +291,6 @@ public static class Util
     public static void PushScene(SCENE scene)
     {
         sceneStack.Push(scene);
-        //if (scene != SCENE.InGameUI || StackCount < 1)
-        //{
-        //    sceneStack.Push(scene);//(new SceneStruct(scene));
-        //}
-        //else
-        //{
-        //    SCENE top = sceneStack.Pop();
-        //    //SceneStruct topStruct = sceneStack.Pop();
-        //    topStruct.scenes.Add(scene);
-        //}
     }
 
     /// <summary>

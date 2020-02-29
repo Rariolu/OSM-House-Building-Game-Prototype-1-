@@ -13,7 +13,7 @@ public class PrefabIconGrid : MultitonScript<PrefabIconGrid,PREFAB_COMPART>
     // Start is called before the first frame update
     void Start()
     {
-        PrefabIconScript[] iconArr = GetComponentsInChildren<PrefabIconScript>();//PrefabIconScript.GetIcons(compart);
+        PrefabIconScript[] iconArr = GetComponentsInChildren<PrefabIconScript>();
         foreach(PrefabIconScript icon in iconArr)
         {
             if (icons.ContainsKey(icon.index))

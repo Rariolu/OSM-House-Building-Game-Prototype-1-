@@ -19,43 +19,20 @@ public class BrochureUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (IsBrochureActive)
-        {
-            BrochureMenuCanvas.SetActive(true);
-            Time.timeScale = 0;
-           // Cursor.visible = true;
-           // Cursor.lockState = CursorLockMode.None;
-        }
-        else
-        {
-            BrochureMenuCanvas.SetActive(false);
-            Time.timeScale = 1;
-          //  Cursor.visible = false;
-        }
-         if (Input.GetKeyDown(KeyCode.R))
-         {
-             IsBrochureActive = !IsBrochureActive;
-             Time.timeScale = 0;
-         }*/
+
     }
     public void BrochureActive()
     {
-        {
-            BrochureMenuCanvas.SetActive(true);
-
-        }
+        BrochureMenuCanvas.SetActive(true);
     }
     public void Continue()
     {
         IsBrochureActive = false;
         Time.timeScale = 1;
-     //   Cursor.visible = false;
     }
 
     public void SellHouse()
     {
         Util.LoadScene(SCENE.ContractSelection);
-        //Application.LoadLevel("ContractSelection");
     }
-
 }

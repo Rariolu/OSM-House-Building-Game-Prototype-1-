@@ -18,7 +18,6 @@ public delegate void UIButtonClick(UIButton sender);
 /// Class which represents a clickable UI object
 /// (an alternative to using Unity's "UnityEngine.UI.Button").
 /// </summary>
-//[RequireComponent(typeof(Image))]
 public class UIButton : MonoBehaviour
 {
     /// <summary>
@@ -35,7 +34,7 @@ public class UIButton : MonoBehaviour
             return image ?? (image = GetComponent<Image>());
         }
     }
-    // Start is called before the first frame update
+    
     protected virtual void Start()
     {
         EventTrigger eventTrigger = gameObject.AddComponent<EventTrigger>();

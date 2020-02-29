@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class BuildButton : MonoBehaviour
 {
-
     bool IsBuildActive = false;
     public GameObject btnWallPrefabs;
     public GameObject btnFloorPrefabs;
     public GameObject btnRoofPrefabs;
+
+    public void BuildActive()
+    {
+        IsBuildActive = !IsBuildActive;
+        btnWallPrefabs.SetActive(IsBuildActive);
+        btnFloorPrefabs.SetActive(IsBuildActive);
+        btnRoofPrefabs.SetActive(IsBuildActive);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,26 +24,4 @@ public class BuildButton : MonoBehaviour
         btnFloorPrefabs.SetActive(false);
         btnRoofPrefabs.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void BuildActive()
-    {
-        IsBuildActive = !IsBuildActive;
-        
-        btnWallPrefabs.SetActive(IsBuildActive);
-        
-        
-        btnFloorPrefabs.SetActive(IsBuildActive);
-        
-        
-        btnRoofPrefabs.SetActive(IsBuildActive);
-        
-    }
-
-
 }

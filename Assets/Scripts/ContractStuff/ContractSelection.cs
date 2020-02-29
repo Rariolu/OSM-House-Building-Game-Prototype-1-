@@ -33,15 +33,9 @@ public class ContractSelection
         gameObject.name = contract.name;
         Image image = gameObject.AddComponent<Image>();
         image.color = backColor = new Color(0f, 0.5864725f, 1f, 0.5f);
-        //Text label = gameObject.AddComponent<Text>();
-        //label.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
-        //label.fontSize = 20;
-        //label.text = contract.name;
         rectTransform = image.rectTransform;//gameObject.AddComponent<RectTransform>();//label.rectTransform;
         AddLabel(contract.name);
         AddStartButton();
-        //gameObject.SetEvent((data) => { if (Click != null) Click(this); });
-        //SetClick(gameObject, (data) => { if (Click != null) Click(this); });
         AddBrochureButton();
     }
     void AddLabel(string text)

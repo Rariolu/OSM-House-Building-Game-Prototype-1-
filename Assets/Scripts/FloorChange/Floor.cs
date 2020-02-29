@@ -76,16 +76,10 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
     {
         gameObject.SetActive(true);
         FocusedFloor = this;
+
         //Set the current floortype of the panel so it displays
         //correct prefabs.
         PrefabSelectionButton.SetCurrentFloorAllButtons(floorType);
-
-        //OtherCameraTest camControl;
-        //if (OtherCameraTest.InstanceAvailable(out camControl))
-        //{
-        //    camControl.SetFloor(transform.position.y);
-
-        //}
 
         CameraMovementScript camControl;
         if (CameraMovementScript.InstanceAvailable(out camControl))
@@ -107,7 +101,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         }
     }
     public static Floor FocusedFloor;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Material floorMat;

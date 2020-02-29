@@ -29,20 +29,5 @@ public class BackButton : UIButton
     public void BackButton_Click(UIButton sender)
     {
         Util.ReturnToPreviousScene();
-        //SceneObjectScript prev;
-        //if (SceneObjectScript.InstanceExists(previousScene,out prev))
-        //{
-        //    prev.SetActive(true);
-        //    //SceneObjectScript uiScene;
-        //    //if (previousScene == SCENE.InGame && SceneObjectScript.InstanceExists(SCENE.InGameUI,out uiScene))
-        //    //{
-        //    //    uiScene.SetActive(true);
-        //    //}
-        //    Util.UnloadScene(currentScene);
-        //}
-        //else
-        //{
-        //    Debug.LogFormat("Previous Scene {0} doesn't exist :/",previousScene);
-        //}
     }
 }

@@ -46,14 +46,6 @@ public class ExitMiniGame : UIButton
         if (SceneObjectScript.InstanceExists(scene, out prevScene))
         {
             prevScene.SetActive(true);
-            if (scene == SCENE.InGame)
-            {
-                //SceneObjectScript gameUIScene;
-                //if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-                //{
-                //    gameUIScene.SetActive(true);
-                //}
-            }
         }
         Util.UnloadScene(SCENE.Fixings_MiniGame);
     }
