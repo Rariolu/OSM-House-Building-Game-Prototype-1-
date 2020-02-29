@@ -19,13 +19,6 @@ public class ContractManager : MonoBehaviour
     /// The array of contracts to be displayed
     /// </summary>
     public Contract[] contracts;
-    public float x = 0.05f;
-    public float y = 0.05f;
-    public float add = 0.3f;
-    void ContractSelection_Click(ContractSelection sender)
-    {
-        Util.SetContract(sender.Contract);
-    }
     private void Start()
     {
         ContractSelectionScript[] contractSelections = GetComponentsInChildren<ContractSelectionScript>();

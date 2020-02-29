@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame/InGame.unity
     guid: 5fdeacfe02cee3f4a9f64d7e40753e0b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Deprecated/scenes/InGameUI.unity
     guid: b7afedd62492d1f429911ad090425249
   - enabled: 1
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI_Misc/Options.unity
     guid: 472c1d8089dfb9e4ba46b45500b5bf04
-  - enabled: 1
+  - enabled: 0
     path: Assets/Deprecated/scenes/Intermediate.unity
     guid: 607995db27de947468c7be3ff6ad4b96
   - enabled: 1
