@@ -42,7 +42,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
     }
     void CreateSnapTriggers()
     {
-        float y = transform.position.y+2.5f;
+        float y = transform.position.y;
         for (int x = minBound; x <= maxBound; x++)
         {
             GameObject snapRow = new GameObject();
@@ -52,7 +52,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
             {
                 SnapPoint sp = new SnapPoint(SNAP_POINT_TYPE.EDGE);
                 sp.SetParent(snapRow.transform);
-                Vector3 spPos = new Vector3(spaceInterval * x, y, spaceInterval * z);
+                Vector3 spPos = new Vector3(spaceInterval * x, y+2.5f, spaceInterval * z);
                 sp.SetPosition(spPos);
 
                 SnapPoint spFloor = new SnapPoint(SNAP_POINT_TYPE.FLOOR);
@@ -69,7 +69,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         {
             SnapPoint sp = new SnapPoint(SNAP_POINT_TYPE.ROOF);
             sp.SetParent(transform);
-            sp.SetPosition(new Vector3(roofSnapPos.x,y-2.5f,roofSnapPos.y));
+            sp.SetPosition(new Vector3(roofSnapPos.x,y,roofSnapPos.y));
         }
     }
     public void Focus()
