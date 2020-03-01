@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using System.Collections;
 
 /// <summary>
@@ -15,6 +16,19 @@ public class UpdateableAudioSource : MonoBehaviour
             return _musicInstance;
         }
     }
+
+    public AudioMixerGroup mixerGroup
+    {
+        get
+        {
+            return audiosource.outputAudioMixerGroup;
+        }
+        set
+        {
+            audiosource.outputAudioMixerGroup = value;
+        }
+    }
+
     AudioSource audiosource;
     public AudioClip clip
     {

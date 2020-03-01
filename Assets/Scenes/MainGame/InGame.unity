@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f773799a52eb7c42b1e111fdfffbeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 778f022e8ac28d04fb57d32ab94bf657, type: 2}
   sounds:
   - name: WOOD_0
     clip: {fileID: 8300000, guid: f6940d7da2937ce43bb136e07d3b5744, type: 3}
