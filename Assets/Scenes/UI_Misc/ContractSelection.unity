@@ -475,6 +475,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -488,6 +489,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.8665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -501,6 +503,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -514,6 +517,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -527,6 +531,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: -90, z: 0}
@@ -540,6 +545,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: -90, z: 0}
@@ -553,6 +559,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -566,6 +573,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3556, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -579,6 +587,7 @@ MonoBehaviour:
       prefab:
         compart: 2
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.26, z: 2.503}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -592,6 +601,7 @@ MonoBehaviour:
       prefab:
         compart: 2
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.26, z: 2.503}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -605,6 +615,7 @@ MonoBehaviour:
       prefab:
         compart: 3
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.26, z: 2.503}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -618,6 +629,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -631,6 +643,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -644,6 +657,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -657,6 +671,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -670,6 +685,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -683,6 +699,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -696,6 +713,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -709,6 +727,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -722,6 +741,7 @@ MonoBehaviour:
       prefab:
         compart: 2
         floorType: 1
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 2.503}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -735,6 +755,7 @@ MonoBehaviour:
       prefab:
         compart: 3
         floorType: 2
+        material: 0
         offset:
           offsetPosition: {x: -5.78, y: -2.3665, z: 0.04}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -748,6 +769,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
+        material: 0
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -770,9 +792,6 @@ MonoBehaviour:
     - number: 300
       type: 3
     time: 0
-  x: 0.05
-  y: 0.05
-  add: 0.3
 --- !u!1 &783237486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1110,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f773799a52eb7c42b1e111fdfffbeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: WOOD_0
+    clip: {fileID: 8300000, guid: f6940d7da2937ce43bb136e07d3b5744, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_1
+    clip: {fileID: 8300000, guid: e254a307d1a1a4442a94cec8fdb6fb37, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_2
+    clip: {fileID: 8300000, guid: 423d3b9ea0b71ad4da53d8e7c7b89e21, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_3
+    clip: {fileID: 8300000, guid: dcccfbc1ad17ad8468a522a31fd28720, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
 --- !u!114 &1625858736
 MonoBehaviour:
   m_ObjectHideFlags: 0

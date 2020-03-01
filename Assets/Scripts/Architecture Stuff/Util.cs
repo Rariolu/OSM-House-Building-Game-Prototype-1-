@@ -13,6 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using SysRand = System.Random;
 
 public static class Util
 {
@@ -33,6 +34,8 @@ public static class Util
             Time.timeScale = isPaused ? 0f : 1f;
         }
     }
+
+    public static SysRand rand = new SysRand();
 
     /// <summary>
     /// The scenes that have been loaded, used to preserve scene continuity
