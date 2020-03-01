@@ -9,6 +9,7 @@ public struct Prefab
 {
     public PREFAB_COMPART compart;
     public FLOORTYPE floorType;
+    public MATERIAL material;
     public PrefabOffsetProperties offset;
     public PREFAB_POSITION position;
     public Standard[] properties;

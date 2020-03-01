@@ -52,6 +52,12 @@ public enum LAYER
     IntersectionLayer = 9
 }
 
+public enum MATERIAL
+{
+    GENERIC,
+    WOOD
+}
+
 public enum PREFABTYPE
 {
     PANEL_FRONT_GROUND,

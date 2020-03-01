@@ -47,6 +47,7 @@ public static class XMLUtil
     const string compart = "compart";
     const string prefabPosition = "prefabposition";
     const string time = "time";
+    const string material = "material";
     #endregion
 
     /// <summary>
@@ -265,6 +266,16 @@ public static class XMLUtil
                     prefab.position = pp;
                 }
             }
+            if (subtree.IsStartElement(material))
+            {
+                subtree.Read();
+                string strMat = subtree.Value;
+                MATERIAL mat;
+                if (Util.EnumTryParse(strMat,out mat))
+                {
+                    prefab.material = mat;
+                }
+            }
         }
         return prefab;
     }
@@ -467,6 +478,10 @@ public static class XMLUtil
 
         xmlWriter.WriteStartElement(prefabPosition);
         xmlWriter.WriteValue(prefab.position.ToString());
+        xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(material);
+        xmlWriter.WriteValue(prefab.material.ToString());
         xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
