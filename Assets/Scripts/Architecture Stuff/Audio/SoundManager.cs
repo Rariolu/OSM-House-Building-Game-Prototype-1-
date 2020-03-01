@@ -62,15 +62,17 @@ public class SoundManager : MonoBehaviour
         {
             name = sound.name.ToString()
         };
-        UpdateableAudioSource audiosource = go.AddComponent<UpdateableAudioSource>();
-        audiosource.Initialise();
+        AudioSource audiosource = go.AddComponent<AudioSource>();
+        //UpdateableAudioSource audiosource = go.AddComponent<UpdateableAudioSource>();
+        //audiosource.Initialise();
         audiosource.clip = sound.clip;
         audiosource.loop = sound.loop;
-        audiosource.mixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
+        audiosource.outputAudioMixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
+        //audiosource.mixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
         audiosource.volume = sound.volume;
         //audiosource.volume = sound.volume * IntegratedSoundManager.GetVolume(sound.type) * IntegratedSoundManager.MasterVolume;
-        audiosource.originalVolume = sound.volume;
-        audiosource.soundType = sound.type;
+        //audiosource.originalVolume = sound.volume;
+        //audiosource.soundType = sound.type;
         //audiosource.ID = IntegratedSoundManager.GetId(sound.type);
         //IntegratedSoundManager.AddAudioSource(sound.type, audiosource);
         audiosource.Play();
