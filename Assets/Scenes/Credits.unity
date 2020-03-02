@@ -705,7 +705,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Dominic Cascarino (Artist)\r\nTeetima Gallagher  (Artist)\r\nErik Petnehazi
     (Artist)\r\nMagdalena Theuss (Artist)\r\nEuan Brown (Designer)\r\nRyan Clifton
-    (Designer)\r\nRobbie Coyne (Programmer)\r\nDylan Weir (Programmer)"
+    (Designer)\r\nRobbie Coyne (Programmer)\r\nDylan Weir (Programmer)\nDaniel Butler
+    (Audio)"
 --- !u!222 &1627866487
 CanvasRenderer:
   m_ObjectHideFlags: 0
