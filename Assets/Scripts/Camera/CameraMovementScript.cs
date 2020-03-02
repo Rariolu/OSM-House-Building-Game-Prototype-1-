@@ -72,6 +72,8 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         canRotate = false;
         float d = 0;
         int mult = (int)cameraDir;
+		SOUNDNAME swipeSound = cameraDir == CAMERA_DIR.LEFT ? SOUNDNAME.SWIPE_LEFT : SOUNDNAME.SWIPE_RIGHT;
+		IntegratedSoundManager.PlaySound(swipeSound);
         const int angle = 90;
         Transform floorTransform = Floor.FocusedFloor.transform;
         Vector3 floorUp = floorTransform.up;
