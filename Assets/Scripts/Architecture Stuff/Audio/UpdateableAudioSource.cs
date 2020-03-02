@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using System.Collections;
 
 /// <summary>
@@ -15,6 +16,19 @@ public class UpdateableAudioSource : MonoBehaviour
             return _musicInstance;
         }
     }
+
+    public AudioMixerGroup mixerGroup
+    {
+        get
+        {
+            return audiosource.outputAudioMixerGroup;
+        }
+        set
+        {
+            audiosource.outputAudioMixerGroup = value;
+        }
+    }
+
     AudioSource audiosource;
     public AudioClip clip
     {
@@ -71,10 +85,10 @@ public class UpdateableAudioSource : MonoBehaviour
     {
         audiosource = GetComponent<AudioSource>();
     }
-    public void ResetAudioSourceVolume()
-    {
-        volume = originalVolume * IntegratedSoundManager.GetVolume(soundType) * IntegratedSoundManager.MasterVolume;
-    }
+    //public void ResetAudioSourceVolume()
+    //{
+    //    volume = originalVolume * IntegratedSoundManager.GetVolume(soundType) * IntegratedSoundManager.MasterVolume;
+    //}
     public void Play()
     {
         audiosource.Play();
@@ -86,8 +100,8 @@ public class UpdateableAudioSource : MonoBehaviour
             audiosource.Stop();
         }
     }
-    private void OnDestroy()
-    {
-        IntegratedSoundManager.DeleteAudioSource(soundType, ID);
-    }
+    //private void OnDestroy()
+    //{
+    //    IntegratedSoundManager.DeleteAudioSource(soundType, ID);
+    //}
 }

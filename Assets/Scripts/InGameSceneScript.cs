@@ -146,6 +146,17 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         {
             groundFloor.Focus();
         }
+        foreach(MaterialQuantity mq in materialQuantites)
+        {
+            if (matQuantities.ContainsKey(mq.material))
+            {
+                matQuantities[mq.material] = mq.number;
+            }
+            else
+            {
+                matQuantities.Add(mq.material, mq.number);
+            }
+        }
     }
 
     public void Undo()
@@ -166,4 +177,24 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             ppo.Destroy();
         }
     }
+
+
+    public MaterialQuantity[] materialQuantites;
+    Dictionary<MATERIAL, int> matQuantities = new Dictionary<MATERIAL, int>();
+    public void MaterialPlaced(MATERIAL material)
+    {
+        if (matQuantities.ContainsKey(material))
+        {
+            int soundNum = Util.rand.Next(matQuantities[material]);
+            string name = "{0}_{1}".FormatText(material, soundNum);
+            IntegratedSoundManager.PlaySoundAsync(name);
+        }
+    }
+}
+
+[System.Serializable]
+public struct MaterialQuantity
+{
+    public MATERIAL material;
+    public int number;
 }

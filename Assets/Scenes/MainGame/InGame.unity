@@ -328,7 +328,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f773799a52eb7c42b1e111fdfffbeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  mixer: {fileID: 24100000, guid: 778f022e8ac28d04fb57d32ab94bf657, type: 2}
+  sounds:
+  - name: WOOD_0
+    clip: {fileID: 8300000, guid: f6940d7da2937ce43bb136e07d3b5744, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_1
+    clip: {fileID: 8300000, guid: e254a307d1a1a4442a94cec8fdb6fb37, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_2
+    clip: {fileID: 8300000, guid: 423d3b9ea0b71ad4da53d8e7c7b89e21, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: WOOD_3
+    clip: {fileID: 8300000, guid: dcccfbc1ad17ad8468a522a31fd28720, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
 --- !u!114 &48087867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,6 +3870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xmlBackupFile: Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml
+  materialQuantites:
+  - material: 1
+    number: 4
 --- !u!1001 &495695092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4242,7 +4266,8 @@ AudioSource:
   m_GameObject: {fileID: 564233145}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2244508845833836414, guid: 778f022e8ac28d04fb57d32ab94bf657,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: eecbcceeee9bbbe4fa282248ae2c068d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
@@ -5115,7 +5140,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.7e-43, y: -5.4074065e-22, z: 4.7e-43, w: -6.9e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
@@ -7314,10 +7339,10 @@ RectTransform:
   - {fileID: 166147914}
   - {fileID: 411480661}
   - {fileID: 1448053094}
+  - {fileID: 1798767190}
   - {fileID: 243670911}
   - {fileID: 1712257818}
   - {fileID: 1531176527}
-  - {fileID: 1798767190}
   m_Father: {fileID: 1193149744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11533,7 +11558,7 @@ RectTransform:
   m_Children:
   - {fileID: 1593938643}
   m_Father: {fileID: 1184134574}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

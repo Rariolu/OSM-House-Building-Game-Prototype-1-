@@ -130,6 +130,7 @@ public class PrefabPlacedObject
                     }
                 }
             }
+            gameScene.MaterialPlaced(prefab.material);
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.

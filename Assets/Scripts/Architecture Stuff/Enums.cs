@@ -52,6 +52,12 @@ public enum LAYER
     IntersectionLayer = 9
 }
 
+public enum MATERIAL
+{
+    GENERIC,
+    WOOD
+}
+
 public enum PREFABTYPE
 {
     PANEL_FRONT_GROUND,
@@ -121,7 +127,7 @@ public enum SCENE
 
 public enum SoundType
 {
-    SFX, Music
+    SFX, Music, Master
 }
 
 public enum SNAP_POINT_TYPE
