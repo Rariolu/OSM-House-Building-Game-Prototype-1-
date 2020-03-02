@@ -138,6 +138,11 @@ public enum SNAP_POINT_TYPE
     ROOF
 }
 
+public enum SOUNDNAME
+{
+	MENU_BUTTON_CLICK
+}
+
 public enum STANDARDTYPE
 {
     SAFETY,
