@@ -221,10 +221,10 @@ public static class Util
     /// <summary>
     /// Open the UI scene over the current one.
     /// </summary>
-    public static void LoadGameUI()
-    {
-        LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
-    }
+    //public static void LoadGameUI()
+    //{
+    //    LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
+    //}
 
 
     /// <summary>
