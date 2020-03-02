@@ -127,7 +127,7 @@ public enum SCENE
 
 public enum SoundType
 {
-    SFX, Music
+    SFX, Music, Master
 }
 
 public enum SNAP_POINT_TYPE
