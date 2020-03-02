@@ -42,6 +42,7 @@ public class UIButton : MonoBehaviour
         entry.eventID = EventTriggerType.PointerClick;
         entry.callback.AddListener((data) =>
         {
+			IntegratedSoundManager.PlaySound(SOUNDNAME.MENU_BUTTON_CLICK);
             if (Click != null)
             {
                 Click(this);
