@@ -19,6 +19,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -36,6 +37,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -53,6 +55,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -70,6 +73,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>10</quantity>
@@ -87,6 +91,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>6</quantity>
@@ -104,6 +109,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -121,6 +127,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -138,6 +145,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>3</quantity>
@@ -155,26 +163,10 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>FLOOR</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
-			<quantity>1</quantity>
-		</prefabcollection>
-		<prefabcollection>
-			<prefab>
-				<prefaboffset>
-					<position x="0" y="-2.26" z="2.503" />
-					<rotation x="-90" y="90" z="0" />
-					<scale x="5" y="5" z="5" />
-				</prefaboffset>
-				<properties />
-				<snaptype>FLOOR</snaptype>
-				<prefabtype>PANEL_FLOOR_GROUND</prefabtype>
-				<floortype>GROUND_FLOOR</floortype>
-				<compart>FLOOR</compart>
-				<prefabposition>EXTERIOR</prefabposition>
-			</prefab>
-			<positions />
-			<quantity>17</quantity>
+			<quantity>18</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
@@ -189,6 +181,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>ROOF</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -206,6 +199,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -223,6 +217,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>8</quantity>
@@ -240,6 +235,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>4</quantity>
@@ -257,6 +253,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -274,6 +271,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>4</quantity>
@@ -291,6 +289,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -308,6 +307,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -325,6 +325,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -342,6 +343,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>FLOOR</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>15</quantity>
@@ -359,6 +361,7 @@
 				<floortype>SECOND_FLOOR</floortype>
 				<compart>ROOF</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -376,6 +379,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
 			</prefab>
 			<positions />
 			<quantity>1</quantity>
@@ -390,5 +394,5 @@
 		<task number="300" type="HOUSE_WIDTH" />
 		<task number="300" type="HOUSE_DEPTH" />
 	</tasks>
-	<time>4</time>
+	<time>0</time>
 </contract>
