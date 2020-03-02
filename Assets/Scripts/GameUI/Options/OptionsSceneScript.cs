@@ -60,4 +60,11 @@ public class OptionsSceneScript : MonoBehaviour
             sldMusicVolume.value = musicVolume;
         }
     }
+
+    private void OnDestroy()
+    {
+        mixer.SetFloat(SoundType.Master.ToString(), sldMasterVolume.value);
+        mixer.SetFloat(SoundType.SFX.ToString(), sldSFXVolume.value);
+        mixer.SetFloat(SoundType.Music.ToString(), sldMusicVolume.value);
+    }
 }
