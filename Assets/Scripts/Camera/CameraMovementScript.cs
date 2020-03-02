@@ -73,14 +73,14 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         float d = 0;
         int mult = (int)cameraDir;
 		SOUNDNAME swipeSound = cameraDir == CAMERA_DIR.LEFT ? SOUNDNAME.SWIPE_LEFT : SOUNDNAME.SWIPE_RIGHT;
-		IntegratedSoundManager.PlaySound(swipeSound);
+		IntegratedSoundManager.PlaySoundAsync(swipeSound);
         const int angle = 90;
         Transform floorTransform = Floor.FocusedFloor.transform;
         Vector3 floorUp = floorTransform.up;
         Vector3 floorPos = floorTransform.position;
         int newIndex = currentPosition + (int)cameraDir;
         newIndex = newIndex < 0 ? cameraPositions.Length + newIndex : newIndex;
-        Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex, newIndex % cameraPositions.Length);
+        //Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex, newIndex % cameraPositions.Length);
         CameraPosition newPosition = cameraPositions[newIndex % cameraPositions.Length];
         float current = 0;
         while (d < angle)
