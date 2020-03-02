@@ -67,6 +67,12 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
             gameObject.GetComponent<MeshRenderer>().material = unconfirmed_material;
             fixings = fixings + 1;
             confirmed = false;
+			ConstructionUtil util;
+			if (ConstructionUtil.InstanceAvailable(out util))
+			{
+				util.IncrementModifiedFixings();
+				Debug.LogFormat("Modified Fixings: {0};",util.FixingsChanged);
+			}
         }
     }
     public void Confirm()
