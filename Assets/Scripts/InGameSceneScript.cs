@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// A script attached to a GameObject in the main game scene which manages its
@@ -38,6 +39,8 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
     Dictionary<FLOORTYPE, Dictionary<Vector3, int>> intersectionMapping = new Dictionary<FLOORTYPE, Dictionary<Vector3, int>>();
     Dictionary<Vector3, Intersection> intersections = new Dictionary<Vector3, Intersection>();
+    public Image pbBlueprint;
+    public Image pbHouse;
 
     public bool AddIntersection(FLOORTYPE floor, Vector3 position, out Intersection intersection)
     {
@@ -139,6 +142,8 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         }
     }
 
+
+
     void Start()
     {
         Floor groundFloor;
@@ -155,6 +160,35 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             else
             {
                 matQuantities.Add(mq.material, mq.number);
+            }
+        }
+        ConstructionUtil util;
+        if (ConstructionUtil.InstanceAvailable(out util))
+        {
+            if (pbBlueprint != null)
+            {
+                Sprite blueprint;
+                if (ResourceManager.GetItem(util.Contract.name+"_Blueprint",out blueprint))
+                {
+                    pbBlueprint.sprite = blueprint;
+                }
+            }
+            else
+            {
+                Debug.Log("pbBlueprint is null.");
+            }
+
+            if (pbHouse != null)
+            {
+                Sprite house;
+                if (ResourceManager.GetItem(util.Contract.name + "_House", out house))
+                {
+                    pbHouse.sprite = house;
+                }
+            }
+            else
+            {
+                Debug.Log("pbHouse is null.");
             }
         }
     }
@@ -192,6 +226,10 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     }
 }
 
+/// <summary>
+/// A struct that determines the quantity of sounds
+/// to use for a particular material.
+/// </summary>
 [System.Serializable]
 public struct MaterialQuantity
 {

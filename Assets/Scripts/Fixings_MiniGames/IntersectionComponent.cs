@@ -28,8 +28,7 @@ public class IntersectionComponent : MonoBehaviour
 
         if(ResourceManager.GetItem("Valid", out confirmedIntersection))
         {
-            gameObject.GetComponent<MeshRenderer>().material = confirmedIntersection; 
+            GetComponent<MeshRenderer>().material = confirmedIntersection; 
         }
-        Debug.Log("Material Changed");
     }
 }
