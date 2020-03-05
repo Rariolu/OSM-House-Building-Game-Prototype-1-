@@ -1732,14 +1732,14 @@ RectTransform:
   m_GameObject: {fileID: 177129525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28237548, y: 0.5909862, z: 0.4863872}
+  m_LocalScale: {x: 0.5899277, y: 0.5988619, z: 0.6557959}
   m_Children: []
-  m_Father: {fileID: 1550802838}
-  m_RootOrder: 5
+  m_Father: {fileID: 1184134574}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -15.399994, y: 28.799988}
+  m_AnchoredPosition: {x: -32.385956, y: 23.884735}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177129527
@@ -3010,7 +3010,7 @@ RectTransform:
   m_Children:
   - {fileID: 1018172817}
   m_Father: {fileID: 1184134574}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3894,9 +3894,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49892732ea915a247910bb147292e077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmlBackupFile: Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml
   pbBlueprint: {fileID: 1878494947}
   pbHouse: {fileID: 904791880}
+  xmlBackupFile: Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml
   materialQuantites:
   - material: 1
     number: 4
@@ -7440,6 +7440,7 @@ RectTransform:
   - {fileID: 1368061779}
   - {fileID: 1550802838}
   - {fileID: 166147914}
+  - {fileID: 177129526}
   - {fileID: 411480661}
   - {fileID: 1448053094}
   - {fileID: 1798767190}
@@ -8858,7 +8859,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184134574}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9558,7 +9559,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184134574}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -10070,7 +10071,6 @@ RectTransform:
   - {fileID: 81456739}
   - {fileID: 904791879}
   - {fileID: 1504866686}
-  - {fileID: 177129526}
   m_Father: {fileID: 1184134574}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11753,7 +11753,7 @@ RectTransform:
   m_Children:
   - {fileID: 1593938643}
   m_Father: {fileID: 1184134574}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
