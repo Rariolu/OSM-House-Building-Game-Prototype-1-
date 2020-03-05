@@ -49,14 +49,14 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
                 Debug.Log("No viable scene enum value found for this scene's name.");
             }
         }
-        if (scene != SCENE.Intermediate)
-        {
-            SceneObjectScript sos;
-            if (InstanceExists(SCENE.Intermediate,out sos))
-            {
-                sos.SetActive(false);
-            }
-        }
+        //if (scene != SCENE.Intermediate)
+        //{
+        //    SceneObjectScript sos;
+        //    if (InstanceExists(SCENE.Intermediate,out sos))
+        //    {
+        //        sos.SetActive(false);
+        //    }
+        //}
         if (Util.StackCount < 1)
         {
             Util.PushScene(scene);

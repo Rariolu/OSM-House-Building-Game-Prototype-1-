@@ -46,6 +46,15 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
         }
     }
     
+	MeshRenderer mRenderer;
+	MeshRenderer MeshRenderer
+	{
+		get
+		{
+			return mRenderer ?? (mRenderer = GetComponent<MeshRenderer>());
+		}
+	}
+	
     public FIXINGSECTION fixingSection;
     void Awake()
     {
@@ -59,14 +68,20 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
         {
             // It adds 1 to the counter and changes the material of the object
             fixings = fixings - 1;
-            gameObject.GetComponent<MeshRenderer>().material = confirmed_material;
+            MeshRenderer.material = confirmed_material;
             confirmed = true;
         }
         else
         {
-            gameObject.GetComponent<MeshRenderer>().material = unconfirmed_material;
+            MeshRenderer.material = unconfirmed_material;
             fixings = fixings + 1;
             confirmed = false;
+			ConstructionUtil util;
+			if (ConstructionUtil.InstanceAvailable(out util))
+			{
+				util.IncrementModifiedFixings();
+				Debug.LogFormat("Modified Fixings: {0};",util.FixingsChanged);
+			}
         }
     }
     public void Confirm()

@@ -55,7 +55,8 @@ public enum LAYER
 public enum MATERIAL
 {
     GENERIC,
-    WOOD
+    WOOD,
+	BRICK
 }
 
 public enum PREFABTYPE
@@ -114,15 +115,14 @@ public enum SCENE
     Menu = 0,
     ContractSelection = 1,
     InGame = 2,
-    InGameUI = 3,
-    Fixings_MiniGame = 4,
+    Fixings_MiniGame = 3,
+    Name_Building = 4,
     EndScene = 5,
     Options = 6,
-    Intermediate = 7,
-    Brochure = 8,
-    HouseViewing = 9,
-    Name_Building = 10,
-    SpecTestScene = 11
+    Brochure = 7,
+    HouseViewing = 8,
+    SpecTestScene = 9,
+    Credits = 10
 }
 
 public enum SoundType

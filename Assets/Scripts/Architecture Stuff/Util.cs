@@ -32,6 +32,18 @@ public static class Util
         {
             isPaused = value;
             Time.timeScale = isPaused ? 0f : 1f;
+            Timer timer;
+            if (Timer.InstanceAvailable(out timer))
+            {
+                if (isPaused)
+                {
+                    timer.StopTimer();
+                }
+                else
+                {
+                    timer.StartTimer();
+                }
+            }
         }
     }
 
@@ -221,10 +233,10 @@ public static class Util
     /// <summary>
     /// Open the UI scene over the current one.
     /// </summary>
-    public static void LoadGameUI()
-    {
-        LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
-    }
+    //public static void LoadGameUI()
+    //{
+    //    LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
+    //}
 
 
     /// <summary>
