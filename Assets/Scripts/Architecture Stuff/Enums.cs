@@ -55,7 +55,8 @@ public enum LAYER
 public enum MATERIAL
 {
     GENERIC,
-    WOOD
+    WOOD,
+	BRICK
 }
 
 public enum PREFABTYPE

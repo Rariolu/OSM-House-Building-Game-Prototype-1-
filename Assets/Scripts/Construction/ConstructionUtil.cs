@@ -22,6 +22,14 @@ public class ConstructionUtil : NullableInstanceClassSingleton<ConstructionUtil>
             return destroyed;
         }
     }
+	int fixingsChanged = 0;
+	public int FixingsChanged
+	{
+		get 
+		{
+			return fixingsChanged;
+		}
+	}
     ConstructionUtil(Contract c)
     {
         contract = c;
@@ -30,6 +38,10 @@ public class ConstructionUtil : NullableInstanceClassSingleton<ConstructionUtil>
     {
         destroyed++;
     }
+	public void IncrementModifiedFixings()
+	{
+		fixingsChanged++;
+	}
     public static void SetContract(Contract c)
     {
         SetInstance(new ConstructionUtil(c));

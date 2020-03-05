@@ -475,7 +475,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 2
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 2
         offset:
           offsetPosition: {x: 0, y: -2.8665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -503,7 +503,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 2
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
@@ -1129,6 +1129,26 @@ MonoBehaviour:
     type: 0
   - name: WOOD_3
     clip: {fileID: 8300000, guid: dcccfbc1ad17ad8468a522a31fd28720, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_0
+    clip: {fileID: 8300000, guid: 5864b7d1871969848a62fc97bf3ec9c8, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_1
+    clip: {fileID: 8300000, guid: fe9d61f24acadb746972223eb4a262cd, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_2
+    clip: {fileID: 8300000, guid: 22db77cebad33a7489d411e245365fa3, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_3
+    clip: {fileID: 8300000, guid: 22db8091c064f68429f22c7251bf640d, type: 3}
     loop: 0
     volume: 1
     type: 0

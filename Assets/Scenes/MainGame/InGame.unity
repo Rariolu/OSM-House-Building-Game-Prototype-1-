@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,6 +347,26 @@ MonoBehaviour:
     type: 0
   - name: WOOD_3
     clip: {fileID: 8300000, guid: dcccfbc1ad17ad8468a522a31fd28720, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_0
+    clip: {fileID: 8300000, guid: 5864b7d1871969848a62fc97bf3ec9c8, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_1
+    clip: {fileID: 8300000, guid: fe9d61f24acadb746972223eb4a262cd, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_2
+    clip: {fileID: 8300000, guid: 22db77cebad33a7489d411e245365fa3, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
+  - name: BRICK_3
+    clip: {fileID: 8300000, guid: 22db8091c064f68429f22c7251bf640d, type: 3}
     loop: 0
     volume: 1
     type: 0
@@ -3874,6 +3894,8 @@ MonoBehaviour:
   materialQuantites:
   - material: 1
     number: 4
+  - material: 2
+    number: 4
 --- !u!1001 &495695092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4252,12 +4274,12 @@ GameObject:
   - component: {fileID: 564233147}
   - component: {fileID: 564233146}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &564233146
 AudioSource:
   m_ObjectHideFlags: 0
