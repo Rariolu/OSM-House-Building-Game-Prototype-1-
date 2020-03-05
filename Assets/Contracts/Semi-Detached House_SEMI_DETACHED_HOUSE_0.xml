@@ -73,7 +73,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
 			<positions />
 			<quantity>10</quantity>
