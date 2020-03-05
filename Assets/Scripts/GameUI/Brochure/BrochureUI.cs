@@ -21,9 +21,11 @@ public class BrochureUI : MonoBehaviour
     {
 
     }
+	bool brochureActive = false;
     public void BrochureActive()
     {
-        BrochureMenuCanvas.SetActive(true);
+		brochureActive = !brochureActive;
+        BrochureMenuCanvas.SetActive(brochureActive);
     }
     public void Continue()
     {
