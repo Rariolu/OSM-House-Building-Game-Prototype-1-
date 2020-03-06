@@ -23,6 +23,7 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     /// scene that this instance is used for.
     /// </summary>
     public SCENE scene;
+    public bool loadResourceLoader = true;
     public bool ShowTestScene = false;
     /// <summary>
     /// A method which adds this scene to the "instances" dictionary.
@@ -32,7 +33,7 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     /// </summary>
     private void Awake()
     {
-        if (!Util.SceneLoaded(SCENE.ResourceLoader))
+        if (!Util.SceneLoaded(SCENE.ResourceLoader) && loadResourceLoader)
         {
             Util.LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
         }

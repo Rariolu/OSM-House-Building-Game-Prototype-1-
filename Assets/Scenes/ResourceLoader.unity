@@ -611,4 +611,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 11
+  loadResourceLoader: 0
   ShowTestScene: 0
