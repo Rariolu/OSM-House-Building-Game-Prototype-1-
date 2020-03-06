@@ -122,7 +122,8 @@ public enum SCENE
     Brochure = 7,
     HouseViewing = 8,
     SpecTestScene = 9,
-    Credits = 10
+    Credits = 10,
+    ResourceLoader = 11
 }
 
 public enum SoundType

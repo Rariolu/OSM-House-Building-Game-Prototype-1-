@@ -301,7 +301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &48087865
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,6 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad66fdee19ce034fa974ba11ee6c776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   pauseMenuUI: {fileID: 166147913}
 --- !u!1 &213221136
 GameObject:
@@ -2128,6 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   compart: 2
 --- !u!1001 &238556051
 PrefabInstance:
@@ -4137,6 +4139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   floorType: 1
   initiallyVisible: 1
 --- !u!114 &526271521
@@ -4232,6 +4235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac7e533131a318468b22ccf739ca65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   pauseMenuUI: {fileID: 166147913}
 --- !u!114 &558726986
 MonoBehaviour:
@@ -5255,6 +5259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd1dce75f977d45b7c863a62871749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
 --- !u!114 &755640846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5963,6 +5968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70fc2697fba2d14d865069ce0585742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   ContractButtonUI: {fileID: 671835647}
 --- !u!1001 &935312114
 PrefabInstance:
@@ -6939,6 +6945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   scene: 6
   loadSceneMode: 1
 --- !u!114 &1066367224
@@ -7153,6 +7160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   compart: 3
 --- !u!1001 &1142315278
 PrefabInstance:
@@ -7920,6 +7928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   compart: 0
 --- !u!1 &1318968671
 GameObject:
@@ -8008,6 +8017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   compart: 1
 --- !u!4 &1357265332 stripped
 Transform:
@@ -8680,6 +8690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   scene: 0
   loadSceneMode: 0
 --- !u!114 &1416855630
@@ -8730,6 +8741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3215a74aec867b34b9a0684618ff317b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
 --- !u!1 &1417395027
 GameObject:
   m_ObjectHideFlags: 0
@@ -10975,6 +10987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   floorType: 0
   initiallyVisible: 0
 --- !u!114 &1631474606
@@ -12608,6 +12621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   floorType: 2
   initiallyVisible: 0
 --- !u!114 &1897578127

@@ -402,6 +402,17 @@ public static class Util
     {
         return new Vector3(Mathf.Round(vec3.x), Mathf.Round(vec3.y), Mathf.Round(vec3.z));
     }
+
+    /// <summary>
+    /// Return true if the requested scene has been loaded.
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <returns></returns>
+    public static bool SceneLoaded(SCENE scene)
+    {
+        Scene sceneInst = SceneManager.GetSceneByName(scene.ToString());
+        return sceneInst.isLoaded;
+    }
     
     /// <summary>
     /// Sets the current contract that is being looked

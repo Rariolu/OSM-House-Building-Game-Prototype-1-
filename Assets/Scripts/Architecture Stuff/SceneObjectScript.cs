@@ -32,6 +32,10 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     /// </summary>
     private void Awake()
     {
+        if (!Util.SceneLoaded(SCENE.ResourceLoader))
+        {
+            Util.LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
+        }
         SetInstance(scene, this);
         string sceneName = gameObject.scene.name;
         
