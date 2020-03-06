@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0839b13f6e332541b29de1bfea65c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 1
 --- !u!222 &67948367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -723,6 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 1
   scene: 10
   loadSceneMode: 1
 --- !u!114 &896505425
@@ -909,6 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3215a74aec867b34b9a0684618ff317b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 1
 --- !u!222 &1615405216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1068,6 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 1
   scene: 6
   loadSceneMode: 1
 --- !u!222 &1693840768

@@ -1152,6 +1152,11 @@ MonoBehaviour:
     loop: 0
     volume: 1
     type: 0
+  - name: MENU_BUTTON_CLICK
+    clip: {fileID: 8300000, guid: 27eaa922784a51b46a446c7114c20255, type: 3}
+    loop: 0
+    volume: 1
+    type: 0
 --- !u!114 &1625858736
 MonoBehaviour:
   m_ObjectHideFlags: 0

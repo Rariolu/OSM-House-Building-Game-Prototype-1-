@@ -26,6 +26,8 @@ public class UIButton : MonoBehaviour
     /// UI button is clicked.
     /// </summary>
     public UIButtonClick Click;
+
+    public bool playClickSound = false;
     Image image;
     public Image Image
     {
@@ -42,7 +44,10 @@ public class UIButton : MonoBehaviour
         entry.eventID = EventTriggerType.PointerClick;
         entry.callback.AddListener((data) =>
         {
-			IntegratedSoundManager.PlaySound(SOUNDNAME.MENU_BUTTON_CLICK);
+            if (playClickSound)
+            {
+                IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.MENU_BUTTON_CLICK);
+            }
             if (Click != null)
             {
                 Click(this);

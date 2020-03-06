@@ -79,8 +79,11 @@ public class SoundManager : MonoBehaviour
         yield return new WaitForSeconds(audiosource.clip.length);
         if (!sound.loop)
         {
-            audiosource.Stop();
-            Destroy(go);
+            if (go != null)
+            {
+                audiosource.Stop();
+                Destroy(go);
+            }
         }
     }
 }
