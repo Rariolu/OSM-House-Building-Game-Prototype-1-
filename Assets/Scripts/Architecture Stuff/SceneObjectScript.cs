@@ -37,7 +37,7 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
         {
             Util.LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
         }
-        SetInstance(scene, this);
+       
         string sceneName = gameObject.scene.name;
         
         if (scene.ToString().NormaliseString() != sceneName.NormaliseString())
@@ -54,6 +54,7 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
                 Debug.Log("No viable scene enum value found for this scene's name.");
             }
         }
+        SetInstance(scene, this);
         //if (scene != SCENE.Intermediate)
         //{
         //    SceneObjectScript sos;
