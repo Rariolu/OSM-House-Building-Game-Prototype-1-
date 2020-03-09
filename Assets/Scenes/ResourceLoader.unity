@@ -288,70 +288,8 @@ MonoBehaviour:
     Item: {fileID: 2100000, guid: 2cb4d7e64adb5cd42b01650922dce157, type: 2}
   - Name: SnapPoint_ROOF
     Item: {fileID: 2100000, guid: 9dea4b2b9e9be254db307c984adb593f, type: 2}
-  meshes:
-  - Name: house
-    Item: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - Name: BUNGALOW
-    Item: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - Name: TOWNHOUSE
-    Item: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - Name: intersection
-    Item: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - Name: SnapPoint
-    Item: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  meshes: []
   sprites:
-  - Name: PANEL_FLOOR_GROUND
-    Item: {fileID: 21300000, guid: ee2004200542ff947a1c6cffc4ed2250, type: 3}
-  - Name: PANEL_FRONT_SECOND
-    Item: {fileID: 21300000, guid: 90689d6cbc46a364fa440524a9458e4e, type: 3}
-  - Name: PANEL_BACK_SECOND
-    Item: {fileID: 21300000, guid: cfa09a15d20841f42850a581909d0628, type: 3}
-  - Name: PANEL_SIDE_SECOND
-    Item: {fileID: 21300000, guid: 763fc4ed6b12762419266bb621537aac, type: 3}
-  - Name: PANEL_FLOOR_SECOND
-    Item: {fileID: 21300000, guid: 1fca83f24f4f02a4097e626fb3f77ab3, type: 3}
-  - Name: PANEL_ROOF
-    Item: {fileID: 21300000, guid: 94aa80d91791a3c498f8f6db010d60f4, type: 3}
-  - Name: PANEL_BEDROOM
-    Item: {fileID: 21300000, guid: 8a4329ff1b1a30041a1af4cf3ae140c5, type: 3}
-  - Name: PANEL_BATHROOM
-    Item: {fileID: 21300000, guid: bceaf0b8a4633174daf4869d2213063e, type: 3}
-  - Name: PANEL_KITCHEN
-    Item: {fileID: 21300000, guid: 1470a99a057f0a845bc42d4864f08e4b, type: 3}
-  - Name: Brochure
-    Item: {fileID: 21300000, guid: d8be57acbba071b48962cb810eeb618d, type: 3}
-  - Name: UNDO
-    Item: {fileID: 21300000, guid: b4802f08a07313343b1444bb66dfe290, type: 3}
-  - Name: BUNGALOW_BLUEPRINT
-    Item: {fileID: 21300000, guid: 1356dfed207b3a345a957116b0e44eb4, type: 3}
-  - Name: ShowHouse
-    Item: {fileID: 21300000, guid: dc42c535f65f21e4ba4fa875a6c61695, type: 3}
-  - Name: PANEL_FRONT_OFFSET_WINDOW_FIRST
-    Item: {fileID: 21300000, guid: 487d09fff8b5d7747af55c6d882c675c, type: 3}
-  - Name: PANEL_BACK_DOOR_GROUND
-    Item: {fileID: 21300000, guid: 3d89513f884dbc8489f07380f233563b, type: 3}
-  - Name: PANEL_INTERIOR_GROUND
-    Item: {fileID: 21300000, guid: 51eba4048f84c7f4ab05f2408e9ee288, type: 3}
-  - Name: PANEL_FRONT_WINDOW_GROUND
-    Item: {fileID: 21300000, guid: 79ef55e84dc96ea489aa4e3348799ac8, type: 3}
-  - Name: PANEL_SLANT_ROOF_GROUND
-    Item: {fileID: 21300000, guid: c6f1471628a60e84d87cc9ee09905f6e, type: 3}
-  - Name: PANEL_STAIRS1_GROUND
-    Item: {fileID: 21300000, guid: e930991f6a29a55419d5325fb6130d5a, type: 3}
-  - Name: PANEL_FRONT2_GROUND
-    Item: {fileID: 21300000, guid: b4293758edaa84847a7865ac9eee4214, type: 3}
-  - Name: PANEL_DOOR2_GROUND
-    Item: {fileID: 21300000, guid: 5da2334c55573f8488000663ce39b983, type: 3}
-  - Name: PANEL_EXTRUDE_DOOR_GROUND
-    Item: {fileID: 21300000, guid: aab01fac9b1789742be2c74b03e6fdbc, type: 3}
-  - Name: PANEL_PORCH_GROUND
-    Item: {fileID: 21300000, guid: fffc42be718d9d042847e67a6929707e, type: 3}
-  - Name: PANEL_DOOR_GROUND
-    Item: {fileID: 21300000, guid: 5666fd26173e3934fb40cfade119d2c6, type: 3}
-  - Name: OTHER_active
-    Item: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: OTHER_inactive
-    Item: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   - Name: start
     Item: {fileID: 21300000, guid: b0d2ec7258682ea46963dbeb66d09c93, type: 3}
   - Name: start
@@ -377,10 +315,46 @@ MonoBehaviour:
     Item: {fileID: 2800000, guid: 447467c56c9b2c34f987b17e1ec446c2, type: 3}
   - Name: PANEL_SIDE_GROUND
     Item: {fileID: 2800000, guid: 6ab546c7479a5654698f77dc8d593f07, type: 3}
-  - Name: FLOOR_active
-    Item: {fileID: 2800000, guid: 280c1df0c8578824d806eec1f8c895a2, type: 3}
-  - Name: FLOOR_active
-    Item: {fileID: 2800000, guid: 280c1df0c8578824d806eec1f8c895a2, type: 3}
+  - Name: PANEL_FLOOR_GROUND
+    Item: {fileID: 2800000, guid: ee2004200542ff947a1c6cffc4ed2250, type: 3}
+  - Name: PANEL_FRONT_SECOND
+    Item: {fileID: 2800000, guid: 90689d6cbc46a364fa440524a9458e4e, type: 3}
+  - Name: PANEL_BACK_SECOND
+    Item: {fileID: 2800000, guid: cfa09a15d20841f42850a581909d0628, type: 3}
+  - Name: PANEL_SIDE_SECOND
+    Item: {fileID: 2800000, guid: 763fc4ed6b12762419266bb621537aac, type: 3}
+  - Name: PANEL_FLOOR_SECOND
+    Item: {fileID: 2800000, guid: 1fca83f24f4f02a4097e626fb3f77ab3, type: 3}
+  - Name: PANEL_ROOF
+    Item: {fileID: 2800000, guid: 94aa80d91791a3c498f8f6db010d60f4, type: 3}
+  - Name: PANEL_BEDROOM
+    Item: {fileID: 2800000, guid: 8a4329ff1b1a30041a1af4cf3ae140c5, type: 3}
+  - Name: PANEL_BATHROOM
+    Item: {fileID: 2800000, guid: bceaf0b8a4633174daf4869d2213063e, type: 3}
+  - Name: PANEL_KITCHEN
+    Item: {fileID: 2800000, guid: 1470a99a057f0a845bc42d4864f08e4b, type: 3}
+  - Name: PANEL_FRONT_OFFSET_WINDOW_FIRST
+    Item: {fileID: 2800000, guid: 487d09fff8b5d7747af55c6d882c675c, type: 3}
+  - Name: PANEL_BACK_DOOR_GROUND
+    Item: {fileID: 2800000, guid: 3d89513f884dbc8489f07380f233563b, type: 3}
+  - Name: PANEL_INTERIOR_GROUND
+    Item: {fileID: 2800000, guid: 51eba4048f84c7f4ab05f2408e9ee288, type: 3}
+  - Name: PANEL_FRONT_WINDOW_GROUND
+    Item: {fileID: 2800000, guid: 79ef55e84dc96ea489aa4e3348799ac8, type: 3}
+  - Name: PANEL_SLANT_ROOF_GROUND
+    Item: {fileID: 2800000, guid: c6f1471628a60e84d87cc9ee09905f6e, type: 3}
+  - Name: PANEL_STAIRS1_GROUND
+    Item: {fileID: 2800000, guid: e930991f6a29a55419d5325fb6130d5a, type: 3}
+  - Name: PANEL_FRONT2_GROUND
+    Item: {fileID: 2800000, guid: b4293758edaa84847a7865ac9eee4214, type: 3}
+  - Name: PANEL_DOOR2_GROUND
+    Item: {fileID: 2800000, guid: 5da2334c55573f8488000663ce39b983, type: 3}
+  - Name: PANEL_EXTRUDE_DOOR_GROUND
+    Item: {fileID: 2800000, guid: aab01fac9b1789742be2c74b03e6fdbc, type: 3}
+  - Name: PANEL_PORCH_GROUND
+    Item: {fileID: 2800000, guid: fffc42be718d9d042847e67a6929707e, type: 3}
+  - Name: PANEL_DOOR_GROUND
+    Item: {fileID: 2800000, guid: 5666fd26173e3934fb40cfade119d2c6, type: 3}
 --- !u!4 &214173334
 Transform:
   m_ObjectHideFlags: 0
