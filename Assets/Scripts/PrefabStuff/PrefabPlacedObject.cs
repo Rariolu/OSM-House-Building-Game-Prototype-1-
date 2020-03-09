@@ -135,6 +135,17 @@ public class PrefabPlacedObject
 
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+
+        CameraMovementScript camera;
+        if (CameraMovementScript.InstanceAvailable(out camera))
+        {
+            camera.CameraMoved += CameraMoved;
+        }
+    }
+
+    void CameraMoved(CameraMovementScript camera, int index)
+    {
+        
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
@@ -164,6 +175,12 @@ public class PrefabPlacedObject
         if (ConstructionUtil.InstanceAvailable(out util))
         {
             util.IncrementDestruction();
+        }
+
+        CameraMovementScript camera;
+        if (CameraMovementScript.InstanceAvailable(out camera))
+        {
+            camera.CameraMoved -= CameraMoved;
         }
     }
 
