@@ -11,7 +11,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+//[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(RawImage))]
 public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
 {
     public FLOORTYPE floorType;
@@ -73,7 +74,8 @@ public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
     }
     public void MakeVisible(bool visible = true)
     {
-        Image.enabled = visible;
+        RawImage.enabled = visible;
+        //Image.enabled = visible;
         foreach(Transform child in transform)
         {
             child.gameObject.SetActive(visible);

@@ -19,35 +19,17 @@ public class RescItem<T>
     public T Item;
 }
 
-[Serializable]
-public class FontRescItem : RescItem<Font>
-{
+[Serializable] public class FontRescItem : RescItem<Font> { }
 
-}
+[Serializable] public class GameObjectRescItem : RescItem<GameObject> { }
 
-[Serializable]
-public class GameObjectRescItem : RescItem<GameObject>
-{
+[Serializable] public class MaterialRescItem : RescItem<Material> { }
 
-}
+[Serializable] public class MeshRescItem : RescItem<Mesh> { }
 
-[Serializable]
-public class MaterialRescItem : RescItem<Material>
-{
+[Serializable] public class SpriteRescItem : RescItem<Sprite> { }
 
-}
-
-[Serializable]
-public class MeshRescItem : RescItem<Mesh>
-{
-
-}
-
-[Serializable]
-public class SpriteRescItem : RescItem<Sprite>
-{
-
-}
+[Serializable] public class TextureRescItem : RescItem<Texture2D> { }
 
 /// <summary>
 /// A struct used to identify specific instances of "RescItem"
