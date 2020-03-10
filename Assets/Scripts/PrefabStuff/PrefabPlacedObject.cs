@@ -140,6 +140,7 @@ public class PrefabPlacedObject
         if (CameraMovementScript.InstanceAvailable(out camera))
         {
             camera.CameraMoved += CameraMoved;
+            CameraMoved(camera, 0);
         }
     }
 
@@ -161,22 +162,24 @@ public class PrefabPlacedObject
             if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
             {
                 bool z = (pos.z < 0 && cameraPos.z < 0) || (pos.z > 0 && cameraPos.z > 0);
-                MeshRenderer.enabled = !z;
+                Drop(z);
             }
             else if (Prefab.snapType == SNAP_POINT_TYPE.CENTRE)
             {
                 bool x = (pos.x < 0 && cameraPos.x < 0) || (pos.x > 0 && cameraPos.x > 0);
-                MeshRenderer.enabled = !x;
+                Drop(x);
             }
         }
-        //MeshRenderer.enabled = Vector3.Distance(camera.transform.position, gameObject.transform.position) < blep|| Prefab.snapType == SNAP_POINT_TYPE.FLOOR;
-        //if (index == SnapPointTrigger.dropIndex)
-        //{
+    }
 
-        //}
-        //else
+    void Drop(bool drop)
+    {
+        MeshRenderer.enabled = !drop;
+        //for(int i = 0; i < MeshRenderer.materials.Length; i++)
         //{
-
+        //    Material mat = MeshRenderer.materials[i];
+        //    mat.color = new Color(mat.color.r,mat.color.g,mat.color.b,drop ? 0.5f : 1.0f);
+        //    MeshRenderer.materials[i] = mat;
         //}
     }
 
