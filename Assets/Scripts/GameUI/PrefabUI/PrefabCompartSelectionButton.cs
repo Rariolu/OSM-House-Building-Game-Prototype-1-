@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-[RequireComponent(typeof(Image))]
+//[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(RawImage))]
 public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelectionButton,PREFAB_COMPART>
 {
     public PREFAB_COMPART compart;
@@ -75,11 +76,16 @@ public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelect
     public void SetActive(bool active)
     {
         string textureName = "{0}_{1}".FormatText(compart, active ? "active" : "inactive");
-        Sprite spr;
-        if (ResourceManager.GetItem(textureName, out spr))
+        Texture2D texture;
+        if (ResourceManager.GetItem(textureName,out texture))
         {
-            Image.sprite = spr;
+            RawImage.texture = texture;
         }
+        //Sprite spr;
+        //if (ResourceManager.GetItem(textureName, out spr))
+        //{
+        //    Image.sprite = spr;
+        //}
         else
         {
             Debug.LogFormat("{0} not found.", textureName);

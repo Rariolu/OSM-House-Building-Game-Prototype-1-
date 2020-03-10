@@ -36,6 +36,15 @@ public class UIButton : MonoBehaviour
             return image ?? (image = GetComponent<Image>());
         }
     }
+
+    RawImage rawImage;
+    public RawImage RawImage
+    {
+        get
+        {
+            return rawImage ?? (rawImage = GetComponent<RawImage>());
+        }
+    }
     
     protected virtual void Start()
     {

@@ -9,15 +9,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+//[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(RawImage))]
 public class PrefabView : NullableInstanceScriptSingleton<PrefabView>
 {
-    Image image;
-    Image Image
+    //Image image;
+    //Image Image
+    //{
+    //    get
+    //    {
+    //        return image ?? (image = GetComponent<Image>());
+    //    }
+    //}
+
+    RawImage rawImage;
+    RawImage RawImage
     {
         get
         {
-            return image ?? (image = GetComponent<Image>());
+            return rawImage ?? (rawImage = GetComponent<RawImage>());
         }
     }
 
@@ -43,10 +53,15 @@ public class PrefabView : NullableInstanceScriptSingleton<PrefabView>
     public void SetPrefab(Prefab prefab)
     {
         gameObject.SetActive(true);
-        Sprite spr;
-        if (ResourceManager.GetItem(prefab.type, out spr))
+        //Sprite spr;
+        //if (ResourceManager.GetItem(prefab.type, out spr))
+        //{
+        //    Image.sprite = spr;
+        //}
+        Texture2D texture;
+        if (ResourceManager.GetItem(prefab.type,out texture))
         {
-            Image.sprite = spr;
+            RawImage.texture = texture;
         }
     }
 }

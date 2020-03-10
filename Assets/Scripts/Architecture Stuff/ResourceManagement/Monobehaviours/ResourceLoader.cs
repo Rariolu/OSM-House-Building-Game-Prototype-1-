@@ -15,6 +15,7 @@ public class ResourceLoader : MonoBehaviour
     public List<MaterialRescItem> materials;
     public List<MeshRescItem> meshes;
     public List<SpriteRescItem> sprites;
+    public List<TextureRescItem> textures;
     private void Awake()
     {
         ResourceManager.AddItems(fonts);
@@ -22,5 +23,6 @@ public class ResourceLoader : MonoBehaviour
         ResourceManager.AddItems(materials);
         ResourceManager.AddItems(meshes);
         ResourceManager.AddItems(sprites);
+        ResourceManager.AddItems(textures);
     }
 }

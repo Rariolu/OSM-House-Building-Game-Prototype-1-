@@ -9,11 +9,11 @@ public class UndoButton : UIButton
     {
         base.Start();
         Click += UndoButton_Click;
-        Sprite undo;
-        if (ResourceManager.GetItem("UNDO",out undo))
-        {
-            Image.sprite = undo;
-        }
+        //Sprite undo;
+        //if (ResourceManager.GetItem("UNDO",out undo))
+        //{
+        //    Image.sprite = undo;
+        //}
     }
 
     void UndoButton_Click(UIButton sender)
