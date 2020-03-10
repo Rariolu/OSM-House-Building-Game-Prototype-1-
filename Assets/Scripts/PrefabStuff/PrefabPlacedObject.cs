@@ -58,6 +58,9 @@ public class PrefabPlacedObject
             snapPointTrigger = value;
         }
     }
+
+    Vector3 originalScale;
+
     public PrefabPlacedObject(Prefab prefab, Vector3 position)
     {
         templatePrefab = prefab;
@@ -124,30 +127,47 @@ public class PrefabPlacedObject
         roundedPosition = roundPos;
         if (InGameSceneScript.InstanceAvailable(out gameScene))
         {
-            for (int i = -1; i < 2; i++)
+            switch (prefab.snapType)
             {
-                if (i != 0)
+                case SNAP_POINT_TYPE.EDGE:
                 {
-                    switch(prefab.snapType)
-                    {
-                        case SNAP_POINT_TYPE.EDGE:
-                        {
-                            AddIntersection(new Vector2(i/2f, 0), prefab.snapType);
-                            break;
-                        }
-                        case SNAP_POINT_TYPE.CENTRE:
-                        {
-                            AddIntersection(new Vector2(0, i / 2f), prefab.snapType);
-                            break;
-                        }
-                    }
+                    AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
+                    AddIntersection(new Vector2( 1f / 2f, 0), prefab.snapType);
+                    break;
+                }
+                case SNAP_POINT_TYPE.CENTRE:
+                {
+                    AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
+                    AddIntersection(new Vector2(0,  1f / 2f), prefab.snapType);
+                    break;
                 }
             }
+            //for (int i = -1; i < 2; i++)
+            //{
+            //    if (i != 0)
+            //    {
+            //        switch(prefab.snapType)
+            //        {
+            //            case SNAP_POINT_TYPE.EDGE:
+            //            {
+            //                AddIntersection(new Vector2(i/2f, 0), prefab.snapType);
+            //                break;
+            //            }
+            //            case SNAP_POINT_TYPE.CENTRE:
+            //            {
+            //                AddIntersection(new Vector2(0, i / 2f), prefab.snapType);
+            //                break;
+            //            }
+            //        }
+            //    }
+            //}
             gameScene.MaterialPlaced(prefab.material);
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+
+        originalScale = gameObject.transform.localScale;
 
         CameraMovementScript camera;
         if (CameraMovementScript.InstanceAvailable(out camera))
@@ -155,6 +175,8 @@ public class PrefabPlacedObject
             camera.CameraMoved += CameraMoved;
             CameraMoved(camera, 0);
         }
+
+
     }
     
     void CameraMoved(CameraMovementScript camera, int index)
@@ -178,7 +200,8 @@ public class PrefabPlacedObject
 
     void Drop(bool drop)
     {
-        MeshRenderer.enabled = !drop;
+        gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.5f : 1f) * originalScale.z);
+        //MeshRenderer.enabled = !drop;
         //for(int i = 0; i < MeshRenderer.materials.Length; i++)
         //{
         //    Material mat = MeshRenderer.materials[i];
