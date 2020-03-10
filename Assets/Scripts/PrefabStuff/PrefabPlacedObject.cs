@@ -7,6 +7,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EzySlice;
+using EPlane = EzySlice.Plane;
 
 /// <summary>
 /// A class which spawns a prefab gameobject at a selected position.
@@ -169,6 +171,8 @@ public class PrefabPlacedObject
 
         originalScale = gameObject.transform.localScale;
 
+        CreateBottomHalf();
+
         CameraMovementScript camera;
         if (CameraMovementScript.InstanceAvailable(out camera))
         {
@@ -176,9 +180,34 @@ public class PrefabPlacedObject
             CameraMoved(camera, 0);
         }
 
-
     }
+
+    GameObject bottomHalf;
     
+    void CreateBottomHalf()
+    {
+        EPlane plane = new EPlane();
+        plane.Compute(gameObject);
+        TextureRegion textureRegion = new TextureRegion();
+        
+        Material bottomMat = MeshRenderer.material;
+        SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
+        if (sh != null)
+        {
+            bottomHalf = sh.CreateLowerHull(gameObject, bottomMat);
+        }
+        else
+        {
+            Debug.LogWarning("sh was null");
+        }
+        if (bottomHalf == null)
+        {
+            bottomHalf = new GameObject();
+        }
+        bottomHalf.name = gameObject.name + " bottom half";
+        bottomHalf.transform.position = gameObject.transform.position;
+    }
+
     void CameraMoved(CameraMovementScript camera, int index)
     {
         if (Prefab.position == PREFAB_POSITION.EXTERIOR)
@@ -200,7 +229,9 @@ public class PrefabPlacedObject
 
     void Drop(bool drop)
     {
-        gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.5f : 1f) * originalScale.z);
+        gameObject.SetActive(!drop);
+        bottomHalf.SetActive(drop);
+        //gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.25f : 1f) * originalScale.z);
         //MeshRenderer.enabled = !drop;
         //for(int i = 0; i < MeshRenderer.materials.Length; i++)
         //{
