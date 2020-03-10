@@ -15,8 +15,11 @@ public class PrefabPlacedObject
 {
     GameObject gameObject;
     InGameSceneScript gameScene;
+
     List<Intersection> intersections = new List<Intersection>();
+
     List<Vector3> intersectionPoints = new List<Vector3>();
+
     private Vector3 roundedPosition;
     public Vector3 RoundedPosition
     {
@@ -33,6 +36,16 @@ public class PrefabPlacedObject
             return templatePrefab;
         }
     }
+
+    MeshRenderer mRenderer;
+    MeshRenderer MeshRenderer
+    {
+        get
+        {
+            return mRenderer ?? (mRenderer = gameObject.GetComponent<MeshRenderer>());
+        }
+    }
+
     SnapPointTrigger snapPointTrigger;
     public SnapPointTrigger SnapPointTrigger
     {
@@ -143,16 +156,7 @@ public class PrefabPlacedObject
             CameraMoved(camera, 0);
         }
     }
-
-    MeshRenderer mRenderer;
-    MeshRenderer MeshRenderer
-    {
-        get
-        {
-            return mRenderer ?? (mRenderer = gameObject.GetComponent<MeshRenderer>());
-        }
-    }
-    const float blep = 40f;
+    
     void CameraMoved(CameraMovementScript camera, int index)
     {
         if (Prefab.position == PREFAB_POSITION.EXTERIOR)
