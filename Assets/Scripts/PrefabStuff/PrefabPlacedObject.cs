@@ -143,9 +143,41 @@ public class PrefabPlacedObject
         }
     }
 
+    MeshRenderer mRenderer;
+    MeshRenderer MeshRenderer
+    {
+        get
+        {
+            return mRenderer ?? (mRenderer = gameObject.GetComponent<MeshRenderer>());
+        }
+    }
+    const float blep = 40f;
     void CameraMoved(CameraMovementScript camera, int index)
     {
-        
+        if (Prefab.position == PREFAB_POSITION.EXTERIOR)
+        {
+            Vector3 pos = gameObject.transform.position;
+            Vector3 cameraPos = camera.ActualCameraPosition;
+            if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+            {
+                bool z = (pos.z < 0 && cameraPos.z < 0) || (pos.z > 0 && cameraPos.z > 0);
+                MeshRenderer.enabled = !z;
+            }
+            else if (Prefab.snapType == SNAP_POINT_TYPE.CENTRE)
+            {
+                bool x = (pos.x < 0 && cameraPos.x < 0) || (pos.x > 0 && cameraPos.x > 0);
+                MeshRenderer.enabled = !x;
+            }
+        }
+        //MeshRenderer.enabled = Vector3.Distance(camera.transform.position, gameObject.transform.position) < blep|| Prefab.snapType == SNAP_POINT_TYPE.FLOOR;
+        //if (index == SnapPointTrigger.dropIndex)
+        //{
+
+        //}
+        //else
+        //{
+
+        //}
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)

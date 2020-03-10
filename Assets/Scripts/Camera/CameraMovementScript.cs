@@ -40,6 +40,21 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         SetInstance(this);
         
     }
+
+    public Vector3 ActualCameraPosition
+    {
+        get
+        {
+            Transform child = transform.GetChild(0);
+            if (child != null)
+            {
+                return child.position;
+            }
+            Debug.Log("Child object not found.");
+            return new Vector3();
+        }
+    }
+
     private void Start()
     {
         originalY = transform.position.y;
