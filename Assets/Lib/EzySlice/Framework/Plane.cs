@@ -91,8 +91,14 @@ namespace EzySlice
 
         public void ComputeGlobalUp(GameObject obj)
         {
+            Vector3 d = Vector3.Normalize((Vector3.forward + Vector3.left) / 2f);
+            Debug.LogFormat("d: {0};", d);
             Compute(obj.transform.position, Vector3.forward);
-            Debug.DrawLine(obj.transform.position, obj.transform.position + Vector3.forward);
+        }
+
+        public void ComputeAlternative(GameObject obj)
+        {
+            Compute(obj.transform.position, obj.transform.right);
         }
 
         public Vector3 normal

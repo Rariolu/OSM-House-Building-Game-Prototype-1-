@@ -187,7 +187,9 @@ public class PrefabPlacedObject
     void CreateBottomHalf()
     {
         EPlane plane = new EPlane();
-        plane.ComputeGlobalUp(gameObject);
+        //plane.ComputeGlobalUp(gameObject);
+        //plane.ComputeAlternative(gameObject);
+        plane.Compute(gameObject);
         TextureRegion textureRegion = new TextureRegion();
         
         Material bottomMat = MeshRenderer.material;
