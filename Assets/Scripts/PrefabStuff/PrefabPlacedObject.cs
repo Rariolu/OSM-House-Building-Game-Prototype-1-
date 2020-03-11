@@ -187,19 +187,20 @@ public class PrefabPlacedObject
     void CreateBottomHalf()
     {
         EPlane plane = new EPlane();
-        plane.Compute(gameObject);
+        plane.ComputeGlobalUp(gameObject);
         TextureRegion textureRegion = new TextureRegion();
         
         Material bottomMat = MeshRenderer.material;
-        SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
-        if (sh != null)
-        {
-            bottomHalf = sh.CreateLowerHull(gameObject, bottomMat);
-        }
-        else
-        {
-            Debug.LogWarning("sh was null");
-        }
+        //SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
+        //if (sh != null)
+        //{
+        //    Debug.Log("sh not null, attempting to create lower hull.");
+        //    bottomHalf = sh.CreateLowerHull(gameObject, bottomMat);
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("sh was null");
+        //}
         if (bottomHalf == null)
         {
             GameObject templateBottomHalf;
@@ -207,18 +208,20 @@ public class PrefabPlacedObject
             {
                 bottomHalf = Object.Instantiate(templateBottomHalf);
                 bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
+                Debug.Log("BottomHalf template found and instantiated.");
             }
             else
             {
+                Debug.LogWarning("BottomHalf template not found so making a blank object sos.");
                 bottomHalf = new GameObject();
+            }
+            if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+            {
+                bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
             }
         }
         bottomHalf.name = gameObject.name + " bottom half";
         bottomHalf.transform.position = gameObject.transform.position;
-        if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
-        {
-            bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
-        }
         //bottomHalf.transform.rotation = gameObject.transform.rotation;
     }
 
@@ -273,6 +276,7 @@ public class PrefabPlacedObject
     public void Destroy()
     {
         Object.Destroy(gameObject);
+        Object.Destroy(bottomHalf);
         foreach(Vector3 intersection in intersectionPoints)
         {
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);

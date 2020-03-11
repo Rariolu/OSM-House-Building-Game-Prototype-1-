@@ -89,6 +89,12 @@ namespace EzySlice
             Compute(obj.transform);
         }
 
+        public void ComputeGlobalUp(GameObject obj)
+        {
+            Compute(obj.transform.position, Vector3.forward);
+            Debug.DrawLine(obj.transform.position, obj.transform.position + Vector3.forward);
+        }
+
         public Vector3 normal
         {
             get
