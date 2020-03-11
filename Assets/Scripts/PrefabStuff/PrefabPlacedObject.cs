@@ -202,10 +202,24 @@ public class PrefabPlacedObject
         }
         if (bottomHalf == null)
         {
-            bottomHalf = new GameObject();
+            GameObject templateBottomHalf;
+            if (ResourceManager.GetItem("BottomHalfTemplate", out templateBottomHalf))
+            {
+                bottomHalf = Object.Instantiate(templateBottomHalf);
+                bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
+            }
+            else
+            {
+                bottomHalf = new GameObject();
+            }
         }
         bottomHalf.name = gameObject.name + " bottom half";
         bottomHalf.transform.position = gameObject.transform.position;
+        if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+        {
+            bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
+        }
+        //bottomHalf.transform.rotation = gameObject.transform.rotation;
     }
 
     void CameraMoved(CameraMovementScript camera, int index)
