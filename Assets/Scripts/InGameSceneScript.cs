@@ -31,8 +31,6 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     }
 
     Contract currentContract;
-    const int minBound = -10;
-    const int maxBound = 10;
     Stack<PrefabPlacedObject> placedPrefabs = new Stack<PrefabPlacedObject>();
     const float spaceInterval = 5f;
     Dictionary<SNAP_POINT_TYPE, List<Vector3>> takenPositions = new Dictionary<SNAP_POINT_TYPE, List<Vector3>>();
@@ -198,10 +196,10 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         if (placedPrefabs.Count > 0)
         {
             PrefabPlacedObject ppo = placedPrefabs.Pop();
-            ppo.SnapPointTrigger.Snapped = false;
-            Prefab prefab = ppo.Prefab;
-            takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
-
+            //ppo.SnapPointTrigger.Snapped = false;
+            //Prefab prefab = ppo.Prefab;
+            //takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
+            RemovePlacedPrefab(ppo);
             //PrefabCounter counter;
             //if (PrefabCounter.InstanceAvailable(out counter))
             //{
@@ -210,6 +208,12 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
             ppo.Destroy();
         }
+    }
+
+    public void RemovePlacedPrefab(PrefabPlacedObject ppo)
+    {
+        Prefab prefab = ppo.Prefab;
+        takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
     }
 
 

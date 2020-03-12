@@ -190,6 +190,10 @@ public class PrefabPlacedObject
         {
             counter.IncrementCount(Prefab);
         }
+
+        gameScene.RemovePlacedPrefab(this);
+
+        SnapPointTrigger.Snapped = false;
     }
 
     public void SetSceneParent()

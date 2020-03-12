@@ -38,30 +38,8 @@ public class PrefabPlacementScript : MonoBehaviour
         {
             Click();
         }
-        //Debug.Log("ifrfijrf");
-        //StartCoroutine(ClickCountThing());
-
         held = true;
         StartCoroutine(DestroyOnHold());
-    }
-
-    float clickInterval = 0.5f;
-    int clickCount = 0;
-    IEnumerator ClickCountThing()
-    {
-        clickCount++;
-        Debug.LogFormat("Click count: {0};", clickCount);
-        if (clickCount >= 2)
-        {
-            DestroyPrefab();
-        }
-        float t = 0;
-        while (t < clickInterval)
-        {
-            t += Time.deltaTime;
-            yield return 0;
-        }
-        clickCount--;
     }
 
     void OnMouseUp()
