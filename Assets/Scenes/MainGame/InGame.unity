@@ -5542,7 +5542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &755640844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10600,6 +10600,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoofPrefabIcons
       objectReference: {fileID: 0}
+    - target: {fileID: 1608882660265671406, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608882659189073176, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498689364968408199, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10720,6 +10730,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8471272
       objectReference: {fileID: 0}
+    - target: {fileID: 1608882660152401264, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498689364968408184, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: compart
@@ -10775,30 +10790,15 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1608882660152401264, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1608882660152401279, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1608882660265671406, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1608882660265671393, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608882659189073176, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1608882659189073175, guid: df212867e885bf744894f019829259b4,
         type: 3}
@@ -12052,6 +12052,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorPrefabIcons
       objectReference: {fileID: 0}
+    - target: {fileID: 1608882660265671406, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608882659189073176, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498689364968408199, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12172,6 +12182,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8471272
       objectReference: {fileID: 0}
+    - target: {fileID: 1608882660152401264, guid: df212867e885bf744894f019829259b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498689364968408184, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: compart
@@ -12227,30 +12242,15 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1608882660152401264, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1608882660152401279, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1608882660265671406, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1608882660265671393, guid: df212867e885bf744894f019829259b4,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608882659189073176, guid: df212867e885bf744894f019829259b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1608882659189073175, guid: df212867e885bf744894f019829259b4,
         type: 3}
