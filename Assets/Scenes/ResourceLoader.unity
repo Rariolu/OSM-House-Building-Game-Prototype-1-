@@ -265,6 +265,8 @@ MonoBehaviour:
     Item: {fileID: 5288729184490879204, guid: fff81fec2ec996a4bb93adb6731fa1cb, type: 3}
   - Name: SnapPoint_FLOOR
     Item: {fileID: 7113488772659607490, guid: 0c0f13719b8450744bc9e6db45e5b527, type: 3}
+  - Name: Intersection
+    Item: {fileID: 6946157043457340215, guid: 58cfb89b56f266c439f05df8e6c9406c, type: 3}
   materials:
   - Name: default
     Item: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
