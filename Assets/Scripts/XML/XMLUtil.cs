@@ -60,16 +60,21 @@ public static class XMLUtil
     {
         if (!Directory.Exists(xmlDirectory))
         {
-            Debug.LogFormat("\"{0}\" doesn't exist.", xmlDirectory);
+            Debug.LogFormat("Directory \"{0}\" doesn't exist.", xmlDirectory);
             return;
         }
         string file = "{0}\\{1}_{2}_{3}.xml".FormatText(xmlDirectory, contract.name, contract.finishedConstruction, aggr);
         Debug.Log(file);
+        SaveContract(file, contract);
+    }
+
+    public static void SaveContract(string xmlFile, Contract contract)
+    {
         XmlWriterSettings config = new XmlWriterSettings();
         config.Indent = true;
         config.IndentChars = "\t";
 
-        XmlWriter xmlWriter = XmlWriter.Create(file, config);
+        XmlWriter xmlWriter = XmlWriter.Create(xmlFile, config);
 
         xmlWriter.WriteStartDocument();
 

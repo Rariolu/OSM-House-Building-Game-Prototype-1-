@@ -513,7 +513,16 @@ MonoBehaviour:
         snapType: 0
         type: 12
       quantity: 1
-    - positionsTakenWithinContract: []
+    - positionsTakenWithinContract:
+      - {x: 7.5, y: 2.6335, z: -12.5}
+      - {x: 7.5, y: 2.6335, z: -7.5}
+      - {x: 7.5, y: 2.6335, z: 2.5}
+      - {x: 7.5, y: 2.6335, z: -2.5}
+      - {x: 7.5, y: 2.6335, z: 7.5}
+      - {x: -12.5, y: 2.6335, z: -7.5}
+      - {x: -12.5, y: 2.6335, z: -2.5}
+      - {x: -12.5, y: 2.6335, z: 2.5}
+      - {x: -12.5, y: 2.6335, z: 7.5}
       prefab:
         compart: 1
         floorType: 0

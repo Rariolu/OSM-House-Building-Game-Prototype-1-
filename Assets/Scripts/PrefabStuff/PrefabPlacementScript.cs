@@ -7,6 +7,13 @@ public class PrefabPlacementScript : MonoBehaviour
 {
     public PrefabPlacementClick Click;
     public PrefabPlacedObject parentPrefabInstance;
+    public Prefab Prefab
+    {
+        get
+        {
+            return parentPrefabInstance.Prefab;
+        }
+    }
     float holdDown = 0.5f;
     bool held = false;
     IEnumerator DestroyOnHold()
