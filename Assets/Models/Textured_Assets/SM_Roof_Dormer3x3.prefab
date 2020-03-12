@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7005273466451860783}
   - component: {fileID: 2048220447930722073}
   - component: {fileID: 5715125988385479648}
+  - component: {fileID: 2383010168719001883}
   m_Layer: 0
   m_Name: SM_Roof_Dormer3x3
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2383010168719001883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299659304953966396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0982797, y: 3.1288664, z: 0.8145873}
+  m_Center: {x: 0.011997223, y: -0.4917751, z: 0.40729246}

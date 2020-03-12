@@ -15,8 +15,11 @@ public class PrefabPlacedObject
 {
     GameObject gameObject;
     InGameSceneScript gameScene;
+
     List<Intersection> intersections = new List<Intersection>();
+
     List<Vector3> intersectionPoints = new List<Vector3>();
+
     private Vector3 roundedPosition;
     public Vector3 RoundedPosition
     {
@@ -33,6 +36,16 @@ public class PrefabPlacedObject
             return templatePrefab;
         }
     }
+
+    MeshRenderer mRenderer;
+    MeshRenderer MeshRenderer
+    {
+        get
+        {
+            return mRenderer ?? (mRenderer = gameObject.GetComponent<MeshRenderer>());
+        }
+    }
+
     SnapPointTrigger snapPointTrigger;
     public SnapPointTrigger SnapPointTrigger
     {
@@ -45,6 +58,9 @@ public class PrefabPlacedObject
             snapPointTrigger = value;
         }
     }
+
+    Vector3 originalScale;
+
     public PrefabPlacedObject(Prefab prefab, Vector3 position)
     {
         templatePrefab = prefab;
@@ -75,23 +91,23 @@ public class PrefabPlacedObject
             gameObject.transform.SetParent(gameSceneObjectScript.transform);
         }
         Vector3 offset;
-        switch(prefab.snapType)
+        switch (prefab.snapType)
         {
             case SNAP_POINT_TYPE.CENTRE:
-            {
-                offset = new Vector3(-2.5f, 0, -2.5f);
-                break;
-            }
+                {
+                    offset = new Vector3(-2.5f, 0, -2.5f);
+                    break;
+                }
             case SNAP_POINT_TYPE.FLOOR:
-            {
-                offset = new Vector3(0, 0, -2.5f);
-                break;
-            }
+                {
+                    offset = new Vector3(0, 0, -2.5f);
+                    break;
+                }
             default:
-            {
-                offset = new Vector3();
-                break;
-            }
+                {
+                    offset = new Vector3();
+                    break;
+                }
         }
 
 
@@ -111,30 +127,33 @@ public class PrefabPlacedObject
         roundedPosition = roundPos;
         if (InGameSceneScript.InstanceAvailable(out gameScene))
         {
-            for (int i = -1; i < 2; i++)
+            switch (prefab.snapType)
             {
-                if (i != 0)
-                {
-                    switch(prefab.snapType)
+                case SNAP_POINT_TYPE.EDGE:
                     {
-                        case SNAP_POINT_TYPE.EDGE:
-                        {
-                            AddIntersection(new Vector2(i/2f, 0), prefab.snapType);
-                            break;
-                        }
-                        case SNAP_POINT_TYPE.CENTRE:
-                        {
-                            AddIntersection(new Vector2(0, i / 2f), prefab.snapType);
-                            break;
-                        }
+                        AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
+                        AddIntersection(new Vector2(1f / 2f, 0), prefab.snapType);
+                        break;
                     }
-                }
+                case SNAP_POINT_TYPE.CENTRE:
+                    {
+                        AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
+                        AddIntersection(new Vector2(0, 1f / 2f), prefab.snapType);
+                        break;
+                    }
             }
             gameScene.MaterialPlaced(prefab.material);
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+        pps.parentPrefabInstance = this;
+
+        BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
+        Debug.LogFormat("Collider: {0};", collider);
+
+        originalScale = gameObject.transform.localScale;
+
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
@@ -155,7 +174,7 @@ public class PrefabPlacedObject
     public void Destroy()
     {
         Object.Destroy(gameObject);
-        foreach(Vector3 intersection in intersectionPoints)
+        foreach (Vector3 intersection in intersectionPoints)
         {
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
         }
@@ -164,6 +183,12 @@ public class PrefabPlacedObject
         if (ConstructionUtil.InstanceAvailable(out util))
         {
             util.IncrementDestruction();
+        }
+
+        PrefabCounter counter;
+        if (PrefabCounter.InstanceAvailable(out counter))
+        {
+            counter.IncrementCount(Prefab);
         }
     }
 

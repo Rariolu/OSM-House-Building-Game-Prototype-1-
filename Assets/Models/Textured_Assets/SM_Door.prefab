@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8130106881080682381}
   - component: {fileID: 975301573243231675}
   - component: {fileID: 6824218931520151874}
+  - component: {fileID: 6457825918754372619}
   m_Layer: 0
   m_Name: SM_Door
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6457825918754372619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5082497975332312478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055517294, y: 1.0000002, z: 1.0000002}
+  m_Center: {x: 0.0070086457, y: 0, z: 0.5000001}

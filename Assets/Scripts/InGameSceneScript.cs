@@ -29,7 +29,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             availableFixtures = value;
         }
     }
-    
+
     Contract currentContract;
     const int minBound = -10;
     const int maxBound = 10;
@@ -57,13 +57,13 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         {
             intersection = new Intersection();
             Floor floorInst;
-            
+
             intersection.SetPosition(position);
             if (Floor.InstanceExists(floor, out floorInst))
             {
                 intersection.SetParent(floorInst.transform);
             }
-            
+
             intersections.Add(position, intersection);
             return true;
         }
@@ -151,7 +151,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         {
             groundFloor.Focus();
         }
-        foreach(MaterialQuantity mq in materialQuantites)
+        foreach (MaterialQuantity mq in materialQuantites)
         {
             if (matQuantities.ContainsKey(mq.material))
             {
@@ -168,7 +168,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             if (pbBlueprint != null)
             {
                 Sprite blueprint;
-                if (ResourceManager.GetItem(util.Contract.name+"_Blueprint",out blueprint))
+                if (ResourceManager.GetItem(util.Contract.name + "_Blueprint", out blueprint))
                 {
                     pbBlueprint.sprite = blueprint;
                 }
@@ -202,11 +202,11 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             Prefab prefab = ppo.Prefab;
             takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
 
-            PrefabCounter counter;
-            if (PrefabCounter.InstanceAvailable(out counter))
-            {
-                counter.IncrementCount(prefab);
-            }
+            //PrefabCounter counter;
+            //if (PrefabCounter.InstanceAvailable(out counter))
+            //{
+            //    counter.IncrementCount(prefab);
+            //}
 
             ppo.Destroy();
         }
