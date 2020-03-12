@@ -36,10 +36,6 @@ public class PrefabPositionStoring : ScriptableObject
                 for(int i = 0; i < contract.prefabCollections.Length; i++)
                 {
                     Prefab colPrefab = contract.prefabCollections[i].prefab;
-                    if (colPrefab.type == PREFABTYPE.PANEL_SIDE_GROUND)
-                    {
-                        int ic = 5;
-                    }
                     if (prefabPositions.ContainsKey(colPrefab))
                     {
                         contract.prefabCollections[i].positionsTakenWithinContract = prefabPositions[colPrefab].ToArray();
