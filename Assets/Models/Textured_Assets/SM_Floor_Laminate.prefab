@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1497118355502489887}
   - component: {fileID: 7610471531776203561}
   - component: {fileID: 4224757852368381904}
+  - component: {fileID: 2826377487149506574}
   m_Layer: 0
   m_Name: SM_Floor_Laminate
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2826377487149506574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494304725582189324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 0.041500177}
+  m_Center: {x: 0.5, y: 0, z: -0.000000081025085}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2953109656074274300}
   - component: {fileID: 6170084498107695050}
   - component: {fileID: 476258144613401395}
+  - component: {fileID: 1642785981842387460}
   m_Layer: 0
   m_Name: SM_Extruded_Door (1) 1
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1642785981842387460
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206997252885690351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28414518, y: 1, z: 1}
+  m_Center: {x: 0.121322595, y: 0, z: 0.5}

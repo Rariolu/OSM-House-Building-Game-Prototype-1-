@@ -28,23 +28,31 @@ public class Intersection
     public Intersection()
     {
         gameObject = new GameObject();
+        
+        GameObject intersectionPrefab;
+        if (ResourceManager.GetItem("Intersection", out intersectionPrefab))
+        {
+            gameObject = GameObject.Instantiate(intersectionPrefab);
+        }
+        else
+        {
+            gameObject.transform.localScale = new Vector3(1f, 5f, 1f);
+            BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
+            MeshFilter filter = gameObject.AddComponent<MeshFilter>();
+            MeshRenderer renderer = gameObject.AddComponent<MeshRenderer>();
+            Mesh mesh;
+            if (ResourceManager.GetItem("intersection", out mesh))
+            {
+                filter.mesh = mesh;
+            }
+            Material mat;
+            if (ResourceManager.GetItem("intersection", out mat))
+            {
+                renderer.material = mat;
+            }
+        }
         gameObject.layer = (int)LAYER.IntersectionLayer;
         gameObject.name = "Intersection";
-        gameObject.transform.localScale = new Vector3(1f, 5f, 1f);
-
-        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
-        MeshFilter filter = gameObject.AddComponent<MeshFilter>();
-        MeshRenderer renderer = gameObject.AddComponent<MeshRenderer>();
-        Mesh mesh;
-        if (ResourceManager.GetItem("intersection",out mesh))
-        {
-            filter.mesh = mesh;
-        }
-        Material mat;
-        if (ResourceManager.GetItem("intersection",out mat))
-        {
-            renderer.material = mat;
-        }
         SetClick();
     }
     public void Destroy()

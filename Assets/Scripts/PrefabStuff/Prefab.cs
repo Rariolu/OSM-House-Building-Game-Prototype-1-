@@ -48,6 +48,11 @@ public struct Prefab
     }
     public override int GetHashCode()
     {
-        return base.GetHashCode();
+        string c = ((int)compart).ToString();
+        string f = ((int)floorType).ToString();
+        string s = ((int)snapType).ToString();
+        string t = ((int)type).ToString();
+        string composite = c + f + s + t;
+        return int.Parse(composite);
     }
 }

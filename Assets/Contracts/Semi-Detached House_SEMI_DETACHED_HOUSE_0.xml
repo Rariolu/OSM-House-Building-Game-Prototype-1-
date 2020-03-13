@@ -75,7 +75,17 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="7.5" y="2.6335" z="-12.5" />
+				<vec3 x="7.5" y="2.6335" z="-7.5" />
+				<vec3 x="7.5" y="2.6335" z="2.5" />
+				<vec3 x="7.5" y="2.6335" z="-2.5" />
+				<vec3 x="7.5" y="2.6335" z="7.5" />
+				<vec3 x="-12.5" y="2.6335" z="-7.5" />
+				<vec3 x="-12.5" y="2.6335" z="-2.5" />
+				<vec3 x="-12.5" y="2.6335" z="2.5" />
+				<vec3 x="-12.5" y="2.6335" z="7.5" />
+			</positions>
 			<quantity>10</quantity>
 		</prefabcollection>
 		<prefabcollection>

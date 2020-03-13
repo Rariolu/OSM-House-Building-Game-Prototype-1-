@@ -102,7 +102,9 @@
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
     <Compile Include="Assets\Scripts\EndCondition\EndUtil.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
