@@ -144,30 +144,15 @@ public class PrefabPlacedObject
                     break;
                 }
             }
-            //for (int i = -1; i < 2; i++)
-            //{
-            //    if (i != 0)
-            //    {
-            //        switch(prefab.snapType)
-            //        {
-            //            case SNAP_POINT_TYPE.EDGE:
-            //            {
-            //                AddIntersection(new Vector2(i/2f, 0), prefab.snapType);
-            //                break;
-            //            }
-            //            case SNAP_POINT_TYPE.CENTRE:
-            //            {
-            //                AddIntersection(new Vector2(0, i / 2f), prefab.snapType);
-            //                break;
-            //            }
-            //        }
-            //    }
-            //}
             gameScene.MaterialPlaced(prefab.material);
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+        pps.parentPrefabInstance = this;
+
+        BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
+        Debug.LogFormat("Collider: {0};", collider);
 
         originalScale = gameObject.transform.localScale;
 
@@ -295,6 +280,16 @@ public class PrefabPlacedObject
         {
             camera.CameraMoved -= CameraMoved;
         }
+
+        PrefabCounter counter;
+        if (PrefabCounter.InstanceAvailable(out counter))
+        {
+            counter.IncrementCount(Prefab);
+        }
+
+        gameScene.RemovePlacedPrefab(this);
+
+        SnapPointTrigger.Snapped = false;
     }
 
     public void SetSceneParent()
