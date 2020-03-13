@@ -155,47 +155,52 @@ MonoBehaviour:
   - name: WOOD_0
     clip: {fileID: 8300000, guid: f6940d7da2937ce43bb136e07d3b5744, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: WOOD_1
     clip: {fileID: 8300000, guid: e254a307d1a1a4442a94cec8fdb6fb37, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: WOOD_2
     clip: {fileID: 8300000, guid: 423d3b9ea0b71ad4da53d8e7c7b89e21, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: WOOD_3
     clip: {fileID: 8300000, guid: dcccfbc1ad17ad8468a522a31fd28720, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: BRICK_0
     clip: {fileID: 8300000, guid: 5864b7d1871969848a62fc97bf3ec9c8, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: BRICK_1
     clip: {fileID: 8300000, guid: fe9d61f24acadb746972223eb4a262cd, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: BRICK_2
     clip: {fileID: 8300000, guid: 22db77cebad33a7489d411e245365fa3, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: BRICK_3
     clip: {fileID: 8300000, guid: 22db8091c064f68429f22c7251bf640d, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.35
     type: 0
   - name: MENU_BUTTON_CLICK
     clip: {fileID: 8300000, guid: 27eaa922784a51b46a446c7114c20255, type: 3}
     loop: 0
     volume: 1
+    type: 0
+  - name: Swiping
+    clip: {fileID: 8300000, guid: a2b25f4c8b34edf4784061bdbe05adbd, type: 3}
+    loop: 0
+    volume: 0.2
     type: 0
 --- !u!114 &214173333
 MonoBehaviour:
