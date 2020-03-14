@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 public class ChooseXMLFile : EditorWindow
 {
     bool aborted = false;
@@ -50,3 +52,5 @@ public class ChooseXMLFile : EditorWindow
         }
     }
 }
+
+#endif
