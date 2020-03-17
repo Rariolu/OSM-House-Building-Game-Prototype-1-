@@ -24,6 +24,11 @@ public class SnapPoint
     /// </summary>
     GameObject gameObject;
 
+    public void SetDropIndex(int index)
+    {
+        trigger.dropIndex = index;
+    }
+
     SnapPointTrigger trigger;
 
     /// <summary>
@@ -102,21 +107,7 @@ public class SnapPoint
         }
         else
         {
-            gameObject = new GameObject();
-
-            MeshFilter filter = gameObject.AddComponent<MeshFilter>();
-            MeshRenderer renderer = gameObject.AddComponent<MeshRenderer>();
-            Mesh mesh;
-            if (ResourceManager.GetItem("SnapPoint", out mesh))
-            {
-                filter.mesh = mesh;
-            }
-
-            Material mat;
-            if (ResourceManager.GetItem("SnapPoint_{0}".FormatText(type), out mat))
-            {
-                renderer.material = mat;
-            }
+            gameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             const float sphereScale = 0.5f;
             gameObject.transform.localScale = new Vector3(sphereScale, sphereScale, sphereScale);
         }

@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+public delegate void CameraMoved(CameraMovementScript sender, int positionIndex);
+
 /// <summary>
 /// A script which is used to rotate its parent object (the camera) around the up axis
 /// of the current floor.
 /// </summary>
 public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMovementScript>
 {
+
+    public CameraMoved CameraMoved;
+
     bool canRotate = true;
     int currentPosition = 0;
 
@@ -34,6 +40,21 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
         SetInstance(this);
         
     }
+
+    public Vector3 ActualCameraPosition
+    {
+        get
+        {
+            Transform child = transform.GetChild(0);
+            if (child != null)
+            {
+                return child.position;
+            }
+            Debug.Log("Child object not found.");
+            return new Vector3();
+        }
+    }
+
     private void Start()
     {
         originalY = transform.position.y;
@@ -75,12 +96,14 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
 		SOUNDNAME Swiping = cameraDir == CAMERA_DIR.LEFT ? SOUNDNAME.SWIPE_LEFT : SOUNDNAME.SWIPE_RIGHT;
 		IntegratedSoundManager.PlaySoundAsync("Swiping");
         const int angle = 90;
+
         Transform floorTransform = Floor.FocusedFloor.transform;
         Vector3 floorUp = floorTransform.up;
         Vector3 floorPos = floorTransform.position;
+
         int newIndex = currentPosition + (int)cameraDir;
         newIndex = newIndex < 0 ? cameraPositions.Length + newIndex : newIndex;
-        //Debug.LogFormat("New camera index: {0}; Modded: {1};", newIndex, newIndex % cameraPositions.Length);
+        
         CameraPosition newPosition = cameraPositions[newIndex % cameraPositions.Length];
         float current = 0;
         while (d < angle)
@@ -93,8 +116,15 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
             yield return 0;
         }
         currentPosition = newIndex;
+
+        if (CameraMoved != null)
+        {
+            CameraMoved(this, currentPosition);
+        }
+
         Vector3 newPos = newPosition.position;
         newPos.y = moveY ? floorPos.y + yIntercept : originalY;
+
         transform.position = newPos;
         transform.rotation = Quaternion.Euler(newPosition.rotation);
         canRotate = true;

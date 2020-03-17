@@ -7,6 +7,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EzySlice;
+using EPlane = EzySlice.Plane;
 
 /// <summary>
 /// A class which spawns a prefab gameobject at a selected position.
@@ -98,23 +100,23 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             gameObject.transform.SetParent(gameSceneObjectScript.transform);
         }
         Vector3 offset;
-        switch (prefab.snapType)
+        switch(prefab.snapType)
         {
             case SNAP_POINT_TYPE.CENTRE:
-                {
-                    offset = new Vector3(-2.5f, 0, -2.5f);
-                    break;
-                }
+            {
+                offset = new Vector3(-2.5f, 0, -2.5f);
+                break;
+            }
             case SNAP_POINT_TYPE.FLOOR:
-                {
-                    offset = new Vector3(0, 0, -2.5f);
-                    break;
-                }
+            {
+                offset = new Vector3(0, 0, -2.5f);
+                break;
+            }
             default:
-                {
-                    offset = new Vector3();
-                    break;
-                }
+            {
+                offset = new Vector3();
+                break;
+            }
         }
 
 
@@ -137,17 +139,17 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             switch (prefab.snapType)
             {
                 case SNAP_POINT_TYPE.EDGE:
-                    {
-                        AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
-                        AddIntersection(new Vector2(1f / 2f, 0), prefab.snapType);
-                        break;
-                    }
+                {
+                    AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
+                    AddIntersection(new Vector2( 1f / 2f, 0), prefab.snapType);
+                    break;
+                }
                 case SNAP_POINT_TYPE.CENTRE:
-                    {
-                        AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
-                        AddIntersection(new Vector2(0, 1f / 2f), prefab.snapType);
-                        break;
-                    }
+                {
+                    AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
+                    AddIntersection(new Vector2(0,  1f / 2f), prefab.snapType);
+                    break;
+                }
             }
             gameScene.MaterialPlaced(prefab.material);
         }
@@ -161,6 +163,93 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
         originalScale = gameObject.transform.localScale;
 
+        CreateBottomHalf();
+
+        CameraMovementScript camera;
+        if (CameraMovementScript.InstanceAvailable(out camera))
+        {
+            camera.CameraMoved += CameraMoved;
+            CameraMoved(camera, 0);
+        }
+
+    }
+
+    GameObject bottomHalf;
+    
+    void CreateBottomHalf()
+    {
+        EPlane plane = new EPlane();
+        //plane.ComputeGlobalUp(gameObject);
+        //plane.ComputeAlternative(gameObject);
+        plane.Compute(gameObject);
+        TextureRegion textureRegion = new TextureRegion();
+        
+        Material bottomMat = MeshRenderer.material;
+        //SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
+        //if (sh != null)
+        //{
+        //    Debug.Log("sh not null, attempting to create lower hull.");
+        //    bottomHalf = sh.CreateLowerHull(gameObject, bottomMat);
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("sh was null");
+        //}
+        if (bottomHalf == null)
+        {
+            GameObject templateBottomHalf;
+            if (ResourceManager.GetItem("BottomHalfTemplate", out templateBottomHalf))
+            {
+                bottomHalf = Object.Instantiate(templateBottomHalf);
+                bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
+                Debug.Log("BottomHalf template found and instantiated.");
+            }
+            else
+            {
+                Debug.LogWarning("BottomHalf template not found so making a blank object sos.");
+                bottomHalf = new GameObject();
+            }
+            if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+            {
+                bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
+            }
+        }
+        bottomHalf.name = gameObject.name + " bottom half";
+        bottomHalf.transform.position = gameObject.transform.position;
+        //bottomHalf.transform.rotation = gameObject.transform.rotation;
+    }
+
+    void CameraMoved(CameraMovementScript camera, int index)
+    {
+        if (Prefab.position == PREFAB_POSITION.EXTERIOR)
+        {
+            Vector3 pos = gameObject.transform.position;
+            Vector3 cameraPos = camera.ActualCameraPosition;
+            if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+            {
+                bool z = (pos.z < 0 && cameraPos.z < 0) || (pos.z > 0 && cameraPos.z > 0);
+                Drop(z);
+            }
+            else if (Prefab.snapType == SNAP_POINT_TYPE.CENTRE)
+            {
+                bool x = (pos.x < 0 && cameraPos.x < 0) || (pos.x > 0 && cameraPos.x > 0);
+                Drop(x);
+            }
+        }
+    }
+
+    void Drop(bool drop)
+    {
+        gameObject.SetActive(!drop);
+        bottomHalf.SetActive(drop);
+        //gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.25f : 1f) * originalScale.z);
+        //MeshRenderer.enabled = !drop;
+        //for(int i = 0; i < MeshRenderer.materials.Length; i++)
+        //{
+        //    Material mat = MeshRenderer.materials[i];
+        //    mat.color = new Color(mat.color.r,mat.color.g,mat.color.b,drop ? 0.5f : 1.0f);
+        //    MeshRenderer.materials[i] = mat;
+        //}
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
@@ -181,7 +270,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     public void Destroy()
     {
         Object.Destroy(gameObject);
-        foreach (Vector3 intersection in intersectionPoints)
+        Object.Destroy(bottomHalf);
+        foreach(Vector3 intersection in intersectionPoints)
         {
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
         }
@@ -190,6 +280,12 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         if (ConstructionUtil.InstanceAvailable(out util))
         {
             util.IncrementDestruction();
+        }
+
+        CameraMovementScript camera;
+        if (CameraMovementScript.InstanceAvailable(out camera))
+        {
+            camera.CameraMoved -= CameraMoved;
         }
 
         PrefabCounter counter;

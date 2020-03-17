@@ -32,6 +32,9 @@ public class SnapPointTrigger : MonoBehaviour
             isSnapped = value;
         }
     }
+
+    public int dropIndex;
+
     /// <summary>
     /// The snap type (which determines which objects
     /// can be "snapped" to this) of this SnapPoint.
