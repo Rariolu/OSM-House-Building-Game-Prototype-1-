@@ -91,6 +91,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     {
         SetInstance(this);
         PrefabCounter.CreatePrefabCounter();
+        PrefabPlacedObject.Clear();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
         if (ConstructionUtil.InstanceAvailable(out util))
@@ -210,10 +211,18 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Debug.LogFormat("Contract: {0};", EndUtil.Pass() ? "Passed" : "Failed");
+        }
+    }
+
     public void RemovePlacedPrefab(PrefabPlacedObject ppo)
     {
         Prefab prefab = ppo.Prefab;
-        takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
+        takenPositions[prefab.snapType].Remove(ppo.RoundedPosition);
     }
 
 

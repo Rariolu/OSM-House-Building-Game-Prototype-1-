@@ -11,7 +11,7 @@ using UnityEngine;
 /// <summary>
 /// A class which spawns a prefab gameobject at a selected position.
 /// </summary>
-public class PrefabPlacedObject
+public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 {
     GameObject gameObject;
     InGameSceneScript gameScene;
@@ -61,8 +61,15 @@ public class PrefabPlacedObject
 
     Vector3 originalScale;
 
+    static int instCount = 0;
+
+    readonly int instID;
+
     public PrefabPlacedObject(Prefab prefab, Vector3 position)
     {
+        instID = instCount++;
+        SetInstance(instID, this);
+
         templatePrefab = prefab;
         GameObject template;
         if (ResourceManager.GetItem(prefab.type, out template))
@@ -194,6 +201,8 @@ public class PrefabPlacedObject
         gameScene.RemovePlacedPrefab(this);
 
         SnapPointTrigger.Snapped = false;
+
+        RemoveInstance(instID);
     }
 
     public void SetSceneParent()

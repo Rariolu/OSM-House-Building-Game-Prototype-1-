@@ -106,4 +106,29 @@ public class Contract
     {
         return !(c1 == c2);
     }
+
+    /// <summary>
+    /// Create a dictionary that maps all the contract's 
+    /// prefabs with their proper locations.
+    /// </summary>
+    /// <returns></returns>
+    public Dictionary<Prefab,List<Vector3>> GetPrefabPositions()
+    {
+        Dictionary<Prefab, List<Vector3>> dict = new Dictionary<Prefab, List<Vector3>>();
+        foreach(PrefabCollection pc in prefabCollections)
+        {
+            Prefab prefab = pc.prefab;
+            Vector3[] positions = pc.positionsTakenWithinContract;
+            if (!dict.ContainsKey(prefab))
+            {
+                dict.Add(prefab, positions.ToList());
+            }
+            else
+            {
+                dict[prefab].AddRange(positions);
+                Debug.LogWarningFormat("{0} is identified on multiple occasions in the contract.");
+            }
+        }
+        return dict;
+    }
 }
