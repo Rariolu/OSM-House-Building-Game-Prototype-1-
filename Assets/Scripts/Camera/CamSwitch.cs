@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CamSwitch : MonoBehaviour
 {
     public GameObject Cam1;
     public GameObject Cam2;
-
+    
     void Start()
     {
         Cam1.SetActive(true);
@@ -26,4 +27,14 @@ public class CamSwitch : MonoBehaviour
             Cam2.SetActive(true);
         }
     }
+
+   public void Camera()
+    {
+        Cam1.SetActive(false);
+        Cam2.SetActive(true);
+        
+    }
+
+
+
 }
