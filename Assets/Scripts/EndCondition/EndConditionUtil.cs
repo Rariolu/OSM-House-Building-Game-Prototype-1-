@@ -3,31 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public static class EndUtil
+public static class EndConditionUtil
 {
-    public static bool Pass()
+    public static EXIT_STATE Pass()
     {
         ConstructionUtil constructionUtil;
         if (!ConstructionUtil.InstanceAvailable(out constructionUtil))
         {
             Debug.LogWarning("There isn't a construction util so default fail.");
-            return false;
+            return EXIT_STATE.LOSE;
         }
         Contract contract = constructionUtil.Contract;
         if (!PrefabsInCorrectPosition(contract))
         {
             Debug.LogWarning("The prefabs aren't in the correct position.");
-            return false;
+            return EXIT_STATE.LOSE;
         }
 
         if (!FixingsInAllIntersections())
         {
             Debug.LogWarning("Not all the intersections have fixings.");
-            return false;
+            return EXIT_STATE.LOSE;
         }
 
-        return true;
+        return EXIT_STATE.WIN;
     }
+
+    /// <summary>
+    /// Returns true if the correct prefabs
+    /// have been placed in the correct positions.
+    /// </summary>
+    /// <param name="contract"></param>
+    /// <returns></returns>
     static bool PrefabsInCorrectPosition(Contract contract)
     {
         PrefabPlacedObject[] placedPrefabs = PrefabPlacedObject.Values;

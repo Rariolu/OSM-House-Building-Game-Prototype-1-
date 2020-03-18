@@ -106,7 +106,9 @@
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
-    <Compile Include="Assets\Scripts\EndCondition\EndUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndConditionUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndGameUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndSceneScript.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings.cs" />

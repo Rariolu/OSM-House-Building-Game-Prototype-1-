@@ -216,7 +216,8 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Debug.LogFormat("Contract: {0};", EndUtil.Pass() ? "Passed" : "Failed");
+            Util.SetExitState(EndConditionUtil.Pass());
+            //Debug.LogFormat("Contract: {0};", EndConditionUtil.Pass());
         }
     }
 
