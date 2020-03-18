@@ -14,7 +14,7 @@ using UnityEngine.EventSystems;
 /// A class which represents a particular intersection (bridge between
 /// two separate prefabs).
 /// </summary>
-public class Intersection
+public class Intersection : MultitonClass<Intersection,int>
 {
     List<FIXINGSECTION> fixingSections = new List<FIXINGSECTION>();
     public List<FIXINGSECTION> FixingSections
@@ -25,8 +25,16 @@ public class Intersection
         }
     }
     GameObject gameObject;
+
+    static int instCount = 0;
+
+    readonly int instID;
+
     public Intersection()
     {
+        instID = instCount++;
+        SetInstance(instID, this);
+
         gameObject = new GameObject();
         
         GameObject intersectionPrefab;
@@ -58,6 +66,7 @@ public class Intersection
     public void Destroy()
     {
         Object.Destroy(gameObject);
+        RemoveInstance(instID);
     }
     void SetClick()
     {

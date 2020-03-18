@@ -92,6 +92,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         SetInstance(this);
         PrefabCounter.CreatePrefabCounter();
         PrefabPlacedObject.Clear();
+        Intersection.Clear();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
         if (ConstructionUtil.InstanceAvailable(out util))
@@ -241,7 +242,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
 /// <summary>
 /// A struct that determines the quantity of sounds
-/// to use for a particular material.
+/// to used for a particular material.
 /// </summary>
 [System.Serializable]
 public struct MaterialQuantity

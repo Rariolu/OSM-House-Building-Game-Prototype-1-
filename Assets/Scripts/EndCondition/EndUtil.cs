@@ -10,14 +10,19 @@ public static class EndUtil
         ConstructionUtil constructionUtil;
         if (!ConstructionUtil.InstanceAvailable(out constructionUtil))
         {
-            //There isn't a construction util so default
-            //fail.
+            Debug.LogWarning("There isn't a construction util so default fail.");
             return false;
         }
         Contract contract = constructionUtil.Contract;
         if (!PrefabsInCorrectPosition(contract))
         {
-            //The prefabs aren't in the correct position.
+            Debug.LogWarning("The prefabs aren't in the correct position.");
+            return false;
+        }
+
+        if (!FixingsInAllIntersections())
+        {
+            Debug.LogWarning("Not all the intersections have fixings.");
             return false;
         }
 
@@ -31,13 +36,21 @@ public static class EndUtil
         {
             Prefab prefab = placedPrefab.Prefab;
             Vector3 placedPosition = placedPrefab.RoundedPosition;
+
+            //Check if the prefab is in the contract
+            //and check if the contract has that specific placed position.
             bool prefabInContract = prefabPosMap.ContainsKey(prefab);
             bool placedPositionInContract = prefabInContract && prefabPosMap[prefab].Contains(placedPosition);
+
             if (!placedPositionInContract)
             {
                 Debug.LogWarningFormat("Prefab In contract: {0}; Position in contract: {1};", prefabInContract, placedPositionInContract);
                 return false;
             }
+
+            //Remove the position from the dictionary
+            //and remove the prefab if there are no
+            //more positions.
             prefabPosMap[prefab].RemoveAll(p => p == placedPosition);
             if (prefabPosMap[prefab].Count < 1)
             {
@@ -51,6 +64,19 @@ public static class EndUtil
             return false;
         }
 
+        return true;
+    }
+
+    static bool FixingsInAllIntersections()
+    {
+        Intersection[] intersections = Intersection.Values;
+        foreach(Intersection intersection in intersections)
+        {
+            if (intersection.FixingSections.Count < 1)
+            {
+                return false;
+            }
+        }
         return true;
     }
 }
