@@ -40,6 +40,10 @@ public class PrefabPositionStoring : ScriptableObject
                     {
                         contract.prefabCollections[i].positionsTakenWithinContract = prefabPositions[colPrefab].ToArray();
                     }
+                    else
+                    {
+                        contract.prefabCollections[i].positionsTakenWithinContract = new Vector3[0];
+                    }
                 }
                 XMLUtil.SaveContract(xmlFile, contract);
                 EditorUtility.DisplayDialog("Positions Saved", string.Format("Positions saved in \"{0}\".", xmlFile), "K");

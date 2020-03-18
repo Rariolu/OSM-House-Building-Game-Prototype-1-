@@ -121,7 +121,10 @@ public class Contract
             Vector3[] positions = pc.positionsTakenWithinContract;
             if (!dict.ContainsKey(prefab))
             {
-                dict.Add(prefab, positions.ToList());
+                if (positions.Length > 0)
+                {
+                    dict.Add(prefab, positions.ToList());
+                }
             }
             else
             {

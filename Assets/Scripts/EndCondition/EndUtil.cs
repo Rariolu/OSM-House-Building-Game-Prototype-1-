@@ -35,6 +35,7 @@ public static class EndUtil
             bool placedPositionInContract = prefabInContract && prefabPosMap[prefab].Contains(placedPosition);
             if (!placedPositionInContract)
             {
+                Debug.LogWarningFormat("Prefab In contract: {0}; Position in contract: {1};", prefabInContract, placedPositionInContract);
                 return false;
             }
             prefabPosMap[prefab].RemoveAll(p => p == placedPosition);
@@ -46,7 +47,7 @@ public static class EndUtil
 
         if (prefabPosMap.Count > 0)
         {
-            Debug.Log("Pos map still got some shit");
+            Debug.LogWarning("Pos map still got some shit");
             return false;
         }
 
