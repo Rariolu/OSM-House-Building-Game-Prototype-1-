@@ -16,7 +16,7 @@ public class CamSwitch : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("1Key"))
+        /*if (Input.GetButtonDown("1Key"))
         {
             Cam1.SetActive(true);
             Cam2.SetActive(false);
@@ -25,14 +25,15 @@ public class CamSwitch : MonoBehaviour
         {
             Cam1.SetActive(false);
             Cam2.SetActive(true);
-        }
+        }*/
     }
 
-   public void Camera()
+    bool cam1Active = true;
+    public void Camera()
     {
-        Cam1.SetActive(false);
-        Cam2.SetActive(true);
-        
+        cam1Active = !cam1Active;
+        Cam1.SetActive(cam1Active);
+        Cam2.SetActive(!cam1Active);
     }
 
 
