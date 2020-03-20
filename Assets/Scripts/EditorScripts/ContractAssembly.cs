@@ -1,0 +1,38 @@
+﻿using UnityEngine;
+using UnityEditor;
+
+#if UNITY_EDITOR
+
+public class ContractAssembly : ScriptableObject
+{
+    [MenuItem("Tools/Contract/AutoAssembly")]
+    static void AutoAssembleContract()
+    {
+        const string xmlFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
+        Contract contract = null;
+        if(EditorUtility.DisplayDialog("Load XML?", "Load contract from XML file?", "YES", "NO"))
+        {
+            XMLUtil.LoadContract(xmlFile, out contract);
+        }
+        else
+        {
+            ConstructionUtil util;
+            if (ConstructionUtil.InstanceAvailable(out util))
+            {
+                contract = util.Contract;
+            }
+        }
+        if (contract != null)
+        {
+            foreach(PrefabCollection prefab in contract.prefabCollections)
+            {
+                foreach(Vector3 pos in prefab.positionsTakenWithinContract)
+                {
+                    PrefabPlacedObject ppo = new PrefabPlacedObject(prefab.prefab, pos);
+                }
+            }
+        }
+    }
+}
+
+#endif

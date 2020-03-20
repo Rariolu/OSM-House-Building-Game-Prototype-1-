@@ -91,6 +91,8 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     {
         SetInstance(this);
         PrefabCounter.CreatePrefabCounter();
+        PrefabPlacedObject.Clear();
+        Intersection.Clear();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
         if (ConstructionUtil.InstanceAvailable(out util))
@@ -210,10 +212,19 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Util.SetExitState(EndConditionUtil.Pass());
+            //Debug.LogFormat("Contract: {0};", EndConditionUtil.Pass());
+        }
+    }
+
     public void RemovePlacedPrefab(PrefabPlacedObject ppo)
     {
         Prefab prefab = ppo.Prefab;
-        takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
+        takenPositions[prefab.snapType].Remove(ppo.RoundedPosition);
     }
 
 
@@ -232,7 +243,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
 
 /// <summary>
 /// A struct that determines the quantity of sounds
-/// to use for a particular material.
+/// to used for a particular material.
 /// </summary>
 [System.Serializable]
 public struct MaterialQuantity

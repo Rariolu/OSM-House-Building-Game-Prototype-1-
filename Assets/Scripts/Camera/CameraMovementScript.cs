@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public delegate void CameraMoved(CameraMovementScript sender, int positionIndex);
+public delegate void CameraMoved(CameraMovementScript sender);
 
 /// <summary>
 /// A script which is used to rotate its parent object (the camera) around the up axis
@@ -119,7 +119,7 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
 
         if (CameraMoved != null)
         {
-            CameraMoved(this, currentPosition);
+            CameraMoved(this);
         }
 
         Vector3 newPos = newPosition.position;

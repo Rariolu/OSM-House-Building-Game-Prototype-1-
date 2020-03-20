@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceClassSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceUIButtonSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
@@ -103,10 +104,13 @@
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ContractAssembly.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
-    <Compile Include="Assets\Scripts\EndCondition\EndUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndConditionUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndGameUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndSceneScript.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
     <Compile Include="Assets\Scripts\GameUI\ContractViewportScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\DropWallButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\FloorButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseNamingScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseViewerButton.cs" />

@@ -442,6 +442,13 @@ public static class Util
         eventTrigger.triggers.Add(entry);
     }
 
+
+    public static void SetExitState(EXIT_STATE exitState)
+    {
+        EndGameUtil.SetExitState(exitState);
+        Util.LoadScene(SCENE.EndScene);
+    }
+
     /// <summary>
     /// Load the house view scene with a particular house.
     /// </summary>

@@ -15,6 +15,12 @@ public enum CONSTRUCTION_IMAGE_TYPE
     BLUEPRINT
 }
 
+public enum EXIT_STATE
+{
+    WIN,
+    LOSE
+}
+
 /// <summary>
 /// An enum representing the different types
 /// of finished constructions.

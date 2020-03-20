@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// A class which allows a derived class to become a multiton
@@ -13,6 +14,31 @@ using System.Collections.Generic;
 public abstract class MultitonClass<T, U> where T : class
 {
     static Dictionary<U, T> instances = new Dictionary<U, T>();
+
+    public static int Count
+    {
+        get
+        {
+            return instances.Count;
+        }
+    }
+
+    /// <summary>
+    /// All instances of the target class.
+    /// </summary>
+    public static T[] Values
+    {
+        get
+        {
+            return instances.Values.ToArray();
+        }
+    }
+
+    public static void Clear()
+    {
+        instances.Clear();
+    }
+
     /// <summary>
     /// Determine whether an instance corresponding to the given
     /// key exists, and output the result.
@@ -48,5 +74,22 @@ public abstract class MultitonClass<T, U> where T : class
         {
             instances.Add(key, obj);
         }
+    }
+
+    /// <summary>
+    /// If an instance of the given key is found,
+    /// it is removed and a true value is returned.
+    /// Otherwise a false value is returned.
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
+    protected static bool RemoveInstance(U key)
+    {
+        if (instances.ContainsKey(key))
+        {
+            instances.Remove(key);
+            return true;
+        }
+        return false;
     }
 }
