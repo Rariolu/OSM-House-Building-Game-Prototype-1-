@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceClassSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceUIButtonSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
     <Compile Include="Assets\Scripts\GameUI\ContractViewportScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\DropWallButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\FloorButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseNamingScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseViewerButton.cs" />

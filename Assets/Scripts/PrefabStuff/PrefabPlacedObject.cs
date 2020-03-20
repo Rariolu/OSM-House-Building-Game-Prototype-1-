@@ -169,9 +169,14 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         if (CameraMovementScript.InstanceAvailable(out camera))
         {
             camera.CameraMoved += CameraMoved;
-            CameraMoved(camera, 0);
+            CameraMoved(camera);
         }
 
+        DropWallButton dropWallButton;
+        if (DropWallButton.InstanceAvailable(out dropWallButton))
+        {
+            Drop(dropWallButton.Dropped);
+        }
     }
 
     GameObject bottomHalf;
@@ -218,8 +223,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         bottomHalf.transform.position = gameObject.transform.position;
         //bottomHalf.transform.rotation = gameObject.transform.rotation;
     }
-
-    void CameraMoved(CameraMovementScript camera, int index)
+    bool dropped = false;
+    void CameraMoved(CameraMovementScript camera)
     {
         if (Prefab.position == PREFAB_POSITION.EXTERIOR)
         {
@@ -228,20 +233,23 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
             {
                 bool z = (pos.z < 0 && cameraPos.z < 0) || (pos.z > 0 && cameraPos.z > 0);
-                Drop(z);
+                dropped = z;
             }
             else if (Prefab.snapType == SNAP_POINT_TYPE.CENTRE)
             {
                 bool x = (pos.x < 0 && cameraPos.x < 0) || (pos.x > 0 && cameraPos.x > 0);
-                Drop(x);
+                dropped = x;
             }
         }
     }
 
-    void Drop(bool drop)
+    public void Drop(bool drop)
     {
-        gameObject.SetActive(!drop);
-        bottomHalf.SetActive(drop);
+        bool willDrop = drop && dropped;
+        //gameObject.SetActive(!drop);
+        //bottomHalf.SetActive(drop);
+        gameObject.SetActive(!willDrop);
+        bottomHalf.SetActive(willDrop);
         //gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.25f : 1f) * originalScale.z);
         //MeshRenderer.enabled = !drop;
         //for(int i = 0; i < MeshRenderer.materials.Length; i++)
