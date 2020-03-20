@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ContractAssembly.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
