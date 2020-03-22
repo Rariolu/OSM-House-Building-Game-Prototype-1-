@@ -33,6 +33,7 @@ public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelect
     {
         base.Start();
         Click += PrefabCompartSelecitonButton_Click;
+        SetActive(false);
     }
 
     void PrefabCompartSelecitonButton_Click(UIButton sender)
