@@ -4697,8 +4697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2424e3d4903da547bc4aae77c3c6d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cam1: {fileID: 0}
-  Cam2: {fileID: 0}
+  Cam1: {fileID: 963194225}
+  Cam2: {fileID: 1574793145}
 --- !u!1 &442751189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1608882660404010635, guid: df212867e885bf744894f019829259b4,
