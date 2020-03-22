@@ -17,6 +17,16 @@ public class RescItem<T>
     public string Name;
     [SerializeField]
     public T Item;
+
+    public RescItem()
+    {
+
+    }
+    public RescItem(string name, T item)
+    {
+        Name = name;
+        Item = item;
+    }
 }
 
 [Serializable] public class FontRescItem : RescItem<Font> { }

@@ -211,6 +211,11 @@ public static class Util
         return new Rect(bottomLeftCorner.x, bottomLeftCorner.y, bottomLeftCorner.x + Screen.width, bottomLeftCorner.y + Screen.height);
     }
 
+    public static string PadNumber(this int number, int digits)
+    {
+        return number.ToString().PadLeft(digits, '0');
+    }
+
     /// <summary>
     /// Returns true if a prefab has been destroyed in the current game.
     /// </summary>
