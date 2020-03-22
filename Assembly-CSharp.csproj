@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceUIButtonSingleton.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs" />
@@ -103,6 +104,9 @@
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
+    <Compile Include="Assets\Scripts\Debug\Logger.cs" />
+    <Compile Include="Assets\Scripts\Debug\LogToggleButton.cs" />
+    <Compile Include="Assets\Scripts\Debug\UILogger.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractAssembly.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
