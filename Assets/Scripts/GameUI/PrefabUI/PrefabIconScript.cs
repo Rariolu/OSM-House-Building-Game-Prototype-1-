@@ -65,7 +65,7 @@ public class PrefabIconScript : UIButton
             }
             else
             {
-                Debug.LogFormat("Num str was {0}.", numStr);
+                Logger.Log("Num str was {0}.", numStr);
             }
         }
     }

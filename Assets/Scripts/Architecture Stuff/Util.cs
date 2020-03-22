@@ -300,7 +300,7 @@ public static class Util
         {
             return sceneStack.Previous();//.mainScene;
         }
-        Debug.Log("Not enough elements on Stack");
+        Logger.Log("Not enough elements on Stack");
         return 0;
     }
 

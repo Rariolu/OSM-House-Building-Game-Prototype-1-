@@ -29,11 +29,11 @@ public class ContractSelectionScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("btnStart was null.");
+            Logger.Log("btnStart was null.");
         }
         if (btnBrochure != null)
         {
-            btnBrochure.Click += (sender) => { Debug.Log("btnBrochure clicked."); };
+            btnBrochure.Click += (sender) => { Logger.Log("btnBrochure clicked."); };
         }
     }
     void StartContract(UIButton sender)
@@ -44,7 +44,7 @@ public class ContractSelectionScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Contract was null.");
+            Logger.Log("Contract was null.");
         }
     }
 }

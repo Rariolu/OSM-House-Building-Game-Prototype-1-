@@ -42,16 +42,16 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
         
         if (scene.ToString().NormaliseString() != sceneName.NormaliseString())
         {
-            Debug.LogFormat("Scene \"{0}\" has SceneObject with value \"{1}\".",sceneName,scene);
+            Logger.Log("Scene \"{0}\" has SceneObject with value \"{1}\".",sceneName,scene);
             SCENE parsedScene;
             if (Util.EnumTryParse(sceneName,out parsedScene))
             {
                 scene = parsedScene;
-                Debug.LogFormat("SceneObject enum value changed to {0}.", scene);
+                Logger.Log("SceneObject enum value changed to {0}.", scene);
             }
             else
             {
-                Debug.Log("No viable scene enum value found for this scene's name.");
+                Logger.Log("No viable scene enum value found for this scene's name.");
             }
         }
         SetInstance(scene, this);
@@ -84,7 +84,7 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     public void SetActive(bool active)
     {
         gameObject.SetActive(active);
-        Debug.LogFormat("Setting {0} to active state {1}", scene, active);
+        Logger.Log("Setting {0} to active state {1}", scene, active);
     }
 
     void Update()

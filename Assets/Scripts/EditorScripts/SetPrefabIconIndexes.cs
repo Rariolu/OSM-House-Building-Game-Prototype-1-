@@ -29,7 +29,7 @@ public class SetPrefabIconIndexes : ScriptableObject
                 }
                 else
                 {
-                    Debug.LogFormat("Num str was {0}.", numStr);
+                    Logger.Log("Num str was {0}.", numStr);
                 }
             }
         }

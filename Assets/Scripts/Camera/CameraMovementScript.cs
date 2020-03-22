@@ -50,7 +50,7 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
             {
                 return child.position;
             }
-            Debug.Log("Child object not found.");
+            Logger.Log("Child object not found.");
             return new Vector3();
         }
     }

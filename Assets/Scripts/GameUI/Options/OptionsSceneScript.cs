@@ -32,7 +32,7 @@ public class OptionsSceneScript : MonoBehaviour
     {
         if (mixer == null)
         {
-            Debug.Log("Mixer is null.");
+            Logger.Log("Mixer is null.");
             f = 0;
             return false;
         }

@@ -32,7 +32,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
             }
             else
             {
-                Debug.Log(value);
+                Logger.Log(value);
             }
         }
     }
@@ -63,7 +63,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
 
     void OnMouseDown()
     {
-        Debug.Log("Mouse down");
+        Logger.Log("Mouse down");
         if (confirmed == false)
         {
             // It adds 1 to the counter and changes the material of the object
@@ -80,7 +80,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
 			if (ConstructionUtil.InstanceAvailable(out util))
 			{
 				util.IncrementModifiedFixings();
-				Debug.LogFormat("Modified Fixings: {0};",util.FixingsChanged);
+				Logger.Log("Modified Fixings: {0};",util.FixingsChanged);
 			}
         }
     }

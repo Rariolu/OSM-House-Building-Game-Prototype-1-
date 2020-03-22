@@ -25,8 +25,6 @@ public class HouseNamingScript : MonoBehaviour
 
     public void NameHouseMenu()
     {
-        Debug.Log("House Name is:" + houseName.text);
-
-       
+        Logger.Log("House Name is:" + houseName.text);
     }
 }

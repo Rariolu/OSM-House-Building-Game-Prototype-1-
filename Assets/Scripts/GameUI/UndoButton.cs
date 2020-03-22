@@ -25,7 +25,7 @@ public class UndoButton : UIButton
         }
         else
         {
-            Debug.Log("No game scene :'(");
+            Logger.Log("No game scene :'(");
         }
     }
 }

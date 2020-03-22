@@ -26,7 +26,7 @@ public class EndSessionBtn: UIButton
 		}
 		else
 		{
-			Debug.Log("BuildingCollapsed");
+			Logger.Log("BuildingCollapsed");
 		}	
 	}	
 }

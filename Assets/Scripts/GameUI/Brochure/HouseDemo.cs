@@ -35,12 +35,12 @@ public class HouseDemo : UIButton
             }
             else
             {
-                Debug.Log("No mesh");
+                Logger.Log("No mesh");
             }
         }
         else
         {
-            Debug.Log("No util");
+            Logger.Log("No util");
         }
     }
 }

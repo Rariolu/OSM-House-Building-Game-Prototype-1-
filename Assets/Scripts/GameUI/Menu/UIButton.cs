@@ -63,7 +63,7 @@ public class UIButton : MonoBehaviour
             }
             else
             {
-                Debug.LogFormat("{0} click event was null.",gameObject.name);
+                Logger.Log("{0} click event was null.",gameObject.name);
             }
         });
         eventTrigger.triggers.Add(entry);

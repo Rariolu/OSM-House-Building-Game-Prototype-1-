@@ -25,7 +25,7 @@ public class SpecTestScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("lblFps is null.");
+                Logger.Log("lblFps is null.");
             }
         }
     }
