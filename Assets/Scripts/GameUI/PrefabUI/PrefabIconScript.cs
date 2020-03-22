@@ -26,20 +26,20 @@ public class PrefabIconScript : UIButton
                     lblCounter.text = counter.GetCount(prefab).ToString();
                 }
             }
-            Texture2D texture;
-            if (ResourceManager.GetItem(prefab.type,out texture))
-            {
-                RawImage.texture = texture;
-            }
-            else
-            {
-                Debug.LogFormat("{0} texture not found.", prefab.type);
-            }
-            //Sprite sprite;
-            //if (ResourceManager.GetItem(prefab.type,out sprite))
+            //Texture2D texture;
+            //if (ResourceManager.GetItem(prefab.type,out texture))
             //{
-            //    Image.sprite = sprite;
+            //    RawImage.texture = texture;
             //}
+            //else
+            //{
+            //    Debug.LogFormat("{0} texture not found.", prefab.type);
+            //}
+            Sprite sprite;
+            if (ResourceManager.GetItem(prefab.type, out sprite))
+            {
+                Image.sprite = sprite;
+            }
         }
     }
 

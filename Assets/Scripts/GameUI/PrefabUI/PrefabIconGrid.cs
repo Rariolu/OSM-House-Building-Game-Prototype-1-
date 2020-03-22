@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrefabIconGrid : MultitonScript<PrefabIconGrid,PREFAB_COMPART>
+public class PrefabIconGrid : MultitonScript<PrefabIconGrid, PREFAB_COMPART>
 {
     public PREFAB_COMPART compart;
     Dictionary<int, PrefabIconScript> icons = new Dictionary<int, PrefabIconScript>();
@@ -13,22 +13,31 @@ public class PrefabIconGrid : MultitonScript<PrefabIconGrid,PREFAB_COMPART>
     // Start is called before the first frame update
     void Start()
     {
-        PrefabIconScript[] iconArr = GetComponentsInChildren<PrefabIconScript>();
-        foreach(PrefabIconScript icon in iconArr)
+        SetIcons();
+        gameObject.SetActive(false);
+    }
+    void SetIcons()
+    {
+        if (icons.Count < 1)
         {
-            if (icons.ContainsKey(icon.index))
+            PrefabIconScript[] iconArr = GetComponentsInChildren<PrefabIconScript>();
+            foreach (PrefabIconScript icon in iconArr)
             {
-                icons[icon.index] = icon;
-            }
-            else
-            {
-                icons.Add(icon.index, icon);
+                if (icons.ContainsKey(icon.index))
+                {
+                    icons[icon.index] = icon;
+                }
+                else
+                {
+                    icons.Add(icon.index, icon);
+                }
             }
         }
-        gameObject.SetActive(false);
     }
     public void SetPrefabs(List<Prefab> prefabs)
     {
+        SetIcons();
+        //Logger.Log("Prefabs being set");
         for (int i = 0; i < icons.Count; i++)
         {
             if (icons.ContainsKey(i))
