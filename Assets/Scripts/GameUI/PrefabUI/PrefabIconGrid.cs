@@ -37,6 +37,9 @@ public class PrefabIconGrid : MultitonScript<PrefabIconGrid, PREFAB_COMPART>
     public void SetPrefabs(List<Prefab> prefabs)
     {
         SetIcons();
+        PrefabCounter prefabCounter;
+        bool counterFound = SingletonUtil.InstanceAvailable(out prefabCounter);
+      
         //Logger.Log("Prefabs being set");
         for (int i = 0; i < icons.Count; i++)
         {
@@ -45,7 +48,8 @@ public class PrefabIconGrid : MultitonScript<PrefabIconGrid, PREFAB_COMPART>
                 if (i < prefabs.Count)
                 {
                     icons[i].Prefab = prefabs[i];
-                    icons[i].gameObject.SetActive(true);
+                    bool active = (counterFound && prefabCounter.GetCount(prefabs[i]) > 0) || !counterFound;
+                    icons[i].gameObject.SetActive(active);
                 }
                 else
                 {
