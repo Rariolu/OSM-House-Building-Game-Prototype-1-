@@ -147,7 +147,6 @@
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
-    <Compile Include="Assets\Scripts\GameUI\UndoButton.cs" />
     <Compile Include="Assets\Scripts\HouseViewing\House.cs" />
     <Compile Include="Assets\Scripts\HouseViewing\HouseViewSingle.cs" />
     <Compile Include="Assets\Scripts\HouseViewing\Monobehaviours\HouseViewSceneScript.cs" />

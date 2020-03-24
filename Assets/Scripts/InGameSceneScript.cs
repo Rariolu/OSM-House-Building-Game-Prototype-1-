@@ -31,7 +31,6 @@ public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<
     }
 
     Contract currentContract;
-    Stack<PrefabPlacedObject> placedPrefabs = new Stack<PrefabPlacedObject>();
     const float spaceInterval = 5f;
     Dictionary<SNAP_POINT_TYPE, List<Vector3>> takenPositions = new Dictionary<SNAP_POINT_TYPE, List<Vector3>>();
 
@@ -76,7 +75,6 @@ public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<
     /// <param name="ppo"></param>
     public void AddPlacement(PrefabPlacedObject ppo)
     {
-        placedPrefabs.Push(ppo);
         if (takenPositions.ContainsKey(ppo.Prefab.snapType))
         {
             takenPositions[ppo.Prefab.snapType].Add(ppo.RoundedPosition);
@@ -193,31 +191,11 @@ public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<
         }
     }
 
-    public void Undo()
-    {
-        if (placedPrefabs.Count > 0)
-        {
-            PrefabPlacedObject ppo = placedPrefabs.Pop();
-            //ppo.SnapPointTrigger.Snapped = false;
-            //Prefab prefab = ppo.Prefab;
-            //takenPositions[ppo.Prefab.snapType].Remove(ppo.RoundedPosition);
-            RemovePlacedPrefab(ppo);
-            //PrefabCounter counter;
-            //if (PrefabCounter.InstanceAvailable(out counter))
-            //{
-            //    counter.IncrementCount(prefab);
-            //}
-
-            ppo.Destroy();
-        }
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
             Util.SetExitState(EndConditionUtil.Pass());
-            //Debug.LogFormat("Contract: {0};", EndConditionUtil.Pass());
         }
     }
 
