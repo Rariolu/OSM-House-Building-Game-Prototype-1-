@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HouseViewSceneScript : MonoBehaviour
 {
-    // Use this for initialization
+    
     void Start()
     {
         HouseViewSingle houseView;

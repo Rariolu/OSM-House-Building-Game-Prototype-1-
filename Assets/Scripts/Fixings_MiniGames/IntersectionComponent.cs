@@ -19,11 +19,6 @@ public class IntersectionComponent : MonoBehaviour
     public Action Click;
     void OnMouseDown()
     {
-        //if (Click != null)
-        //{
-        //    Click();
-        //}
-
         Material confirmedIntersection;
 
         if (ResourceManager.GetItem("Valid", out confirmedIntersection))

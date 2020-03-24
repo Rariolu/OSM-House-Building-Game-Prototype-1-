@@ -5,7 +5,7 @@ using UnityEngine;
 public class CompartSystemToggle : UIButton
 {
     bool childrenActive = false;
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();

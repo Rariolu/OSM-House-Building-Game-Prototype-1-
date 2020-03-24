@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompartPrefabSystem : MonoBehaviour//NullableInstanceScriptSingleton<CompartPrefabSystem>
+public class CompartPrefabSystem : MonoBehaviour
 {
     void Awake()
     {
@@ -29,7 +29,7 @@ public class CompartPrefabSystem : MonoBehaviour//NullableInstanceScriptSingleto
             compartedPrefabs.Add(prefab.compart, newFloorDict);
         }
     }
-    // Start is called before the first frame update
+    
     void Start()
     {
         ConstructionUtil util;

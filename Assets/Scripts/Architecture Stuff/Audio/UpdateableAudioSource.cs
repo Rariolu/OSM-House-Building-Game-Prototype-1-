@@ -85,10 +85,6 @@ public class UpdateableAudioSource : MonoBehaviour
     {
         audiosource = GetComponent<AudioSource>();
     }
-    //public void ResetAudioSourceVolume()
-    //{
-    //    volume = originalVolume * IntegratedSoundManager.GetVolume(soundType) * IntegratedSoundManager.MasterVolume;
-    //}
     public void Play()
     {
         audiosource.Play();
@@ -100,8 +96,4 @@ public class UpdateableAudioSource : MonoBehaviour
             audiosource.Stop();
         }
     }
-    //private void OnDestroy()
-    //{
-    //    IntegratedSoundManager.DeleteAudioSource(soundType, ID);
-    //}
 }

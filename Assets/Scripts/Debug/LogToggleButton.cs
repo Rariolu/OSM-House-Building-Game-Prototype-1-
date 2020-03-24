@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class LogToggleButton : UIButton
 {
     public Image log;
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();

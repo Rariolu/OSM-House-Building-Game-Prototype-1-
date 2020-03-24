@@ -10,9 +10,6 @@ public class PrefabPositionStoring : ScriptableObject
     [MenuItem("Tools/Prefabs/SavePrefabs")]
     static void SavePrefabPositions()
     {
-        //string xmlFile;
-        //if (ChooseXMLFile.ChooseXML(out xmlFile))
-        //{
         Contract contract;
         if (XMLUtil.LoadContract(xmlFile, out contract))
         {
@@ -53,11 +50,6 @@ public class PrefabPositionStoring : ScriptableObject
         {
             Logger.Log("XML file not parsed.");
         }
-        //}
-        //else
-        //{
-        //    Debug.Log("XML file not chosen.");
-        //}
     }
 }
 

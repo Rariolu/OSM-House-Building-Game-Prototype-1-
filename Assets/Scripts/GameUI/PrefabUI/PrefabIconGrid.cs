@@ -10,7 +10,7 @@ public class PrefabIconGrid : MultitonScript<PrefabIconGrid, PREFAB_COMPART>
     {
         SetInstance(compart, this);
     }
-    // Start is called before the first frame update
+    
     void Start()
     {
         SetIcons();

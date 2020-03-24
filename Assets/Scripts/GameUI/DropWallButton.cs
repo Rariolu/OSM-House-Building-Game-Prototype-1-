@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DropWallButton : UIButton//NullableInstanceUIButtonSingleton<DropWallButton>
+public class DropWallButton : UIButton
 {
     bool dropped = false;
     public bool Dropped
@@ -23,7 +23,7 @@ public class DropWallButton : UIButton//NullableInstanceUIButtonSingleton<DropWa
     {
         SingletonUtil.SetInstance(this);
     }
-    // Use this for initialization
+    
     protected override void Start()
     {
         base.Start();

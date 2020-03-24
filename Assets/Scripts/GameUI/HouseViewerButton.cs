@@ -12,7 +12,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Image))]
 public class HouseViewerButton : UIButton
 {
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();
@@ -35,14 +35,9 @@ public class HouseViewerButton : UIButton
     void DeActivateGameScenes()
     {
         SceneObjectScript gameScene;
-        //SceneObjectScript gameUIScene;
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
             gameScene.SetActive(false);
         }
-        //if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-        //{
-        //    gameUIScene.SetActive(false);
-        //}
     }
 }

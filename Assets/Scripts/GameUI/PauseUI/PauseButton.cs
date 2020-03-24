@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseButton : UIButton
 {
     public GameObject pauseMenuUI;
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();

@@ -20,7 +20,7 @@ public class ContractSelectionScript : MonoBehaviour
             lblContractName.text = contract.name;
         }
     }
-    // Use this for initialization
+    
     void Start()
     {
         if (btnStart != null)

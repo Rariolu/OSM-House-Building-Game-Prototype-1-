@@ -17,7 +17,7 @@ public class BuildButton : MonoBehaviour
         btnRoofPrefabs.SetActive(IsBuildActive);
     }
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         btnWallPrefabs.SetActive(false);

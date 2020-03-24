@@ -10,17 +10,12 @@ public class BrochureUI : MonoBehaviour
     public bool IsBrochureActive;
     public GameObject BrochureMenuCanvas;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         BrochureMenuCanvas.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 	bool brochureActive = false;
     public void BrochureActive()
     {
