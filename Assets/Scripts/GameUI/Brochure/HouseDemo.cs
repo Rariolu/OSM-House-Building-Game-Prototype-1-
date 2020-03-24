@@ -25,7 +25,7 @@ public class HouseDemo : UIButton
     void HouseDemo_Click(UIButton sender)
     {
         BrochureUtil util;
-        if (BrochureUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {   
             Mesh m;
             if (ResourceManager.GetItem(util.DemoContract.finishedConstruction, out m))

@@ -23,7 +23,7 @@ public class BrochureSceneScript : MonoBehaviour
     void Awake()
     {
         BrochureUtil util;
-        if (BrochureUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             contract = util.DemoContract;
             parentScene = util.ParentScene;

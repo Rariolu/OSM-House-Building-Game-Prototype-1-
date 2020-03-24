@@ -21,12 +21,12 @@ public class ExitMiniGame : UIButton
     void SceneLoad_Click(UIButton sender)
     {
         InGameSceneScript gameScene;
-        if (InGameSceneScript.InstanceAvailable(out gameScene))
+        if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             gameScene.AvailableFixtures = Fixings.fixings;
         }
         FixingsUtil fixingsUtil;
-        if (FixingsUtil.InstanceAvailable(out fixingsUtil))
+        if (SingletonUtil.InstanceAvailable(out fixingsUtil))
         {
             List<FIXINGSECTION> fixingSections = new List<FIXINGSECTION>();
             foreach(FIXINGSECTION fSection in Enum.GetValues(typeof(FIXINGSECTION)))

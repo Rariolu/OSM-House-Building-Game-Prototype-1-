@@ -13,7 +13,7 @@ using UnityEngine;
 /// A class used to store the currently selected prefab and allow it to be
 /// instantiated on request.
 /// </summary>
-public class buildSystem : NullableInstanceScriptSingleton<buildSystem>
+public class buildSystem : MonoBehaviour//NullableInstanceScriptSingleton<buildSystem>
 {
 
     /// <summary>
@@ -46,7 +46,7 @@ public class buildSystem : NullableInstanceScriptSingleton<buildSystem>
     }
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
     }
     /// <summary>
     /// Returns true if a prefab has been selected

@@ -10,7 +10,7 @@ public class EndSceneScript : MonoBehaviour
     void Start()
     {
         EndGameUtil endUtil;
-        if (EndGameUtil.InstanceAvailable(out endUtil) &&
+        if (SingletonUtil.InstanceAvailable(out endUtil) &&
             lblExitState != null)
         {
             lblExitState.text = endUtil.ExitState.ToString();

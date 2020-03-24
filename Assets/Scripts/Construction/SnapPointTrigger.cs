@@ -45,7 +45,7 @@ public class SnapPointTrigger : MonoBehaviour
         if (!Snapped)
         {
             PrefabCounter counter;
-            if (PrefabCounter.InstanceAvailable(out counter))
+            if (SingletonUtil.InstanceAvailable(out counter))
             {
                 Prefab currentPrefab;
                 if (counter.PrefabAvailable(out currentPrefab))
@@ -56,7 +56,7 @@ public class SnapPointTrigger : MonoBehaviour
                         ppo.SnapPointTrigger = this;
                         ppo.SetSceneParent();
                         InGameSceneScript gameSceneScript;
-                        if (InGameSceneScript.InstanceAvailable(out gameSceneScript))
+                        if (SingletonUtil.InstanceAvailable(out gameSceneScript))
                         {
                             gameSceneScript.AddPlacement(ppo);
                         }

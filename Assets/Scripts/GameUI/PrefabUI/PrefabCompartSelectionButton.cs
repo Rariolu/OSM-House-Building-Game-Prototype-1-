@@ -57,7 +57,7 @@ public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelect
 
         CompartPrefabSystem compartSystem;
         
-        if (CompartPrefabSystem.InstanceAvailable(out compartSystem))
+        if (SingletonUtil.InstanceAvailable(out compartSystem))
         {
             if (currentlyActive)
             {

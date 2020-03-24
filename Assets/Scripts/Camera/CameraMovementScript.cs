@@ -8,7 +8,7 @@ public delegate void CameraMoved(CameraMovementScript sender);
 /// A script which is used to rotate its parent object (the camera) around the up axis
 /// of the current floor.
 /// </summary>
-public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMovementScript>
+public class CameraMovementScript : MonoBehaviour//NullableInstanceScriptSingleton<CameraMovementScript>
 {
 
     public CameraMoved CameraMoved;
@@ -37,7 +37,7 @@ public class CameraMovementScript : NullableInstanceScriptSingleton<CameraMoveme
     float originalY;
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
         
     }
 

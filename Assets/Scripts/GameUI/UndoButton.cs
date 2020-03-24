@@ -19,7 +19,7 @@ public class UndoButton : UIButton
     void UndoButton_Click(UIButton sender)
     {
         InGameSceneScript gameScene;
-        if (InGameSceneScript.InstanceAvailable(out gameScene))
+        if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             gameScene.Undo();
         }

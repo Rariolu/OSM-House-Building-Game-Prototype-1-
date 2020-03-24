@@ -55,7 +55,7 @@ public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
         }
 
         CompartPrefabSystem compartSystem;
-        if (CompartPrefabSystem.InstanceAvailable(out compartSystem))
+        if (SingletonUtil.InstanceAvailable(out compartSystem))
         {
             compartSystem.SwitchFloors(floorType);
             //compartSystem.SwitchIcons()

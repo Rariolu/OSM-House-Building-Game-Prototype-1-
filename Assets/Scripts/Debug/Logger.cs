@@ -29,7 +29,7 @@ public static class Logger
             }
         }
         UILogger uiLogger;
-        if (UILogger.InstanceAvailable(out uiLogger))
+        if (SingletonUtil.InstanceAvailable(out uiLogger))
         {
             uiLogger.Log(text, logType);
         }

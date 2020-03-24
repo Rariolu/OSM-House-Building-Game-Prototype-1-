@@ -16,7 +16,7 @@ public class FixingsScene : MonoBehaviour
     void Start()
     {
         InGameSceneScript gameScene;
-        if (InGameSceneScript.InstanceAvailable(out gameScene))
+        if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             int fixs = gameScene.AvailableFixtures;
             Fixings.fixings = fixs;
@@ -28,7 +28,7 @@ public class FixingsScene : MonoBehaviour
         
 
         FixingsUtil fixingsUtil;
-        if (FixingsUtil.InstanceAvailable(out fixingsUtil))
+        if (SingletonUtil.InstanceAvailable(out fixingsUtil))
         {
             foreach(FIXINGSECTION fSection in fixingsUtil.CurrentIntersection.FixingSections)
             {

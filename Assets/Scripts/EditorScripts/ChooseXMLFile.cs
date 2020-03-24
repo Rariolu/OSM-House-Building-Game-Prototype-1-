@@ -22,8 +22,6 @@ public class ChooseXMLFile : EditorWindow
         }
     }
     const string xmlFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
-    int projectNumber = 1;
-
 
     //[MenuItem("Tools/Misc/ShowPopup Example")]
     public static bool ChooseXML(out string text)

@@ -33,7 +33,7 @@ public static class Util
             isPaused = value;
             Time.timeScale = isPaused ? 0f : 1f;
             Timer timer;
-            if (Timer.InstanceAvailable(out timer))
+            if (SingletonUtil.InstanceAvailable(out timer))
             {
                 if (isPaused)
                 {
@@ -225,7 +225,7 @@ public static class Util
         //Finds construction util and uses that to determine if
         //a prefab has been destroyed.
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             return util.Destroyed > 0;
         }

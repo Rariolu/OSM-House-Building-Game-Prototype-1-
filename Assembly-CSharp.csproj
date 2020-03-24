@@ -80,9 +80,8 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonClass.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonScript.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
-    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceClassSingleton.cs" />
-    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs" />
-    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceUIButtonSingleton.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUtil.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\SingletonUtil.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />

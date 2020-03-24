@@ -78,7 +78,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         FocusedFloor = this;
 
         CameraMovementScript camControl;
-        if (CameraMovementScript.InstanceAvailable(out camControl))
+        if (SingletonUtil.InstanceAvailable(out camControl))
         {
             camControl.SetFloor(transform.position.y);
         }

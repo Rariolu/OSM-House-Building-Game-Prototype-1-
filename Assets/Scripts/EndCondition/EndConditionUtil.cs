@@ -8,7 +8,7 @@ public static class EndConditionUtil
     public static EXIT_STATE Pass()
     {
         ConstructionUtil constructionUtil;
-        if (!ConstructionUtil.InstanceAvailable(out constructionUtil))
+        if (!SingletonUtil.InstanceAvailable(out constructionUtil))
         {
             Debug.LogWarning("There isn't a construction util so default fail.");
             return EXIT_STATE.LOSE;

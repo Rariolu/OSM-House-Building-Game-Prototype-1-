@@ -26,7 +26,7 @@ public class HouseViewerButton : UIButton
     void HouseViewerButton_Click(UIButton sender)
     {
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             DeActivateGameScenes();
             BrochureUtil.SetContract(util.Contract, SCENE.InGame);
