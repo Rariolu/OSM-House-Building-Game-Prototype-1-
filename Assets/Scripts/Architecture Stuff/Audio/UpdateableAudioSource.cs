@@ -31,6 +31,10 @@ public class UpdateableAudioSource : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void PlayAsync(Sound sound, AudioMixer mixer)
+    {
+        StartCoroutine(Play(sound, mixer));
+    }
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
