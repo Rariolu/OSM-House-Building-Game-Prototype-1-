@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class BrochureUtil : NullableInstanceClassSingleton<BrochureUtil>
+public class BrochureUtil //: NullableInstanceClassSingleton<BrochureUtil>
 {
     Contract demoContract;
     public Contract DemoContract
@@ -34,7 +34,7 @@ public class BrochureUtil : NullableInstanceClassSingleton<BrochureUtil>
     }
     public static void SetContract(Contract contract, SCENE parentScene)
     {
-        SetInstance(new BrochureUtil(contract, parentScene));
+        SingletonUtil.SetInstance(new BrochureUtil(contract, parentScene));
         Util.LoadScene(SCENE.Brochure, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 }

@@ -7,7 +7,7 @@ public delegate void CounterChanged(Prefab prefab, int count);
 /// <summary>
 /// Singleton used to keep a count of the amount of each prefab that there is available.
 /// </summary>
-public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
+public class PrefabCounter //: NullableInstanceClassSingleton<PrefabCounter>
 {
     Dictionary<Prefab, int> availablePrefabCount = new Dictionary<Prefab, int>();
     public CounterChanged CounterChanged;
@@ -21,7 +21,7 @@ public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
 
     public static void CreatePrefabCounter()
     {
-        SetInstance(new PrefabCounter());
+        SingletonUtil.SetInstance(new PrefabCounter());
     }
 
 
@@ -94,7 +94,7 @@ public class PrefabCounter : NullableInstanceClassSingleton<PrefabCounter>
         prefabSelected = true;
         SnapPoint.ShowSnapPoints(prefab.snapType);
         PrefabView prefabView;
-        if (PrefabView.InstanceAvailable(out prefabView))
+        if (SingletonUtil.InstanceAvailable(out prefabView))
         {
             prefabView.SetPrefab(prefab);
         }

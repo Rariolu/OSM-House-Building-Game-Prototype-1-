@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HouseViewSingle : NullableInstanceClassSingleton<HouseViewSingle>
+public class HouseViewSingle //: NullableInstanceClassSingleton<HouseViewSingle>
 {
     House currentHouse;
     public House CurrentHouse
@@ -18,6 +18,6 @@ public class HouseViewSingle : NullableInstanceClassSingleton<HouseViewSingle>
     }
     public static void ShowHouse(House house)
     {
-        SetInstance(new HouseViewSingle(house));
+        SingletonUtil.SetInstance(new HouseViewSingle(house));
     }
 }

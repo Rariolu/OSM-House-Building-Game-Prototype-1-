@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefabSystem>
+public class CompartPrefabSystem : MonoBehaviour//NullableInstanceScriptSingleton<CompartPrefabSystem>
 {
     void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
     }
     Dictionary<PREFAB_COMPART, Dictionary<FLOORTYPE, List<Prefab>>> compartedPrefabs = new Dictionary<PREFAB_COMPART, Dictionary<FLOORTYPE, List<Prefab>>>();
     void AddPrefabToDict(Prefab prefab)
@@ -34,7 +34,7 @@ public class CompartPrefabSystem : NullableInstanceScriptSingleton<CompartPrefab
     {
         ConstructionUtil util;
         PrefabCounter counter;
-        if (ConstructionUtil.InstanceAvailable(out util) && PrefabCounter.InstanceAvailable(out counter))
+        if (SingletonUtil.InstanceAvailable(out util) && SingletonUtil.InstanceAvailable(out counter))
         {
             PrefabCollection[] collections = util.Contract.prefabCollections;
             foreach (PrefabCollection collection in collections)

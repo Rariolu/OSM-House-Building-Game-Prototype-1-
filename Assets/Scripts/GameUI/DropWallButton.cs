@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DropWallButton : NullableInstanceUIButtonSingleton<DropWallButton>
+public class DropWallButton : UIButton//NullableInstanceUIButtonSingleton<DropWallButton>
 {
     bool dropped = false;
     public bool Dropped
@@ -21,7 +21,7 @@ public class DropWallButton : NullableInstanceUIButtonSingleton<DropWallButton>
     }
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
     }
     // Use this for initialization
     protected override void Start()
@@ -29,7 +29,7 @@ public class DropWallButton : NullableInstanceUIButtonSingleton<DropWallButton>
         base.Start();
         Click += DropWallButton_Click;
         CameraMovementScript cameraScript;
-        if (CameraMovementScript.InstanceAvailable(out cameraScript))
+        if (SingletonUtil.InstanceAvailable(out cameraScript))
         {
             cameraScript.CameraMoved += (c) => { Dropped = false; };
         }

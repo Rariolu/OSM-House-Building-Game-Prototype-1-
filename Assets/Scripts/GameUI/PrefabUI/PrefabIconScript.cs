@@ -21,7 +21,7 @@ public class PrefabIconScript : UIButton
             if (lblCounter != null)
             {
                 PrefabCounter counter;
-                if (PrefabCounter.InstanceAvailable(out counter))
+                if (SingletonUtil.InstanceAvailable(out counter))
                 {
                     lblCounter.text = counter.GetCount(prefab).ToString();
                 }
@@ -84,7 +84,7 @@ public class PrefabIconScript : UIButton
         SetLabel();
         Click += PrefabIconScript_Click;
         PrefabCounter counter;
-        if (PrefabCounter.InstanceAvailable(out counter))
+        if (SingletonUtil.InstanceAvailable(out counter))
         {
             counter.CounterChanged += CounterChanged;
             if (lblCounter != null)
@@ -109,7 +109,7 @@ public class PrefabIconScript : UIButton
     void PrefabIconScript_Click(UIButton sender)
     {
         PrefabCounter counter;
-        if (PrefabCounter.InstanceAvailable(out counter))
+        if (SingletonUtil.InstanceAvailable(out counter))
         {
             counter.SelectPrefab(Prefab);
         }

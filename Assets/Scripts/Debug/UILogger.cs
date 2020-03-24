@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class UILogger : NullableInstanceScriptSingleton<UILogger>
+public class UILogger : MonoBehaviour//NullableInstanceScriptSingleton<UILogger>
 {
     Text lblLog;
     Text LblLog
@@ -16,7 +16,7 @@ public class UILogger : NullableInstanceScriptSingleton<UILogger>
     }
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
         Logger.DequeueBackLog(this);
     }
     int logs = 0;

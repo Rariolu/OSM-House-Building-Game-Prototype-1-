@@ -74,7 +74,7 @@ public class Intersection : MultitonClass<Intersection,int>
         ic.Click += () =>
         {
             buildSystem bs;
-            bool apply = !buildSystem.InstanceAvailable(out bs) || !bs.PrefabSet;
+            bool apply = !SingletonUtil.InstanceAvailable(out bs) || !bs.PrefabSet;
             if (apply)
             {
                 Util.ApplyFixturesToIntersection(this);

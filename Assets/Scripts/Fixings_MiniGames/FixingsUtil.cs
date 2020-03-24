@@ -7,7 +7,7 @@ using UnityEngine;
 /// A class used to store and retrieve the Intersection that is currently
 /// being used in the "Fixings" scene.
 /// </summary>
-public class FixingsUtil : NullableInstanceClassSingleton<FixingsUtil>
+public class FixingsUtil //: NullableInstanceClassSingleton<FixingsUtil>
 {
     Intersection currentIntersection;
     public Intersection CurrentIntersection
@@ -23,6 +23,6 @@ public class FixingsUtil : NullableInstanceClassSingleton<FixingsUtil>
     }
     public static void ApplyFixingsToIntersection(Intersection intersection)
     {
-        SetInstance(new FixingsUtil(intersection));
+        SingletonUtil.SetInstance(new FixingsUtil(intersection));
     }
 }

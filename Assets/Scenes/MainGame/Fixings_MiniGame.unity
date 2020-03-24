@@ -866,7 +866,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1359080880}
     m_Modifications:
     - target: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -911,7 +911,7 @@ PrefabInstance:
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -941,10 +941,16 @@ PrefabInstance:
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.03
+      value: 4.030002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe53af5b529586e468d09c4d24872a32, type: 3}
+--- !u!4 &1053674026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
+    type: 3}
+  m_PrefabInstance: {fileID: 1053674025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359080879
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +991,8 @@ Transform:
   - {fileID: 1404671042}
   - {fileID: 771455527}
   - {fileID: 1046494939}
+  - {fileID: 1359432836}
+  - {fileID: 1053674026}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1001,6 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 4
+  loadResourceLoader: 1
   ShowTestScene: 0
 --- !u!114 &1359080882
 MonoBehaviour:
@@ -1019,7 +1028,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1359080880}
     m_Modifications:
     - target: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -1029,7 +1038,7 @@ PrefabInstance:
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -1044,12 +1053,12 @@ PrefabInstance:
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -1064,7 +1073,7 @@ PrefabInstance:
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
         type: 3}
@@ -1098,6 +1107,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe53af5b529586e468d09c4d24872a32, type: 3}
+--- !u!4 &1359432836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6141968838517468405, guid: fe53af5b529586e468d09c4d24872a32,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359432835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1404671036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6605724192672603691, guid: 87e759fba088c764e9f22f100726f106,
@@ -1299,6 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60922c2322c4c3d479c4822cde9296f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playClickSound: 0
   scene: 2
   loadSceneMode: 0
 --- !u!1001 &1916002856

@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 //[RequireComponent(typeof(Image))]
 [RequireComponent(typeof(RawImage))]
-public class PrefabView : NullableInstanceScriptSingleton<PrefabView>
+public class PrefabView : MonoBehaviour//NullableInstanceScriptSingleton<PrefabView>
 {
     //Image image;
     //Image Image
@@ -33,7 +33,7 @@ public class PrefabView : NullableInstanceScriptSingleton<PrefabView>
 
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
         DeActivate();
     }
 

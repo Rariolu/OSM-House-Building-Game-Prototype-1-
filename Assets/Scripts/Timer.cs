@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class Timer : NullableInstanceScriptSingleton<Timer>
+public class Timer : MonoBehaviour//NullableInstanceScriptSingleton<Timer>
 {
    
     public float interval = 1f;
@@ -20,13 +20,13 @@ public class Timer : NullableInstanceScriptSingleton<Timer>
 
     private void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
     }
 
     IEnumerator RunTimer()
     {
         ConstructionUtil constructionUtil;
-        if (ConstructionUtil.InstanceAvailable(out constructionUtil))
+        if (SingletonUtil.InstanceAvailable(out constructionUtil))
         {
             run = true;
             uint dayLimit = constructionUtil.Contract.time;

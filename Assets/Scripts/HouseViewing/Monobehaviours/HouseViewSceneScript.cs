@@ -7,7 +7,7 @@ public class HouseViewSceneScript : MonoBehaviour
     void Start()
     {
         HouseViewSingle houseView;
-        if (HouseViewSingle.InstanceAvailable(out houseView))
+        if (SingletonUtil.InstanceAvailable(out houseView))
         {
             House house = houseView.CurrentHouse;
             house.Instantiate();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class EndGameUtil : NullableInstanceClassSingleton<EndGameUtil>
+public class EndGameUtil //: NullableInstanceClassSingleton<EndGameUtil>
 {
     EXIT_STATE state;
     public EXIT_STATE ExitState
@@ -20,6 +20,6 @@ public class EndGameUtil : NullableInstanceClassSingleton<EndGameUtil>
     }
     public static void SetExitState(EXIT_STATE exitState)
     {
-        SetInstance(new EndGameUtil(exitState));
+        SingletonUtil.SetInstance(new EndGameUtil(exitState));
     }
 }

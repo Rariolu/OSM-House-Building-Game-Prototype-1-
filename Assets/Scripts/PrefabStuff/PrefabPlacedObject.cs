@@ -134,7 +134,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         gameObject.tag = TAG.TESTTAG.ToString();
 
         roundedPosition = roundPos;
-        if (InGameSceneScript.InstanceAvailable(out gameScene))
+        if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             switch (prefab.snapType)
             {
@@ -159,21 +159,20 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         pps.parentPrefabInstance = this;
 
         BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
-        Logger.Log("Collider: {0};", collider);
 
         originalScale = gameObject.transform.localScale;
 
         CreateBottomHalf();
 
         CameraMovementScript camera;
-        if (CameraMovementScript.InstanceAvailable(out camera))
+        if (SingletonUtil.InstanceAvailable(out camera))
         {
             camera.CameraMoved += CameraMoved;
             CameraMoved(camera);
         }
 
         DropWallButton dropWallButton;
-        if (DropWallButton.InstanceAvailable(out dropWallButton))
+        if (SingletonUtil.InstanceAvailable(out dropWallButton))
         {
             Drop(dropWallButton.Dropped);
         }
@@ -183,11 +182,9 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     
     void CreateBottomHalf()
     {
-        EPlane plane = new EPlane();
-        //plane.ComputeGlobalUp(gameObject);
-        //plane.ComputeAlternative(gameObject);
-        plane.Compute(gameObject);
-        TextureRegion textureRegion = new TextureRegion();
+        //EPlane plane = new EPlane();
+        //plane.Compute(gameObject);
+        //TextureRegion textureRegion = new TextureRegion();
         
         Material bottomMat = MeshRenderer.material;
         //SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
@@ -285,19 +282,19 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
         intersectionPoints.Clear();
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             util.IncrementDestruction();
         }
 
         CameraMovementScript camera;
-        if (CameraMovementScript.InstanceAvailable(out camera))
+        if (SingletonUtil.InstanceAvailable(out camera))
         {
             camera.CameraMoved -= CameraMoved;
         }
 
         PrefabCounter counter;
-        if (PrefabCounter.InstanceAvailable(out counter))
+        if (SingletonUtil.InstanceAvailable(out counter))
         {
             counter.IncrementCount(Prefab);
         }

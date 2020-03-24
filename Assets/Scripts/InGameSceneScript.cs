@@ -12,7 +12,7 @@ using UnityEngine.UI;
 /// A script attached to a GameObject in the main game scene which manages its
 /// operation and resources.
 /// </summary>
-public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScript>
+public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<InGameSceneScript>
 {
     int availableFixtures;
     /// <summary>
@@ -89,13 +89,13 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
     public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
     void Awake()
     {
-        SetInstance(this);
+        SingletonUtil.SetInstance(this);
         PrefabCounter.CreatePrefabCounter();
         PrefabPlacedObject.Clear();
         Intersection.Clear();
         Util.PreventCollisions(LAYER.DEFAULT, LAYER.IntersectionLayer);
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             currentContract = util.Contract;
             availableFixtures = currentContract.fixtures;
@@ -163,7 +163,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             }
         }
         ConstructionUtil util;
-        if (ConstructionUtil.InstanceAvailable(out util))
+        if (SingletonUtil.InstanceAvailable(out util))
         {
             if (pbBlueprint != null)
             {

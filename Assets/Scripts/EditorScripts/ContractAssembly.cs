@@ -17,7 +17,7 @@ public class ContractAssembly : ScriptableObject
         else
         {
             ConstructionUtil util;
-            if (ConstructionUtil.InstanceAvailable(out util))
+            if (SingletonUtil.InstanceAvailable(out util))
             {
                 contract = util.Contract;
             }
