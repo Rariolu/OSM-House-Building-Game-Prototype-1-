@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -62,29 +62,13 @@ public class SoundManager : MonoBehaviour
         {
             name = sound.name.ToString()
         };
-        AudioSource audiosource = go.AddComponent<AudioSource>();
-        //UpdateableAudioSource audiosource = go.AddComponent<UpdateableAudioSource>();
-        //audiosource.Initialise();
-        audiosource.clip = sound.clip;
-        audiosource.loop = sound.loop;
-        audiosource.outputAudioMixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
-        //audiosource.mixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
-        audiosource.volume = sound.volume;
-        //audiosource.volume = sound.volume * IntegratedSoundManager.GetVolume(sound.type) * IntegratedSoundManager.MasterVolume;
-        //audiosource.originalVolume = sound.volume;
-        //audiosource.soundType = sound.type;
-        //audiosource.ID = IntegratedSoundManager.GetId(sound.type);
-        //IntegratedSoundManager.AddAudioSource(sound.type, audiosource);
-        audiosource.Play();
-        yield return new WaitForSeconds(audiosource.clip.length);
-        if (!sound.loop)
-        {
-            if (go != null)
-            {
-                audiosource.Stop();
-                Destroy(go);
-            }
-        }
+        UpdateableAudioSource audiosource = go.AddComponent<UpdateableAudioSource>();
+        //audiosource.clip = sound.clip;
+        //audiosource.loop = sound.loop;
+        //audiosource.outputAudioMixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
+        //audiosource.volume = sound.volume;
+        //audiosource.Play();
+        yield return audiosource.Play(sound, mixer);//new WaitForSeconds(audiosource.clip.length);
     }
 }
 public static class IntegratedSoundManager

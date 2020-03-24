@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections;
+using System.Linq;
 
 /// <summary>
 /// A monobehaviour script which plays audio and allows things like volume to be modified in real time (when main volume is changed).
@@ -8,92 +9,30 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class UpdateableAudioSource : MonoBehaviour
 {
-    static UpdateableAudioSource _musicInstance;
-    public static UpdateableAudioSource MusicInstance
-    {
-        get
-        {
-            return _musicInstance;
-        }
-    }
-
-    public AudioMixerGroup mixerGroup
-    {
-        get
-        {
-            return audiosource.outputAudioMixerGroup;
-        }
-        set
-        {
-            audiosource.outputAudioMixerGroup = value;
-        }
-    }
-
     AudioSource audiosource;
-    public AudioClip clip
+    public AudioSource AudioSource
     {
         get
         {
-            return audiosource.clip;
-        }
-        set
-        {
-            audiosource.clip = value;
+            return audiosource ?? (audiosource = GetComponent<AudioSource>());
         }
     }
-    public bool loop
+    public IEnumerator Play(Sound sound, AudioMixer mixer)
     {
-        get
+        AudioSource.clip = sound.clip;
+        AudioSource.loop = sound.loop;
+        AudioSource.outputAudioMixerGroup = mixer.FindMatchingGroups(sound.type.ToString()).First();
+        AudioSource.volume = sound.volume;
+        AudioSource.Play();
+        yield return new WaitForSeconds(AudioSource.clip.length);
+        if (!sound.loop)
         {
-            return audiosource.loop;
-        }
-        set
-        {
-            audiosource.loop = value;
+            AudioSource.Stop();
+            Destroy(gameObject);
         }
     }
-    public float originalVolume = 1;
-    public float volume
+    private void Start()
     {
-        get
-        {
-            return audiosource.volume;
-        }
-        set
-        {
-            audiosource.volume = value;
-        }
-    }
-    SoundType soundtype = SoundType.SFX;
-    public SoundType soundType
-    {
-        get
-        {
-            return soundtype;
-        }
-        set
-        {
-            soundtype = value;
-            if (soundtype == SoundType.Music)
-            {
-                _musicInstance = this;
-            }
-        }
-    }
-    public int ID = 0;
-    public void Initialise()
-    {
-        audiosource = GetComponent<AudioSource>();
-    }
-    public void Play()
-    {
-        audiosource.Play();
-    }
-    public void Stop()
-    {
-        if (audiosource != null)
-        {
-            audiosource.Stop();
-        }
+        DontDestroyOnLoad(gameObject);
     }
 }
