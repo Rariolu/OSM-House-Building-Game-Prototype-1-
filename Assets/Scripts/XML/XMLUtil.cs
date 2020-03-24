@@ -60,11 +60,11 @@ public static class XMLUtil
     {
         if (!Directory.Exists(xmlDirectory))
         {
-            Debug.LogFormat("Directory \"{0}\" doesn't exist.", xmlDirectory);
+            Logger.Log("Directory \"{0}\" doesn't exist.", xmlDirectory);
             return;
         }
         string file = "{0}\\{1}_{2}_{3}.xml".FormatText(xmlDirectory, contract.name, contract.finishedConstruction, aggr);
-        Debug.Log(file);
+        Logger.Log(file);
         SaveContract(file, contract);
     }
 
@@ -366,11 +366,11 @@ public static class XMLUtil
         string strType = subtree[type];
         if (!int.TryParse(strNum, out task.number))
         {
-            Debug.Log("Task number not parsed.");
+            Logger.Log("Task number not parsed.");
         }
         if (!Util.EnumTryParse(strType, out task.type))
         {
-            Debug.LogFormat("\"{0}\" not parsed", strType);
+            Logger.Log("\"{0}\" not parsed", strType);
         }
         return task;
     }

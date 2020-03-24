@@ -159,7 +159,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         pps.parentPrefabInstance = this;
 
         BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
-        Debug.LogFormat("Collider: {0};", collider);
+        Logger.Log("Collider: {0};", collider);
 
         originalScale = gameObject.transform.localScale;
 
@@ -207,7 +207,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             {
                 bottomHalf = Object.Instantiate(templateBottomHalf);
                 bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
-                Debug.Log("BottomHalf template found and instantiated.");
+                Logger.Log("BottomHalf template found and instantiated.");
             }
             else
             {

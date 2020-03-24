@@ -81,7 +81,7 @@ public class Intersection : MultitonClass<Intersection,int>
             }
             else
             {
-                Debug.Log("Lack of application worked.");
+                Logger.Log("Lack of application worked.");
             }
         };
     }

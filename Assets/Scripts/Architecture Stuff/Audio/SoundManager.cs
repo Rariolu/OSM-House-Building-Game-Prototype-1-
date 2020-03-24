@@ -27,7 +27,7 @@ public class SoundManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogFormat("\"{0}\" already added to dictionary.",s.name.ToString());
+                    Logger.Log("\"{0}\" already added to dictionary.",s.name.ToString());
                 }
             }
             
@@ -46,7 +46,7 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            Debug.LogFormat("soundDict doesn't contain \"{0}\".", name);
+            Logger.Log("soundDict doesn't contain \"{0}\".", name);
         }
     }
     public IEnumerator Play(string name)
@@ -102,7 +102,7 @@ public static class IntegratedSoundManager
         }
         else
         {
-            Debug.Log("No soundmanager has been implemented.");
+            Logger.Log("No soundmanager has been implemented.");
         }
     }
 	public static IEnumerator PlaySound(SOUNDNAME soundName)
@@ -117,7 +117,7 @@ public static class IntegratedSoundManager
         }
         else
         {
-            Debug.Log("No soundmanager has been implemented.");
+            Logger.Log("No soundmanager has been implemented.");
             yield return 0;
         }
     }

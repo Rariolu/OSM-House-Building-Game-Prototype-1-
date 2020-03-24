@@ -104,10 +104,10 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
         else
         {
             Contract contract;
-            Debug.LogFormat("Attempting to load \"{0}\".", xmlBackupFile);
+            Logger.Log("Attempting to load \"{0}\".", xmlBackupFile);
             if (XMLUtil.LoadContract(xmlBackupFile, out contract))
             {
-                Debug.Log("Loaded xml file.");
+                Logger.Log("Loaded xml file.");
                 ConstructionUtil.SetContract(contract);
             }
         }
@@ -175,7 +175,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             }
             else
             {
-                Debug.Log("pbBlueprint is null.");
+                Logger.Log("pbBlueprint is null.");
             }
 
             if (pbHouse != null)
@@ -188,7 +188,7 @@ public class InGameSceneScript : NullableInstanceScriptSingleton<InGameSceneScri
             }
             else
             {
-                Debug.Log("pbHouse is null.");
+                Logger.Log("pbHouse is null.");
             }
         }
     }

@@ -51,7 +51,7 @@ public class PrefabPositionStoring : ScriptableObject
         }
         else
         {
-            Debug.Log("XML file not parsed.");
+            Logger.Log("XML file not parsed.");
         }
         //}
         //else

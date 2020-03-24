@@ -13,7 +13,7 @@ public class PauseButton : UIButton
     }
     void PauseButton_Click(UIButton sender)
     {
-        Debug.Log("Pause button clicked");
+        Logger.Log("Pause button clicked");
         if (Util.IsPaused)
         {
             Resume();

@@ -21,7 +21,7 @@ public class BackButton : UIButton
         if (getPreviousSceneFromStack)
         {
             previousScene = Util.PrevMainScene();
-            Debug.LogFormat("Prev scene set to {0}", previousScene);
+            Logger.Log("Prev scene set to {0}", previousScene);
         }
         Click += BackButton_Click;
     }

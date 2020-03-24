@@ -40,7 +40,7 @@ public class IntersectionComponent : MonoBehaviour
     IEnumerator ClickCountThing()
     {
         clickCount++;
-        Debug.LogFormat("Pre Click count: {0};", clickCount);
+        Logger.Log("Pre Click count: {0};", clickCount);
         if (clickCount == 2)
         {
             clickCount = 0;
@@ -56,6 +56,6 @@ public class IntersectionComponent : MonoBehaviour
             yield return 0;
         }
         clickCount--;
-        Debug.LogFormat("Post Click count: {0};", clickCount);
+        Logger.Log("Post Click count: {0};", clickCount);
     }
 }

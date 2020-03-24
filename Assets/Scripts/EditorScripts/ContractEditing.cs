@@ -49,17 +49,17 @@ public class ContractEditing : ScriptableObject
                     }
                     else
                     {
-                        Debug.Log("No contracts");
+                        Logger.Log("No contracts");
                     }
                 }
                 else
                 {
-                    Debug.Log("No contract manager");
+                    Logger.Log("No contract manager");
                 }
             }
             else
             {
-                Debug.Log("pnlMain is null");
+                Logger.Log("pnlMain is null");
             }
         }
     }
