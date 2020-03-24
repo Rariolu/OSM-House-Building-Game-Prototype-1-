@@ -362,7 +362,7 @@ MonoBehaviour:
   - type: 19
     gameObject: {fileID: 7866758776235219392, guid: 5e04e91988f3899429baaf103f68efc3,
       type: 3}
-    sprite: {fileID: 21300000, guid: 41810c9ac46272a4e9d6215bd696e7e0, type: 3}
+    sprite: {fileID: 21300000, guid: 4202d8d626b3c8e468fefb4dae560c2c, type: 3}
   - type: 20
     gameObject: {fileID: 5600847410234954856, guid: 85ed573b8884eaf49b90e183aad524e4,
       type: 3}
@@ -370,7 +370,7 @@ MonoBehaviour:
   - type: 21
     gameObject: {fileID: 1530794274060882896, guid: 290f90f9a15040947ae3eba12c0c3926,
       type: 3}
-    sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
+    sprite: {fileID: 21300000, guid: 24d33b788224e3f45acd1ddd2317b137, type: 3}
   - type: 22
     gameObject: {fileID: 9137775800049009215, guid: 60e59bf40af45ba48a220b41be471736,
       type: 3}
@@ -382,7 +382,7 @@ MonoBehaviour:
   - type: 24
     gameObject: {fileID: 6299659304953966396, guid: 4bd277ae23c3de04cbc8b9406a6e7229,
       type: 3}
-    sprite: {fileID: 21300000, guid: 8b681b9845117884d98ee96de3425d38, type: 3}
+    sprite: {fileID: 21300000, guid: 9ec702398b276604fb8a60dae934aee7, type: 3}
   - type: 25
     gameObject: {fileID: 5296809909221054301, guid: 3430783577fc6af4c8a346720b856bea,
       type: 3}
