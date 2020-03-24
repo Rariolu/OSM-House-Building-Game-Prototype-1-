@@ -93,6 +93,5 @@ public class PrefabCompartSelectionButton : MultitonUIButton<PrefabCompartSelect
         //}
         Color colour = Image.color;
         Image.color = new Color(colour.r, colour.g, colour.b, active ? 1f : 0.5f);
-        
     }
 }
