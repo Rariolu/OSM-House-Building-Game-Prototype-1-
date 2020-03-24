@@ -1183,7 +1183,7 @@ MonoBehaviour:
     rotation: {x: 5, y: -180, z: -5}
   - position: {x: -11.5, y: 11.3014, z: -20.3}
     rotation: {x: 5, y: -90, z: -5}
-  minSwipeDistance: 30
+  minSwipeDistance: 40
   speed: 2
   moveY: 1
 --- !u!4 &153405619
@@ -7639,7 +7639,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.5904e-41, y: 0, z: 0, w: -7.7786385e-30}
+  m_BoundingSphereOverride: {x: 4.537e-42, y: 1.05e-43, z: 7.86e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
