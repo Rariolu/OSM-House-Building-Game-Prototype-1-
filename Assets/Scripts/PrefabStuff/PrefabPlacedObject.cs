@@ -7,8 +7,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EzySlice;
-using EPlane = EzySlice.Plane;
 
 /// <summary>
 /// A class which spawns a prefab gameobject at a selected position.

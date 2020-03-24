@@ -33,7 +33,7 @@ public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
     {
         SetInstance(floorType, this);
     }
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();
@@ -58,7 +58,6 @@ public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
         if (SingletonUtil.InstanceAvailable(out compartSystem))
         {
             compartSystem.SwitchFloors(floorType);
-            //compartSystem.SwitchIcons()
         }
 
         const int floorQuantity = 3;

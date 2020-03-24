@@ -7,35 +7,18 @@ public class CamSwitch : MonoBehaviour
 {
     public GameObject Cam1;
     public GameObject Cam2;
-    
+    bool cam1Active = true;
+
     void Start()
     {
         Cam1.SetActive(true);
         Cam2.SetActive(false);
     }
-
-    void Update()
-    {
-        /*if (Input.GetButtonDown("1Key"))
-        {
-            Cam1.SetActive(true);
-            Cam2.SetActive(false);
-        }
-        if (Input.GetButtonDown("2Key"))
-        {
-            Cam1.SetActive(false);
-            Cam2.SetActive(true);
-        }*/
-    }
-
-    bool cam1Active = true;
+    
     public void Camera()
     {
         cam1Active = !cam1Active;
         Cam1.SetActive(cam1Active);
         Cam2.SetActive(!cam1Active);
     }
-
-
-
 }
