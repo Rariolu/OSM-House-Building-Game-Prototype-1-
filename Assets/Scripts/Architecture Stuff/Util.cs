@@ -289,7 +289,7 @@ public static class Util
     {
         if (sceneStack.Count > 1)
         {
-            return sceneStack.Previous();//.mainScene;
+            return sceneStack.Previous();
         }
         Logger.Log("Not enough elements on Stack");
         return 0;
@@ -332,7 +332,7 @@ public static class Util
     {
         if (sceneStack.Count > 0)
         {
-            SCENE prevSceneEnum = sceneStack.Previous();
+            SCENE prevSceneEnum = PrevMainScene();
             SceneObjectScript prevScene;
             if (SceneObjectScript.InstanceExists(prevSceneEnum, out prevScene))
             {

@@ -12,25 +12,13 @@ using UnityEngine;
 public class ViewableStack<T> : Stack<T>
 {
     /// <summary>
-    /// Most recent element to be added.
-    /// </summary>
-    /// <returns></returns>
-    public T Top()
-    {
-        T val = Pop();
-        Push(val);
-        return val;
-    }
-
-    /// <summary>
     /// Second most recent element to be added.
     /// </summary>
     /// <returns></returns>
     public T Previous()
     {
         T val1 = Pop();
-        T val2 = Pop();
-        Push(val2);
+        T val2 = Peek();
         Push(val1);
         return val2;
     }

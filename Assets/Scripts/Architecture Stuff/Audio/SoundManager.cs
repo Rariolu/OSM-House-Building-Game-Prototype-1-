@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioMixer mixer;
     public Sound[] sounds;
+
     private void Start()
     {
         foreach (Sound s in sounds)
@@ -58,9 +59,7 @@ public static class IntegratedSoundManager
         if (soundDict.ContainsKey(name))
         {
             Sound sound = soundDict[name];
-            GameObject go = new GameObject();
-            go.name = name;
-            UpdateableAudioSource audioSource = go.AddComponent<UpdateableAudioSource>();
+            UpdateableAudioSource audioSource = CreateAudioSource(name);
             yield return audioSource.Play(sound, mixer);
         }
         else
