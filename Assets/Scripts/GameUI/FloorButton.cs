@@ -11,7 +11,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-//[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(Image))]
 [RequireComponent(typeof(RawImage))]
 public class FloorButton : MultitonUIButton<FloorButton, FLOORTYPE>
 {

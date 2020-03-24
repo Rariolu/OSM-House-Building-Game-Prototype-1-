@@ -236,15 +236,6 @@ public static class Util
     }
 
     /// <summary>
-    /// Open the UI scene over the current one.
-    /// </summary>
-    //public static void LoadGameUI()
-    //{
-    //    LoadScene(SCENE.InGameUI, LoadSceneMode.Additive);
-    //}
-
-
-    /// <summary>
     /// Load a given scene either to replace the current one or to be open alongside it.
     /// </summary>
     /// <param name="scene">The name of the scene to be loaded</param>

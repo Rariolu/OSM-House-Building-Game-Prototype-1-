@@ -180,21 +180,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     
     void CreateBottomHalf()
     {
-        //EPlane plane = new EPlane();
-        //plane.Compute(gameObject);
-        //TextureRegion textureRegion = new TextureRegion();
-        
         Material bottomMat = MeshRenderer.material;
-        //SlicedHull sh = Slicer.Slice(gameObject, plane, textureRegion, bottomMat);
-        //if (sh != null)
-        //{
-        //    Debug.Log("sh not null, attempting to create lower hull.");
-        //    bottomHalf = sh.CreateLowerHull(gameObject, bottomMat);
-        //}
-        //else
-        //{
-        //    Debug.LogWarning("sh was null");
-        //}
         if (bottomHalf == null)
         {
             GameObject templateBottomHalf;
@@ -216,7 +202,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
         bottomHalf.name = gameObject.name + " bottom half";
         bottomHalf.transform.position = gameObject.transform.position;
-        //bottomHalf.transform.rotation = gameObject.transform.rotation;
     }
     bool dropped = false;
     void CameraMoved(CameraMovementScript camera)
@@ -241,18 +226,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     public void Drop(bool drop)
     {
         bool willDrop = drop && dropped;
-        //gameObject.SetActive(!drop);
-        //bottomHalf.SetActive(drop);
         gameObject.SetActive(!willDrop);
         bottomHalf.SetActive(willDrop);
-        //gameObject.transform.localScale = new Vector3(originalScale.x, originalScale.y, (drop ? 0.25f : 1f) * originalScale.z);
-        //MeshRenderer.enabled = !drop;
-        //for(int i = 0; i < MeshRenderer.materials.Length; i++)
-        //{
-        //    Material mat = MeshRenderer.materials[i];
-        //    mat.color = new Color(mat.color.r,mat.color.g,mat.color.b,drop ? 0.5f : 1.0f);
-        //    MeshRenderer.materials[i] = mat;
-        //}
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)

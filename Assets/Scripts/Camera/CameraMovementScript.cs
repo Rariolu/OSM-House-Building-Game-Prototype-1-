@@ -8,7 +8,7 @@ public delegate void CameraMoved(CameraMovementScript sender);
 /// A script which is used to rotate its parent object (the camera) around the up axis
 /// of the current floor.
 /// </summary>
-public class CameraMovementScript : MonoBehaviour//NullableInstanceScriptSingleton<CameraMovementScript>
+public class CameraMovementScript : MonoBehaviour
 {
 
     public CameraMoved CameraMoved;
@@ -150,8 +150,7 @@ public class CameraMovementScript : MonoBehaviour//NullableInstanceScriptSinglet
             transform.position = new Vector3(transform.position.x, y + yIntercept, transform.position.z);
         }
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

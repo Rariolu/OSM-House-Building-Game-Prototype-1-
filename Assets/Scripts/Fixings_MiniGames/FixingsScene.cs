@@ -12,7 +12,7 @@ using UnityEngine;
 /// </summary>
 public class FixingsScene : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         InGameSceneScript gameScene;

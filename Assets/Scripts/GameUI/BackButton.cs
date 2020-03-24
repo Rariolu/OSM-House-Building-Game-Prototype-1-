@@ -14,7 +14,7 @@ public class BackButton : UIButton
     public bool getPreviousSceneFromStack = false;
     public SCENE currentScene;
     public SCENE previousScene;
-    // Start is called before the first frame update
+    
     protected override void Start()
     {
         base.Start();
@@ -25,6 +25,7 @@ public class BackButton : UIButton
         }
         Click += BackButton_Click;
     }
+
     //public for now but this is only due to Unity being annoying
     public void BackButton_Click(UIButton sender)
     {

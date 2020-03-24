@@ -32,17 +32,9 @@ public class BrochureSceneScript : MonoBehaviour
             {
                 pScene.SetActive(false);
             }
-            //if (parentScene == SCENE.InGame)
-            //{
-            //    SceneObjectScript gameUIScene;
-            //    if (SceneObjectScript.InstanceExists(SCENE.InGameUI, out gameUIScene))
-            //    {
-            //        gameUIScene.SetActive(false);
-            //    }
-            //}
         }
     }
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (contract != null)

@@ -5,7 +5,7 @@ using System.Collections;
 /// A class used to set and retrieve the current contract that's being used
 /// and store information on the progression of the game.
 /// </summary>
-public class ConstructionUtil//: NullableInstanceClassSingleton<ConstructionUtil>
+public class ConstructionUtil
 {
     #region Properties
     readonly Contract contract;

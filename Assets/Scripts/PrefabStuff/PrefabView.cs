@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 //[RequireComponent(typeof(Image))]
 [RequireComponent(typeof(RawImage))]
-public class PrefabView : MonoBehaviour//NullableInstanceScriptSingleton<PrefabView>
+public class PrefabView : MonoBehaviour
 {
     //Image image;
     //Image Image
