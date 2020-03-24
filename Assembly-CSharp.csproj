@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\LabeledArrayAttribute.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\LabeledArrayDrawer.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\SceneObjectScript.cs" />

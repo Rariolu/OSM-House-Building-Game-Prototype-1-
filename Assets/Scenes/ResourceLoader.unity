@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 214173334}
+  - component: {fileID: 214173335}
   - component: {fileID: 214173333}
   - component: {fileID: 214173332}
   m_Layer: 0
@@ -216,54 +217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fonts: []
   gameobjects:
-  - Name: PANEL_FRONT_GROUND
-    Item: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991, type: 3}
-  - Name: PANEL_BACK_GROUND
-    Item: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991, type: 3}
-  - Name: PANEL_SIDE_GROUND
-    Item: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32, type: 3}
-  - Name: PANEL_FLOOR_GROUND
-    Item: {fileID: 2494304725582189324, guid: 068df7ba68f73264e917938e2d4d08bc, type: 3}
-  - Name: PANEL_FRONT_SECOND
-    Item: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991, type: 3}
-  - Name: PANEL_BACK_SECOND
-    Item: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991, type: 3}
-  - Name: PANEL_SIDE_SECOND
-    Item: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991, type: 3}
-  - Name: PANEL_FLOOR_SECOND
-    Item: {fileID: -927199367670048503, guid: 4e5d19bfa14ea9641b0fc97c035f99ca, type: 3}
-  - Name: PANEL_ROOF
-    Item: {fileID: -927199367670048503, guid: 1bf3505e91c886b49825f31fe04f205d, type: 3}
-  - Name: PANEL_DOOR_GROUND
-    Item: {fileID: 5082497975332312478, guid: 47b0e6104a46648429ff88713a9cfc8f, type: 3}
-  - Name: PANEL_PORCH_GROUND
-    Item: {fileID: -927199367670048503, guid: bd644d60dd3e7514186720a3ae83ff92, type: 3}
-  - Name: PANEL_EXTRUDE_DOOR_GROUND
-    Item: {fileID: 2206997252885690351, guid: 9def7f2e17d089641b59aabc0a103182, type: 3}
-  - Name: PANEL_DOOR2_GROUND
-    Item: {fileID: 5082497975332312478, guid: 47b0e6104a46648429ff88713a9cfc8f, type: 3}
-  - Name: PANEL_FRONT2_GROUND
-    Item: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32, type: 3}
-  - Name: PANEL_STAIRS1_GROUND
-    Item: {fileID: 1603890359464921295, guid: 818f030ed41a26849bd48d2ae5d45910, type: 3}
-  - Name: PANEL_SLANT_ROOF_GROUND
-    Item: {fileID: 6996597811572697145, guid: 20ecb92bb44186247b2cc408db36d4fe, type: 3}
-  - Name: PANEL_FRONT_WINDOW_GROUND
-    Item: {fileID: 7866758776235219392, guid: 5e04e91988f3899429baaf103f68efc3, type: 3}
-  - Name: PANEL_INTERIOR_GROUND
-    Item: {fileID: 5600847410234954856, guid: 85ed573b8884eaf49b90e183aad524e4, type: 3}
-  - Name: PANEL_BACK_DOOR_GROUND
-    Item: {fileID: 1530794274060882896, guid: 290f90f9a15040947ae3eba12c0c3926, type: 3}
-  - Name: PANEL_FRONT_OFFSET_WINDOW_FIRST
-    Item: {fileID: 9137775800049009215, guid: 60e59bf40af45ba48a220b41be471736, type: 3}
-  - Name: PANEL_INTERIOR_DOOR
-    Item: {fileID: 2147254577337427097, guid: af2e30b0998adb8449dddca3aafce02b, type: 3}
-  - Name: PANEL_ROOF1
-    Item: {fileID: 6299659304953966396, guid: 4bd277ae23c3de04cbc8b9406a6e7229, type: 3}
-  - Name: PANEL_WINDOW_LEFT
-    Item: {fileID: 5296809909221054301, guid: 3430783577fc6af4c8a346720b856bea, type: 3}
-  - Name: PANEL_WINDOW_RGHT
-    Item: {fileID: 7523694975668501232, guid: faa8a53188532584cb6d39b31e8d3935, type: 3}
   - Name: SnapPoint_EDGE
     Item: {fileID: 4238651369669595235, guid: a9a90e5b576342a44a16c77dc89298d0, type: 3}
   - Name: SnapPoint_CENTRE
@@ -305,52 +258,6 @@ MonoBehaviour:
     Item: {fileID: 21300000, guid: 6af504975b93fd24aa8d36ebfec0534d, type: 3}
   - Name: Semi-Detached House_House
     Item: {fileID: 21300000, guid: d5269f3cd57d2ae43aff9ef76994ac56, type: 3}
-  - Name: PANEL_FRONT_GROUND
-    Item: {fileID: 21300000, guid: e641e8099407e1a409c662514464e8da, type: 3}
-  - Name: PANEL_BACK_GROUND
-    Item: {fileID: 21300000, guid: 447467c56c9b2c34f987b17e1ec446c2, type: 3}
-  - Name: PANEL_SIDE_GROUND
-    Item: {fileID: 21300000, guid: 6ab546c7479a5654698f77dc8d593f07, type: 3}
-  - Name: PANEL_FLOOR_GROUND
-    Item: {fileID: 21300000, guid: ee2004200542ff947a1c6cffc4ed2250, type: 3}
-  - Name: PANEL_FRONT_SECOND
-    Item: {fileID: 21300000, guid: 90689d6cbc46a364fa440524a9458e4e, type: 3}
-  - Name: PANEL_BACK_SECOND
-    Item: {fileID: 21300000, guid: cfa09a15d20841f42850a581909d0628, type: 3}
-  - Name: PANEL_SIDE_SECOND
-    Item: {fileID: 21300000, guid: 763fc4ed6b12762419266bb621537aac, type: 3}
-  - Name: PANEL_FLOOR_SECOND
-    Item: {fileID: 21300000, guid: 1fca83f24f4f02a4097e626fb3f77ab3, type: 3}
-  - Name: PANEL_ROOF
-    Item: {fileID: 21300000, guid: 94aa80d91791a3c498f8f6db010d60f4, type: 3}
-  - Name: PANEL_BEDROOM
-    Item: {fileID: 21300000, guid: 8a4329ff1b1a30041a1af4cf3ae140c5, type: 3}
-  - Name: PANEL_BATHROOM
-    Item: {fileID: 21300000, guid: bceaf0b8a4633174daf4869d2213063e, type: 3}
-  - Name: PANEL_KITCHEN
-    Item: {fileID: 21300000, guid: 1470a99a057f0a845bc42d4864f08e4b, type: 3}
-  - Name: PANEL_FRONT_OFFSET_WINDOW_FIRST
-    Item: {fileID: 21300000, guid: 487d09fff8b5d7747af55c6d882c675c, type: 3}
-  - Name: PANEL_BACK_DOOR_GROUND
-    Item: {fileID: 21300000, guid: 3d89513f884dbc8489f07380f233563b, type: 3}
-  - Name: PANEL_INTERIOR_GROUND
-    Item: {fileID: 21300000, guid: 51eba4048f84c7f4ab05f2408e9ee288, type: 3}
-  - Name: PANEL_FRONT_WINDOW_GROUND
-    Item: {fileID: 21300000, guid: 79ef55e84dc96ea489aa4e3348799ac8, type: 3}
-  - Name: PANEL_SLANT_ROOF_GROUND
-    Item: {fileID: 21300000, guid: c6f1471628a60e84d87cc9ee09905f6e, type: 3}
-  - Name: PANEL_STAIRS1_GROUND
-    Item: {fileID: 21300000, guid: e930991f6a29a55419d5325fb6130d5a, type: 3}
-  - Name: PANEL_FRONT2_GROUND
-    Item: {fileID: 21300000, guid: b4293758edaa84847a7865ac9eee4214, type: 3}
-  - Name: PANEL_DOOR2_GROUND
-    Item: {fileID: 21300000, guid: 5da2334c55573f8488000663ce39b983, type: 3}
-  - Name: PANEL_EXTRUDE_DOOR_GROUND
-    Item: {fileID: 21300000, guid: aab01fac9b1789742be2c74b03e6fdbc, type: 3}
-  - Name: PANEL_PORCH_GROUND
-    Item: {fileID: 21300000, guid: fffc42be718d9d042847e67a6929707e, type: 3}
-  - Name: PANEL_DOOR_GROUND
-    Item: {fileID: 21300000, guid: 65f0659945e9d544089cd7f3778cc247, type: 3}
   textures: []
 --- !u!4 &214173334
 Transform:
@@ -366,6 +273,124 @@ Transform:
   m_Father: {fileID: 1470395318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214173335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214173331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4d7307f524c5e40ba48fa6326a4544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - type: 0
+    gameObject: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991,
+      type: 3}
+    sprite: {fileID: 21300000, guid: e641e8099407e1a409c662514464e8da, type: 3}
+  - type: 1
+    gameObject: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 447467c56c9b2c34f987b17e1ec446c2, type: 3}
+  - type: 2
+    gameObject: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 6ab546c7479a5654698f77dc8d593f07, type: 3}
+  - type: 3
+    gameObject: {fileID: 2494304725582189324, guid: 068df7ba68f73264e917938e2d4d08bc,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 84a576e5c2536be40bff72a109af6b96, type: 3}
+  - type: 4
+    gameObject: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 90689d6cbc46a364fa440524a9458e4e, type: 3}
+  - type: 5
+    gameObject: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991,
+      type: 3}
+    sprite: {fileID: 21300000, guid: cfa09a15d20841f42850a581909d0628, type: 3}
+  - type: 6
+    gameObject: {fileID: -927199367670048503, guid: d03e238805d899641b3930b06b490991,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 763fc4ed6b12762419266bb621537aac, type: 3}
+  - type: 7
+    gameObject: {fileID: -927199367670048503, guid: 4e5d19bfa14ea9641b0fc97c035f99ca,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 1fca83f24f4f02a4097e626fb3f77ab3, type: 3}
+  - type: 8
+    gameObject: {fileID: -927199367670048503, guid: 1bf3505e91c886b49825f31fe04f205d,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 9ec702398b276604fb8a60dae934aee7, type: 3}
+  - type: 9
+    gameObject: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 8a4329ff1b1a30041a1af4cf3ae140c5, type: 3}
+  - type: 10
+    gameObject: {fileID: 0}
+    sprite: {fileID: 21300000, guid: bceaf0b8a4633174daf4869d2213063e, type: 3}
+  - type: 11
+    gameObject: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 1470a99a057f0a845bc42d4864f08e4b, type: 3}
+  - type: 12
+    gameObject: {fileID: 5082497975332312478, guid: 47b0e6104a46648429ff88713a9cfc8f,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
+  - type: 13
+    gameObject: {fileID: -927199367670048503, guid: bd644d60dd3e7514186720a3ae83ff92,
+      type: 3}
+    sprite: {fileID: 21300000, guid: d904bba5f60e4ed468db76d7c02e06da, type: 3}
+  - type: 14
+    gameObject: {fileID: 2206997252885690351, guid: 9def7f2e17d089641b59aabc0a103182,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 24d33b788224e3f45acd1ddd2317b137, type: 3}
+  - type: 15
+    gameObject: {fileID: 5082497975332312478, guid: 47b0e6104a46648429ff88713a9cfc8f,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
+  - type: 16
+    gameObject: {fileID: 7162959561149439718, guid: fe53af5b529586e468d09c4d24872a32,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
+  - type: 17
+    gameObject: {fileID: 1603890359464921295, guid: 818f030ed41a26849bd48d2ae5d45910,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 4d9e02ed731ebd74c86d008328e16e77, type: 3}
+  - type: 18
+    gameObject: {fileID: 6996597811572697145, guid: 20ecb92bb44186247b2cc408db36d4fe,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 41810c9ac46272a4e9d6215bd696e7e0, type: 3}
+  - type: 19
+    gameObject: {fileID: 7866758776235219392, guid: 5e04e91988f3899429baaf103f68efc3,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 41810c9ac46272a4e9d6215bd696e7e0, type: 3}
+  - type: 20
+    gameObject: {fileID: 5600847410234954856, guid: 85ed573b8884eaf49b90e183aad524e4,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 51eba4048f84c7f4ab05f2408e9ee288, type: 3}
+  - type: 21
+    gameObject: {fileID: 1530794274060882896, guid: 290f90f9a15040947ae3eba12c0c3926,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
+  - type: 22
+    gameObject: {fileID: 9137775800049009215, guid: 60e59bf40af45ba48a220b41be471736,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 4202d8d626b3c8e468fefb4dae560c2c, type: 3}
+  - type: 23
+    gameObject: {fileID: 2147254577337427097, guid: af2e30b0998adb8449dddca3aafce02b,
+      type: 3}
+    sprite: {fileID: 0}
+  - type: 24
+    gameObject: {fileID: 6299659304953966396, guid: 4bd277ae23c3de04cbc8b9406a6e7229,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 8b681b9845117884d98ee96de3425d38, type: 3}
+  - type: 25
+    gameObject: {fileID: 5296809909221054301, guid: 3430783577fc6af4c8a346720b856bea,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 4202d8d626b3c8e468fefb4dae560c2c, type: 3}
+  - type: 26
+    gameObject: {fileID: 7523694975668501232, guid: faa8a53188532584cb6d39b31e8d3935,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 4202d8d626b3c8e468fefb4dae560c2c, type: 3}
 --- !u!1 &1470395317
 GameObject:
   m_ObjectHideFlags: 0
