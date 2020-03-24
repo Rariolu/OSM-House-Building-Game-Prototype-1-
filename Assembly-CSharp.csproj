@@ -117,7 +117,6 @@
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureSceneScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUI.cs" />
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUtil.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\HouseDemo.cs" />
     <Compile Include="Assets\Scripts\GameUI\BuildButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
@@ -137,9 +136,6 @@
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\House.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\HouseViewSingle.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\Monobehaviours\HouseViewSceneScript.cs" />
     <Compile Include="Assets\Scripts\InGameSceneScript.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\Misc\SpecTestScript.cs" />

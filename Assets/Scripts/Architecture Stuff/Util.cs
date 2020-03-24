@@ -446,16 +446,6 @@ public static class Util
     }
 
     /// <summary>
-    /// Load the house view scene with a particular house.
-    /// </summary>
-    /// <param name="house"></param>
-    public static void ShowHouse(House house)
-    {
-        HouseViewSingle.ShowHouse(house);
-        LoadScene(SCENE.HouseViewing,LoadSceneMode.Additive);
-    }
-
-    /// <summary>
     /// Load the test scene which shows an estimate of the FPS onscreen.
     /// </summary>
     public static void ShowTest()
