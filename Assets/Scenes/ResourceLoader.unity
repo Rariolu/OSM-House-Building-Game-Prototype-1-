@@ -352,7 +352,7 @@ MonoBehaviour:
       type: 3}
     sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
   - type: 17
-    gameObject: {fileID: 1603890359464921295, guid: 818f030ed41a26849bd48d2ae5d45910,
+    gameObject: {fileID: 6751729719619182444, guid: ae006649580f48040bcc12810dd5e2a7,
       type: 3}
     sprite: {fileID: 21300000, guid: 4d9e02ed731ebd74c86d008328e16e77, type: 3}
   - type: 18
