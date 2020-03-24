@@ -17680,11 +17680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Truck Fixed
       objectReference: {fileID: 0}
-    - target: {fileID: -7098060764458484821, guid: f0a45426324f61847b7d9de46c13a6c9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e9cf9cfe74d5e3e48a30bf7c0ff2c593, type: 2}
     - target: {fileID: -4216859302048453862, guid: f0a45426324f61847b7d9de46c13a6c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17755,6 +17750,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.500001
       objectReference: {fileID: 0}
+    - target: {fileID: -7098060764458484821, guid: f0a45426324f61847b7d9de46c13a6c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9cf9cfe74d5e3e48a30bf7c0ff2c593, type: 2}
     - target: {fileID: -3890237660958439973, guid: f0a45426324f61847b7d9de46c13a6c9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
