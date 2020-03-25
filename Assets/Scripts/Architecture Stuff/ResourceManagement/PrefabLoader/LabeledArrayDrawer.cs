@@ -5,7 +5,7 @@
   * Created on: 28/12/17 (dd/mm/yy)
   * Reference from John Avery: https://forum.unity.com/threads/how-to-change-the-name-of-list-elements-in-the-inspector.448910/
   */
-
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.Linq;
@@ -35,3 +35,4 @@ public class LabeledArrayDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif
