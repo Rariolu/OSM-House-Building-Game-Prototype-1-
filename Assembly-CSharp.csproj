@@ -94,7 +94,9 @@
     <Compile Include="Assets\Scripts\Construction\SnapPointTrigger.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Contract.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\PrefabPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
     <Compile Include="Assets\Scripts\Debug\Logger.cs" />
@@ -155,6 +157,7 @@
     <None Include="Assets\Industrial Props\ReadMe.txt" />
     <None Include="Assets\IconGenerator\HowToUse.txt" />
     <None Include="Assets\Contracts\Bungalow_TOWNHOUSE_0.xml" />
+    <None Include="Assets\Contracts\Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/UnityProjects/2019Unity Projects/OSM House Building Game Prototype (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
