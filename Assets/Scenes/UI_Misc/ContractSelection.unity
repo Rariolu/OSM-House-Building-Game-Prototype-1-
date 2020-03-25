@@ -547,9 +547,9 @@ MonoBehaviour:
         floorType: 0
         material: 0
         offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
-          offsetRotation: {x: -90, y: -90, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
+          offsetPosition: {x: 0, y: 0, z: 0}
+          offsetRotation: {x: -90, y: 90, z: 0}
+          offsetScale: {x: 5, y: 2.5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -561,9 +561,9 @@ MonoBehaviour:
         floorType: 0
         material: 0
         offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
+          offsetPosition: {x: 0.6025, y: -2.501, z: 0}
           offsetRotation: {x: -90, y: -90, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
+          offsetScale: {x: 5, y: 6.21, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
         floorType: 0
         material: 2
         offset:
-          offsetPosition: {x: 0, y: -2.3665, z: 0}
+          offsetPosition: {x: 0, y: -2.6335, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
           offsetScale: {x: 5, y: 5, z: 5}
         position: 0
