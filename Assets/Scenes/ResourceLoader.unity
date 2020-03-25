@@ -332,7 +332,7 @@ MonoBehaviour:
     gameObject: {fileID: 0}
     sprite: {fileID: 21300000, guid: 1470a99a057f0a845bc42d4864f08e4b, type: 3}
   - type: 12
-    gameObject: {fileID: 8698321106356189833, guid: 3268b299f1d6bd144bac8f25b483341c,
+    gameObject: {fileID: 730602018605801870, guid: c1f2ddceac3ed10459aaa658fb4b87b3,
       type: 3}
     sprite: {fileID: 21300000, guid: 8d194bc20b9f01c4cadd14dce8850739, type: 3}
   - type: 13

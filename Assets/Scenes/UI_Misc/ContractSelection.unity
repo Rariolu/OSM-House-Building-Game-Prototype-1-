@@ -508,7 +508,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 270, z: 0}
-          offsetScale: {x: 5, y: 5, z: 5}
+          offsetScale: {x: 12.7, y: 12.7, z: 12.7}
         position: 0
         properties: []
         snapType: 0
