@@ -10,8 +10,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{76BFAD19-78B2-3693-EE48-A14176CFBD29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -78,6 +77,7 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\AlternateNamePropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\PrefabLoaderPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs" />
