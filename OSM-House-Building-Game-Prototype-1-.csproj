@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{07A21C90-D344-AE1A-8456-9910C203B41A}</ProjectGuid>
+    <ProjectGuid>{3B0AA9DA-3187-47DB-4B1E-F51FC96E6FFB}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.TextMeshPro</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -47,11 +47,17 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Managed/UnityEngine/UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.12f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -229,21 +235,6 @@
     </Reference>
     <Reference Include="Managed/UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.12f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.VR">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Graphs">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.12f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -592,62 +583,117 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\AssemblyInfo.cs.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\FastAction.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\MaterialReferenceManager.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TextContainer.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TextMeshPro.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TextMeshProUGUI.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Asset.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Character.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_CharacterInfo.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_ColorGradient.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_CoroutineTween.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_DefaultControls.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Dropdown.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_EditorResourceManager.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_FontAsset.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_FontAssetCommon.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_FontAssetUtilities.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_FontFeaturesCommon.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_FontFeatureTable.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_InputField.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_InputValidator.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_LineInfo.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_ListPool.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_MaterialManager.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_MeshInfo.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_ObjectPool.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_PackageResourceImporter.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_RichTextTagsCommon.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_RichTextTagStack.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_ScrollbarEventHandler.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SelectionCaret.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Settings.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_ShaderUtilities.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Sprite.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SpriteAnimator.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SpriteAsset.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SpriteAssetImportFormats.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SpriteCharacter.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SpriteGlyph.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Style.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_StyleSheet.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SubMesh.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_SubMeshUI.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_Text.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_TextElement.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_TextElement_Legacy.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_TextInfo.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_TextParsingUtilities.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_TextUtilities.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_UpdateManager.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMP_UpdateRegistery.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_EventManager.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_ExtensionMethods.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_MeshUtilities.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_Private.cs" />
-    <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_UGUI_Private.cs" />
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{F37EB8D3-595B-2A8E-9D57-98253E4F534B}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{C540080A-BED7-978E-DDFC-EE09E5DBB722}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\IconGenerator\IconGenerator.cs" />
+    <Compile Include="Assets\IconGenerator\IconGeneratorUIExample.cs" />
+    <Compile Include="Assets\IconGenerator\TextureScale.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\IntegratedSoundManager.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\Sound.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\UpdateableAudioSource.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonClass.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonScript.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUtil.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\SingletonUtil.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\LabeledArrayAttribute.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\LabeledArrayDrawer.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\SceneObjectScript.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\StringBuilderPro.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Util.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ViewableStack.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
+    <Compile Include="Assets\Scripts\Camera\CamSwitch.cs" />
+    <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
+    <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
+    <Compile Include="Assets\Scripts\Construction\SnapPoint.cs" />
+    <Compile Include="Assets\Scripts\Construction\SnapPointTrigger.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\Contract.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
+    <Compile Include="Assets\Scripts\Debug\Logger.cs" />
+    <Compile Include="Assets\Scripts\Debug\LogToggleButton.cs" />
+    <Compile Include="Assets\Scripts\Debug\UILogger.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ContractAssembly.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndConditionUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndGameUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndSceneScript.cs" />
+    <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings_Count.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\FixingsScene.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\FixingsUtil.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\Intersection.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\IntersectionComponent.cs" />
+    <Compile Include="Assets\Scripts\FloorChange\Floor.cs" />
+    <Compile Include="Assets\Scripts\GameUI\BackButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureSceneScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUI.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUtil.cs" />
+    <Compile Include="Assets\Scripts\GameUI\BuildButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
+    <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
+    <Compile Include="Assets\Scripts\GameUI\ContractViewportScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\DropWallButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\FloorButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\HouseNamingScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\HouseViewerButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Menu\QuitButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Menu\SceneLoadButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Menu\StartButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Menu\UIButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Options\OptionsSceneScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PauseUI\ContinueButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PauseUI\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCompartSelectionButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
+    <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
+    <Compile Include="Assets\Scripts\InGameSceneScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScript.cs" />
+    <Compile Include="Assets\Scripts\Misc\SpecTestScript.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\Prefab.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\PrefabCollection.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\PrefabOffsetProperties.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\PrefabPlacedObject.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\PrefabPlacementScript.cs" />
+    <Compile Include="Assets\Scripts\PrefabStuff\PrefabView.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\XML\XMLUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Contracts\Bungalow_TOWNHOUSE_0.xml" />
