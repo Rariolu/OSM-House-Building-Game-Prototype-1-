@@ -1984,7 +1984,7 @@ Transform:
   - {fileID: 4337853666564841769}
   - {fileID: 8391703219799051789}
   m_Father: {fileID: 1793909520}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &217875288 stripped
 Transform:
@@ -21062,8 +21062,8 @@ Transform:
   - {fileID: 2006782618}
   - {fileID: 1769533984}
   - {fileID: 1265722862}
-  - {fileID: 1710139023}
   - {fileID: 215769419}
+  - {fileID: 1710139023}
   m_Father: {fileID: 1193149744}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

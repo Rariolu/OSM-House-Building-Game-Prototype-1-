@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4693808326192359851}
   - component: {fileID: 1305842297090118994}
   - component: {fileID: -7927000112037387457}
+  - component: {fileID: 3128635866412638541}
   m_Layer: 0
   m_Name: SM_Door_CenPorch_FIX
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730602018605801870}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 2.6335, z: -15}
+  m_LocalPosition: {x: -0.1157359, y: 2.6361814, z: -15}
   m_LocalScale: {x: 12.7, y: 12.7, z: 12.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,3 +100,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15883571, y: 0.39370078, z: 0.39370078}
   m_Center: {x: 0.06872584, y: 0, z: 0.19685039}
+--- !u!95 &3128635866412638541
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730602018605801870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e277eb139c62e548a35ddd6db59679e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
