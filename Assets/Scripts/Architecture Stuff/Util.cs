@@ -49,6 +49,8 @@ public static class Util
 
     public static SysRand rand = new SysRand();
 
+    static bool resourcesLoaded = false;
+
     /// <summary>
     /// The scenes that have been loaded, used to preserve scene continuity
     /// so that the "previous" scene can be easily identified.
@@ -233,6 +235,19 @@ public static class Util
         //but if a util isn't available then it's presumed
         //that a prefab hasn't been destroyed.
         return false;
+    }
+
+    /// <summary>
+    /// Open the "ResourceLoader" scene in order to load resources
+    /// into memory if the resources haven't already been loaded.
+    /// </summary>
+    public static void LoadResources()
+    {
+        if (!resourcesLoaded)
+        {
+            resourcesLoaded = true;
+            LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
+        }
     }
 
     /// <summary>
