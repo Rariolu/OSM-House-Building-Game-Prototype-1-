@@ -4,8 +4,6 @@ using System.Collections;
 
 public class PrefabLoader : MonoBehaviour
 {
-    //https://answers.unity.com/questions/145262/naming-array-elements-in-editor.html
-    [LabeledArray(typeof(PREFABTYPE))]
     public PrefabResource[] prefabs;
     private void Awake()
     {
