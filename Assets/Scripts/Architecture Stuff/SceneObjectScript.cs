@@ -62,7 +62,11 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     }
     void Start()
     {
-        if (ShowTestScene)
+
+#if DEVELOPMENT_BUILD
+        ShowTestScene = true;
+#endif
+        if (!Util.SceneLoaded(SCENE.SpecTestScene) && ShowTestScene)
         {
             Util.ShowTest();
         }
