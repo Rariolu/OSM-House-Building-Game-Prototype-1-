@@ -139,6 +139,8 @@
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\SellHouseButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Subtasks\SubtaskButton.cs" />
     <Compile Include="Assets\Scripts\InGameSceneScript.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\Misc\SpecTestScript.cs" />
