@@ -30,6 +30,7 @@ public class BrochureUI : MonoBehaviour
 
     public void SellHouse()
     {
+
         Util.LoadScene(SCENE.ContractSelection);
     }
 }

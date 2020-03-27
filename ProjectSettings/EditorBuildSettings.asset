@@ -27,12 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UI_Misc/Options.unity
     guid: 472c1d8089dfb9e4ba46b45500b5bf04
   - enabled: 1
-    path: Assets/Scenes/BrochureStuff/Brochure.unity
-    guid: d88681aadb19c6b49a20db7c6e59c2d6
-  - enabled: 1
-    path: Assets/Scenes/BrochureStuff/HouseViewing.unity
-    guid: 03d62d75d1c24eb459ad8a43e98d26ae
-  - enabled: 1
     path: Assets/Scenes/Misc/SpecTestScene.unity
     guid: e9fb8cefabb139d4fa0373f0d90283c2
   - enabled: 1

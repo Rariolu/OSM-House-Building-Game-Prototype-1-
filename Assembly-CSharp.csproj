@@ -120,9 +120,7 @@
     <Compile Include="Assets\Scripts\Fixings_MiniGames\IntersectionComponent.cs" />
     <Compile Include="Assets\Scripts\FloorChange\Floor.cs" />
     <Compile Include="Assets\Scripts\GameUI\BackButton.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureSceneScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUI.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUtil.cs" />
     <Compile Include="Assets\Scripts\GameUI\BuildButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
@@ -130,7 +128,6 @@
     <Compile Include="Assets\Scripts\GameUI\DropWallButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\FloorButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseNamingScript.cs" />
-    <Compile Include="Assets\Scripts\GameUI\HouseViewerButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\QuitButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\SceneLoadButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\StartButton.cs" />
