@@ -10,9 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{76BFAD19-78B2-3693-EE48-A14176CFBD29}</ProjectGuid>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{0EF0840C-274B-573E-61AE-3A400990D66D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -175,20 +174,20 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Editor">
+      <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Runtime">
+      <HintPath>D:/Uni/Year 3/IP3/Unity/OSM-House-Building-Game-Prototype-1-/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
