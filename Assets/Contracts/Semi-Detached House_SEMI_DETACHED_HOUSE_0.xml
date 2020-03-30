@@ -21,25 +21,29 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>BRICK</material>
 			</prefab>
-			<positions />
-			<quantity>2</quantity>
+			<positions>
+				<vec3 x="5" y="2.6335" z="-15" />
+			</positions>
+			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.8665" z="0" />
+					<position x="2.43" y="-2.3665" z="0" />
 					<rotation x="-90" y="270" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="1.97" y="1.97" z="1.97" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
-				<prefabtype>PANEL_WINDOW_RGHT</prefabtype>
+				<prefabtype>PANEL_WINDOW_LEFT</prefabtype>
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-7.57" y="2.6335" z="-10" />
+			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -47,7 +51,7 @@
 				<prefaboffset>
 					<position x="0" y="-2.3665" z="0" />
 					<rotation x="-90" y="270" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="12.7" y="12.7" z="12.7" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
@@ -78,25 +82,25 @@
 				<material>BRICK</material>
 			</prefab>
 			<positions>
-				<vec3 x="-2.5" y="2.6335" z="-12.5" />
 				<vec3 x="7.5" y="2.6335" z="-12.5" />
 				<vec3 x="7.5" y="2.6335" z="-7.5" />
 				<vec3 x="7.5" y="2.6335" z="-2.5" />
 				<vec3 x="7.5" y="2.6335" z="2.5" />
 				<vec3 x="7.5" y="2.6335" z="7.5" />
-				<vec3 x="-12.5" y="2.6335" z="-7.5" />
+				<vec3 x="-12.5" y="2.6335" z="7.5" />
 				<vec3 x="-12.5" y="2.6335" z="-2.5" />
 				<vec3 x="-12.5" y="2.6335" z="2.5" />
-				<vec3 x="-12.5" y="2.6335" z="7.5" />
+				<vec3 x="-12.5" y="2.6335" z="-7.5" />
+				<vec3 x="-2.5" y="2.6335" z="-12.5" />
 			</positions>
 			<quantity>10</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
-					<rotation x="-90" y="-90" z="0" />
-					<scale x="5" y="5" z="5" />
+					<position x="0" y="0" z="0" />
+					<rotation x="-90" y="90" z="0" />
+					<scale x="5" y="2.5" z="5" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
@@ -104,21 +108,21 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
 			<positions>
-				<vec3 x="5" y="2.6335" z="-15" />
-				<vec3 x="-5" y="2.6335" z="-10" />
-				<vec3 x="-10" y="2.6335" z="-10" />
+				<vec3 x="-10" y="5" z="10" />
+				<vec3 x="-5" y="5" z="10" />
+				<vec3 x="5" y="5" z="10" />
 			</positions>
-			<quantity>6</quantity>
+			<quantity>3</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
+					<position x="0.6025" y="-2.501" z="0" />
 					<rotation x="-90" y="-90" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="5" y="6.21" z="5" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
@@ -126,9 +130,11 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="0.6025" y="2.499" z="10" />
+			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -146,7 +152,10 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="5" y="2.6335" z="0" />
+				<vec3 x="5" y="2.6335" z="-10" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -164,7 +173,11 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-2.5" y="2.6444" z="7.5" />
+				<vec3 x="-2.5" y="2.6444" z="2.5" />
+				<vec3 x="-2.5" y="2.6444" z="-7.5" />
+			</positions>
 			<quantity>3</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -180,10 +193,10 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>FLOOR</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions>
-				<vec3 x="5" y="2.74" z="-4.997" />
+				<vec3 x="5" y="2.74" z="0.003000021" />
 			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
@@ -205,21 +218,21 @@
 			<positions>
 				<vec3 x="0" y="2.74" z="-9.997" />
 				<vec3 x="5" y="2.74" z="-9.997" />
+				<vec3 x="5" y="2.74" z="-4.997" />
 				<vec3 x="0" y="2.74" z="-4.997" />
+				<vec3 x="0" y="2.74" z="0.003000021" />
+				<vec3 x="0" y="2.74" z="5.003" />
+				<vec3 x="5" y="2.74" z="5.003" />
+				<vec3 x="5" y="2.74" z="10.003" />
+				<vec3 x="0" y="2.74" z="10.003" />
+				<vec3 x="-5" y="2.74" z="10.003" />
+				<vec3 x="-10" y="2.74" z="10.003" />
+				<vec3 x="-10" y="2.74" z="5.003" />
+				<vec3 x="-5" y="2.74" z="5.003" />
+				<vec3 x="-10" y="2.74" z="0.003000021" />
+				<vec3 x="-5" y="2.74" z="0.003000021" />
 				<vec3 x="-5" y="2.74" z="-4.997" />
 				<vec3 x="-10" y="2.74" z="-4.997" />
-				<vec3 x="-10" y="2.74" z="0.003000021" />
-				<vec3 x="-10" y="2.74" z="5.003" />
-				<vec3 x="-10" y="2.74" z="10.003" />
-				<vec3 x="0" y="2.74" z="10.003" />
-				<vec3 x="5" y="2.74" z="10.003" />
-				<vec3 x="5" y="2.74" z="0.003000021" />
-				<vec3 x="5" y="2.74" z="5.003" />
-				<vec3 x="0" y="2.74" z="5.003" />
-				<vec3 x="0" y="2.74" z="0.003000021" />
-				<vec3 x="-5" y="2.74" z="0.003000021" />
-				<vec3 x="-5" y="2.74" z="5.003" />
-				<vec3 x="-5" y="2.74" z="10.003" />
 			</positions>
 			<quantity>17</quantity>
 		</prefabcollection>
@@ -236,27 +249,32 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>ROOF</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="0" y="7.74" z="-9.997" />
+				<vec3 x="5" y="7.74" z="-9.997" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
 					<position x="0" y="-2.3665" z="0" />
-					<rotation x="-90" y="90" z="0" />
+					<rotation x="-90" y="90" z="180" />
 					<scale x="5" y="5" z="5" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
-				<prefabtype>PANEL_FRONT2_GROUND</prefabtype>
+				<prefabtype>PANEL_FRONT_OFFSET_WINDOW_FIRST</prefabtype>
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="5" y="7.6335" z="-10" />
+			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -268,13 +286,22 @@
 				</prefaboffset>
 				<properties />
 				<snaptype>CENTRE</snaptype>
-				<prefabtype>PANEL_FRONT2_GROUND</prefabtype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="7.5" y="7.6335" z="7.5" />
+				<vec3 x="7.5" y="7.6335" z="2.5" />
+				<vec3 x="7.5" y="7.6335" z="-2.5" />
+				<vec3 x="7.5" y="7.6335" z="-7.5" />
+				<vec3 x="-12.5" y="7.6335" z="7.5" />
+				<vec3 x="-12.5" y="7.6335" z="2.5" />
+				<vec3 x="-12.5" y="7.6335" z="-2.5" />
+				<vec3 x="-12.5" y="7.6335" z="-7.5" />
+			</positions>
 			<quantity>8</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -292,15 +319,20 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-10" y="7.6335" z="0" />
+				<vec3 x="-5" y="7.6335" z="0" />
+				<vec3 x="5" y="7.6335" z="5" />
+				<vec3 x="5" y="7.6335" z="-5" />
+			</positions>
 			<quantity>4</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
+					<position x="2.5" y="-2.3665" z="-0.13" />
 					<rotation x="-90" y="90" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="1.97" y="1.97" z="1.97" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
@@ -310,7 +342,10 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="2.5" y="7.6335" z="4.87" />
+				<vec3 x="2.5" y="7.6335" z="-5.13" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -328,15 +363,18 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
-			<quantity>4</quantity>
+			<positions>
+				<vec3 x="-2.5" y="7.6335" z="-7.5" />
+				<vec3 x="-2.5" y="7.6335" z="7.5" />
+			</positions>
+			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
+					<position x="-0.128" y="-2.3665" z="-2.5" />
 					<rotation x="-90" y="180" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="1.97" y="1.97" z="1.97" />
 				</prefaboffset>
 				<properties />
 				<snaptype>CENTRE</snaptype>
@@ -346,15 +384,18 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-2.628" y="7.6335" z="-5" />
+				<vec3 x="-2.628" y="7.6335" z="0" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
+					<position x="-0.128" y="-2.3665" z="-2.5" />
 					<rotation x="-90" y="180" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="1.97" y="1.97" z="1.97" />
 				</prefaboffset>
 				<properties />
 				<snaptype>CENTRE</snaptype>
@@ -364,15 +405,18 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-2.628" y="2.6335" z="-5" />
+				<vec3 x="2.372" y="2.6335" z="-15" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
 			<prefab>
 				<prefaboffset>
-					<position x="0" y="-2.3665" z="0" />
+					<position x="2.5" y="-2.3665" z="-0.13" />
 					<rotation x="-90" y="90" z="0" />
-					<scale x="5" y="5" z="5" />
+					<scale x="1.97" y="1.97" z="1.97" />
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
@@ -382,7 +426,9 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>GENERIC</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="2.5" y="2.6335" z="-0.13" />
+			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -398,16 +444,24 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>FLOOR</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions>
-				<vec3 x="-5" y="7.6335" z="-4.997" />
-				<vec3 x="-5" y="7.6335" z="0.003000021" />
-				<vec3 x="5" y="7.6335" z="-9.997" />
-				<vec3 x="0" y="7.6335" z="-9.997" />
 				<vec3 x="0" y="7.6335" z="-4.997" />
+				<vec3 x="5" y="7.6335" z="-4.997" />
+				<vec3 x="5" y="7.6335" z="5.003" />
 				<vec3 x="0" y="7.6335" z="0.003000021" />
-				<vec3 x="5" y="7.6335" z="0.003000021" />
+				<vec3 x="0" y="7.6335" z="5.003" />
+				<vec3 x="5" y="7.6335" z="10.003" />
+				<vec3 x="0" y="7.6335" z="10.003" />
+				<vec3 x="-10" y="7.6335" z="5.003" />
+				<vec3 x="-10" y="7.6335" z="10.003" />
+				<vec3 x="-5" y="7.6335" z="10.003" />
+				<vec3 x="-5" y="7.6335" z="5.003" />
+				<vec3 x="-5" y="7.6335" z="0.003000021" />
+				<vec3 x="-10" y="7.6335" z="0.003000021" />
+				<vec3 x="-10" y="7.6335" z="-4.997" />
+				<vec3 x="-5" y="7.6335" z="-4.997" />
 			</positions>
 			<quantity>15</quantity>
 		</prefabcollection>
@@ -424,10 +478,30 @@
 				<floortype>SECOND_FLOOR</floortype>
 				<compart>ROOF</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
 			<positions>
 				<vec3 x="-5.78" y="12.6335" z="0.04" />
+			</positions>
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="1.908" y="-2.3665" z="0" />
+					<rotation x="-90" y="270" z="0" />
+					<scale x="1.97" y="1.97" z="1.97" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_WINDOW_RGHT</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions>
+				<vec3 x="-3.092" y="2.6335" z="-10" />
 			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
@@ -440,14 +514,41 @@
 				</prefaboffset>
 				<properties />
 				<snaptype>EDGE</snaptype>
-				<prefabtype>PANEL_WINDOW_LEFT</prefabtype>
-				<floortype>GROUND_FLOOR</floortype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>EXTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>BRICK</material>
 			</prefab>
-			<positions />
-			<quantity>1</quantity>
+			<positions>
+				<vec3 x="0" y="7.6335" z="10" />
+				<vec3 x="0" y="7.6335" z="-10" />
+			</positions>
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0.131" z="0" />
+					<rotation x="-90" y="90" z="0" />
+					<scale x="5" y="2.5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_WINDOW_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions>
+				<vec3 x="-10" y="10.131" z="-10" />
+				<vec3 x="-5" y="10.131" z="-10" />
+				<vec3 x="-10" y="10.131" z="10" />
+				<vec3 x="-5" y="10.131" z="10" />
+				<vec3 x="5" y="10.131" z="10" />
+			</positions>
+			<quantity>5</quantity>
 		</prefabcollection>
 	</prefabcollections>
 	<standards>
