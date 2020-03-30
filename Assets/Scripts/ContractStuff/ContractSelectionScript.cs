@@ -35,6 +35,10 @@ public class ContractSelectionScript : MonoBehaviour
         {
             btnBrochure.Click += (sender) => { Logger.Log("btnBrochure clicked."); };
         }
+        else
+        {
+            Logger.Log("btnBrochure was null.");
+        }
     }
     void StartContract(UIButton sender)
     {

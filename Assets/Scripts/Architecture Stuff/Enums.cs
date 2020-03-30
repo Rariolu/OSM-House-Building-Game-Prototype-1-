@@ -125,11 +125,9 @@ public enum SCENE
     Name_Building = 4,
     EndScene = 5,
     Options = 6,
-    Brochure = 7,
-    HouseViewing = 8,
-    SpecTestScene = 9,
-    Credits = 10,
-    ResourceLoader = 11
+    SpecTestScene = 7,
+    Credits = 8,
+    ResourceLoader = 9
 }
 
 public enum SoundType
@@ -149,7 +147,8 @@ public enum SOUNDNAME
 {
 	MENU_BUTTON_CLICK,
 	SWIPE_RIGHT,
-	SWIPE_LEFT
+	SWIPE_LEFT,
+    SELL_HOUSE
 }
 
 public enum STANDARDTYPE

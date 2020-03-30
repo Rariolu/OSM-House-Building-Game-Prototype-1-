@@ -33,10 +33,14 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     /// </summary>
     private void Awake()
     {
-        if (!Util.SceneLoaded(SCENE.ResourceLoader) && loadResourceLoader)
+        if (loadResourceLoader)
         {
-            Util.LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
+            Util.LoadResources();
         }
+        //if (!Util.SceneLoaded(SCENE.ResourceLoader) && loadResourceLoader)
+        //{
+        //    Util.LoadScene(SCENE.ResourceLoader, LoadSceneMode.Additive, false);
+        //}
        
         string sceneName = gameObject.scene.name;
         
@@ -62,7 +66,11 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
     }
     void Start()
     {
-        if (ShowTestScene)
+
+#if DEVELOPMENT_BUILD
+        ShowTestScene = true;
+#endif
+        if (!Util.SceneLoaded(SCENE.SpecTestScene) && ShowTestScene)
         {
             Util.ShowTest();
         }

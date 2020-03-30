@@ -30,6 +30,8 @@ public class BrochureUI : MonoBehaviour
 
     public void SellHouse()
     {
-        Util.LoadScene(SCENE.ContractSelection);
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.SELL_HOUSE);
+        Util.SetExitState(EndConditionUtil.Pass());
+        //Util.LoadScene(SCENE.ContractSelection);
     }
 }

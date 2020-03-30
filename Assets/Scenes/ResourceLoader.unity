@@ -203,6 +203,11 @@ MonoBehaviour:
     loop: 0
     volume: 0.2
     type: 0
+  - name: SELL_HOUSE
+    clip: {fileID: 8300000, guid: b5ea45076e8e7f249afb6502850b8c06, type: 3}
+    loop: 0
+    volume: 0.2
+    type: 0
 --- !u!114 &214173333
 MonoBehaviour:
   m_ObjectHideFlags: 0
