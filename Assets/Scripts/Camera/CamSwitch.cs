@@ -14,11 +14,13 @@ public class CamSwitch : MonoBehaviour
         Cam1.SetActive(true);
         Cam2.SetActive(false);
     }
-    
+
+
     public void Camera()
     {
         cam1Active = !cam1Active;
         Cam1.SetActive(cam1Active);
         Cam2.SetActive(!cam1Active);
     }
+
 }
