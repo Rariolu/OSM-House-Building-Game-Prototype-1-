@@ -12,6 +12,8 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     public Image pbClosedContract;
     public Image pbOpenContract;
     public Image pbOpenMeta;
+    public Image[] pbFloorPlans;
+    
     Contract contract;
     int id;
     public int ID
@@ -97,9 +99,32 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     public void SetContract(Contract _contract)
     {
         contract = _contract;
+
         if (lblContractName != null)
         {
             lblContractName.text = contract.name;
+        }
+
+        FINISHED_CONSTRUCTION conType = contract.finishedConstruction;
+
+        for (int i = 0; i < pbFloorPlans.Length; i++)
+        {
+            SetFloorPlan(conType, i, pbFloorPlans[i]);
+        }
+    }
+
+    void SetFloorPlan(FINISHED_CONSTRUCTION conType,int floor,Image pbFloorPlan)
+    {
+        string strFloor = "{0}_floorplan_{1}".FormatText(conType, floor);
+        Sprite sprite;
+        if (ResourceManager.GetItem(strFloor,out sprite))
+        {
+            pbFloorPlan.sprite = sprite;
+        }
+        else
+        {
+            pbFloorPlan.gameObject.SetActive(false);
+            Logger.Log("{0} not found in resource manager.",LogType.Warning,strFloor);
         }
     }
     
