@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using System.Collections;
 
-[RequireComponent(typeof(Image))]
 public class ContractSelectionScript : MultitonScript<ContractSelectionScript,int>
 {
     public Text lblContractName;
@@ -22,6 +21,16 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
             return id;
         }
     }
+
+    Image image;
+    Image Image
+    {
+        get
+        {
+            return image ?? (image = GetComponent<Image>());
+        }
+    }
+
     static int count = 0;
     enum ContractSelectionState
     {
@@ -62,6 +71,11 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
             if (btnBack != null)
             {
                 btnBack.gameObject.SetActive(state != ContractSelectionState.CLOSED);
+            }
+
+            if (Image != null)
+            {
+                Image.enabled = state == ContractSelectionState.CLOSED;
             }
         }
     }
