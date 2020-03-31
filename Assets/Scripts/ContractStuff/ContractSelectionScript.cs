@@ -48,6 +48,12 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
         set
         {
             state = value;
+
+            if (state != ContractSelectionState.CLOSED)
+            {
+                OpenContract();
+            }
+
             if (pbOpenContract != null)
             {
                 pbOpenContract.gameObject.SetActive(state == ContractSelectionState.OPEN_MAIN);
