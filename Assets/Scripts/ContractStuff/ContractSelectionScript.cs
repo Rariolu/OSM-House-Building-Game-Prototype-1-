@@ -13,6 +13,7 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     public Image pbOpenContract;
     public Image pbOpenMeta;
     public Image[] pbFloorPlans;
+    public Text lblInfo;
     
     Contract contract;
     int id;
@@ -110,6 +111,16 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
         for (int i = 0; i < pbFloorPlans.Length; i++)
         {
             SetFloorPlan(conType, i, pbFloorPlans[i]);
+        }
+
+        if (lblInfo != null)
+        {
+            StringBuilderPro stringBuilder = new StringBuilderPro();
+
+            stringBuilder.AppendLineFormat("Budget: £{0}", contract.budget);
+            stringBuilder.AppendLineFormat("Time: {0}", contract.time);
+
+            lblInfo.text = stringBuilder.ToString();
         }
     }
 
