@@ -187,12 +187,6 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>F:/UnityProjects/2019Unity Projects/OSM House Building Game Prototype (1)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>F:/UnityProjects/2019Unity Projects/OSM House Building Game Prototype (1)/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>F:/UnityProjects/2019Unity Projects/OSM House Building Game Prototype (1)/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
