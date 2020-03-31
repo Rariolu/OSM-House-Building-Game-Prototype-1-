@@ -14,7 +14,8 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     public Image pbOpenMeta;
     public Image[] pbFloorPlans;
     public Text lblInfo;
-    
+    public Image pbHouse;
+
     Contract contract;
     int id;
     public int ID
