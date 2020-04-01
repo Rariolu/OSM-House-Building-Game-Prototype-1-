@@ -10,21 +10,27 @@ public static class EndConditionUtil
         ConstructionUtil constructionUtil;
         if (!SingletonUtil.InstanceAvailable(out constructionUtil))
         {
-            Debug.LogWarning("There isn't a construction util so default fail.");
+            Logger.Log("There isn't a construction util so default fail.",LogType.Warning);
             return EXIT_STATE.LOSE;
         }
         Contract contract = constructionUtil.Contract;
+
+        //TODO: Replace with price calculation.
+        contract.CompleteContract(contract.budget);
+
         if (!PrefabsInCorrectPosition(contract))
         {
-            Debug.LogWarning("The prefabs aren't in the correct position.");
+            Logger.Log("The prefabs aren't in the correct position.",LogType.Warning);
             return EXIT_STATE.LOSE;
         }
 
         if (!FixingsInAllIntersections())
         {
-            Debug.LogWarning("Not all the intersections have fixings.");
+            Logger.Log("Not all the intersections have fixings.",LogType.Warning);
             return EXIT_STATE.LOSE;
         }
+
+    
 
         return EXIT_STATE.WIN;
     }

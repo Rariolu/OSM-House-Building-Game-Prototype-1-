@@ -25,7 +25,6 @@ public class BrochureUI : MonoBehaviour
     public void Continue()
     {
         IsBrochureActive = false;
-        Time.timeScale = 1;
     }
 
     public void SellHouse()

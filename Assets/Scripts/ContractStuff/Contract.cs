@@ -23,11 +23,18 @@ public class Contract
     /// The quantity of money that the player has available to complete contract.
     /// </summary>
     public int budget;
-
+ 
+    bool completed = false;
     /// <summary>
     /// Whether or not the contract has been carried out at least once.
     /// </summary>
-    bool completed = false;
+    public bool Completed
+    {
+        get
+        {
+            return completed;
+        }
+    }
 
     /// <summary>
     /// What the resulting building should look like.
@@ -39,10 +46,18 @@ public class Contract
     /// </summary>
     public int fixtures;
 
+
+    int highestSellPrice = 0;
     /// <summary>
     /// The highest price that this contract has sold for.
     /// </summary>
-    int highestSellPrice = 0;
+    public int HighestSellPrice
+    {
+        get
+        {
+            return highestSellPrice;
+        }
+    }
 
     /// <summary>
     /// The name of the contract.
@@ -150,7 +165,14 @@ public class Contract
         //Set the highest sell price to be the larger number between the current
         //highest and the new sell price.
         highestSellPrice = !completed ? sellPrice : Math.Max(sellPrice, highestSellPrice);
-
+        if (ContractManager.highestSellingPrices.ContainsKey(finishedConstruction))
+        {
+            ContractManager.highestSellingPrices[finishedConstruction] = highestSellPrice;
+        }
+        else
+        {
+            ContractManager.highestSellingPrices.Add(finishedConstruction, highestSellPrice);
+        }
         completed = true;
     }
 }

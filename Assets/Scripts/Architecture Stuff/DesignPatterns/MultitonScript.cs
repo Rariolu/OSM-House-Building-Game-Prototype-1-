@@ -15,7 +15,7 @@ public abstract class MultitonScript<T,U> : MonoBehaviour where T : MonoBehaviou
 {
     static Dictionary<U, T> instances = new Dictionary<U, T>();
 
-    public T[] Values
+    public static T[] Values
     {
         get
         {

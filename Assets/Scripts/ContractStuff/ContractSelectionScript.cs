@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ContractSelectionScript : MultitonScript<ContractSelectionScript,int>
+public class ContractSelectionScript : MultitonScript<ContractSelectionScript,FINISHED_CONSTRUCTION>
 {
     public Text lblContractName;
     public UIButton btnStart;
@@ -15,6 +15,9 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     public Image[] pbFloorPlans;
     public Text lblInfo;
     public Image pbHouse;
+    public Text lblSold;
+
+    public FINISHED_CONSTRUCTION finishedConstruction;
 
     Contract contract;
     int id;
@@ -91,7 +94,8 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     }
     private void Awake()
     {
-        SetInstance(id = count++, this);
+        SetInstance(finishedConstruction, this);
+        //SetInstance(id = count++, this);
     }
 
     public void SetActive(bool active)
@@ -136,6 +140,18 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
             {
                 pbHouse.gameObject.SetActive(false);
                 Logger.Log("{0} not found in resource manager.", LogType.Warning, strHouse);
+            }
+        }
+
+        if (lblSold != null)
+        {
+            if (contract.Completed)
+            {
+                lblSold.text = "Previously sold for: £{0}".FormatText(contract.HighestSellPrice);
+            }
+            else
+            {
+                lblSold.text = "";
             }
         }
     }
@@ -214,7 +230,6 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     {
         if (contract != null)
         {
-            Clear();
             Util.SetContract(contract);
         }
         else
