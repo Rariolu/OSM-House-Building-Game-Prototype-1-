@@ -25,6 +25,11 @@ public class Contract
     public int budget;
 
     /// <summary>
+    /// Whether or not the contract has been carried out at least once.
+    /// </summary>
+    bool completed = false;
+
+    /// <summary>
     /// What the resulting building should look like.
     /// </summary>
     public FINISHED_CONSTRUCTION finishedConstruction;
@@ -33,6 +38,11 @@ public class Contract
     ///  The quantity of "fixtures" (joints between prefabs) available.
     /// </summary>
     public int fixtures;
+
+    /// <summary>
+    /// The highest price that this contract has sold for.
+    /// </summary>
+    int highestSellPrice = 0;
 
     /// <summary>
     /// The name of the contract.
@@ -133,5 +143,14 @@ public class Contract
             }
         }
         return dict;
+    }
+
+    public void CompleteContract(int sellPrice)
+    {
+        //Set the highest sell price to be the larger number between the current
+        //highest and the new sell price.
+        highestSellPrice = !completed ? sellPrice : Math.Max(sellPrice, highestSellPrice);
+
+        completed = true;
     }
 }
