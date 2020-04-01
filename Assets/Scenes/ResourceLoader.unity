@@ -260,7 +260,7 @@ MonoBehaviour:
   - Name: start
     Item: {fileID: 21300000, guid: b0d2ec7258682ea46963dbeb66d09c93, type: 3}
   - Name: Semi-Detached House_Blueprint
-    Item: {fileID: 21300000, guid: 6af504975b93fd24aa8d36ebfec0534d, type: 3}
+    Item: {fileID: 21300000, guid: 5e33c05290f20464f9c027ad5b09ce38, type: 3}
   - Name: Semi-Detached House_House
     Item: {fileID: 21300000, guid: d5269f3cd57d2ae43aff9ef76994ac56, type: 3}
   - Name: SEMI_Detached_HOUSE_floorplan_0
