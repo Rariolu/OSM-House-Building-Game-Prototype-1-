@@ -748,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contracts:
   - budget: 40
-    finishedConstruction: 2
+    finishedConstruction: 3
     fixtures: 25
     name: Detached House
     positionsTaken: []
@@ -3812,6 +3812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
         type: 3}
+      propertyPath: pbFloorPlans.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
+        type: 3}
       propertyPath: btnBack
       value: 
       objectReference: {fileID: 1425602901}
@@ -3840,6 +3845,21 @@ PrefabInstance:
       propertyPath: pbHouse
       value: 
       objectReference: {fileID: 1162009066}
+    - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
+        type: 3}
+      propertyPath: pbFloorPlans.Array.data[0]
+      value: 
+      objectReference: {fileID: 1115855480}
+    - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
+        type: 3}
+      propertyPath: pbFloorPlans.Array.data[1]
+      value: 
+      objectReference: {fileID: 1928191705}
+    - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
+        type: 3}
+      propertyPath: pbFloorPlans.Array.data[2]
+      value: 
+      objectReference: {fileID: 1581509209}
     - target: {fileID: 8874964543015880450, guid: 8f0112820417d1b4da5d72beb48abded,
         type: 3}
       propertyPath: playClickSound
@@ -4190,7 +4210,7 @@ PrefabInstance:
     - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
         type: 3}
       propertyPath: pbFloorPlans.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8874964542124633052, guid: 8f0112820417d1b4da5d72beb48abded,
         type: 3}

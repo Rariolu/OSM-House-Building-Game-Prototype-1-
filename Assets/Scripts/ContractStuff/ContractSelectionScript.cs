@@ -27,7 +27,7 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     }
 
     Image image;
-    Image Image
+    public Image Image
     {
         get
         {
@@ -120,8 +120,23 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
 
             stringBuilder.AppendLineFormat("Budget: £{0}", contract.budget);
             stringBuilder.AppendLineFormat("Time: {0}", contract.time);
-
+            stringBuilder.AppendLineFormat("Fixings: {0}", contract.fixtures);
             lblInfo.text = stringBuilder.ToString();
+        }
+
+        if (pbHouse != null)
+        {
+            string strHouse = "{0}_house".FormatText(conType);
+            Sprite sprite;
+            if (ResourceManager.GetItem(strHouse,out sprite))
+            {
+                pbHouse.sprite = sprite;
+            }
+            else
+            {
+                pbHouse.gameObject.SetActive(false);
+                Logger.Log("{0} not found in resource manager.", LogType.Warning, strHouse);
+            }
         }
     }
 
@@ -180,11 +195,19 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
     void btnForward_Click(UIButton sender)
     {
         State = State != ContractSelectionState.OPEN_META ? (ContractSelectionState)((int)State + 1) : ContractSelectionState.CLOSED;
+        if (State == ContractSelectionState.CLOSED)
+        {
+            RestoreVisibility();
+        }
     }
 
     void btnBack_Click(UIButton sender)
     {
         State = State != ContractSelectionState.CLOSED ? (ContractSelectionState)((int)State - 1) : ContractSelectionState.OPEN_META;
+        if (State == ContractSelectionState.CLOSED)
+        {
+            RestoreVisibility();
+        }
     }
 
     void StartContract(UIButton sender)
@@ -212,9 +235,16 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,in
         }
 
     }
-
+    void RestoreVisibility()
+    {
+        foreach (ContractSelectionScript contractSelection in Values)
+        {
+            contractSelection.gameObject.SetActive(true);
+        }
+    }
     public void CloseContract()
     {
         State = ContractSelectionState.CLOSED;
+        gameObject.SetActive(false);
     }
 }

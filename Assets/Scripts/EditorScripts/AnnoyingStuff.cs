@@ -10,9 +10,10 @@ public class AnnoyingStuff : ScriptableObject
     static void DoIt()
     {
         const string dir = "Library\\PackageCache\\com.unity.postprocessing@2.0.3-preview";
+        string fullPath = Path.GetFullPath(dir);
         if (Directory.Exists(dir))
         {
-            string fullPath = Path.GetFullPath(dir);
+            
             if (EditorUtility.DisplayDialog("Post-Processing", "Delete annoying post-processing folder. "+fullPath, "Yes", "No"))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(fullPath);
@@ -22,9 +23,8 @@ public class AnnoyingStuff : ScriptableObject
         }
         else
         {
-            Logger.Log(string.Format("\"{0}\" doesn't exist...", dir), LogType.Warning);
+            Logger.Log(string.Format("\"{0}\" doesn't exist...", fullPath), LogType.Warning);
         }
-      
     }
 }
 
