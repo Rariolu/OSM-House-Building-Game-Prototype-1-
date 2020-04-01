@@ -225,7 +225,7 @@ MonoBehaviour:
   - Name: SnapPoint_EDGE
     Item: {fileID: 4238651369669595235, guid: a9a90e5b576342a44a16c77dc89298d0, type: 3}
   - Name: SnapPoint_CENTRE
-    Item: {fileID: 5288729184490879204, guid: fff81fec2ec996a4bb93adb6731fa1cb, type: 3}
+    Item: {fileID: 5857970095776298357, guid: 309d90692d1a76e408792834b43153ce, type: 3}
   - Name: SnapPoint_FLOOR
     Item: {fileID: 7113488772659607490, guid: 0c0f13719b8450744bc9e6db45e5b527, type: 3}
   - Name: Intersection
