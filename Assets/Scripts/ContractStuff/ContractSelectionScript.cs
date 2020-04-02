@@ -243,7 +243,7 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,FI
         //Close the other contracts
         foreach(ContractSelectionScript contractSelection in Values)
         {
-            if (contractSelection.ID != ID)
+            if (contractSelection.finishedConstruction != finishedConstruction)
             {
                 contractSelection.CloseContract();
             }
