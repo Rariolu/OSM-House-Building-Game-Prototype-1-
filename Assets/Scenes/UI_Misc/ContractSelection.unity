@@ -860,13 +860,13 @@ MonoBehaviour:
         floorType: 0
         material: 2
         offset:
-          offsetPosition: {x: 0, y: 0, z: 0}
-          offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetPosition: {x: 0, y: -2.3664, z: 0}
+          offsetRotation: {x: 270, y: -90, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
-        type: 16
+        type: 2
       quantity: 2
     - positionsTakenWithinContract: []
       prefab:
@@ -874,9 +874,9 @@ MonoBehaviour:
         floorType: 0
         material: 2
         offset:
-          offsetPosition: {x: 0, y: 0, z: 0}
-          offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetPosition: {x: 0, y: -2.3665, z: 0}
+          offsetRotation: {x: 270, y: 180, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
@@ -888,9 +888,9 @@ MonoBehaviour:
         floorType: 0
         material: 2
         offset:
-          offsetPosition: {x: 0, y: 0, z: 0}
+          offsetPosition: {x: 0, y: 2.3665, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 2.5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -1048,7 +1048,7 @@ MonoBehaviour:
         position: 0
         properties: []
         snapType: 0
-        type: 0
+        type: 2
       quantity: 4
     - positionsTakenWithinContract: []
       prefab:
@@ -1062,7 +1062,7 @@ MonoBehaviour:
         position: 0
         properties: []
         snapType: 1
-        type: 0
+        type: 2
       quantity: 7
     - positionsTakenWithinContract: []
       prefab:

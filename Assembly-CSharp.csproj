@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractUI.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\PrefabPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
