@@ -59,6 +59,9 @@ public class Contract
         }
     }
 
+    public int snapPointsMinBound = -10;
+    public int snapPointsMaxBound = 10;
+
     /// <summary>
     /// The name of the contract.
     /// </summary>

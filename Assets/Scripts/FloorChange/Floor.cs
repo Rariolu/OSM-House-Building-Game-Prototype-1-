@@ -18,7 +18,7 @@ using UnityEngine;
 public class Floor : MultitonScript<Floor,FLOORTYPE>
 {
     public FLOORTYPE floorType;
-    public int maxBound = 10;
+    //public int maxBound = 10;
     MeshRenderer meshRenderer;
     MeshRenderer MeshRenderer
     {
@@ -27,7 +27,7 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
             return meshRenderer ?? (meshRenderer = GetComponent<MeshRenderer>());
         }
     }
-    public int minBound = -10;
+    //public int minBound = -10;
     public bool originalFocus = false;
     const float spaceInterval = 5f;
     public bool roofSnapPoint = false;
@@ -42,6 +42,15 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
     }
     void CreateSnapTriggers()
     {
+        int minBound = -10;
+        int maxBound = 10;
+        ConstructionUtil util;
+        if (SingletonUtil.InstanceAvailable(out util))
+        {
+            minBound = util.Contract.snapPointsMinBound;
+            maxBound = util.Contract.snapPointsMaxBound;
+        }
+
         float y = transform.position.y;
         for (int x = minBound; x <= maxBound; x++)
         {
