@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16704121, g: 0.20054403, b: 0.24099708, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7717,8 +7717,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorType: 1
-  maxBound: 2
-  minBound: -3
   originalFocus: 0
   roofSnapPoint: 0
   roofSnapPos: {x: 0, y: 0}
@@ -8484,7 +8482,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.435e-42, y: 3.5873e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.1e-44, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
@@ -9239,8 +9237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorType: 2
-  maxBound: 1
-  minBound: -1
   originalFocus: 0
   roofSnapPoint: 1
   roofSnapPos: {x: 0, y: 0}
@@ -13328,7 +13324,6 @@ Transform:
   - {fileID: 50518793}
   - {fileID: 478017943}
   - {fileID: 1923294325}
-  - {fileID: 1204164772}
   - {fileID: 1793909520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -13386,8 +13381,8 @@ Transform:
   - {fileID: 1237639816}
   - {fileID: 630509530}
   - {fileID: 1875279120}
-  m_Father: {fileID: 1193149744}
-  m_RootOrder: 8
+  m_Father: {fileID: 1793909520}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1204903833
 PrefabInstance:
@@ -21119,8 +21114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorType: 0
-  maxBound: 2
-  minBound: -3
   originalFocus: 1
   roofSnapPoint: 0
   roofSnapPos: {x: 0, y: 0}
@@ -22590,6 +22583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793909520}
+  - component: {fileID: 1793909521}
   m_Layer: 0
   m_Name: EnvironmentalStuff
   m_TagString: Untagged
@@ -22623,9 +22617,23 @@ Transform:
   - {fileID: 1265722862}
   - {fileID: 215769419}
   - {fileID: 1710139023}
+  - {fileID: 1204164772}
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793909521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793909519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b232ec3cb3b414d45812d6e19d29efaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contract: 2
 --- !u!1 &1798767189
 GameObject:
   m_ObjectHideFlags: 0
