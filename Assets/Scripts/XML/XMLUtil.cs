@@ -48,8 +48,11 @@ public static class XMLUtil
     const string prefabPosition = "prefabposition";
     const string time = "time";
     const string material = "material";
-    const string minboundsnap = "minboundsnap";
-    const string maxboundsnap = "maxboundsnap";
+    const string groundFloorBounds = "groundfloorbounds";
+    const string firstFloorBounds = "firstfloorbounds";
+    const string secondFloorBounds = "secondfloorbounds";
+    //const string minboundsnap = "minboundsnap";
+    //const string maxboundsnap = "maxboundsnap";
     #endregion
 
     /// <summary>
@@ -180,31 +183,72 @@ public static class XMLUtil
                 }
             }
 
-            if (xmlReader.IsStartElement(minboundsnap))
+            IntVec2 groundBounds;
+            if (ReadIntVec2(groundFloorBounds,ref xmlReader,out groundBounds))
             {
-                xmlReader.Read();
-                string strMinBound = xmlReader.Value;
-                int minBound;
-                if (int.TryParse(strMinBound,out minBound))
-                {
-                    contract.snapPointsMinBound = minBound;
-                }
+                contract.groundFloorBounds = groundBounds;
             }
 
-            if (xmlReader.IsStartElement(maxboundsnap))
+            IntVec2 firstBounds;
+            if (ReadIntVec2(firstFloorBounds,ref xmlReader, out firstBounds))
             {
-                xmlReader.Read();
-                string strMaxBound = xmlReader.Value;
-                int maxBound;
-                if (int.TryParse(strMaxBound,out maxBound))
-                {
-                    contract.snapPointsMaxBound = maxBound;
-                }
+                contract.firstFloorBounds = firstBounds;
             }
+
+            IntVec2 secondBounds;
+            if (ReadIntVec2(secondFloorBounds, ref xmlReader, out secondBounds))
+            {
+                contract.secondFloorBounds = secondBounds;
+            }
+
+            //if (xmlReader.IsStartElement(minboundsnap))
+            //{
+            //    xmlReader.Read();
+            //    string strMinBound = xmlReader.Value;
+            //    int minBound;
+            //    if (int.TryParse(strMinBound,out minBound))
+            //    {
+            //        contract.snapPointsMinBound = minBound;
+            //    }
+            //}
+
+            //if (xmlReader.IsStartElement(maxboundsnap))
+            //{
+            //    xmlReader.Read();
+            //    string strMaxBound = xmlReader.Value;
+            //    int maxBound;
+            //    if (int.TryParse(strMaxBound,out maxBound))
+            //    {
+            //        contract.snapPointsMaxBound = maxBound;
+            //    }
+            //}
         }
 
         xmlReader.Close();
         return true;
+    }
+
+    static bool ReadIntVec2(string elementName, ref XmlReader xmlReader, out IntVec2 bounds)
+    {
+        bounds = new IntVec2();
+        if (xmlReader.IsStartElement(elementName))
+        {
+            string strMin = xmlReader["min"];
+            string strMax = xmlReader["max"];
+            int min;
+            if (int.TryParse(strMin, out min))
+            {
+                bounds.x = min;
+            }
+
+            int max;
+            if (int.TryParse(strMax, out max))
+            {
+                bounds.y = max;
+            }
+            return true;
+        }
+        return false;
     }
 
     #region XMLReading
@@ -478,13 +522,28 @@ public static class XMLUtil
         xmlWriter.WriteValue(contract.time.ToString());
         xmlWriter.WriteEndElement();
 
-        xmlWriter.WriteStartElement(minboundsnap);
-        xmlWriter.WriteValue(contract.snapPointsMinBound);
+        xmlWriter.WriteStartElement(groundFloorBounds);
+        xmlWriter.WriteAttributeString("min", contract.groundFloorBounds.x.ToString());
+        xmlWriter.WriteAttributeString("max", contract.groundFloorBounds.y.ToString());
         xmlWriter.WriteEndElement();
 
-        xmlWriter.WriteStartElement(maxboundsnap);
-        xmlWriter.WriteValue(contract.snapPointsMaxBound);
+        xmlWriter.WriteStartElement(firstFloorBounds);
+        xmlWriter.WriteAttributeString("min", contract.firstFloorBounds.x.ToString());
+        xmlWriter.WriteAttributeString("max", contract.firstFloorBounds.y.ToString());
         xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(secondFloorBounds);
+        xmlWriter.WriteAttributeString("min", contract.secondFloorBounds.x.ToString());
+        xmlWriter.WriteAttributeString("max", contract.secondFloorBounds.y.ToString());
+        xmlWriter.WriteEndElement();
+
+        //xmlWriter.WriteStartElement(minboundsnap);
+        //xmlWriter.WriteValue(contract.snapPointsMinBound);
+        //xmlWriter.WriteEndElement();
+
+        //xmlWriter.WriteStartElement(maxboundsnap);
+        //xmlWriter.WriteValue(contract.snapPointsMaxBound);
+        //xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
     }
