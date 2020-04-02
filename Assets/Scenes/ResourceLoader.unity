@@ -208,6 +208,11 @@ MonoBehaviour:
     loop: 0
     volume: 0.2
     type: 0
+  - name: TURNING_PAGE
+    clip: {fileID: 8300000, guid: 6d059b25f029aee479cab4142eefd38a, type: 3}
+    loop: 0
+    volume: 0.3
+    type: 0
 --- !u!114 &214173333
 MonoBehaviour:
   m_ObjectHideFlags: 0

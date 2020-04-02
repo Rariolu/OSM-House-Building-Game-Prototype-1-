@@ -55,7 +55,7 @@ public class UIButton : MonoBehaviour
         {
             if (playClickSound)
             {
-                IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.MENU_BUTTON_CLICK);
+                IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.TURNING_PAGE);
             }
             if (Click != null)
             {
