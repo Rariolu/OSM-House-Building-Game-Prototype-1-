@@ -48,6 +48,8 @@ public static class XMLUtil
     const string prefabPosition = "prefabposition";
     const string time = "time";
     const string material = "material";
+    const string minboundsnap = "minboundsnap";
+    const string maxboundsnap = "maxboundsnap";
     #endregion
 
     /// <summary>
@@ -175,6 +177,28 @@ public static class XMLUtil
                 if (uint.TryParse(strTime,out time))
                 {
                     contract.time = time;
+                }
+            }
+
+            if (xmlReader.IsStartElement(minboundsnap))
+            {
+                xmlReader.Read();
+                string strMinBound = xmlReader.Value;
+                int minBound;
+                if (int.TryParse(strMinBound,out minBound))
+                {
+                    contract.snapPointsMinBound = minBound;
+                }
+            }
+
+            if (xmlReader.IsStartElement(maxboundsnap))
+            {
+                xmlReader.Read();
+                string strMaxBound = xmlReader.Value;
+                int maxBound;
+                if (int.TryParse(strMaxBound,out maxBound))
+                {
+                    contract.snapPointsMaxBound = maxBound;
                 }
             }
         }
@@ -452,6 +476,14 @@ public static class XMLUtil
 
         xmlWriter.WriteStartElement(time);
         xmlWriter.WriteValue(contract.time.ToString());
+        xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(minboundsnap);
+        xmlWriter.WriteValue(contract.snapPointsMinBound);
+        xmlWriter.WriteEndElement();
+
+        xmlWriter.WriteStartElement(maxboundsnap);
+        xmlWriter.WriteValue(contract.snapPointsMaxBound);
         xmlWriter.WriteEndElement();
 
         xmlWriter.WriteEndElement();
