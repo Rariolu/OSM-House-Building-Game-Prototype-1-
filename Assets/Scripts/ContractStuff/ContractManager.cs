@@ -7,6 +7,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 //[ExecuteInEditMode]
 
@@ -19,20 +20,41 @@ public class ContractManager : MonoBehaviour
     /// The array of contracts to be displayed
     /// </summary>
     public Contract[] contracts;
+
+    static bool staticContractsSet = false;
+    static Contract[] staticContracts;
+
     private void Start()
     {
-        ContractSelectionScript[] contractSelections = GetComponentsInChildren<ContractSelectionScript>();
-        for (int i = 0; i < contractSelections.Length; i++)
+        if (!staticContractsSet)
         {
-            if (i < contracts.Length)
+            staticContracts = contracts;
+            staticContractsSet = true;
+        }
+        Logger.Log("ContractManager->Start()");
+        for (int i = 0; i < staticContracts.Length; i++)
+        {
+            Contract contract = staticContracts[i];
+            ContractSelectionScript contractSelection;
+            if (ContractSelectionScript.InstanceExists(contract.finishedConstruction,out contractSelection))
             {
-                Contract contract = contracts[i];
-                contractSelections[i].SetContract(contract);
-            }
-            else
-            {
-                contractSelections[i].SetActive(false);
+                contractSelection.SetContract(contract);
             }
         }
+        //ContractSelectionScript[] contractSelections = ContractSelectionScript.Values;
+        //for (int i = 0; i < contractSelections.Length; i++)
+        //{
+        //    if (i < staticContracts.Length)
+        //    {
+        //        Contract contract = staticContracts[i];
+        //        contractSelections[i].SetContract(contract);
+        //    }
+        //    else
+        //    {
+        //        contractSelections[i].SetActive(false);
+        //    }
+        //}
     }
+
+    public static Dictionary<FINISHED_CONSTRUCTION, int> highestSellingPrices = new Dictionary<FINISHED_CONSTRUCTION, int>();
 }

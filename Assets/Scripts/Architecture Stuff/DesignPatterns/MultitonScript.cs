@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// A class which allows a derived Monobehaviour class to become a multiton,
@@ -13,6 +14,15 @@ using System.Collections.Generic;
 public abstract class MultitonScript<T,U> : MonoBehaviour where T : MonoBehaviour
 {
     static Dictionary<U, T> instances = new Dictionary<U, T>();
+
+    public static T[] Values
+    {
+        get
+        {
+            return instances.Values.ToArray();
+        }
+    }
+
     /// <summary>
     /// Determine whether an instance corresponding to the given
     /// key exists, and output the result.
@@ -48,5 +58,10 @@ public abstract class MultitonScript<T,U> : MonoBehaviour where T : MonoBehaviou
         {
             instances.Add(key, obj);
         }
+    }
+
+    protected static void Clear()
+    {
+        instances.Clear();
     }
 }
