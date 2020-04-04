@@ -40,47 +40,6 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
             FocusedFloor = this;
         }
     }
-    void CreateSnapTriggers()
-    {
-        int minBound = -10;
-        int maxBound = 10;
-        ConstructionUtil util;
-        if (SingletonUtil.InstanceAvailable(out util))
-        {
-            minBound = util.Contract.snapPointsMinBound;
-            maxBound = util.Contract.snapPointsMaxBound;
-        }
-
-        float y = transform.position.y;
-        for (int x = minBound; x <= maxBound; x++)
-        {
-            GameObject snapRow = new GameObject();
-            snapRow.name = "Snap Row {0}".FormatText(x);
-            snapRow.transform.SetParent(transform);
-            for (int z = minBound; z <= maxBound; z++)
-            {
-                SnapPoint sp = new SnapPoint(SNAP_POINT_TYPE.EDGE);
-                sp.SetParent(snapRow.transform);
-                Vector3 spPos = new Vector3(spaceInterval * x, y+2.5f, spaceInterval * z);
-                sp.SetPosition(spPos);
-
-                SnapPoint spFloor = new SnapPoint(SNAP_POINT_TYPE.FLOOR);
-                spFloor.SetParent(snapRow.transform);
-                Vector3 spFloorPos = new Vector3(spaceInterval * x, y, spPos.z + (spaceInterval / 2f));
-                spFloor.SetPosition(spFloorPos);
-
-                SnapPoint centreSP = new SnapPoint(SNAP_POINT_TYPE.CENTRE);
-                centreSP.SetParent(snapRow.transform);
-                centreSP.SetPosition(new Vector3(spPos.x + (spaceInterval / 2f), spPos.y, spPos.z + (spaceInterval / 2f)));
-            }
-        }
-        if (roofSnapPoint)
-        {
-            SnapPoint sp = new SnapPoint(SNAP_POINT_TYPE.ROOF);
-            sp.SetParent(transform);
-            sp.SetPosition(new Vector3(roofSnapPos.x,y,roofSnapPos.y));
-        }
-    }
     public void Focus()
     {
         gameObject.SetActive(true);
@@ -114,8 +73,6 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
         {
             MeshRenderer.material = floorMat;
         }
-
-        CreateSnapTriggers();
     }
 
     public void Unfocus(bool deactivate = false)
