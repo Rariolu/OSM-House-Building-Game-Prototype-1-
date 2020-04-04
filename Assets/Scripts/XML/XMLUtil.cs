@@ -183,6 +183,29 @@ public static class XMLUtil
         return true;
     }
 
+    static bool ReadIntVec2(string elementName, ref XmlReader xmlReader, out IntVec2 bounds)
+    {
+        bounds = new IntVec2();
+        if (xmlReader.IsStartElement(elementName))
+        {
+            string strMin = xmlReader["min"];
+            string strMax = xmlReader["max"];
+            int min;
+            if (int.TryParse(strMin, out min))
+            {
+                bounds.x = min;
+            }
+
+            int max;
+            if (int.TryParse(strMax, out max))
+            {
+                bounds.y = max;
+            }
+            return true;
+        }
+        return false;
+    }
+
     #region XMLReading
 
     static PrefabOffsetProperties ReadOffset(XmlReader subtree)

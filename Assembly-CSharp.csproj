@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUtil.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\SingletonUtil.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\IntVec2.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\AlternateNamePropertyDrawer.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
     <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPoint.cs" />
+    <Compile Include="Assets\Scripts\Construction\SnapPointLauncher.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPointTrigger.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Contract.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
@@ -110,10 +112,12 @@
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\Temp\CreatingSnapLauncher.cs" />
     <Compile Include="Assets\Scripts\EndCondition\EndConditionUtil.cs" />
     <Compile Include="Assets\Scripts\EndCondition\EndGameUtil.cs" />
     <Compile Include="Assets\Scripts\EndCondition\EndSceneScript.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvironmentScript.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings_Count.cs" />
