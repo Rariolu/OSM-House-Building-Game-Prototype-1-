@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 public class CreatingSnapLauncher : ScriptableObject
 {
     [MenuItem("Tools/SnapPoints/CreateLaunchers")]
@@ -16,3 +18,5 @@ public class CreatingSnapLauncher : ScriptableObject
         EditorUtility.DisplayDialog("Done", "Created snap point launchers.", "OK");
     }
 }
+
+#endif

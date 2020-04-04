@@ -33,7 +33,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_6;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_6;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -43,7 +43,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_2019_2_6;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>TRACE;UNITY_2019_2_6;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -601,9 +601,17 @@
       <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{CBEC4DCB-1B2B-E03B-0387-393C59967E8B}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{C540080A-BED7-978E-DDFC-EE09E5DBB722}</Project>
       <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
@@ -611,18 +619,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraRotatorScript.cs" />
     <Compile Include="Assets\IconGenerator\IconGenerator.cs" />
     <Compile Include="Assets\IconGenerator\IconGeneratorUIExample.cs" />
     <Compile Include="Assets\IconGenerator\TextureScale.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\IntegratedSoundManager.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Audio\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Audio\UpdateableAudioSource.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonClass.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonScript.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUIButton.cs" />
-    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceClassSingleton.cs" />
-    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\NullableInstanceScriptSingleton.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\MultitonUtil.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\DesignPatterns\SingletonUtil.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\Enums.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\IntVec2.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\PrefabLoader.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\Monobehaviours\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\AlternateNamePropertyDrawer.cs" />
+    <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\PrefabLoader\PrefabLoaderPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\RescItem.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\ResourceManagement\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Architecture Stuff\SceneObjectScript.cs" />
@@ -635,16 +650,31 @@
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
     <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPoint.cs" />
+    <Compile Include="Assets\Scripts\Construction\SnapPointLauncher.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPointTrigger.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Contract.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractManager.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\ContractSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\ContractUI.cs" />
+    <Compile Include="Assets\Scripts\ContractStuff\PrefabPropertyDrawer.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Standard.cs" />
     <Compile Include="Assets\Scripts\ContractStuff\Task.cs" />
+    <Compile Include="Assets\Scripts\Debug\Logger.cs" />
+    <Compile Include="Assets\Scripts\Debug\LogToggleButton.cs" />
+    <Compile Include="Assets\Scripts\Debug\UILogger.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\AnnoyingStuff.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ChooseXMLFile.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\ContractAssembly.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ContractEditing.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\PrefabPositionStoring.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\SetPrefabIconIndexes.cs" />
-    <Compile Include="Assets\Scripts\EndCondition\EndUtil.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\Temp\CreatingSnapLauncher.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndConditionUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndGameUtil.cs" />
+    <Compile Include="Assets\Scripts\EndCondition\EndSceneScript.cs" />
     <Compile Include="Assets\Scripts\EndSession\EndSessionBtn.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvironmentScript.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\ExitMiniGame.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Fixings_Count.cs" />
@@ -654,17 +684,14 @@
     <Compile Include="Assets\Scripts\Fixings_MiniGames\IntersectionComponent.cs" />
     <Compile Include="Assets\Scripts\FloorChange\Floor.cs" />
     <Compile Include="Assets\Scripts\GameUI\BackButton.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureSceneScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUI.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUtil.cs" />
-    <Compile Include="Assets\Scripts\GameUI\Brochure\HouseDemo.cs" />
     <Compile Include="Assets\Scripts\GameUI\BuildButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartPrefabSystem.cs" />
     <Compile Include="Assets\Scripts\GameUI\CompartSystemToggle.cs" />
     <Compile Include="Assets\Scripts\GameUI\ContractViewportScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\DropWallButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\FloorButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\HouseNamingScript.cs" />
-    <Compile Include="Assets\Scripts\GameUI\HouseViewerButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\QuitButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\SceneLoadButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Menu\StartButton.cs" />
@@ -676,10 +703,8 @@
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabCounter.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconGrid.cs" />
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
-    <Compile Include="Assets\Scripts\GameUI\UndoButton.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\House.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\HouseViewSingle.cs" />
-    <Compile Include="Assets\Scripts\HouseViewing\Monobehaviours\HouseViewSceneScript.cs" />
+    <Compile Include="Assets\Scripts\GameUI\SellHouseButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Subtasks\SubtaskButton.cs" />
     <Compile Include="Assets\Scripts\InGameSceneScript.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\Misc\SpecTestScript.cs" />
@@ -693,8 +718,10 @@
     <Compile Include="Assets\Scripts\XML\XMLUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Contracts\Bungalow_TOWNHOUSE_0.xml" />
+    <None Include="Assets\Contracts\Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml" />
+    <None Include="Assets\Deprecated\Bungalow_TOWNHOUSE_0.xml" />
+    <None Include="Assets\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
     <None Include="Assets\IconGenerator\HowToUse.txt" />
     <None Include="Assets\IconGenerator\Readme.txt" />
     <None Include="Assets\Industrial Props\ReadMe.txt" />
@@ -707,6 +734,75 @@
     <None Include="Packages\com.unity.ext.nunit\net35\unity-custom\nunit.framework.xml" />
     <None Include="Packages\com.unity.ide.rider\Rider\Editor\com.unity.ide.rider.asmdef" />
     <None Include="Packages\com.unity.ide.vscode\Editor\Unity.com.unity.vscode.Editor.asmdef" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Editor\Unity.Postprocessing.Editor.asmdef" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Runtime\Unity.Postprocessing.Runtime.asmdef" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\ACES.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\D3D11.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\D3D12.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\D3D9.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\Metal.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\OpenGL.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\PSP2.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\PSSL.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\Switch.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\Vulkan.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\API\XboxOne.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Bloom.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Copy.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\CopyStd.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\FinalPass.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Fog.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Builtins\Uber.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Colors.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Histogram.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Histogram.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\LightMeter.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Overlays.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Vectorscope.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Vectorscope.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Waveform.compute" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Debug\Waveform.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Editor\CurveGrid.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Editor\Trackball.shader" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\Sampling.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\StdLib.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\PostProcessing\Shaders\xRLib.hlsl" />
+    <None Include="Packages\com.unity.postprocessing\Tests\Editor\Unity.Postprocessing.Editor.Tests.asmdef" />
+    <None Include="Packages\com.unity.postprocessing\Tests\Runtime\Unity.Postprocessing.Runtime.Tests.asmdef" />
     <None Include="Packages\com.unity.test-framework\UnityEditor.TestRunner\UnityEditor.TestRunner.asmdef" />
     <None Include="Packages\com.unity.test-framework\UnityEngine.TestRunner\UnityEngine.TestRunner.asmdef" />
     <None Include="Packages\com.unity.textmeshpro\Editor Resources\Shaders\TMP_Properties.cginc" />
