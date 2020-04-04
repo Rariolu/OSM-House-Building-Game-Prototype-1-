@@ -90,27 +90,38 @@ public class SnapPoint
     
     public SnapPoint(SNAP_POINT_TYPE type = SNAP_POINT_TYPE.EDGE)
     {
-        AddInstance(type, this);
-
-        snapType = type;
-        
         GameObject sphereObj;
-
+        GameObject temp;
         string snapPointGameObjName = "SnapPoint_" + type;
         if (ResourceManager.GetItem(snapPointGameObjName,out sphereObj))
         {
-            gameObject = Object.Instantiate(sphereObj);
+            temp = Object.Instantiate(sphereObj);
         }
         else if (ResourceManager.GetItem("SnapPoint", out sphereObj))
         {
-            gameObject = Object.Instantiate(sphereObj);
+            temp = Object.Instantiate(sphereObj);
         }
         else
         {
-            gameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            temp = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             const float sphereScale = 0.5f;
-            gameObject.transform.localScale = new Vector3(sphereScale, sphereScale, sphereScale);
+            temp.transform.localScale = new Vector3(sphereScale, sphereScale, sphereScale);
         }
+
+        Init(temp, type);
+    }
+
+    public SnapPoint(SNAP_POINT_TYPE type, GameObject snapObject)
+    {
+        Init(snapObject, type);
+    }
+
+    void Init(GameObject obj, SNAP_POINT_TYPE type)
+    {
+        AddInstance(type, this);
+        snapType = type;
+        gameObject = obj;
+
         gameObject.name = "SnapPoint";
         gameObject.tag = TAG.TESTTAG.ToString();
 
