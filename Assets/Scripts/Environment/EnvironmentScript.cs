@@ -7,7 +7,12 @@ public class EnvironmentScript : MultitonScript<EnvironmentScript,FINISHED_CONST
     private void Awake()
     {
         SetInstance(contract, this);
-        SetActive(false);
+        ConstructionUtil util;
+        if (SingletonUtil.InstanceAvailable(out util))
+        {
+            SetActive(contract == util.Contract.finishedConstruction);
+        }
+        //SetActive(false);
     }
 
     public void SetActive(bool active)

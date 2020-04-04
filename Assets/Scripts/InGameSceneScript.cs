@@ -189,11 +189,11 @@ public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<
                 Logger.Log("pbHouse is null.");
             }
 
-            EnvironmentScript environment;
-            if (EnvironmentScript.InstanceExists(util.Contract.finishedConstruction, out environment))
-            {
-                environment.SetActive(true);
-            }
+            //EnvironmentScript environment;
+            //if (EnvironmentScript.InstanceExists(util.Contract.finishedConstruction, out environment))
+            //{
+            //    environment.SetActive(true);
+            //}
         }
     }
 
