@@ -8,14 +8,23 @@ public class EnvironmentScript : MultitonScript<EnvironmentScript,FINISHED_CONST
     {
         SetActive(false);
         SetInstance(contract, this);
+        bool active;
         ConstructionUtil util;
         if (SingletonUtil.InstanceAvailable(out util))
         {
-            SetActive(contract == util.Contract.finishedConstruction);
+            active = (contract == util.Contract.finishedConstruction);
         }
         else
         {
-            SetActive(contract == FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE);
+            active = (contract == FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE);
+        }
+        if (!active)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            SetActive(true);
         }
         //SetActive(false);
     }

@@ -154,7 +154,14 @@ public class SnapPoint
     /// <param name="active"></param>
     public void SetActive(bool active)
     {
-        gameObject.SetActive(active);
+        if (gameObject != null)
+        {
+            gameObject.SetActive(active);
+        }
+        else
+        {
+            //snapPointInstances[snapType].RemoveAll(sp => sp == this);
+        }
     }
 
     /// <summary>
