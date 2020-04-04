@@ -8,6 +8,8 @@
 using UnityEngine;
 using System.Collections;
 
+public delegate void SnapPointDeleted();
+public delegate void SnapPointTriggered();
 
 /// <summary>
 /// A script which is attached to the SnapPoints which allows
@@ -32,6 +34,9 @@ public class SnapPointTrigger : MonoBehaviour
             isSnapped = value;
         }
     }
+
+    public SnapPointDeleted SnapPointDeleted;
+    public SnapPointTriggered SnapPointTriggered;
 
     public int dropIndex;
 
@@ -65,6 +70,13 @@ public class SnapPointTrigger : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    private void OnDestroy()
+    {
+        if (SnapPointDeleted != null)
+        {
+            SnapPointDeleted();
         }
     }
 }

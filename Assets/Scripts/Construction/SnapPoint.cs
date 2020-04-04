@@ -135,7 +135,14 @@ public class SnapPoint
         //Attempt to retrieve snaptrigger or add one if there isn't one present.
         trigger = gameObject.GetComponent<SnapPointTrigger>() ?? gameObject.AddComponent<SnapPointTrigger>();
         trigger.snapType = type;
-
+        trigger.SnapPointDeleted += () =>
+        {
+            snapPointInstances[type].RemoveAll(sp => sp == this);
+        };
+        trigger.SnapPointTriggered += () =>
+        {
+            SetActive(false);
+        };
 
         gameObject.SetActive(false);
     }
@@ -160,6 +167,7 @@ public class SnapPoint
         }
         else
         {
+            Logger.Log("Snap point that doesn't exist is referenced.", LogType.Warning);
             //snapPointInstances[snapType].RemoveAll(sp => sp == this);
         }
     }
