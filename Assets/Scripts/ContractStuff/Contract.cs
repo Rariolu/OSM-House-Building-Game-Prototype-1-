@@ -59,12 +59,6 @@ public class Contract
         }
     }
 
-    public IntVec2 groundFloorBounds;
-    public IntVec2 firstFloorBounds;
-    public IntVec2 secondFloorBounds;
-    //public int snapPointsMinBound = -10;
-    //public int snapPointsMaxBound = 10;
-
     /// <summary>
     /// The name of the contract.
     /// </summary>
