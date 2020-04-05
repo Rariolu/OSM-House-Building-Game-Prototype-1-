@@ -183,15 +183,16 @@ public class SnapPoint
     /// <param name="active"></param>
     public void SetActive(bool active)
     {
-        if (gameObject != null)
-        {
-            gameObject.SetActive(active);
-        }
-        else
-        {
-            Logger.Log("Snap point that doesn't exist is referenced.", LogType.Warning);
-            //snapPointInstances[snapType].RemoveAll(sp => sp == this);
-        }
+        gameObject.SetActive(active);
+        //if (gameObject != null)
+        //{
+            
+        //}
+        //else
+        //{
+        //    Logger.Log("Snap point that doesn't exist is referenced.", LogType.Warning);
+        //    //snapPointInstances[snapType].RemoveAll(sp => sp == this);
+        //}
     }
 
     /// <summary>

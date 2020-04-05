@@ -304,11 +304,11 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         rigidBody.useGravity = true;
     }
 
-    public void Explode(float force, Vector3 explosionCentre)
+    public void Implode(float force, Vector3 explosionCentre)
     {
         const float explosionDistance = 50f;
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-        rigidBody.AddExplosionForce(force, explosionCentre, explosionDistance);
+        rigidBody.AddExplosionForce(-force, explosionCentre, explosionDistance);
     }
 
     public static void AddRigidBodies(float mass = 1f, float force = 0f)
@@ -322,7 +322,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         explosionCentre /= Values.Length;
         foreach(PrefabPlacedObject ppo in Values)
         {
-            ppo.Explode(force, explosionCentre);
+            ppo.Implode(force, explosionCentre);
         }
     }
 }
