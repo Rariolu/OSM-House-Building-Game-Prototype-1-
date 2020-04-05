@@ -142,7 +142,8 @@ public enum SNAP_POINT_TYPE
     EDGE,
     CENTRE,
     FLOOR,
-    ROOF
+    ROOF,
+    NONE
 }
 
 public enum SOUNDNAME

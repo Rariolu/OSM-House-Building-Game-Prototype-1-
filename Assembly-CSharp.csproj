@@ -90,6 +90,8 @@
     <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Camera\CamSwitch.cs" />
+    <Compile Include="Assets\Scripts\Collapse\CollapseScript.cs" />
+    <Compile Include="Assets\Scripts\Collapse\CollapseUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
     <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPoint.cs" />

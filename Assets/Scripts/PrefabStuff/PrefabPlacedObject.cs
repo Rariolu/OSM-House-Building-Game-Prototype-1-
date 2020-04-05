@@ -155,6 +155,10 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
         pps.parentPrefabInstance = this;
+        pps.PrefabPlacementDeleted += () =>
+        {
+            RemoveInstance(instID);
+        };
 
         BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
 
@@ -291,6 +295,34 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
             gameObject.transform.SetParent(gameScene.transform);
+        }
+    }
+
+    public void AddRigidBody(float mass)
+    {
+        Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
+        rigidBody.useGravity = true;
+    }
+
+    public void Explode(float force, Vector3 explosionCentre)
+    {
+        const float explosionDistance = 50f;
+        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
+        rigidBody.AddExplosionForce(force, explosionCentre, explosionDistance);
+    }
+
+    public static void AddRigidBodies(float mass = 1f, float force = 0f)
+    {
+        Vector3 explosionCentre = new Vector3();
+        foreach(PrefabPlacedObject ppo in Values)
+        {
+            ppo.AddRigidBody(mass);
+            explosionCentre += ppo.RoundedPosition;
+        }
+        explosionCentre /= Values.Length;
+        foreach(PrefabPlacedObject ppo in Values)
+        {
+            ppo.Explode(force, explosionCentre);
         }
     }
 }

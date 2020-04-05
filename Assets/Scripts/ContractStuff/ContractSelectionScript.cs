@@ -20,14 +20,6 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,FI
     public FINISHED_CONSTRUCTION finishedConstruction;
 
     Contract contract;
-    int id;
-    public int ID
-    {
-        get
-        {
-            return id;
-        }
-    }
 
     Image image;
     public Image Image
@@ -38,7 +30,6 @@ public class ContractSelectionScript : MultitonScript<ContractSelectionScript,FI
         }
     }
 
-    static int count = 0;
     enum ContractSelectionState
     {
         CLOSED,
