@@ -128,7 +128,8 @@ public enum SCENE
     Options = 6,
     SpecTestScene = 7,
     Credits = 8,
-    ResourceLoader = 9
+    ResourceLoader = 9,
+    How_To_Play = 10
 }
 
 public enum SoundType
