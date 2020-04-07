@@ -163,6 +163,7 @@
     <Compile Include="Assets\Scripts\XML\XMLUtil.cs" />
     <None Include="Assets\IconGenerator\Readme.txt" />
     <None Include="Assets\Industrial Props\ReadMe.txt" />
+    <None Include="Assets\Contracts\Detached House_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\IconGenerator\HowToUse.txt" />
     <None Include="Assets\Deprecated\Bungalow_TOWNHOUSE_0.xml" />
     <None Include="Assets\Contracts\Detached House_SEMI_DETACHED_HOUSE_0.xml" />

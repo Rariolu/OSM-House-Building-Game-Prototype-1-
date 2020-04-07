@@ -904,7 +904,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
@@ -918,7 +918,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -932,7 +932,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -946,7 +946,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
@@ -960,7 +960,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -974,7 +974,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 1
@@ -1002,7 +1002,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 1
@@ -1030,7 +1030,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 2
@@ -1044,7 +1044,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
@@ -1072,7 +1072,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 0
@@ -1086,7 +1086,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 1
@@ -1156,7 +1156,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 1
@@ -1170,7 +1170,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 2
@@ -1184,7 +1184,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 1
         properties: []
         snapType: 2
@@ -1198,7 +1198,7 @@ MonoBehaviour:
         offset:
           offsetPosition: {x: 0, y: 0, z: 0}
           offsetRotation: {x: 0, y: 0, z: 0}
-          offsetScale: {x: 0, y: 0, z: 0}
+          offsetScale: {x: 5, y: 5, z: 5}
         position: 0
         properties: []
         snapType: 3
