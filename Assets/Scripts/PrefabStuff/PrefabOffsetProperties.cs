@@ -35,6 +35,13 @@ public class PrefabOffsetProperties
     {
         transform.localPosition += offsetPosition;
         transform.localRotation = Quaternion.Euler(offsetRotation);
-        transform.localScale = offsetScale;
+        if (offsetScale.magnitude != 0f)
+        {
+            transform.localScale = offsetScale;
+        }
+        else
+        {
+            Logger.Log("Attempted to do a scale of 0 on \"{0}\".", transform.name);
+        }
     }
 }
