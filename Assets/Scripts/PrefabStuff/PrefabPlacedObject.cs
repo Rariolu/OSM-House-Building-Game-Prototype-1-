@@ -67,6 +67,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
+        Logger.Log("Construction: {0};", construction);
+
         instID = instCount++;
         SetInstance(instID, this);
 
@@ -119,14 +121,25 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         prefab.offset.ApplyOffset(gameObject.transform);
 
         roundPos = gameObject.transform.position;
-        if (prefab.position == PREFAB_POSITION.EXTERIOR && ((prefab.snapType == SNAP_POINT_TYPE.CENTRE && position.x > 0) || (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0)))
-        {
-            gameObject.transform.Rotate(0, 180f, 0, Space.World);
-        }
+
         gameObject.name = prefab.type.ToString();
         gameObject.tag = TAG.TESTTAG.ToString();
 
         roundedPosition = roundPos;
+
+        if (prefab.position == PREFAB_POSITION.EXTERIOR)
+        {
+            bool centre = prefab.snapType == SNAP_POINT_TYPE.CENTRE && (position.x > 0 || construction == FINISHED_CONSTRUCTION.DETACHED_HOUSE && RoundedPosition.x == -2.5f);
+            bool edge = (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0);
+            //bool centreException = centre && (construction != FINISHED_CONSTRUCTION.DETACHED_HOUSE || (RoundedPosition.x != -2.5f));
+            //centre = centreException;
+            if (centre || edge)
+            {
+                Logger.Log("Rotated");
+                gameObject.transform.Rotate(0, 180f, 0, Space.World);
+            }
+            //Logger.Log("Name: {0}; Centre: {1}; Edge: {2}; CentreException: {3}; SnapType: {4};",gameObject.name, centre, edge, centreException, prefab.snapType);
+        }
 
         Logger.Log("RoundedPosition: {0};", RoundedPosition);
         if (SingletonUtil.InstanceAvailable(out gameScene))
