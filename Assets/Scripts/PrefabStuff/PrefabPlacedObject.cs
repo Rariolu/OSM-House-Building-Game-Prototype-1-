@@ -65,7 +65,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     readonly int instID;
 
-    public PrefabPlacedObject(Prefab prefab, Vector3 position)
+    public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
         instID = instCount++;
         SetInstance(instID, this);
@@ -97,8 +97,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             gameObject.transform.SetParent(gameSceneObjectScript.transform);
         }
-        Vector3 offset;
-        switch(prefab.snapType)
+        Vector3 offset = new Vector3();
+        switch (prefab.snapType)
         {
             case SNAP_POINT_TYPE.CENTRE:
             {
@@ -108,11 +108,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             case SNAP_POINT_TYPE.FLOOR:
             {
                 offset = new Vector3(0, 0, -2.5f);
-                break;
-            }
-            default:
-            {
-                offset = new Vector3();
                 break;
             }
         }
@@ -132,6 +127,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         gameObject.tag = TAG.TESTTAG.ToString();
 
         roundedPosition = roundPos;
+
+        Logger.Log("RoundedPosition: {0};", RoundedPosition);
         if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             switch (prefab.snapType)
