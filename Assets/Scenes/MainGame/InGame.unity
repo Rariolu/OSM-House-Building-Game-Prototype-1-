@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44883925, g: 0.48894238, b: 0.5319761, a: 1}
+  m_IndirectSpecularColor: {r: 0.4502936, g: 0.48931092, b: 0.533949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1115518495}
@@ -1214,6 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 708309741}
@@ -1348,6 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 2054262904}
@@ -1666,6 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad66fdee19ce034fa974ba11ee6c776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   pauseMenuUI: {fileID: 166147913}
 --- !u!1 &178382047
@@ -1966,6 +1970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8461a9d26d57c43ab40098dbbd8101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
 --- !u!114 &214692252
 MonoBehaviour:
@@ -2330,6 +2335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 699466601}
@@ -2563,13 +2569,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245752232}
+  - component: {fileID: 245752233}
   m_Layer: 0
   m_Name: ContractDropDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &245752232
 Transform:
   m_ObjectHideFlags: 0
@@ -2578,13 +2585,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245752231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -553.67847, y: 216.27405, z: -1603.6123}
+  m_LocalPosition: {x: -553.67847, y: 216.27405, z: -603.612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1432572140}
   m_Father: {fileID: 224061336}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245752233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245752231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d547ae03919d640af267454c11dc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lblBudget: {fileID: 0}
 --- !u!4 &256594955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c872576beb870314995e55e9607c97df,
@@ -3452,6 +3472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1748285824}
@@ -5232,6 +5253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 178382049}
@@ -5851,6 +5873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1092770196}
@@ -5984,6 +6007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   floorType: 1
   initiallyVisible: 1
@@ -6198,6 +6222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 403999640}
@@ -6552,6 +6577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac7e533131a318468b22ccf739ca65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   pauseMenuUI: {fileID: 166147913}
 --- !u!114 &558726986
@@ -7990,6 +8016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1094410851}
@@ -9030,6 +9057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 327260726}
@@ -9164,6 +9192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1354050316}
@@ -9656,7 +9685,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.15625, z: 0.02734375, w: -0.0390625}
+  m_BoundingSphereOverride: {x: 3.43e-42, y: 1.02e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
@@ -9882,6 +9911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   compart: 2
 --- !u!1001 &722688622
@@ -10642,6 +10672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1154989271}
@@ -10791,6 +10822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 834159466}
@@ -10926,6 +10958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1672158297}
@@ -11116,6 +11149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1299565628}
@@ -11707,6 +11741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 2096141917}
@@ -12025,6 +12060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 230292941}
@@ -13472,6 +13508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   scene: 6
   loadSceneMode: 1
@@ -14701,6 +14738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 30792615}
@@ -14934,6 +14972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 539302246}
@@ -16344,6 +16383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 969746276}
@@ -16579,6 +16619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 274359266}
@@ -18033,6 +18074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 728255214}
@@ -18553,6 +18595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25080e915ebde943b32c99a15ccb6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   scene: 0
   loadSceneMode: 0
@@ -18604,6 +18647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3215a74aec867b34b9a0684618ff317b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
 --- !u!95 &1416855633
 Animator:
@@ -19073,7 +19117,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432572139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1603.6123}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4358051, y: 0.4358051, z: 0.4358051}
   m_Children: []
   m_Father: {fileID: 245752232}
@@ -19081,8 +19125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.32153, y: -83.27405}
-  m_SizeDelta: {x: 1160, y: 1535}
+  m_AnchoredPosition: {x: -29.3, y: -76.8}
+  m_SizeDelta: {x: 861.7, y: 1167.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432572141
 MonoBehaviour:
@@ -19521,6 +19565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 2098900217}
@@ -19872,6 +19917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1430923704}
@@ -20350,6 +20396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 499437890}
@@ -21364,6 +21411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1375958728}
@@ -21794,6 +21842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   floorType: 0
   initiallyVisible: 0
@@ -22287,6 +22336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1457941200}
@@ -23089,6 +23139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 2058051441}
@@ -23275,6 +23326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1476971641}
@@ -23389,6 +23441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1868635776}
@@ -24945,6 +24998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 530070103}
@@ -25094,6 +25148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 275771435}
@@ -25399,6 +25454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 483841114}
@@ -25925,6 +25981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f210e778eee84381174964de2b68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   floorType: 2
   initiallyVisible: 0
@@ -26571,6 +26628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 1712248531}
@@ -27296,6 +27354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   compart: 3
 --- !u!1 &2006782617
@@ -27606,6 +27665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 854289699}
@@ -28299,6 +28359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   compart: 1
 --- !u!1 &2096141915
@@ -28608,6 +28669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beced6faf81565488118c409f7a57c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   index: 0
   lblCounter: {fileID: 958933422}
