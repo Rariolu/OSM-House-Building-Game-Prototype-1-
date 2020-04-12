@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UI_Misc/Options.unity
     guid: 472c1d8089dfb9e4ba46b45500b5bf04
   - enabled: 1
+    path: Assets/Scenes/UI_Misc/How_To_Play.unity
+    guid: a37b42db7b4ea2c47834575c0b1bfaed
+  - enabled: 1
     path: Assets/Scenes/Misc/SpecTestScene.unity
     guid: e9fb8cefabb139d4fa0373f0d90283c2
   - enabled: 1
@@ -35,7 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ResourceLoader.unity
     guid: dc4d8b626c6df3d4caaf5f480c428dce
-  - enabled: 1
-    path: Assets/Scenes/How_To_Play.unity
-    guid: a37b42db7b4ea2c47834575c0b1bfaed
   m_configObjects: {}

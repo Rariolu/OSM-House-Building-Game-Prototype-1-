@@ -96,7 +96,13 @@ public enum PREFABTYPE
     PANEL_WINDOW_LEFT,
     PANEL_WINDOW_RGHT,
     PANEL_WINDOW_LEFT_SECOND,
-    PANEL_WINDOW_RIGHT_RIGHT
+    PANEL_WINDOW_RIGHT_RIGHT,
+    PANEL_C2_EXTERIOR,
+    PANEL_C2_FRONT_DOOR,
+    PANEL_C2_BACK_DOOR,
+    PANEL_C2_WINDOW_CENTRE,
+    PANEL_C2_WINDOW_LEFT,
+    PANEL_C2_WINDOW_RIGHT
 }
 
 public enum PREFAB_COMPART
@@ -128,10 +134,10 @@ public enum SCENE
     Name_Building = 4,
     EndScene = 5,
     Options = 6,
-    SpecTestScene = 7,
+    How_To_Play = 7,
     Credits = 8,
     ResourceLoader = 9,
-    How_To_Play = 10
+    SpecTestScene = 10
 }
 
 public enum SoundType
