@@ -13,29 +13,21 @@ using UnityEngine;
 /// </summary>
 public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 {
+    #region MemberVariables_N_Properties
+    GameObject bottomHalf;
+
+    bool dropped = false;
+
     GameObject gameObject;
     InGameSceneScript gameScene;
+
+    static int instCount = 0;
+
+    readonly int instID;
 
     List<Intersection> intersections = new List<Intersection>();
 
     List<Vector3> intersectionPoints = new List<Vector3>();
-
-    private Vector3 roundedPosition;
-    public Vector3 RoundedPosition
-    {
-        get
-        {
-            return roundedPosition;
-        }
-    }
-    private Prefab templatePrefab;
-    public Prefab Prefab
-    {
-        get
-        {
-            return templatePrefab;
-        }
-    }
 
     MeshRenderer mRenderer;
     MeshRenderer MeshRenderer
@@ -46,6 +38,17 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
     }
 
+    Vector3 originalScale;
+
+    private Vector3 roundedPosition;
+    public Vector3 RoundedPosition
+    {
+        get
+        {
+            return roundedPosition;
+        }
+    }
+    
     SnapPointTrigger snapPointTrigger;
     public SnapPointTrigger SnapPointTrigger
     {
@@ -59,11 +62,16 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
     }
 
-    Vector3 originalScale;
+    private Prefab templatePrefab;
+    public Prefab Prefab
+    {
+        get
+        {
+            return templatePrefab;
+        }
+    }
 
-    static int instCount = 0;
-
-    readonly int instID;
+    #endregion
 
     public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
@@ -131,17 +139,12 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             bool centre = prefab.snapType == SNAP_POINT_TYPE.CENTRE && (position.x > 0 || (construction == FINISHED_CONSTRUCTION.DETACHED_HOUSE && RoundedPosition.x == -2.5f && RoundedPosition.z < 0f));
             bool edge = (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0);
-            //bool centreException = centre && (construction != FINISHED_CONSTRUCTION.DETACHED_HOUSE || (RoundedPosition.x != -2.5f));
-            //centre = centreException;
             if (centre || edge)
             {
-                Logger.Log("Rotated");
                 gameObject.transform.Rotate(0, 180f, 0, Space.World);
             }
-            //Logger.Log("Name: {0}; Centre: {1}; Edge: {2}; CentreException: {3}; SnapType: {4};",gameObject.name, centre, edge, centreException, prefab.snapType);
         }
-
-        Logger.Log("RoundedPosition: {0};", RoundedPosition);
+        
         if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             switch (prefab.snapType)
@@ -190,40 +193,38 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
     }
 
-    GameObject bottomHalf;
-    
-    void CreateBottomHalf()
+    void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
     {
-        Material bottomMat = MeshRenderer.material;
-        if (bottomHalf == null)
+        Vector3 intersectionPosition = (gameObject.transform.position + new Vector3(offset.x * 5f, 2.5f, offset.y * 5f)).RoundToNearestMultiple(2.5f);
+        Intersection intersection;
+        if (gameScene.AddIntersection(Prefab.floorType, intersectionPosition, out intersection))
         {
-            GameObject templateBottomHalf;
-            if (ResourceManager.GetItem("BottomHalfTemplate", out templateBottomHalf))
-            {
-                bottomHalf = Object.Instantiate(templateBottomHalf);
-                bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
-                Logger.Log("BottomHalf template found and instantiated.");
-            }
-            else
-            {
-                Debug.LogWarning("BottomHalf template not found so making a blank object sos.");
-                bottomHalf = new GameObject();
-            }
-            if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
-            {
-                bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
-            }
+            intersections.Add(intersection);
         }
-        bottomHalf.name = gameObject.name + " bottom half";
-        bottomHalf.transform.position = gameObject.transform.position;
-        bottomHalf.transform.parent = gameObject.transform;
-        SceneObjectScript gameSceneObjectScript;
-        if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameSceneObjectScript))
+        intersectionPoints.Add(intersectionPosition);
+    }
+
+    public void AddRigidBody(float mass)
+    {
+        Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
+        rigidBody.useGravity = true;
+    }
+
+    public static void AddRigidBodies(float mass = 1f, float force = 0f)
+    {
+        Vector3 explosionCentre = new Vector3();
+        foreach (PrefabPlacedObject ppo in Values)
         {
-            bottomHalf.transform.SetParent(gameSceneObjectScript.transform);
+            ppo.AddRigidBody(mass);
+            explosionCentre += ppo.RoundedPosition;
+        }
+        explosionCentre /= Values.Length;
+        foreach (PrefabPlacedObject ppo in Values)
+        {
+            ppo.Implode(force, explosionCentre);
         }
     }
-    bool dropped = false;
+
     void CameraMoved(CameraMovementScript camera)
     {
         if (Prefab.position == PREFAB_POSITION.EXTERIOR)
@@ -243,22 +244,33 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
     }
 
-    public void Drop(bool drop)
+    void CreateBottomHalf()
     {
-        bool willDrop = drop && dropped;
-        gameObject.SetActive(!willDrop);
-        bottomHalf.SetActive(willDrop);
-    }
-
-    void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
-    {
-        Vector3 intersectionPosition = (gameObject.transform.position + new Vector3(offset.x * 5f, 2.5f, offset.y * 5f)).RoundToNearestMultiple(2.5f);
-        Intersection intersection;
-        if (gameScene.AddIntersection(Prefab.floorType, intersectionPosition, out intersection))
+        Material bottomMat = MeshRenderer.material;
+        GameObject templateBottomHalf;
+        if (ResourceManager.GetItem("BottomHalfTemplate", out templateBottomHalf))
         {
-            intersections.Add(intersection);
+            bottomHalf = Object.Instantiate(templateBottomHalf);
+            bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
+            Logger.Log("BottomHalf template found and instantiated.");
         }
-        intersectionPoints.Add(intersectionPosition);
+        else
+        {
+            Debug.LogWarning("BottomHalf template not found so making a blank object sos.");
+            bottomHalf = new GameObject();
+        }
+        if (Prefab.snapType == SNAP_POINT_TYPE.EDGE)
+        {
+            bottomHalf.transform.Rotate(0, 90f, 0, Space.World);
+        }
+        bottomHalf.name = gameObject.name + " bottom half";
+        bottomHalf.transform.position = gameObject.transform.position;
+        bottomHalf.transform.parent = gameObject.transform;
+        SceneObjectScript gameSceneObjectScript;
+        if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameSceneObjectScript))
+        {
+            bottomHalf.transform.SetParent(gameSceneObjectScript.transform);
+        }
     }
 
     /// <summary>
@@ -269,11 +281,14 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     {
         Object.Destroy(gameObject);
         Object.Destroy(bottomHalf);
-        foreach(Vector3 intersection in intersectionPoints)
+
+        foreach (Vector3 intersection in intersectionPoints)
         {
             gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
         }
+
         intersectionPoints.Clear();
+
         ConstructionUtil util;
         if (SingletonUtil.InstanceAvailable(out util))
         {
@@ -299,19 +314,11 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         RemoveInstance(instID);
     }
 
-    public void SetSceneParent()
+    public void Drop(bool drop)
     {
-        SceneObjectScript gameScene;
-        if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
-        {
-            gameObject.transform.SetParent(gameScene.transform);
-        }
-    }
-
-    public void AddRigidBody(float mass)
-    {
-        Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
-        rigidBody.useGravity = true;
+        bool willDrop = drop && dropped;
+        gameObject.SetActive(!willDrop);
+        bottomHalf.SetActive(willDrop);
     }
 
     public void Implode(float force, Vector3 explosionCentre)
@@ -321,18 +328,12 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         rigidBody.AddExplosionForce(-force, explosionCentre, explosionDistance);
     }
 
-    public static void AddRigidBodies(float mass = 1f, float force = 0f)
+    public void SetSceneParent()
     {
-        Vector3 explosionCentre = new Vector3();
-        foreach(PrefabPlacedObject ppo in Values)
+        SceneObjectScript gameScene;
+        if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
-            ppo.AddRigidBody(mass);
-            explosionCentre += ppo.RoundedPosition;
-        }
-        explosionCentre /= Values.Length;
-        foreach(PrefabPlacedObject ppo in Values)
-        {
-            ppo.Implode(force, explosionCentre);
+            gameObject.transform.SetParent(gameScene.transform);
         }
     }
 }
