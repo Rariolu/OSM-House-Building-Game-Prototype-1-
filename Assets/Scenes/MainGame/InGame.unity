@@ -8135,7 +8135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 5
-  force: 1
+  force: 500
 --- !u!4 &479542504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c872576beb870314995e55e9607c97df,
@@ -13752,7 +13752,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.7e-43, y: 1.0045e-41, z: 0, w: -1.6412894e+33}
+  m_BoundingSphereOverride: {x: 0, y: 1.878323e-39, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
