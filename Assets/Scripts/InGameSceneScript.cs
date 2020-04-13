@@ -8,12 +8,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public delegate void FixturesChanged(int fixtures);
+
 /// <summary>
 /// A script attached to a GameObject in the main game scene which manages its
 /// operation and resources.
 /// </summary>
-public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<InGameSceneScript>
+public class InGameSceneScript : MonoBehaviour
 {
+    public FixturesChanged FixturesChanged;
+
     int availableFixtures;
     /// <summary>
     /// The quantity of remaining fixtures.
@@ -27,6 +31,10 @@ public class InGameSceneScript : MonoBehaviour//NullableInstanceScriptSingleton<
         set
         {
             availableFixtures = value;
+            if (FixturesChanged != null)
+            {
+                FixturesChanged(availableFixtures);
+            }
         }
     }
 

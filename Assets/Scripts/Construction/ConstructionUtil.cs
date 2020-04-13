@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public delegate void DestroyedPrefabChange(int prefabs);
+
 /// <summary>
 /// A class used to set and retrieve the current contract that's being used
 /// and store information on the progression of the game.
