@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contract>
+	<name>Detached House</name>
+	<finishedconstruction>DETACHED_HOUSE</finishedconstruction>
+	<budget>40</budget>
+	<fixtures>25</fixtures>
+	<positionstaken />
+	<prefabcollections>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="-2.3664" z="0" />
+					<rotation x="270" y="-90" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="-2.3665" z="0" />
+					<rotation x="270" y="180" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>6</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="2.3665" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="2.5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_WINDOW_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_FRONT_WINDOW_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>3</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_WINDOW_LEFT</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>3</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_DOOR_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_DOOR_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_EXTRUDE_DOOR_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>7</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_FRONT_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_INTERIOR_DOOR</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_INTERIOR_DOOR</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>4</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>FLOOR</snaptype>
+				<prefabtype>PANEL_STAIRS1_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>FLOOR</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>4</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_SIDE_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>7</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_WINDOW_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_FRONT_WINDOW_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>3</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="0" y="0" z="0" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_WINDOW_LEFT</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>BRICK</material>
+			</prefab>
+			<positions />
+			<quantity>3</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="0" y="0" z="0" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_FRONT_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>4</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="0" y="0" z="0" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_FRONT_GROUND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>5</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="0" y="0" z="0" />
+				</prefaboffset>
+				<properties />
+				<snaptype>EDGE</snaptype>
+				<prefabtype>PANEL_INTERIOR_DOOR</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>2</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>CENTRE</snaptype>
+				<prefabtype>PANEL_INTERIOR_DOOR</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>WALL</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>3</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>FLOOR</snaptype>
+				<prefabtype>PANEL_FLOOR_GROUND</prefabtype>
+				<floortype>GROUND_FLOOR</floortype>
+				<compart>FLOOR</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>WOOD</material>
+			</prefab>
+			<positions />
+			<quantity>22</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>FLOOR</snaptype>
+				<prefabtype>PANEL_FLOOR_SECOND</prefabtype>
+				<floortype>FIRST_FLOOR</floortype>
+				<compart>FLOOR</compart>
+				<prefabposition>INTERIOR</prefabposition>
+				<material>WOOD</material>
+			</prefab>
+			<positions />
+			<quantity>21</quantity>
+		</prefabcollection>
+		<prefabcollection>
+			<prefab>
+				<prefaboffset>
+					<position x="0" y="0" z="0" />
+					<rotation x="0" y="0" z="0" />
+					<scale x="5" y="5" z="5" />
+				</prefaboffset>
+				<properties />
+				<snaptype>ROOF</snaptype>
+				<prefabtype>PANEL_ROOF</prefabtype>
+				<floortype>SECOND_FLOOR</floortype>
+				<compart>ROOF</compart>
+				<prefabposition>EXTERIOR</prefabposition>
+				<material>GENERIC</material>
+			</prefab>
+			<positions />
+			<quantity>1</quantity>
+		</prefabcollection>
+	</prefabcollections>
+	<standards>
+		<standard rating="0.980000019073486" type="SAFETY" />
+	</standards>
+	<tasks>
+		<task number="3" type="BEDROOM_QUANTITY" />
+		<task number="40" type="HOUSE_HEIGHT" />
+		<task number="300" type="HOUSE_WIDTH" />
+		<task number="300" type="HOUSE_DEPTH" />
+	</tasks>
+	<time>0</time>
+</contract>

@@ -65,8 +65,10 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     readonly int instID;
 
-    public PrefabPlacedObject(Prefab prefab, Vector3 position)
+    public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
+        Logger.Log("Construction: {0};", construction);
+
         instID = instCount++;
         SetInstance(instID, this);
 
@@ -97,8 +99,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             gameObject.transform.SetParent(gameSceneObjectScript.transform);
         }
-        Vector3 offset;
-        switch(prefab.snapType)
+        Vector3 offset = new Vector3();
+        switch (prefab.snapType)
         {
             case SNAP_POINT_TYPE.CENTRE:
             {
@@ -110,11 +112,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
                 offset = new Vector3(0, 0, -2.5f);
                 break;
             }
-            default:
-            {
-                offset = new Vector3();
-                break;
-            }
         }
 
 
@@ -124,14 +121,27 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         prefab.offset.ApplyOffset(gameObject.transform);
 
         roundPos = gameObject.transform.position;
-        if (prefab.position == PREFAB_POSITION.EXTERIOR && ((prefab.snapType == SNAP_POINT_TYPE.CENTRE && position.x > 0) || (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0)))
-        {
-            gameObject.transform.Rotate(0, 180f, 0, Space.World);
-        }
+
         gameObject.name = prefab.type.ToString();
         gameObject.tag = TAG.TESTTAG.ToString();
 
         roundedPosition = roundPos;
+
+        if (prefab.position == PREFAB_POSITION.EXTERIOR)
+        {
+            bool centre = prefab.snapType == SNAP_POINT_TYPE.CENTRE && (position.x > 0 || construction == FINISHED_CONSTRUCTION.DETACHED_HOUSE && RoundedPosition.x == -2.5f);
+            bool edge = (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0);
+            //bool centreException = centre && (construction != FINISHED_CONSTRUCTION.DETACHED_HOUSE || (RoundedPosition.x != -2.5f));
+            //centre = centreException;
+            if (centre || edge)
+            {
+                Logger.Log("Rotated");
+                gameObject.transform.Rotate(0, 180f, 0, Space.World);
+            }
+            //Logger.Log("Name: {0}; Centre: {1}; Edge: {2}; CentreException: {3}; SnapType: {4};",gameObject.name, centre, edge, centreException, prefab.snapType);
+        }
+
+        Logger.Log("RoundedPosition: {0};", RoundedPosition);
         if (SingletonUtil.InstanceAvailable(out gameScene))
         {
             switch (prefab.snapType)
@@ -155,6 +165,10 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         //Get the PrefabPlacementScript component or add one if there is none.
         PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
         pps.parentPrefabInstance = this;
+        pps.PrefabPlacementDeleted += () =>
+        {
+            RemoveInstance(instID);
+        };
 
         BoxCollider collider = gameObject.GetComponent<BoxCollider>() ?? gameObject.AddComponent<BoxCollider>();
 
@@ -291,6 +305,34 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
             gameObject.transform.SetParent(gameScene.transform);
+        }
+    }
+
+    public void AddRigidBody(float mass)
+    {
+        Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
+        rigidBody.useGravity = true;
+    }
+
+    public void Implode(float force, Vector3 explosionCentre)
+    {
+        const float explosionDistance = 50f;
+        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
+        rigidBody.AddExplosionForce(-force, explosionCentre, explosionDistance);
+    }
+
+    public static void AddRigidBodies(float mass = 1f, float force = 0f)
+    {
+        Vector3 explosionCentre = new Vector3();
+        foreach(PrefabPlacedObject ppo in Values)
+        {
+            ppo.AddRigidBody(mass);
+            explosionCentre += ppo.RoundedPosition;
+        }
+        explosionCentre /= Values.Length;
+        foreach(PrefabPlacedObject ppo in Values)
+        {
+            ppo.Implode(force, explosionCentre);
         }
     }
 }

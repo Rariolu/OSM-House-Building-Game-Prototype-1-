@@ -40,6 +40,15 @@ public class Floor : MultitonScript<Floor,FLOORTYPE>
             FocusedFloor = this;
         }
     }
+
+    public static void HideAll()
+    {
+        foreach(Floor floor in Values)
+        {
+            floor.gameObject.SetActive(false);
+        }
+    }
+
     public void Focus()
     {
         gameObject.SetActive(true);

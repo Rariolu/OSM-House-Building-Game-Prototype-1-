@@ -454,10 +454,21 @@ public static class Util
     }
 
 
-    public static void SetExitState(EXIT_STATE exitState)
+    public static void SetExitState(EXIT_STATE exitState, bool collapse = true)
     {
-        EndGameUtil.SetExitState(exitState);
-        Util.LoadScene(SCENE.EndScene);
+        if (exitState == EXIT_STATE.LOSE && collapse)
+        {
+            CollapseScript collapser;
+            if (SingletonUtil.InstanceAvailable(out collapser))
+            {
+                collapser.BeginCollapsing();
+            }
+        }
+        else
+        {
+            EndGameUtil.SetExitState(exitState);
+            Util.LoadScene(SCENE.EndScene);
+        }
     }
 
     /// <summary>

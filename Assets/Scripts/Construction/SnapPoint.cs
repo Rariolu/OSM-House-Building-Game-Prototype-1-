@@ -87,6 +87,25 @@ public class SnapPoint
             }
         }
     }
+
+    public static void DestroyAll()
+    {
+        foreach (SNAP_POINT_TYPE type in Util.GetEnumValues<SNAP_POINT_TYPE>())
+        {
+            foreach (SnapPoint snapPoint in snapPointInstances[type])
+            {
+                snapPoint.SetActive(false);
+                //snapPoint.Destroy();
+            }
+            snapPointInstances.Remove(type);
+        }
+        snapPointInstances.Clear();
+    }
+
+    public void Destroy()
+    {
+        Object.Destroy(gameObject);
+    }
     
     public SnapPoint(SNAP_POINT_TYPE type = SNAP_POINT_TYPE.EDGE)
     {
@@ -137,7 +156,10 @@ public class SnapPoint
         trigger.snapType = type;
         trigger.SnapPointDeleted += () =>
         {
-            snapPointInstances[type].RemoveAll(sp => sp == this);
+            if (snapPointInstances.ContainsKey(type))
+            {
+                snapPointInstances[type].RemoveAll(sp => sp == this);
+            }
         };
         trigger.SnapPointTriggered += () =>
         {
@@ -161,15 +183,16 @@ public class SnapPoint
     /// <param name="active"></param>
     public void SetActive(bool active)
     {
-        if (gameObject != null)
-        {
-            gameObject.SetActive(active);
-        }
-        else
-        {
-            Logger.Log("Snap point that doesn't exist is referenced.", LogType.Warning);
-            //snapPointInstances[snapType].RemoveAll(sp => sp == this);
-        }
+        gameObject.SetActive(active);
+        //if (gameObject != null)
+        //{
+            
+        //}
+        //else
+        //{
+        //    Logger.Log("Snap point that doesn't exist is referenced.", LogType.Warning);
+        //    //snapPointInstances[snapType].RemoveAll(sp => sp == this);
+        //}
     }
 
     /// <summary>

@@ -27,6 +27,16 @@ public class UIButton : MonoBehaviour
     /// </summary>
     public UIButtonClick Click;
 
+    /// <summary>
+    /// The sound that the button plays when it's clicked
+    /// (if playClickSound is true).
+    /// </summary>
+    public SOUNDNAME sound = SOUNDNAME.MENU_BUTTON_CLICK;
+
+    /// <summary>
+    /// A bool that determines whether a sound should be
+    /// played when the button is clicked.
+    /// </summary>
     public bool playClickSound = false;
     Image image;
     public Image Image
@@ -55,7 +65,7 @@ public class UIButton : MonoBehaviour
         {
             if (playClickSound)
             {
-                IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.TURNING_PAGE);
+                IntegratedSoundManager.PlaySoundAsync(sound);
             }
             if (Click != null)
             {

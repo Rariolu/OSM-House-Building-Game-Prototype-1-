@@ -90,6 +90,8 @@
     <Compile Include="Assets\Scripts\Camera\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Camera\CamSwitch.cs" />
+    <Compile Include="Assets\Scripts\Collapse\CollapseScript.cs" />
+    <Compile Include="Assets\Scripts\Collapse\CollapseUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\buildSystem.cs" />
     <Compile Include="Assets\Scripts\Construction\ConstructionUtil.cs" />
     <Compile Include="Assets\Scripts\Construction\SnapPoint.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Assets\Tutorial1_Button.cs" />
     <None Include="Assets\IconGenerator\Readme.txt" />
     <None Include="Assets\Industrial Props\ReadMe.txt" />
+    <None Include="Assets\Contracts\Detached House_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\IconGenerator\HowToUse.txt" />
     <None Include="Assets\Deprecated\Bungalow_TOWNHOUSE_0.xml" />
     <None Include="Assets\Contracts\Detached House_SEMI_DETACHED_HOUSE_0.xml" />

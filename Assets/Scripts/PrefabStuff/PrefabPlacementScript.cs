@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public delegate void PrefabPlacementClick();
+public delegate void PrefabPlacementDeleted();
 public class PrefabPlacementScript : MonoBehaviour
 {
     public PrefabPlacementClick Click;
+    public PrefabPlacementDeleted PrefabPlacementDeleted;
     public PrefabPlacedObject parentPrefabInstance;
     public Prefab Prefab
     {
@@ -52,5 +54,12 @@ public class PrefabPlacementScript : MonoBehaviour
     void OnMouseUp()
     {
         held = false;
+    }
+    private void OnDestroy()
+    {
+        if (PrefabPlacementDeleted != null)
+        {
+            PrefabPlacementDeleted();
+        }
     }
 }

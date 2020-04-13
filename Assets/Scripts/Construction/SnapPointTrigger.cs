@@ -57,16 +57,21 @@ public class SnapPointTrigger : MonoBehaviour
                 {
                     if (currentPrefab.snapType == snapType)
                     {
-                        PrefabPlacedObject ppo = new PrefabPlacedObject(currentPrefab, transform.position);
-                        ppo.SnapPointTrigger = this;
-                        ppo.SetSceneParent();
-                        InGameSceneScript gameSceneScript;
-                        if (SingletonUtil.InstanceAvailable(out gameSceneScript))
+                        ConstructionUtil constructionUtil;
+                        if (SingletonUtil.InstanceAvailable(out constructionUtil))
                         {
-                            gameSceneScript.AddPlacement(ppo);
+                            PrefabPlacedObject ppo = new PrefabPlacedObject(currentPrefab, transform.position, constructionUtil.Contract.finishedConstruction);
+                            ppo.SnapPointTrigger = this;
+                            ppo.SetSceneParent();
+
+                            InGameSceneScript gameSceneScript;
+                            if (SingletonUtil.InstanceAvailable(out gameSceneScript))
+                            {
+                                gameSceneScript.AddPlacement(ppo);
+                            }
+                            isSnapped = true;
+                            counter.DecrementCount(currentPrefab);
                         }
-                        isSnapped = true;
-                        counter.DecrementCount(currentPrefab);
                     }
                 }
             }
