@@ -19,5 +19,6 @@ public class Tutorial1_Button : MonoBehaviour
     public void Continue()
     {
         IsTutorialActive = false;
+        TutorialCanvas.SetActive(false);
     }
 }
