@@ -11,6 +11,7 @@ public class StartButton : UIButton
     }
     void StartButton_Click(UIButton sender)
     {
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.MENU_BUTTON_CLICK);
         Util.StartGame();
     }
 }

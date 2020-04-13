@@ -16,6 +16,7 @@ public class SceneLoadButton : UIButton
     }
     void SceneLoad_Click(UIButton sender)
     {
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.MENU_BUTTON_CLICK);
         Util.LoadScene(scene, loadSceneMode);
     }
 }

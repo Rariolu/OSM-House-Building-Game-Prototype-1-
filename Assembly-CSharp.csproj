@@ -162,6 +162,7 @@
     <Compile Include="Assets\Scripts\PrefabStuff\PrefabView.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\XML\XMLUtil.cs" />
+    <Compile Include="Assets\Tutorial1_Button.cs" />
     <None Include="Assets\IconGenerator\Readme.txt" />
     <None Include="Assets\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Contracts\Detached House_DETACHED_HOUSE_0.xml" />
