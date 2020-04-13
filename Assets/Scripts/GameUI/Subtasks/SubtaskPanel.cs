@@ -5,6 +5,7 @@ using System.Collections;
 public class SubtaskPanel : MonoBehaviour
 {
     public Text lblBudget;
+    public Text lblFixtures;
 
     int budget;
     int Budget
@@ -27,15 +28,41 @@ public class SubtaskPanel : MonoBehaviour
         }
     }
 
-
+    int fixtures;
+    int Fixtures
+    {
+        get
+        {
+            return fixtures;
+        }
+        set
+        {
+            fixtures = value;
+            if (lblFixtures != null)
+            {
+                lblFixtures.text = "Fixtures: {0}".FormatText(fixtures);
+            }
+            else
+            {
+                Logger.Log("lblFixtures is null.");
+            }
+        }
+    }
 
     private void Awake()
     {
         SingletonUtil.SetInstance(this);
+        gameObject.SetActive(false);
     }
-    // Use this for initialization
+
     void Start()
     {
+        InGameSceneScript gameSceneScript;
+        if (SingletonUtil.InstanceAvailable(out gameSceneScript))
+        {
+            gameSceneScript.FixturesChanged += (fixs) => { Fixtures = fixs; };
+        }
+
         ConstructionUtil constructionUtil;
         if (SingletonUtil.InstanceAvailable(out constructionUtil))
         {
@@ -46,11 +73,6 @@ public class SubtaskPanel : MonoBehaviour
     void SetContract(Contract contract)
     {
         Budget = contract.budget;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Fixtures = contract.fixtures;
     }
 }
