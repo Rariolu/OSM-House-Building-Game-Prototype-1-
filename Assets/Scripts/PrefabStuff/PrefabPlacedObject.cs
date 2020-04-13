@@ -129,7 +129,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
         if (prefab.position == PREFAB_POSITION.EXTERIOR)
         {
-            bool centre = prefab.snapType == SNAP_POINT_TYPE.CENTRE && (position.x > 0 || construction == FINISHED_CONSTRUCTION.DETACHED_HOUSE && RoundedPosition.x == -2.5f);
+            bool centre = prefab.snapType == SNAP_POINT_TYPE.CENTRE && (position.x > 0 || (construction == FINISHED_CONSTRUCTION.DETACHED_HOUSE && RoundedPosition.x == -2.5f && RoundedPosition.z < 0f));
             bool edge = (prefab.snapType == SNAP_POINT_TYPE.EDGE && position.z < 0);
             //bool centreException = centre && (construction != FINISHED_CONSTRUCTION.DETACHED_HOUSE || (RoundedPosition.x != -2.5f));
             //centre = centreException;
