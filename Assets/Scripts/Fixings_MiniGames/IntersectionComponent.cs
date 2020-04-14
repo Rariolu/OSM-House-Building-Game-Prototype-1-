@@ -16,22 +16,20 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class IntersectionComponent : MonoBehaviour
 {
-    public Action Click;
-    void OnMouseDown()
+    MeshRenderer meshRenderer;
+    MeshRenderer MeshRenderer
     {
-        Material confirmedIntersection;
-
-        if (ResourceManager.GetItem("Valid", out confirmedIntersection))
+        get
         {
-            GetComponent<MeshRenderer>().material = confirmedIntersection;
+            return meshRenderer ?? (meshRenderer = GetComponent<MeshRenderer>());
         }
-
-        StartCoroutine(ClickCountThing());
-
     }
 
-    float clickInterval = 0.5f;
+    public Action Click;
+
     int clickCount = 0;
+    float clickInterval = 0.5f;
+
     IEnumerator ClickCountThing()
     {
         clickCount++;
@@ -42,6 +40,12 @@ public class IntersectionComponent : MonoBehaviour
             if (Click != null)
             {
                 Click();
+
+                Material confirmedIntersection;
+                if (ResourceManager.GetItem("Valid", out confirmedIntersection))
+                {
+                    MeshRenderer.material = confirmedIntersection;
+                }
             }
         }
         float t = 0;
@@ -52,5 +56,10 @@ public class IntersectionComponent : MonoBehaviour
         }
         clickCount--;
         Logger.Log("Post Click count: {0};", clickCount);
+    }
+
+    void OnMouseDown()
+    {
+        StartCoroutine(ClickCountThing());
     }
 }
