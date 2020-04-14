@@ -34,6 +34,9 @@ public class ConstructionUtil
             return destroyed;
         }
     }
+
+    public DestroyedPrefabChange DestroyedPrefabChange;
+
 	int fixingsChanged = 0;
 	public int FixingsChanged
 	{
@@ -56,6 +59,10 @@ public class ConstructionUtil
     public void IncrementDestruction()
     {
         destroyed++;
+        if (DestroyedPrefabChange != null)
+        {
+            DestroyedPrefabChange(destroyed);
+        }
     }
 	public void IncrementModifiedFixings()
 	{

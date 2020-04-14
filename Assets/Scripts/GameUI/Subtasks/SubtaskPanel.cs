@@ -6,6 +6,7 @@ public class SubtaskPanel : MonoBehaviour
 {
     public Text lblBudget;
     public Text lblFixtures;
+    public SubtaskCheckbox cbDestroyedPrefabs;
 
     int budget;
     int Budget
@@ -67,6 +68,12 @@ public class SubtaskPanel : MonoBehaviour
         if (SingletonUtil.InstanceAvailable(out constructionUtil))
         {
             SetContract(constructionUtil.Contract);
+            constructionUtil.DestroyedPrefabChange += (prefabs) => { cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
+        }
+
+        if (cbDestroyedPrefabs != null)
+        {
+            cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
         }
     }
 

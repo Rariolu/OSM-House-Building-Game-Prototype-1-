@@ -104,7 +104,7 @@ public class InGameSceneScript : MonoBehaviour
         if (SingletonUtil.InstanceAvailable(out util))
         {
             currentContract = util.Contract;
-            availableFixtures = currentContract.fixtures;
+            AvailableFixtures = currentContract.fixtures;
         }
 #if UNITY_EDITOR
         else
@@ -115,6 +115,8 @@ public class InGameSceneScript : MonoBehaviour
             {
                 Logger.Log("Loaded xml file.");
                 ConstructionUtil.SetContract(contract);
+                currentContract = contract;
+                AvailableFixtures = currentContract.fixtures;
             }
         }
 #endif
