@@ -40,6 +40,17 @@ public class ExitMiniGame : UIButton
                     }
                 }
             }
+            if (fixingsUtil.CurrentIntersection.FixingsPreviouslySet)
+            {
+                if (!Util.CollectionsEqual(fixingsUtil.CurrentIntersection.FixingSections,fixingSections))
+                {
+                    ConstructionUtil constructionUtil;
+                    if (SingletonUtil.InstanceAvailable(out constructionUtil))
+                    {
+                        constructionUtil.NewSetOfFixings();
+                    }
+                }
+            }
             fixingsUtil.CurrentIntersection.SetFixingSections(fixingSections);
         }
         SceneObjectScript prevScene;

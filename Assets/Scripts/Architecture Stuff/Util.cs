@@ -83,6 +83,22 @@ public static class Util
         }
     }
 
+    public static bool CollectionsEqual<T>(IEnumerable<T> col1, IEnumerable<T> col2)
+    {
+        if (col1.Count() != col2.Count())
+        {
+            return false;
+        }
+        foreach(T val in col1)
+        {
+            if (!col2.Contains(val))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     /// <summary>
     /// Returns true if the gameobject attached to the given component has the given tag.
     /// </summary>

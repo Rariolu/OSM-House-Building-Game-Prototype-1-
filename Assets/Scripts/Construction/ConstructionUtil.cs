@@ -2,6 +2,7 @@
 using System.Collections;
 
 public delegate void DestroyedPrefabChange(int prefabs);
+public delegate void FixingsReset();
 
 /// <summary>
 /// A class used to set and retrieve the current contract that's being used
@@ -45,6 +46,18 @@ public class ConstructionUtil
 			return fixingsChanged;
 		}
 	}
+
+    bool fixingsRedone = false;
+    public bool FixingsRedone
+    {
+        get
+        {
+            return fixingsRedone;
+        }
+    }
+
+    public FixingsReset FixingsReset;
+
     #endregion
 
     ConstructionUtil(Contract c)
@@ -68,6 +81,16 @@ public class ConstructionUtil
 	{
 		fixingsChanged++;
 	}
+
+    public void NewSetOfFixings()
+    {
+        fixingsRedone = true;
+        if (FixingsReset != null)
+        {
+            FixingsReset();
+        }
+    }
+
     #endregion
     public static void SetContract(Contract c)
     {

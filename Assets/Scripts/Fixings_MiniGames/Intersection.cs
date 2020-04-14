@@ -16,6 +16,14 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class Intersection : MultitonClass<Intersection,int>
 {
+    bool fixingsPreviouslySet = false;
+    public bool FixingsPreviouslySet
+    {
+        get
+        {
+            return fixingsPreviouslySet;
+        }
+    }
     List<FIXINGSECTION> fixingSections = new List<FIXINGSECTION>();
     public List<FIXINGSECTION> FixingSections
     {
@@ -88,6 +96,7 @@ public class Intersection : MultitonClass<Intersection,int>
     public void SetFixingSections(List<FIXINGSECTION> fSections)
     {
         fixingSections = fSections;
+        fixingsPreviouslySet = true;
     }
     public void SetParent(Transform transform)
     {

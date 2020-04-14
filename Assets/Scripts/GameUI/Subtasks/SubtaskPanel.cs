@@ -6,6 +6,7 @@ public class SubtaskPanel : MonoBehaviour
 {
     public Text lblBudget;
     public Text lblFixtures;
+    public Text lblTimeframe;
     public SubtaskCheckbox cbDestroyedPrefabs;
     public SubtaskCheckbox cbChangedFixings;
 
@@ -51,6 +52,27 @@ public class SubtaskPanel : MonoBehaviour
         }
     }
 
+    uint time;
+    uint Time
+    {
+        get
+        {
+            return time;
+        }
+        set
+        {
+            time = value;
+            if (lblTimeframe != null)
+            {
+                lblTimeframe.text = "{0} months".FormatText(time);
+            }
+            else
+            {
+                Logger.Log("lblTimeframe is null.");
+            }
+        }
+    }
+
     private void Awake()
     {
         SingletonUtil.SetInstance(this);
@@ -70,6 +92,7 @@ public class SubtaskPanel : MonoBehaviour
             SetContract(constructionUtil.Contract);
             //Set the "destroyed prefabs" checkbox to fail when a prefab is destroyed.
             constructionUtil.DestroyedPrefabChange += (prefabs) => { cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
+            constructionUtil.FixingsReset += () => { cbChangedFixings.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
         }
 
         if (cbDestroyedPrefabs != null)
@@ -87,5 +110,6 @@ public class SubtaskPanel : MonoBehaviour
     {
         Budget = contract.budget;
         Fixtures = contract.fixtures;
+        Time = contract.time;
     }
 }
