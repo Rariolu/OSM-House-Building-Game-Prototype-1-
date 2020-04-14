@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\GameUI\PrefabUI\PrefabIconScript.cs" />
     <Compile Include="Assets\Scripts\GameUI\SellHouseButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Subtasks\SubtaskButton.cs" />
+    <Compile Include="Assets\Scripts\GameUI\Subtasks\SubtaskCheckbox.cs" />
     <Compile Include="Assets\Scripts\GameUI\Subtasks\SubtaskPanel.cs" />
     <Compile Include="Assets\Scripts\InGameSceneScript.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />

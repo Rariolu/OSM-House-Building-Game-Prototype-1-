@@ -7,6 +7,7 @@ public class SubtaskPanel : MonoBehaviour
     public Text lblBudget;
     public Text lblFixtures;
     public SubtaskCheckbox cbDestroyedPrefabs;
+    public SubtaskCheckbox cbRedonePrefabs;
 
     int budget;
     int Budget
@@ -20,7 +21,7 @@ public class SubtaskPanel : MonoBehaviour
             budget = value;
             if (lblBudget != null)
             {
-                lblBudget.text = "£{0}".FormatText(budget);
+                lblBudget.text = "Budget: £{0}".FormatText(budget);
             }
             else
             {
@@ -41,7 +42,7 @@ public class SubtaskPanel : MonoBehaviour
             fixtures = value;
             if (lblFixtures != null)
             {
-                lblFixtures.text = "Fixtures: {0}".FormatText(fixtures);
+                lblFixtures.text = "Remaining Fixtures: {0}".FormatText(fixtures);
             }
             else
             {
@@ -53,7 +54,6 @@ public class SubtaskPanel : MonoBehaviour
     private void Awake()
     {
         SingletonUtil.SetInstance(this);
-        gameObject.SetActive(false);
     }
 
     void Start()
@@ -68,12 +68,18 @@ public class SubtaskPanel : MonoBehaviour
         if (SingletonUtil.InstanceAvailable(out constructionUtil))
         {
             SetContract(constructionUtil.Contract);
+            //Set the "destroyed prefabs" checkbox to fail when a prefab is destroyed.
             constructionUtil.DestroyedPrefabChange += (prefabs) => { cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
         }
 
         if (cbDestroyedPrefabs != null)
         {
             cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
+        }
+
+        if (cbRedonePrefabs != null)
+        {
+            cbRedonePrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
         }
     }
 
