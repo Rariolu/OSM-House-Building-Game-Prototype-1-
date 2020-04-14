@@ -7,7 +7,7 @@ public class SubtaskPanel : MonoBehaviour
     public Text lblBudget;
     public Text lblFixtures;
     public SubtaskCheckbox cbDestroyedPrefabs;
-    public SubtaskCheckbox cbRedonePrefabs;
+    public SubtaskCheckbox cbChangedFixings;
 
     int budget;
     int Budget
@@ -77,9 +77,9 @@ public class SubtaskPanel : MonoBehaviour
             cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
         }
 
-        if (cbRedonePrefabs != null)
+        if (cbChangedFixings != null)
         {
-            cbRedonePrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
+            cbChangedFixings.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
         }
     }
 
