@@ -50,6 +50,7 @@ public class Intersection : MultitonClass<Intersection,int>
         {
             snapPointsSnapped = value;
             SetActive(snapPointsSnapped == snapPointTriggers.Count);
+            Logger.Log("snapPointsSnapped: {0}; SnapPointTriggersCount: {1};", snapPointsSnapped, snapPointTriggers.Count);
         }
     }
 
@@ -91,8 +92,9 @@ public class Intersection : MultitonClass<Intersection,int>
     public void AddSnapPoint(SnapPointTrigger trigger)
     {
         snapPointTriggers.Add(trigger);
-        trigger.SnapPointTriggered += () => { snapPointsSnapped++; };
-        trigger.SnapPointUnTriggered += () => { snapPointsSnapped--; };
+        Logger.Log("Trigger delegates added.");
+        trigger.SnapPointTriggered += () => { SnapPointsSnapped++; Logger.Log("Trigger"); };
+        trigger.SnapPointUnTriggered += () => { SnapPointsSnapped--; Logger.Log("Untrigger"); };
     }
 
     void Init(GameObject gameObjectBase)

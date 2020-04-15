@@ -92,7 +92,6 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
 			if (SingletonUtil.InstanceAvailable(out util))
 			{
 				util.IncrementModifiedFixings();
-				Logger.Log("Modified Fixings: {0};",util.FixingsChanged);
 			}
         }
     }

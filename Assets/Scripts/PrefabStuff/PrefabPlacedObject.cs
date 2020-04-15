@@ -75,7 +75,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
-        Logger.Log("Construction: {0};", construction);
+        //Logger.Log("Construction: {0};", construction);
 
         instID = instCount++;
         SetInstance(instID, this);
@@ -147,21 +147,21 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         
         if (SingletonUtil.InstanceAvailable(out gameScene))
         {
-            switch (prefab.snapType)
-            {
-                case SNAP_POINT_TYPE.EDGE:
-                {
-                    AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
-                    AddIntersection(new Vector2( 1f / 2f, 0), prefab.snapType);
-                    break;
-                }
-                case SNAP_POINT_TYPE.CENTRE:
-                {
-                    AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
-                    AddIntersection(new Vector2(0,  1f / 2f), prefab.snapType);
-                    break;
-                }
-            }
+            //switch (prefab.snapType)
+            //{
+            //    case SNAP_POINT_TYPE.EDGE:
+            //    {
+            //        AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
+            //        AddIntersection(new Vector2( 1f / 2f, 0), prefab.snapType);
+            //        break;
+            //    }
+            //    case SNAP_POINT_TYPE.CENTRE:
+            //    {
+            //        AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
+            //        AddIntersection(new Vector2(0,  1f / 2f), prefab.snapType);
+            //        break;
+            //    }
+            //}
             gameScene.MaterialPlaced(prefab.material);
         }
 

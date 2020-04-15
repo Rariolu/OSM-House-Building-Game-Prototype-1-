@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\Fixings_MiniGames\FixingsUtil.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\Intersection.cs" />
     <Compile Include="Assets\Scripts\Fixings_MiniGames\IntersectionComponent.cs" />
+    <Compile Include="Assets\Scripts\Fixings_MiniGames\IntersectionLauncher.cs" />
     <Compile Include="Assets\Scripts\FloorChange\Floor.cs" />
     <Compile Include="Assets\Scripts\GameUI\BackButton.cs" />
     <Compile Include="Assets\Scripts\GameUI\Brochure\BrochureUI.cs" />

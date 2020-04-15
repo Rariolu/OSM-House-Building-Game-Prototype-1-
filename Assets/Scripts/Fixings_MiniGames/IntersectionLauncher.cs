@@ -8,13 +8,15 @@ public class IntersectionLauncher : MonoBehaviour
     private void Awake()
     {
         intersection = new Intersection(gameObject);
-        intersection.SetActive(false);
+     
     }
     private void Start()
     {
+        Logger.Log("snapPoints Length: {0};", snapPoints.Length);
         foreach(SnapPointLauncher spl in snapPoints)
         {
             intersection.AddSnapPoint(spl.Trigger);
         }
+        intersection.SetActive(false);
     }
 }
