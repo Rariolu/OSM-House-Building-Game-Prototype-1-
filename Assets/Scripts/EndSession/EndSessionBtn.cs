@@ -20,13 +20,18 @@ public class EndSessionBtn: UIButton
 	{
         minimumFixtures = noOfFixings - fixingsLeeway;
 
-        if (Fixings.fixings >= minimumFixtures)
-		{
-		    UnityEngine.SceneManagement.SceneManager.LoadScene("Name_Building");
-		}
-		else
-		{
-			Logger.Log("BuildingCollapsed");
-		}	
+        InGameSceneScript gameScene;
+        if (SingletonUtil.InstanceAvailable(out gameScene))
+        {
+            //if (Fixings.fixings >= minimumFixtures)
+            if (gameScene.AvailableFixtures >= minimumFixtures)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Name_Building");
+            }
+            else
+            {
+                Logger.Log("BuildingCollapsed");
+            }
+        }
 	}	
 }
