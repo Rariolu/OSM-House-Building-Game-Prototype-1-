@@ -527,7 +527,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: NaN, w: 2.908071e-11}
+  m_BoundingSphereOverride: {x: 6.712e-42, y: 1.02e-43, z: 1.3559e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -749,7 +749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ceac9a1bf883f4a90dba20394b0526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixingsUsedText: {fileID: 887687486}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +759,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -768,14 +766,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -1334,6 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60922c2322c4c3d479c4822cde9296f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: 0
   playClickSound: 0
   scene: 2
   loadSceneMode: 0
