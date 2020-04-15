@@ -3,9 +3,18 @@ using System.Collections;
 
 public class IntersectionLauncher : MonoBehaviour
 {
-    //public SnapPointLauncher snapPoints;
+    public SnapPointLauncher[] snapPoints;
+    Intersection intersection;
     private void Awake()
     {
-        Intersection intersection = new Intersection(gameObject);
+        intersection = new Intersection(gameObject);
+        intersection.SetActive(false);
+    }
+    private void Start()
+    {
+        foreach(SnapPointLauncher spl in snapPoints)
+        {
+            intersection.AddSnapPoint(spl.Trigger);
+        }
     }
 }

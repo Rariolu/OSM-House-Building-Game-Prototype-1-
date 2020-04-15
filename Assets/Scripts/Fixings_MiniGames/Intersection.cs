@@ -36,26 +36,38 @@ public class Intersection : MultitonClass<Intersection,int>
 
     static int instCount = 0;
 
-    readonly int instID;
+    int instID;
+
+    List<SnapPointTrigger> snapPointTriggers = new List<SnapPointTrigger>();
+    int snapPointsSnapped = 0;
+    int SnapPointsSnapped
+    {
+        get
+        {
+            return snapPointsSnapped;
+        }
+        set
+        {
+            snapPointsSnapped = value;
+            SetActive(snapPointsSnapped == snapPointTriggers.Count);
+        }
+    }
 
     public Intersection()
     {
-        instID = instCount++;
-        SetInstance(instID, this);
-
-        gameObject = new GameObject();
+        GameObject gameObjectTemp = new GameObject();
         
         GameObject intersectionPrefab;
         if (ResourceManager.GetItem("Intersection", out intersectionPrefab))
         {
-            gameObject = GameObject.Instantiate(intersectionPrefab);
+            gameObjectTemp = Object.Instantiate(intersectionPrefab);
         }
         else
         {
-            gameObject.transform.localScale = new Vector3(1f, 5f, 1f);
-            BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
-            MeshFilter filter = gameObject.AddComponent<MeshFilter>();
-            MeshRenderer renderer = gameObject.AddComponent<MeshRenderer>();
+            gameObjectTemp.transform.localScale = new Vector3(1f, 5f, 1f);
+            BoxCollider boxCollider = gameObjectTemp.AddComponent<BoxCollider>();
+            MeshFilter filter = gameObjectTemp.AddComponent<MeshFilter>();
+            MeshRenderer renderer = gameObjectTemp.AddComponent<MeshRenderer>();
             Mesh mesh;
             if (ResourceManager.GetItem("intersection", out mesh))
             {
@@ -67,18 +79,46 @@ public class Intersection : MultitonClass<Intersection,int>
                 renderer.material = mat;
             }
         }
+
+        Init(gameObjectTemp);
+    }
+
+    public Intersection(GameObject gameObjectBase)
+    {
+        Init(gameObjectBase);
+    }
+
+    public void AddSnapPoint(SnapPointTrigger trigger)
+    {
+        snapPointTriggers.Add(trigger);
+        trigger.SnapPointTriggered += () => { snapPointsSnapped++; };
+        trigger.SnapPointUnTriggered += () => { snapPointsSnapped--; };
+    }
+
+    void Init(GameObject gameObjectBase)
+    {
+        instID = instCount++;
+        SetInstance(instID, this);
+        gameObject = gameObjectBase;
         gameObject.layer = (int)LAYER.IntersectionLayer;
         gameObject.name = "Intersection";
         SetClick();
     }
+
     public void Destroy()
     {
         Object.Destroy(gameObject);
         RemoveInstance(instID);
     }
+
+    public void SetActive(bool active)
+    {
+        gameObject.SetActive(active);
+    }
+
     void SetClick()
     {
-        IntersectionComponent ic = gameObject.AddComponent<IntersectionComponent>();
+        IntersectionComponent ic = gameObject.GetComponent<IntersectionComponent>() ?? gameObject.AddComponent<IntersectionComponent>();
         ic.Click += () =>
         {
             buildSystem bs;
