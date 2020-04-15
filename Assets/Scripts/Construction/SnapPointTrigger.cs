@@ -33,7 +33,6 @@ public class SnapPointTrigger : MonoBehaviour
         set
         {
             isSnapped = value;
-            Logger.Log("Blep");
             if (isSnapped)
             {
                 if (SnapPointTriggered != null)

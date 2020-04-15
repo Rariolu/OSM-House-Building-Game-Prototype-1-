@@ -38,7 +38,7 @@ public class SubtaskCheckbox : MonoBehaviour
                 completionState == COMPLETION_STATE.FAILED ? failedSprite : succeededSprite
             );
             Image.sprite = sprite;
-            Logger.Log("Completion state changed {0}.", completionState);
+            //Logger.Log("Completion state changed {0}.", completionState);
         }
     }
 

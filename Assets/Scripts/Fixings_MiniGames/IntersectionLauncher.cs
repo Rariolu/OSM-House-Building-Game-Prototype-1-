@@ -12,7 +12,6 @@ public class IntersectionLauncher : MonoBehaviour
     }
     private void Start()
     {
-        Logger.Log("snapPoints Length: {0};", snapPoints.Length);
         foreach(SnapPointLauncher spl in snapPoints)
         {
             intersection.AddSnapPoint(spl.Trigger);
