@@ -16,26 +16,26 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
     // Declaring the materials used for the fixings
     public Material confirmed_material;
 	public Material unconfirmed_material;
-    static int f = 0;
-    // Counter for the number of fixings used
-    public static int fixings
-    {
-        get
-        {
-            return f;
-        }
-        set
-        {
-            if (value >= 0)
-            {
-                f = value;
-            }
-            else
-            {
-                Logger.Log(value);
-            }
-        }
-    }
+    //static int f = 0;
+    //// Counter for the number of fixings used
+    //public static int fixings
+    //{
+    //    get
+    //    {
+    //        return f;
+    //    }
+    //    set
+    //    {
+    //        if (value >= 0)
+    //        {
+    //            f = value;
+    //        }
+    //        else
+    //        {
+    //            Logger.Log(value);
+    //        }
+    //    }
+    //}
     // Boolean to determine if the placement of the fixing is confirmed, stops multiple additions to the counter
     private bool confirmed = false;
     public bool Confirmed
@@ -43,6 +43,11 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
         get
         {
             return confirmed;
+        }
+        private set
+        {
+            confirmed = value;
+            MeshRenderer.material = confirmed ? confirmed_material : unconfirmed_material;
         }
     }
     
@@ -63,19 +68,26 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
 
     void OnMouseDown()
     {
-        Logger.Log("Mouse down");
-        if (confirmed == false)
+        if (!confirmed)
         {
             // It adds 1 to the counter and changes the material of the object
-            fixings = fixings - 1;
-            MeshRenderer.material = confirmed_material;
-            confirmed = true;
+            FixingsUtil util;
+            if (SingletonUtil.InstanceAvailable(out util))
+            {
+                util.Fixings--;
+            }
+            Confirmed = true;
+            IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.FIXING);
         }
         else
         {
-            MeshRenderer.material = unconfirmed_material;
-            fixings = fixings + 1;
-            confirmed = false;
+            //fixings = fixings + 1;
+            FixingsUtil fixingsUtil;
+            if (SingletonUtil.InstanceAvailable(out fixingsUtil))
+            {
+                fixingsUtil.Fixings++;
+            }
+            Confirmed = false;
 			ConstructionUtil util;
 			if (SingletonUtil.InstanceAvailable(out util))
 			{
@@ -86,7 +98,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
     }
     public void Confirm()
     {
-        gameObject.GetComponent<MeshRenderer>().material = confirmed_material;
+        MeshRenderer.material = confirmed_material;
         confirmed = true;
     }
 }

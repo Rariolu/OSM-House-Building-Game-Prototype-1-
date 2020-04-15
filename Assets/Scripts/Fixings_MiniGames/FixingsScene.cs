@@ -12,25 +12,23 @@ using UnityEngine;
 /// </summary>
 public class FixingsScene : MonoBehaviour
 {
-    
     void Start()
     {
-        InGameSceneScript gameScene;
-        if (SingletonUtil.InstanceAvailable(out gameScene))
-        {
-            int fixs = gameScene.AvailableFixtures;
-            Fixings.fixings = fixs;
-        }
-        else
-        {
-            Fixings.fixings = 4;
-        }
-        
-
         FixingsUtil fixingsUtil;
         if (SingletonUtil.InstanceAvailable(out fixingsUtil))
         {
-            foreach(FIXINGSECTION fSection in fixingsUtil.CurrentIntersection.FixingSections)
+            InGameSceneScript gameScene;
+            if (SingletonUtil.InstanceAvailable(out gameScene))
+            {
+                int fixs = gameScene.AvailableFixtures;
+                fixingsUtil.Fixings = fixs;
+            }
+            else
+            {
+                fixingsUtil.Fixings = 4;
+            }
+
+            foreach (FIXINGSECTION fSection in fixingsUtil.CurrentIntersection.FixingSections)
             {
                 Fixings fixings;
                 if (Fixings.InstanceExists(fSection, out fixings))

@@ -7,17 +7,25 @@ using UnityEngine.UI;
 /// A script which updates the UI with the current amount of
 /// used fixings.
 /// </summary>
+[RequireComponent(typeof(Text))]
 public class Fixings_Count : MonoBehaviour
 {
-    public Text fixingsUsedText;
+    Text lbl;
+    Text fixingsUsedText
+    {
+        get
+        {
+            return lbl ?? (lbl = GetComponent<Text>());
+        }
+    }
 
     private void Start()
     {
-        fixingsUsedText = GetComponent<Text>();
-    }
-
-    private void Update()
-    {
-        fixingsUsedText.text = "Fixings: " + Fixings.fixings.ToString();
+        FixingsUtil util;
+        if (SingletonUtil.InstanceAvailable(out util))
+        {
+            fixingsUsedText.text = "Fixings: {0}".FormatText(util.Fixings);
+            util.FixingsChanged += (fixings) => { fixingsUsedText.text = "Fixings: {0}".FormatText(fixings); };
+        }
     }
 }

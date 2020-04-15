@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void FixingsChanged(int fixings);
 
 /// <summary>
 /// A class used to store and retrieve the Intersection that is currently
@@ -17,6 +18,26 @@ public class FixingsUtil
             return currentIntersection;
         }
     }
+
+    int fixings;
+    public int Fixings
+    {
+        get
+        {
+            return fixings;
+        }
+        set
+        {
+            fixings = value;
+            if (FixingsChanged != null)
+            {
+                FixingsChanged(fixings);
+            }
+        }
+    }
+
+    public FixingsChanged FixingsChanged;
+
     private FixingsUtil(Intersection intersection)
     {
         currentIntersection = intersection;
