@@ -10,6 +10,7 @@ using System.Collections;
 
 public delegate void SnapPointDeleted();
 public delegate void SnapPointTriggered();
+public delegate void SnapPointUnTriggered();
 
 /// <summary>
 /// A script which is attached to the SnapPoints which allows
@@ -32,13 +33,35 @@ public class SnapPointTrigger : MonoBehaviour
         set
         {
             isSnapped = value;
+            Logger.Log("Blep");
+            if (isSnapped)
+            {
+                if (SnapPointTriggered != null)
+                {
+                    SnapPointTriggered();
+                }
+                else
+                {
+                    Logger.Log("triggered delegate null");
+                }
+            }
+            else
+            {
+                if (SnapPointUnTriggered != null)
+                {
+                    SnapPointUnTriggered();
+                }
+                else
+                {
+                    Logger.Log("untriggered delegate null");
+                }
+            }
         }
     }
 
     public SnapPointDeleted SnapPointDeleted;
     public SnapPointTriggered SnapPointTriggered;
-
-    public int dropIndex;
+    public SnapPointUnTriggered SnapPointUnTriggered;
 
     /// <summary>
     /// The snap type (which determines which objects
@@ -69,7 +92,7 @@ public class SnapPointTrigger : MonoBehaviour
                             {
                                 gameSceneScript.AddPlacement(ppo);
                             }
-                            isSnapped = true;
+                            Snapped = true;
                             counter.DecrementCount(currentPrefab);
                         }
                     }
