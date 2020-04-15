@@ -19472,7 +19472,7 @@ PrefabInstance:
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.24
+      value: 92.56
       objectReference: {fileID: 0}
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
@@ -19482,7 +19482,7 @@ PrefabInstance:
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -220.12
+      value: -219.78
       objectReference: {fileID: 0}
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
@@ -21514,7 +21514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39ca7968bfb59146a7bb80457578254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapPoints: []
+  snapPoints:
+  - {fileID: 4847311202795060773}
+  - {fileID: 3164071910129551128}
 --- !u!1001 &1164198560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24445,7 +24447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39ca7968bfb59146a7bb80457578254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapPoints: []
+  snapPoints:
+  - {fileID: 5247068437632476417}
+  - {fileID: 93964215956895517}
 --- !u!4 &1347857334 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c872576beb870314995e55e9607c97df,
@@ -32918,7 +32922,7 @@ PrefabInstance:
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.24
+      value: 92.78
       objectReference: {fileID: 0}
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
@@ -32928,7 +32932,7 @@ PrefabInstance:
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -244.23
+      value: -244.61
       objectReference: {fileID: 0}
     - target: {fileID: 6946157043457340219, guid: 58cfb89b56f266c439f05df8e6c9406c,
         type: 3}
@@ -40223,8 +40227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 850269925585575013}
+  - {fileID: 1652806741525158007}
 --- !u!4 &1324312797725111
 Transform:
   m_ObjectHideFlags: 0
