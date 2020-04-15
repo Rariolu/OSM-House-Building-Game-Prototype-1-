@@ -24,11 +24,6 @@ public class SnapPoint
     /// </summary>
     GameObject gameObject;
 
-    public void SetDropIndex(int index)
-    {
-        trigger.dropIndex = index;
-    }
-
     SnapPointTrigger trigger;
 
     /// <summary>
