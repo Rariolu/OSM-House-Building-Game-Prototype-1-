@@ -196,7 +196,7 @@ MonoBehaviour:
   - name: MENU_BUTTON_CLICK
     clip: {fileID: 8300000, guid: 27eaa922784a51b46a446c7114c20255, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.2
     type: 0
   - name: Swiping
     clip: {fileID: 8300000, guid: a2b25f4c8b34edf4784061bdbe05adbd, type: 3}
@@ -209,9 +209,19 @@ MonoBehaviour:
     volume: 0.2
     type: 0
   - name: TURNING_PAGE
-    clip: {fileID: 8300000, guid: 6d059b25f029aee479cab4142eefd38a, type: 3}
+    clip: {fileID: 8300000, guid: df629cb6c3bacc140b07260a8ca063dc, type: 3}
     loop: 0
-    volume: 0.3
+    volume: 0.4
+    type: 0
+  - name: EXTRA_BUTTON_CLICK
+    clip: {fileID: 8300000, guid: 6e102eb1c3461284180d87f3eeb65f4f, type: 3}
+    loop: 0
+    volume: 0.075
+    type: 0
+  - name: FIXINGS
+    clip: {fileID: 8300000, guid: 7e458ec5550be8c41b5575f1acf92b70, type: 3}
+    loop: 0
+    volume: 1
     type: 0
 --- !u!114 &214173333
 MonoBehaviour:

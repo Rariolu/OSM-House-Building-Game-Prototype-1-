@@ -70,6 +70,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
             fixings = fixings - 1;
             MeshRenderer.material = confirmed_material;
             confirmed = true;
+            IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.FIXINGS);
         }
         else
         {
