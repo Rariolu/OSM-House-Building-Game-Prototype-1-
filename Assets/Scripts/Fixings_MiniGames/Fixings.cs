@@ -77,7 +77,7 @@ public class Fixings : MultitonScript<Fixings,FIXINGSECTION>
                 util.Fixings--;
             }
             Confirmed = true;
-            IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.FIXING);
+            IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.FIXINGS);
         }
         else
         {

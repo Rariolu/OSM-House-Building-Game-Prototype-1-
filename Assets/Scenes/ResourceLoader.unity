@@ -223,11 +223,6 @@ MonoBehaviour:
     loop: 0
     volume: 1
     type: 0
-  - name: FIXING
-    clip: {fileID: 8300000, guid: 367d15685907f85408518faea4cd398e, type: 3}
-    loop: 0
-    volume: 0.3
-    type: 0
 --- !u!114 &214173333
 MonoBehaviour:
   m_ObjectHideFlags: 0
