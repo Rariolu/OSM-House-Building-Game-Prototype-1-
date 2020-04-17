@@ -107,11 +107,7 @@ public class SnapPoint
         GameObject sphereObj;
         GameObject temp;
         string snapPointGameObjName = "SnapPoint_" + type;
-        if (ResourceManager.GetItem(snapPointGameObjName,out sphereObj))
-        {
-            temp = Object.Instantiate(sphereObj);
-        }
-        else if (ResourceManager.GetItem("SnapPoint", out sphereObj))
+        if (ResourceManager.GetItem(snapPointGameObjName,out sphereObj) || ResourceManager.GetItem("SnapPoint", out sphereObj))
         {
             temp = Object.Instantiate(sphereObj);
         }
