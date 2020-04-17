@@ -12725,8 +12725,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0166807, y: 1.0000006, z: 1.0000002}
-  m_Center: {x: 0.0000003874302, y: 0.0000011920929, z: 0.49999958}
+  m_Size: {x: 2.0166807, y: 1.0000006, z: 0.91300946}
+  m_Center: {x: 0.00000038146973, y: 0.0000011920929, z: 0.45650455}
 --- !u!1001 &587665041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14165,8 +14165,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0166807, y: 2.0166807, z: 1.0000002}
-  m_Center: {x: 0.00000035762787, y: 0.0000017285347, z: 0.4999994}
+  m_Size: {x: 2.0166807, y: 2.0166807, z: 0.8699524}
+  m_Center: {x: 0.00000038146973, y: 0.0000017166138, z: 0.43497583}
 --- !u!1 &631804480
 GameObject:
   m_ObjectHideFlags: 0
@@ -15669,7 +15669,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.15e-43, y: 0.0040684454, z: 9.15e-43, w: 0.0000000053010467}
+  m_BoundingSphereOverride: {x: 9.15e-43, y: NaN, z: 9.15e-43, w: 0.000000005298361}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
@@ -16868,8 +16868,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0166807, y: 2.0166807, z: 1.0000002}
-  m_Center: {x: 0.0000003874302, y: 0.0000017285347, z: 0.4999994}
+  m_Size: {x: 2.0166807, y: 2.0166807, z: 0.8687773}
+  m_Center: {x: 0.00000038146973, y: 0.0000017166138, z: 0.43438876}
 --- !u!1 &802218906
 GameObject:
   m_ObjectHideFlags: 0
@@ -25017,8 +25017,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0166807, y: 2.0166807, z: 1.0000002}
-  m_Center: {x: 0.0000003874302, y: 0.0000006556511, z: 0.49999917}
+  m_Size: {x: 2.0166807, y: 2.0166807, z: 0.883697}
+  m_Center: {x: 0.00000038146973, y: 0.00000066757207, z: 0.441848}
 --- !u!1001 &1237648271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25411,7 +25411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1268546775
 Transform:
   m_ObjectHideFlags: 0
@@ -40203,8 +40203,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0166807, y: 2.0166807, z: 1.0000002}
-  m_Center: {x: 0.00000035762787, y: 0.0000006556511, z: 0.49999917}
+  m_Size: {x: 2.0166807, y: 2.0166807, z: 0.92387307}
+  m_Center: {x: 0.00000038146973, y: 0.00000066757207, z: 0.4619358}
 --- !u!1 &1878494945
 GameObject:
   m_ObjectHideFlags: 0
