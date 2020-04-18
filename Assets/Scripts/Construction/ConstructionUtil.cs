@@ -3,6 +3,7 @@ using System.Collections;
 
 public delegate void DestroyedPrefabChange(int prefabs);
 public delegate void FixingsReset();
+public delegate void TimePassed(uint t);
 
 /// <summary>
 /// A class used to set and retrieve the current contract that's being used
@@ -57,6 +58,7 @@ public class ConstructionUtil
     }
 
     public FixingsReset FixingsReset;
+    public TimePassed TimePassed;
 
     #endregion
 
@@ -68,6 +70,10 @@ public class ConstructionUtil
     public void IncrementDaysPassed()
     {
         daysPassed++;
+        if (TimePassed != null)
+        {
+            TimePassed(daysPassed);
+        }
     }
     public void IncrementDestruction()
     {
