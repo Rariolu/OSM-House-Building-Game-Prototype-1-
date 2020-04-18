@@ -265,11 +265,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         bottomHalf.name = gameObject.name + " bottom half";
         bottomHalf.transform.position = gameObject.transform.position;
         bottomHalf.transform.parent = gameObject.transform;
-        SceneObjectScript gameSceneObjectScript;
-        if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameSceneObjectScript))
-        {
-            bottomHalf.transform.SetParent(gameSceneObjectScript.transform);
-        }
     }
 
     /// <summary>
@@ -341,6 +336,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
                 placedPrefabsTransform = ppObj.transform;
             }
             gameObject.transform.SetParent(placedPrefabsTransform);
+            bottomHalf.transform.SetParent(placedPrefabsTransform);
         }
     }
 }
