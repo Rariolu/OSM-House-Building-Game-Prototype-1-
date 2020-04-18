@@ -332,7 +332,15 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         SceneObjectScript gameScene;
         if (SceneObjectScript.InstanceExists(SCENE.InGame, out gameScene))
         {
-            gameObject.transform.SetParent(gameScene.transform);
+            Transform placedPrefabsTransform = gameScene.transform.Find("PlacedPrefabs");
+            if (placedPrefabsTransform == null)
+            {
+                GameObject ppObj = new GameObject();
+                ppObj.name = "PlacedPrefabs";
+                ppObj.transform.SetParent(gameScene.transform);
+                placedPrefabsTransform = ppObj.transform;
+            }
+            gameObject.transform.SetParent(placedPrefabsTransform);
         }
     }
 }
