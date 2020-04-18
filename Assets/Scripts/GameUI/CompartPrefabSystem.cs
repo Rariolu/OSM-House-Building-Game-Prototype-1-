@@ -69,6 +69,12 @@ public class CompartPrefabSystem : MonoBehaviour
                 grid.SetPrefabs(prefabs);
             }
         }
+
+        PrefabCounter counter;
+        if (SingletonUtil.InstanceAvailable(out counter))
+        {
+            counter.ForgetCurrentPrefab();
+        }
     }
 
     public void SwitchCompart(PREFAB_COMPART compart)
