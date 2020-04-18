@@ -17,7 +17,6 @@ public class TurnManager : MonoBehaviour
         if (pbTransition != null)
         {
             pbTransition.gameObject.SetActive(true);
-
         }
     }
     public void IncrementTurns()
