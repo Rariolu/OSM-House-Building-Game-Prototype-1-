@@ -252,7 +252,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             bottomHalf = Object.Instantiate(templateBottomHalf);
             bottomHalf.GetComponent<MeshRenderer>().material = bottomMat;
-            Logger.Log("BottomHalf template found and instantiated.");
         }
         else
         {
