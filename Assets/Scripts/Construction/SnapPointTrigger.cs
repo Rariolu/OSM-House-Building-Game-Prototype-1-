@@ -33,6 +33,11 @@ public class SnapPointTrigger : MonoBehaviour
         set
         {
             isSnapped = value;
+            TurnManager turnManager;
+            if (SingletonUtil.InstanceAvailable(out turnManager))
+            {
+                turnManager.IncrementTurns();
+            }
             if (isSnapped)
             {
                 if (SnapPointTriggered != null)
