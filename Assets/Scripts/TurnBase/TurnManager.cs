@@ -5,6 +5,7 @@ using System.Collections;
 public class TurnManager : MonoBehaviour
 {
     public Image pbTransition;
+    public Text lblTurn;
     public uint turnsPerMonth = 10;
     int currentTurns;
     private void Awake()
@@ -29,7 +30,6 @@ public class TurnManager : MonoBehaviour
             if (SingletonUtil.InstanceAvailable(out util))
             {
                 util.IncrementDaysPassed();
-                Logger.Log("Months: {0};", util.DaysPassed);
             }
 
             TransitionScript transition;
@@ -37,6 +37,15 @@ public class TurnManager : MonoBehaviour
             {
                 transition.Transition();
             }
+        }
+        SetTurnText(currentTurns);
+    }
+
+    void SetTurnText(int turn)
+    {
+        if (lblTurn != null)
+        {
+            lblTurn.text = "Turn: {0}".FormatText(turn);
         }
     }
 }
