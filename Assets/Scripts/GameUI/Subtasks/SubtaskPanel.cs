@@ -9,6 +9,7 @@ public class SubtaskPanel : MonoBehaviour
     public Text lblTimeframe;
     public SubtaskCheckbox cbDestroyedPrefabs;
     public SubtaskCheckbox cbChangedFixings;
+    public SubtaskCheckbox cbOnTime;
 
     int budget;
     int Budget
@@ -93,6 +94,13 @@ public class SubtaskPanel : MonoBehaviour
             //Set the "destroyed prefabs" checkbox to fail when a prefab is destroyed.
             constructionUtil.DestroyedPrefabChange += (prefabs) => { cbDestroyedPrefabs.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
             constructionUtil.FixingsReset += () => { cbChangedFixings.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED; };
+            constructionUtil.TimePassed += (t) =>
+            {
+                if (t > constructionUtil.Contract.time)
+                {
+                    cbOnTime.CompletionState = SubtaskCheckbox.COMPLETION_STATE.FAILED;
+                }
+            };
         }
 
         if (cbDestroyedPrefabs != null)
@@ -103,6 +111,11 @@ public class SubtaskPanel : MonoBehaviour
         if (cbChangedFixings != null)
         {
             cbChangedFixings.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
+        }
+
+        if (cbOnTime != null)
+        {
+            cbOnTime.CompletionState = SubtaskCheckbox.COMPLETION_STATE.SUCCEEDED;
         }
     }
 
