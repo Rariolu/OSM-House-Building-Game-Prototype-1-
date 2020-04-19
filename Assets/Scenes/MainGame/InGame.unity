@@ -1217,7 +1217,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3270,7 +3270,7 @@ RectTransform:
   - {fileID: 1066367222}
   - {fileID: 1416855628}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4450,11 +4450,9 @@ RectTransform:
   - {fileID: 1897578125}
   - {fileID: 1631474604}
   - {fileID: 1214605790}
-  - {fileID: 1134884135}
   - {fileID: 1777522718}
   - {fileID: 561824686}
   - {fileID: 1798767190}
-  - {fileID: 376582591}
   - {fileID: 245752232}
   - {fileID: 950450248}
   - {fileID: 166147914}
@@ -5112,7 +5110,7 @@ Transform:
   m_Children:
   - {fileID: 1432572140}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &245752233
 MonoBehaviour:
@@ -7157,51 +7155,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 70f1f5a45ac031e4eb3d3f266b2edf28, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8842c1e97583b2845afa780a7be41daf, type: 3}
---- !u!1 &376582590
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 376582591}
-  - component: {fileID: 376582592}
-  m_Layer: 0
-  m_Name: ContractGameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &376582591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376582590}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -473.3241, y: 236.31305, z: -1673.875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224061336}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &376582592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376582590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563bb7c42f1fdd64c966fe9517dc7cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Menu: 
-  ContractMenuCanvas: {fileID: 245752231}
 --- !u!4 &378748668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c872576beb870314995e55e9607c97df,
@@ -11675,6 +11628,7 @@ GameObject:
   - component: {fileID: 561824689}
   - component: {fileID: 561824688}
   - component: {fileID: 561824687}
+  - component: {fileID: 561824690}
   m_Layer: 5
   m_Name: BrochureButton
   m_TagString: Untagged
@@ -11694,7 +11648,7 @@ RectTransform:
   m_LocalScale: {x: 1.326143, y: 3.9318492, z: 1.5524281}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -11768,18 +11722,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 561824687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1134884134}
-        m_MethodName: BrochureActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &561824689
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11788,6 +11731,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561824685}
   m_CullTransparentMesh: 0
+--- !u!114 &561824690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561824685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8ec0c9b84ede0448f1900a8bea79f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: 0
+  playClickSound: 0
+  gameObjects:
+  - {fileID: 1777522717}
+  initiallyActive: 0
 --- !u!1 &564233145
 GameObject:
   m_ObjectHideFlags: 0
@@ -13504,7 +13464,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -19659,6 +19619,7 @@ GameObject:
   - component: {fileID: 950450251}
   - component: {fileID: 950450250}
   - component: {fileID: 950450249}
+  - component: {fileID: 950450253}
   m_Layer: 5
   m_Name: ContractButton
   m_TagString: Untagged
@@ -19678,7 +19639,7 @@ RectTransform:
   m_LocalScale: {x: 0.64648277, y: 0.74589664, z: 0.29450542}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -19755,18 +19716,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950450249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 376582592}
-        m_MethodName: ContractActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &950450251
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19775,6 +19725,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950450247}
   m_CullTransparentMesh: 0
+--- !u!114 &950450253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950450247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8ec0c9b84ede0448f1900a8bea79f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: 0
+  playClickSound: 0
+  gameObjects:
+  - {fileID: 245752231}
+  initiallyActive: 0
 --- !u!1 &957722198
 GameObject:
   m_ObjectHideFlags: 0
@@ -20523,7 +20490,7 @@ RectTransform:
   - {fileID: 1789853607}
   - {fileID: 1991751802}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22645,7 +22612,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -23545,57 +23512,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c87b9def81efdcb4cabfdd7429551851, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c872576beb870314995e55e9607c97df, type: 3}
---- !u!1 &1134884133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1134884135}
-  - component: {fileID: 1134884134}
-  m_Layer: 5
-  m_Name: BrochureGameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1134884134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134884133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a57ea3649419004282dd2b2a8be0215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Menu: 
-  IsBrochureActive: 0
-  BrochureMenuCanvas: {fileID: 1777522717}
---- !u!224 &1134884135
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134884133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224061336}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1143980854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26495,7 +26411,7 @@ RectTransform:
   - {fileID: 1169556481}
   - {fileID: 177391059}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31775,7 +31691,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1134884134}
+      - m_Target: {fileID: 0}
         m_MethodName: SellHouse
         m_Mode: 1
         m_Arguments:
@@ -38008,7 +37924,7 @@ Transform:
   - {fileID: 22108312}
   - {fileID: 1271852794}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1785740708
 PrefabInstance:
@@ -38531,7 +38447,7 @@ GameObject:
   - component: {fileID: 1798767194}
   - component: {fileID: 1798767192}
   - component: {fileID: 1798767191}
-  - component: {fileID: 1798767195}
+  - component: {fileID: 1798767193}
   m_Layer: 5
   m_Name: BuildButton
   m_TagString: Untagged
@@ -38551,7 +38467,7 @@ RectTransform:
   m_LocalScale: {x: 1.2631, y: 1.2631, z: 1.2631}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38626,15 +38542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!222 &1798767194
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798767189}
-  m_CullTransparentMesh: 0
---- !u!114 &1798767195
+--- !u!114 &1798767193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38643,14 +38551,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1798767189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 849b4f9de2986d049827da4777d22c9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e8ec0c9b84ede0448f1900a8bea79f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 5
   playClickSound: 1
-  btnWallPrefabs: {fileID: 2096092171}
-  btnFloorPrefabs: {fileID: 719827840}
-  btnRoofPrefabs: {fileID: 2000232268}
+  gameObjects:
+  - {fileID: 2096092171}
+  - {fileID: 719827840}
+  - {fileID: 2000232268}
+  initiallyActive: 0
+--- !u!222 &1798767194
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798767189}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1799160783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40137,7 +40055,7 @@ RectTransform:
   - {fileID: 1888659937}
   - {fileID: 1669403504}
   m_Father: {fileID: 224061336}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43181,7 +43099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224061336}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2030911440
 MonoBehaviour:
