@@ -99,4 +99,13 @@ public class PrefabCounter
             prefabView.SetPrefab(prefab);
         }
     }
+
+    public void ForgetCurrentPrefab()
+    {
+        if (prefabSelected)
+        {
+            prefabSelected = false;
+            SnapPoint.HideSnapPoints(selectedPrefab.snapType);
+        }
+    }
 }
