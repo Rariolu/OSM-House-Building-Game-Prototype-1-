@@ -121,9 +121,10 @@ public class Intersection : MultitonClass<Intersection,int>
         IntersectionComponent ic = gameObject.GetComponent<IntersectionComponent>() ?? gameObject.AddComponent<IntersectionComponent>();
         ic.Click += () =>
         {
-            PrefabCounter counter;
-            Prefab p;
-            bool apply = !SingletonUtil.InstanceAvailable(out counter) || !counter.PrefabAvailable(out p);
+            //PrefabCounter counter;
+            //Prefab p;
+            bool apply = true;
+            //bool apply = !SingletonUtil.InstanceAvailable(out counter) || !counter.PrefabAvailable(out p);
             if (apply)
             {
                 Util.ApplyFixturesToIntersection(this);
