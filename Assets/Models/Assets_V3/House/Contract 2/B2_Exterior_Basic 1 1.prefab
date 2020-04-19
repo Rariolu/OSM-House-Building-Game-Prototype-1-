@@ -121,11 +121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5668466078989805595}
     m_Modifications:
-    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
-        type: 3}
-      propertyPath: m_Name
-      value: SandDustPart
-      objectReference: {fileID: 0}
     - target: {fileID: 6684454031446462208, guid: b863e3a1e330ef848b602de7b45e85ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -180,6 +175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
+        type: 3}
+      propertyPath: m_Name
+      value: SandDustPart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b863e3a1e330ef848b602de7b45e85ba, type: 3}

@@ -29,6 +29,6 @@ public class TimeKeeper : MonoBehaviour
 
     void TimePassed(uint time)
     {
-        Label.text = "Month: {0}".FormatText(time);
+        Label.text = "Week: {0}".FormatText(time);
     }
 }
