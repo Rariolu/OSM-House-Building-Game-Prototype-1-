@@ -13,7 +13,6 @@ public class SellHouseButton : UIButton
 
     void SellHouseButton_Click(UIButton sender)
     {
-        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.SELL_HOUSE);
-        Util.SetExitState(EndConditionUtil.Pass());
+        Util.SellHouse();
     }
 }

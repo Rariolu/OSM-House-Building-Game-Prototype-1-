@@ -487,6 +487,12 @@ public static class Util
         }
     }
 
+    public static void SellHouse()
+    {
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.SELL_HOUSE);
+        SetExitState(EndConditionUtil.Pass());
+    }
+
     /// <summary>
     /// Load the test scene which shows an estimate of the FPS onscreen.
     /// </summary>
