@@ -826,7 +826,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &56431859
 PrefabInstance:
@@ -3139,7 +3139,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 1574793146}
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 5, y: 0, z: -5}
 --- !u!1001 &157690657
 PrefabInstance:
@@ -6161,7 +6161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &295057611
 MonoBehaviour:
@@ -8784,51 +8784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c347d3f1257bd644c8c34b28f135a3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &434441488
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 434441489}
-  - component: {fileID: 434441490}
-  m_Layer: 0
-  m_Name: CamSwitchGameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &434441489
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434441488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1193149744}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &434441490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434441488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2424e3d4903da547bc4aae77c3c6d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cam1: {fileID: 963194225}
-  Cam2: {fileID: 1574793145}
 --- !u!1001 &440185617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9293,7 +9248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &478017944
 MonoBehaviour:
@@ -13956,7 +13911,7 @@ GameObject:
   - component: {fileID: 626792479}
   - component: {fileID: 626792477}
   - component: {fileID: 626792478}
-  - component: {fileID: 626792480}
+  - component: {fileID: 626792481}
   m_Layer: 5
   m_Name: CameraSwitchButton
   m_TagString: Untagged
@@ -14025,18 +13980,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 626792478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 434441490}
-        m_MethodName: Camera
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &626792478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14073,7 +14017,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626792475}
   m_CullTransparentMesh: 0
---- !u!114 &626792480
+--- !u!114 &626792481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14082,11 +14026,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 626792475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10536a97c239c64bb9fb6291c1df115, type: 3}
+  m_Script: {fileID: 11500000, guid: d18a9d67b2a07e84ab9c8e72287df46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 5
   playClickSound: 1
+  mainCamera: {fileID: 963194225}
+  topCamera: {fileID: 1574793145}
 --- !u!1001 &630509529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15916,7 +15862,6 @@ GameObject:
   - component: {fileID: 719827845}
   - component: {fileID: 719827843}
   - component: {fileID: 719827842}
-  - component: {fileID: 719827846}
   m_Layer: 5
   m_Name: btnFloorPrefabs
   m_TagString: Untagged
@@ -16035,23 +15980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: 0
-  playClickSound: 0
-  compart: 2
---- !u!114 &719827846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719827840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10536a97c239c64bb9fb6291c1df115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sound: 5
   playClickSound: 1
+  compart: 2
 --- !u!1001 &722688622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24595,7 +24526,6 @@ Transform:
   - {fileID: 224061336}
   - {fileID: 705507995}
   - {fileID: 1426342203}
-  - {fileID: 434441489}
   - {fileID: 295057610}
   - {fileID: 153405619}
   - {fileID: 50518793}
@@ -25663,7 +25593,7 @@ Transform:
   - {fileID: 2039678708}
   - {fileID: 312805338}
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1268546776
 MonoBehaviour:
@@ -35788,7 +35718,7 @@ Transform:
   - {fileID: 1535642666}
   - {fileID: 1186260729}
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1710642147
 MonoBehaviour:
@@ -41423,7 +41353,7 @@ Transform:
   - {fileID: 643448058}
   - {fileID: 803021646}
   m_Father: {fileID: 1193149744}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924715705
 GameObject:
@@ -42648,7 +42578,6 @@ GameObject:
   - component: {fileID: 2000232273}
   - component: {fileID: 2000232271}
   - component: {fileID: 2000232270}
-  - component: {fileID: 2000232274}
   m_Layer: 5
   m_Name: btnRoofPrefabs
   m_TagString: Untagged
@@ -42767,23 +42696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: 0
-  playClickSound: 0
-  compart: 3
---- !u!114 &2000232274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000232268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10536a97c239c64bb9fb6291c1df115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sound: 5
   playClickSound: 1
+  compart: 3
 --- !u!1 &2006782617
 GameObject:
   m_ObjectHideFlags: 0
@@ -44572,7 +44487,6 @@ GameObject:
   - component: {fileID: 2096092176}
   - component: {fileID: 2096092174}
   - component: {fileID: 2096092173}
-  - component: {fileID: 2096092177}
   m_Layer: 5
   m_Name: btnWallPrefabs
   m_TagString: Untagged
@@ -44691,23 +44605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8364af612857f7489b022caf13aebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: 0
-  playClickSound: 0
-  compart: 1
---- !u!114 &2096092177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096092171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10536a97c239c64bb9fb6291c1df115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sound: 5
   playClickSound: 1
+  compart: 1
 --- !u!1 &2096141915
 GameObject:
   m_ObjectHideFlags: 0
