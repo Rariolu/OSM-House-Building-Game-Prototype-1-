@@ -3122,7 +3122,7 @@ MonoBehaviour:
     rotation: {x: 5, y: -180, z: -5}
   - position: {x: -11.5, y: 11.3014, z: -20.3}
     rotation: {x: 5, y: -90, z: -5}
-  minSwipeDistance: 45
+  minSwipeDistance: 55
   speed: 2
   moveY: 1
 --- !u!4 &153405619

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 977231760158364111}
   - component: {fileID: 4307252317601321174}
   - component: {fileID: 9079014007006373326}
+  - component: {fileID: 2729785487631431499}
   m_Layer: 0
   m_Name: SM_Exterior_Basic 1 1
   m_TagString: Untagged
@@ -114,6 +115,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &2729785487631431499
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563599092018980115}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a0e8b2f7155a8084eb4996cdb56e012c, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 1
+  m_CullingType: 0
 --- !u!1001 &7444564437751174610
 PrefabInstance:
   m_ObjectHideFlags: 0

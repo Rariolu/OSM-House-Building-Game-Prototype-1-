@@ -267,6 +267,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         bottomHalf.transform.parent = gameObject.transform;
     }
 
+    public Animator anim;
     /// <summary>
     /// Destroy the placed object and the intersection between it
     /// and the prefab it had snapped to.
@@ -305,6 +306,10 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
         SnapPointTrigger.Snapped = false;
 
+        anim.SetBool("Exterior_Wall_Des", true);
+
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.DESTRUCTION_0);
+
         RemoveInstance(instID);
     }
 
@@ -317,7 +322,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     public void Implode(float force, Vector3 explosionCentre)
     {
-        const float explosionDistance = 50f;
+        const float explosionDistance = 35f;
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
         rigidBody.AddExplosionForce(-force, explosionCentre, explosionDistance);
     }

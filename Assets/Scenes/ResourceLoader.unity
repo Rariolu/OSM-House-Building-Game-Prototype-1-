@@ -224,9 +224,9 @@ MonoBehaviour:
     volume: 1
     type: 0
   - name: DESTRUCTION_0
-    clip: {fileID: 8300000, guid: a34f6dd1c6894bf4385ff50e31d65ad9, type: 3}
+    clip: {fileID: 8300000, guid: 1205a7a2d337701499452fdc3cf43aa1, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.25
     type: 0
 --- !u!114 &214173333
 MonoBehaviour:
