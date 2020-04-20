@@ -14,6 +14,9 @@ using UnityEngine;
 public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 {
     #region MemberVariables_N_Properties
+
+    //Animator animator;
+
     GameObject bottomHalf;
 
     bool dropped = false;
@@ -39,6 +42,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     }
 
     Vector3 originalScale;
+
+    PrefabPlacementScript prefabPlacementScript;
 
     private Vector3 roundedPosition;
     public Vector3 RoundedPosition
@@ -166,9 +171,9 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.
-        PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
-        pps.parentPrefabInstance = this;
-        pps.PrefabPlacementDeleted += () =>
+        prefabPlacementScript = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+        prefabPlacementScript.parentPrefabInstance = this;
+        prefabPlacementScript.PrefabPlacementDeleted += () =>
         {
             RemoveInstance(instID);
         };
@@ -191,6 +196,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             Drop(dropWallButton.Dropped);
         }
+
+        //animator = gameObject.GetComponent<Animator>();
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
@@ -267,14 +274,13 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         bottomHalf.transform.parent = gameObject.transform;
     }
 
-    public Animator anim;
     /// <summary>
     /// Destroy the placed object and the intersection between it
     /// and the prefab it had snapped to.
     /// </summary>
     public void Destroy()
     {
-        Object.Destroy(gameObject);
+        //Object.Destroy(gameObject);
         Object.Destroy(bottomHalf);
 
         foreach (Vector3 intersection in intersectionPoints)
@@ -306,11 +312,11 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
         SnapPointTrigger.Snapped = false;
 
-        anim.SetBool("Exterior_Wall_Des", true);
+        //animator.SetBool("Exterior_Wall_Des", true);
 
-        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.DESTRUCTION_0);
+        prefabPlacementScript.DestructionAnimation();
 
-        RemoveInstance(instID);
+        //RemoveInstance(instID);
     }
 
     public void Drop(bool drop)
