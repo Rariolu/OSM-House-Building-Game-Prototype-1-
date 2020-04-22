@@ -47,7 +47,7 @@ public static class Util
         }
     }
 
-    public static SysRand rand = new SysRand();
+    public static SuperRand rand = new SuperRand();
 
     static bool resourcesLoaded = false;
 

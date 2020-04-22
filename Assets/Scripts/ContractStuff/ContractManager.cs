@@ -31,7 +31,6 @@ public class ContractManager : MonoBehaviour
             staticContracts = contracts;
             staticContractsSet = true;
         }
-        Logger.Log("ContractManager->Start()");
         for (int i = 0; i < staticContracts.Length; i++)
         {
             Contract contract = staticContracts[i];
@@ -41,19 +40,6 @@ public class ContractManager : MonoBehaviour
                 contractSelection.SetContract(contract);
             }
         }
-        //ContractSelectionScript[] contractSelections = ContractSelectionScript.Values;
-        //for (int i = 0; i < contractSelections.Length; i++)
-        //{
-        //    if (i < staticContracts.Length)
-        //    {
-        //        Contract contract = staticContracts[i];
-        //        contractSelections[i].SetContract(contract);
-        //    }
-        //    else
-        //    {
-        //        contractSelections[i].SetActive(false);
-        //    }
-        //}
     }
 
     public static Dictionary<FINISHED_CONSTRUCTION, int> highestSellingPrices = new Dictionary<FINISHED_CONSTRUCTION, int>();

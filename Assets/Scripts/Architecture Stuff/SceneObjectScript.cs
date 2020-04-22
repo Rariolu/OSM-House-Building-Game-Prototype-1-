@@ -46,12 +46,12 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
         
         if (scene.ToString().NormaliseString() != sceneName.NormaliseString())
         {
-            Logger.Log("Scene \"{0}\" has SceneObject with value \"{1}\".",sceneName,scene);
+            //Logger.Log("Scene \"{0}\" has SceneObject with value \"{1}\".",sceneName,scene);
             SCENE parsedScene;
             if (Util.EnumTryParse(sceneName,out parsedScene))
             {
                 scene = parsedScene;
-                Logger.Log("SceneObject enum value changed to {0}.", scene);
+                //Logger.Log("SceneObject enum value changed to {0}.", scene);
             }
             else
             {

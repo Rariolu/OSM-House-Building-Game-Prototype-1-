@@ -9468,12 +9468,14 @@ MonoBehaviour:
   - {fileID: 1878494947}
   - {fileID: 165861979}
   pbHouse: {fileID: 904791880}
-  xmlBackupFile: Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml
   materialQuantites:
   - material: 1
     number: 4
   - material: 2
     number: 4
+  xmlBackupFile: Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml
+  destructionDelay: 2
+  vibrationShake: 0.25
 --- !u!114 &478017945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15865,7 +15867,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.71e-43, y: 7.1e-44, z: 0, w: 1339.2705}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.9
