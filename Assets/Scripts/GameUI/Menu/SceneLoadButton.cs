@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoadButton : UIButton
 {
+    public SCENE currentScene;
+    public bool deactivateCurrentScene = false;
     public SCENE scene;
     public LoadSceneMode loadSceneMode = LoadSceneMode.Single;
     protected override void Start()
@@ -16,7 +18,14 @@ public class SceneLoadButton : UIButton
     }
     void SceneLoad_Click(UIButton sender)
     {
-        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.MENU_BUTTON_CLICK);
         Util.LoadScene(scene, loadSceneMode);
+        if (loadSceneMode == LoadSceneMode.Additive && deactivateCurrentScene)
+        {
+            SceneObjectScript openScene;
+            if (SceneObjectScript.InstanceExists(currentScene, out openScene))
+            {
+                openScene.SetActive(false);
+            }
+        }
     }
 }

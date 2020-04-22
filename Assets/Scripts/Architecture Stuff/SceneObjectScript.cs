@@ -87,6 +87,11 @@ public class SceneObjectScript : MultitonScript<SceneObjectScript,SCENE>//MonoBe
         Logger.Log("Setting {0} to active state {1}", scene, active);
     }
 
+    private void OnDestroy()
+    {
+        RemoveInstance(scene);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

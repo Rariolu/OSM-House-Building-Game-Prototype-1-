@@ -64,4 +64,12 @@ public abstract class MultitonScript<T,U> : MonoBehaviour where T : MonoBehaviou
     {
         instances.Clear();
     }
+
+    protected static void RemoveInstance(U key)
+    {
+        if (instances.ContainsKey(key))
+        {
+            instances.Remove(key);
+        }
+    }
 }

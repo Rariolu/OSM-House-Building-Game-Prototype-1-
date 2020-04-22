@@ -371,7 +371,7 @@ public static class Util
             }
             else
             {
-                Util.LoadScene(prevSceneEnum,LoadSceneMode.Single,false);
+                LoadScene(prevSceneEnum,LoadSceneMode.Single,false);
             }
             SCENE currentScene = sceneStack.Pop();
             UnloadScene(currentScene);
