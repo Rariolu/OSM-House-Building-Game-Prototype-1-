@@ -48,6 +48,9 @@ public class InGameSceneScript : MonoBehaviour
     public MaterialQuantity[] materialQuantites;
     public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
 
+    public float destructionDelay = 2f;
+    public float vibrationShake = 1f;
+
     #endregion
 
     void Awake()
