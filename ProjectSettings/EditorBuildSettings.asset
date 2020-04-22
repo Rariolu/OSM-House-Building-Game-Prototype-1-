@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Misc/SpecTestScene.unity
     guid: e9fb8cefabb139d4fa0373f0d90283c2
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/UI_Misc/Credits.unity
     guid: 442a9689cf3c3bc44ab90cd32061922f
   - enabled: 1
     path: Assets/Scenes/ResourceLoader.unity

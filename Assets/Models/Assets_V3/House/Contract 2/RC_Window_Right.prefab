@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2898440006646685659}
   - component: {fileID: 1747910560444277796}
   m_Layer: 0
-  m_Name: RC_Window_Right 1
+  m_Name: RC_Window_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ Animator:
   m_GameObject: {fileID: 8135763503311388850}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5287a96c67282314f8c11116c920ca19, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -123,6 +123,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5094503658786157217}
     m_Modifications:
+    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
+        type: 3}
+      propertyPath: m_Name
+      value: SandDustPart 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6684454031446462208, guid: b863e3a1e330ef848b602de7b45e85ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,11 +182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
-        type: 3}
-      propertyPath: m_Name
-      value: SandDustPart 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b863e3a1e330ef848b602de7b45e85ba, type: 3}

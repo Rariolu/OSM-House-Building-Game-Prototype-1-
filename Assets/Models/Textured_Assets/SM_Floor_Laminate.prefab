@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7610471531776203561}
   - component: {fileID: 4224757852368381904}
   - component: {fileID: 2826377487149506574}
+  - component: {fileID: 5713889313562493921}
   m_Layer: 0
   m_Name: SM_Floor_Laminate
   m_TagString: Untagged
@@ -92,3 +93,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000002, z: 0.041500177}
   m_Center: {x: 0.5, y: 0, z: -0.000000081025085}
+--- !u!95 &5713889313562493921
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494304725582189324}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

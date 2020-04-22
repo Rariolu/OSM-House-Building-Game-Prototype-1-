@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2259323351798732655}
   - component: {fileID: 5505144723821472662}
   - component: {fileID: -5559309251840111824}
+  - component: {fileID: -7181244956385014480}
   m_Layer: 0
   m_Name: L_Roof
   m_TagString: Untagged
@@ -96,3 +97,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0519423, y: 2.435739, z: 0.3166137}
   m_Center: {x: 0.37979975, y: 0.003107012, z: 0.15830685}
+--- !u!95 &-7181244956385014480
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078423507953033034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

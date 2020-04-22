@@ -9393,6 +9393,7 @@ GameObject:
   - component: {fileID: 5955323848504209140}
   - component: {fileID: 1645073316488882557}
   - component: {fileID: 7369423296584190162}
+  - component: {fileID: 6404702438323548696}
   m_Layer: 0
   m_Name: B2_BigWin_Cen
   m_TagString: Untagged
@@ -9477,3 +9478,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09210893, y: 1.997114, z: 1}
   m_Center: {x: -0.00000013038516, y: 0.00000017881393, z: 0}
+--- !u!95 &6404702438323548696
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658039518398082217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
