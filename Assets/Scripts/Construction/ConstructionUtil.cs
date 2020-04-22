@@ -20,12 +20,12 @@ public class ConstructionUtil
             return contract;
         }
     }
-    uint daysPassed = 0;
-    public uint DaysPassed
+    uint weeksPassed = 0;
+    public uint WeeksPassed
     {
         get
         {
-            return daysPassed;
+            return weeksPassed;
         }
     }
     int destroyed = 0;
@@ -69,10 +69,10 @@ public class ConstructionUtil
     #region IncrementFunctions
     public void IncrementDaysPassed()
     {
-        daysPassed++;
+        weeksPassed++;
         if (TimePassed != null)
         {
-            TimePassed(daysPassed);
+            TimePassed(weeksPassed);
         }
     }
     public void IncrementDestruction()

@@ -37,13 +37,14 @@ public class Timer : MonoBehaviour//NullableInstanceScriptSingleton<Timer>
                 if (d >= interval)
                 {
                     constructionUtil.IncrementDaysPassed();
-                    Label.text = "{0} : {1}".FormatText(constructionUtil.DaysPassed, dayLimit);
+                    Label.text = "{0} : {1}".FormatText(constructionUtil.WeeksPassed, dayLimit);
                     d = 0;
                 }
                 yield return 0;
             }
         }
     }
+
 
     // Start is called before the first frame update
     void Start()

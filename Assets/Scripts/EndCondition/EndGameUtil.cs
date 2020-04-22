@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class EndGameUtil //: NullableInstanceClassSingleton<EndGameUtil>
+public class EndGameUtil
 {
     EXIT_STATE state;
     public EXIT_STATE ExitState
