@@ -91,11 +91,6 @@ public class SnapPointTrigger : MonoBehaviour
                             ppo.SnapPointTrigger = this;
                             ppo.SetSceneParent();
 
-                            InGameSceneScript gameSceneScript;
-                            if (SingletonUtil.InstanceAvailable(out gameSceneScript))
-                            {
-                                gameSceneScript.AddPlacement(ppo);
-                            }
                             Snapped = true;
                             counter.DecrementCount(currentPrefab);
                         }
