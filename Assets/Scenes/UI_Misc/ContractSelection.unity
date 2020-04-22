@@ -1360,7 +1360,7 @@ MonoBehaviour:
   contracts:
   - budget: 40
     finishedConstruction: 3
-    fixtures: 25
+    fixtures: 48
     name: Detached House
     positionsTaken: []
     prefabCollections:
@@ -1771,7 +1771,7 @@ MonoBehaviour:
     time: 0
   - budget: 40
     finishedConstruction: 2
-    fixtures: 37
+    fixtures: 27
     name: Semi-Detached House
     positionsTaken: []
     prefabCollections:
