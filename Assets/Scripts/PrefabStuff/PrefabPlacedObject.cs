@@ -15,8 +15,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 {
     #region MemberVariables_N_Properties
 
-    //Animator animator;
-
     GameObject bottomHalf;
 
     bool dropped = false;
@@ -27,10 +25,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     static int instCount = 0;
 
     readonly int instID;
-
-    List<Intersection> intersections = new List<Intersection>();
-
-    List<Vector3> intersectionPoints = new List<Vector3>();
 
     MeshRenderer mRenderer;
     MeshRenderer MeshRenderer
@@ -152,21 +146,6 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         
         if (SingletonUtil.InstanceAvailable(out gameScene))
         {
-            //switch (prefab.snapType)
-            //{
-            //    case SNAP_POINT_TYPE.EDGE:
-            //    {
-            //        AddIntersection(new Vector2(-1f / 2f, 0), prefab.snapType);
-            //        AddIntersection(new Vector2( 1f / 2f, 0), prefab.snapType);
-            //        break;
-            //    }
-            //    case SNAP_POINT_TYPE.CENTRE:
-            //    {
-            //        AddIntersection(new Vector2(0, -1f / 2f), prefab.snapType);
-            //        AddIntersection(new Vector2(0,  1f / 2f), prefab.snapType);
-            //        break;
-            //    }
-            //}
             gameScene.MaterialPlaced(prefab.material);
         }
 
@@ -200,16 +179,16 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         //animator = gameObject.GetComponent<Animator>();
     }
 
-    void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
-    {
-        Vector3 intersectionPosition = (gameObject.transform.position + new Vector3(offset.x * 5f, 2.5f, offset.y * 5f)).RoundToNearestMultiple(2.5f);
-        Intersection intersection;
-        if (gameScene.AddIntersection(Prefab.floorType, intersectionPosition, out intersection))
-        {
-            intersections.Add(intersection);
-        }
-        intersectionPoints.Add(intersectionPosition);
-    }
+    //void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
+    //{
+    //    Vector3 intersectionPosition = (gameObject.transform.position + new Vector3(offset.x * 5f, 2.5f, offset.y * 5f)).RoundToNearestMultiple(2.5f);
+    //    Intersection intersection;
+    //    if (gameScene.AddIntersection(Prefab.floorType, intersectionPosition, out intersection))
+    //    {
+    //        intersections.Add(intersection);
+    //    }
+    //    intersectionPoints.Add(intersectionPosition);
+    //}
 
     public void AddRigidBody(float mass)
     {
@@ -280,15 +259,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     /// </summary>
     public void Destroy()
     {
-        //Object.Destroy(gameObject);
         Object.Destroy(bottomHalf);
-
-        foreach (Vector3 intersection in intersectionPoints)
-        {
-            gameScene.RemovePrefabIntersectionPoint(Prefab.floorType, intersection);
-        }
-
-        intersectionPoints.Clear();
 
         ConstructionUtil util;
         if (SingletonUtil.InstanceAvailable(out util))
@@ -308,15 +279,11 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             counter.IncrementCount(Prefab);
         }
 
-        gameScene.RemovePlacedPrefab(this);
+        //gameScene.RemovePlacedPrefab(this);
 
         SnapPointTrigger.Snapped = false;
 
-        //animator.SetBool("Exterior_Wall_Des", true);
-
         prefabPlacementScript.DestructionAnimation();
-
-        //RemoveInstance(instID);
     }
 
     public void Drop(bool drop)

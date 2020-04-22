@@ -3,6 +3,7 @@
 #pragma warning disable IDE0044
 #pragma warning disable IDE1005
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public delegate void FixturesChanged(int fixtures);
 /// </summary>
 public class InGameSceneScript : MonoBehaviour
 {
-    public FixturesChanged FixturesChanged;
+    #region PropertiesAndVariables
 
     int availableFixtures;
     /// <summary>
@@ -39,60 +40,16 @@ public class InGameSceneScript : MonoBehaviour
     }
 
     Contract currentContract;
-    const float spaceInterval = 5f;
-    Dictionary<SNAP_POINT_TYPE, List<Vector3>> takenPositions = new Dictionary<SNAP_POINT_TYPE, List<Vector3>>();
+    public FixturesChanged FixturesChanged;
+    Dictionary<MATERIAL, int> matQuantities = new Dictionary<MATERIAL, int>();
 
-    Dictionary<FLOORTYPE, Dictionary<Vector3, int>> intersectionMapping = new Dictionary<FLOORTYPE, Dictionary<Vector3, int>>();
-    Dictionary<Vector3, Intersection> intersections = new Dictionary<Vector3, Intersection>();
     public Image[] pbBlueprints;
     public Image pbHouse;
-
-    public bool AddIntersection(FLOORTYPE floor, Vector3 position, out Intersection intersection)
-    {
-        if (!intersectionMapping.ContainsKey(floor))
-        {
-            intersectionMapping.Add(floor, new Dictionary<Vector3, int>());
-        }
-        if (!intersectionMapping[floor].ContainsKey(position))
-        {
-            intersectionMapping[floor].Add(position, 0);
-        }
-        intersectionMapping[floor][position]++;
-        if (intersectionMapping[floor][position] == 2)
-        {
-            intersection = new Intersection();
-            Floor floorInst;
-
-            intersection.SetPosition(position);
-            if (Floor.InstanceExists(floor, out floorInst))
-            {
-                intersection.SetParent(floorInst.transform);
-            }
-
-            intersections.Add(position, intersection);
-            return true;
-        }
-        intersection = intersections.ContainsKey(position) ? intersections[position] : null;
-        return intersectionMapping[floor][position] > 1;
-    }
-
-    /// <summary>
-    /// Add a placed object to the stack and store its position
-    /// to be checked later.
-    /// </summary>
-    /// <param name="ppo"></param>
-    public void AddPlacement(PrefabPlacedObject ppo)
-    {
-        if (takenPositions.ContainsKey(ppo.Prefab.snapType))
-        {
-            takenPositions[ppo.Prefab.snapType].Add(ppo.RoundedPosition);
-        }
-        else
-        {
-            takenPositions.Add(ppo.Prefab.snapType, new List<Vector3>() { ppo.RoundedPosition });
-        }
-    }
+    public MaterialQuantity[] materialQuantites;
     public string xmlBackupFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
+
+    #endregion
+
     void Awake()
     {
         SingletonUtil.SetInstance(this);
@@ -122,35 +79,15 @@ public class InGameSceneScript : MonoBehaviour
 #endif
     }
 
-    public bool PositionTaken(Vector3 v3, SNAP_POINT_TYPE snapType)
+    public void MaterialPlaced(MATERIAL material)
     {
-        if (!takenPositions.ContainsKey(snapType))
+        if (matQuantities.ContainsKey(material))
         {
-            return false;
-        }
-        return takenPositions[snapType].Contains(v3);
-    }
-
-    public void RemovePrefabIntersectionPoint(FLOORTYPE floor, Vector3 position)
-    {
-        if (intersectionMapping.ContainsKey(floor))
-        {
-            if (intersectionMapping[floor].ContainsKey(position))
-            {
-                intersectionMapping[floor][position]--;
-                if (intersectionMapping[floor][position] < 2)
-                {
-                    if (intersections.ContainsKey(position))
-                    {
-                        intersections[position].Destroy();
-                        intersections.Remove(position);
-                    }
-                }
-            }
+            int soundNum = Util.rand.Next(matQuantities[material]);
+            string name = "{0}_{1}".FormatText(material, soundNum);
+            IntegratedSoundManager.PlaySoundAsync(name);
         }
     }
-
-
 
     void Start()
     {
@@ -178,19 +115,6 @@ public class InGameSceneScript : MonoBehaviour
                 SetFloorPlan(util.Contract.finishedConstruction, i, pbBlueprints[i]);
             }
 
-            //if (pbBlueprint != null)
-            //{
-            //    Sprite blueprint;
-            //    if (ResourceManager.GetItem(util.Contract.name + "_Blueprint", out blueprint))
-            //    {
-            //        pbBlueprint.sprite = blueprint;
-            //    }
-            //}
-            //else
-            //{
-            //    Logger.Log("pbBlueprint is null.");
-            //}
-
             if (pbHouse != null)
             {
                 Sprite house;
@@ -203,12 +127,6 @@ public class InGameSceneScript : MonoBehaviour
             {
                 Logger.Log("pbHouse is null.");
             }
-
-            //EnvironmentScript environment;
-            //if (EnvironmentScript.InstanceExists(util.Contract.finishedConstruction, out environment))
-            //{
-            //    environment.SetActive(true);
-            //}
         }
     }
 
@@ -234,32 +152,13 @@ public class InGameSceneScript : MonoBehaviour
             Util.SetExitState(EndConditionUtil.Pass());
         }
     }
-
-    public void RemovePlacedPrefab(PrefabPlacedObject ppo)
-    {
-        Prefab prefab = ppo.Prefab;
-        takenPositions[prefab.snapType].Remove(ppo.RoundedPosition);
-    }
-
-
-    public MaterialQuantity[] materialQuantites;
-    Dictionary<MATERIAL, int> matQuantities = new Dictionary<MATERIAL, int>();
-    public void MaterialPlaced(MATERIAL material)
-    {
-        if (matQuantities.ContainsKey(material))
-        {
-            int soundNum = Util.rand.Next(matQuantities[material]);
-            string name = "{0}_{1}".FormatText(material, soundNum);
-            IntegratedSoundManager.PlaySoundAsync(name);
-        }
-    }
 }
 
 /// <summary>
 /// A struct that determines the quantity of sounds
 /// to used for a particular material.
 /// </summary>
-[System.Serializable]
+[Serializable]
 public struct MaterialQuantity
 {
     public MATERIAL material;
