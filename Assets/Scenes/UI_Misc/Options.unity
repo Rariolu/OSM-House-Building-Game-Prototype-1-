@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 819332653}
   - component: {fileID: 819332652}
   - component: {fileID: 819332655}
+  - component: {fileID: 819332656}
   m_Layer: 5
   m_Name: BackBtn
   m_TagString: Untagged
@@ -682,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 293, y: 54}
+  m_AnchoredPosition: {x: 322, y: 54}
   m_SizeDelta: {x: 270.90002, y: 113.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819332652
@@ -785,6 +786,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &819332656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819332650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 9.4, y: -8.7}
+  m_UseGraphicAlpha: 1
 --- !u!1 &826588373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1340,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.73
+  orthographic size: 4.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
