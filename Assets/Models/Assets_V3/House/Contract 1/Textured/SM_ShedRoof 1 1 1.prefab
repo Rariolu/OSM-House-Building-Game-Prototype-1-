@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4129643211667484232}
   - component: {fileID: 7670749417854522033}
   - component: {fileID: 6797029954579227485}
+  - component: {fileID: 5892099135226543972}
   m_Layer: 0
   m_Name: SM_ShedRoof 1 1 1
   m_TagString: Untagged
@@ -93,3 +94,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0497905, y: 1.0930403, z: 0.59850746}
   m_Center: {x: 0.52489525, y: 0, z: 0.27850357}
+--- !u!95 &5892099135226543972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236854989739452013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

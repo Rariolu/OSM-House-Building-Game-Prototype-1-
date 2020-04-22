@@ -224,9 +224,9 @@ MonoBehaviour:
     volume: 1
     type: 0
   - name: DESTRUCTION_0
-    clip: {fileID: 8300000, guid: a34f6dd1c6894bf4385ff50e31d65ad9, type: 3}
+    clip: {fileID: 8300000, guid: 1205a7a2d337701499452fdc3cf43aa1, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.25
     type: 0
 --- !u!114 &214173333
 MonoBehaviour:
@@ -279,15 +279,9 @@ MonoBehaviour:
   sprites:
   - Name: start
     Item: {fileID: 21300000, guid: b0d2ec7258682ea46963dbeb66d09c93, type: 3}
-  - Name: Semi-Detached House_Blueprint
-    Item: {fileID: 21300000, guid: 5e33c05290f20464f9c027ad5b09ce38, type: 3}
-  - Name: Semi-Detached House_House
-    Item: {fileID: 21300000, guid: d5269f3cd57d2ae43aff9ef76994ac56, type: 3}
-  - Name: SEMI_Detached_HOUSE_floorplan_0
-    Item: {fileID: 21300000, guid: 5e33c05290f20464f9c027ad5b09ce38, type: 3}
-  - Name: Contract2_Floorplan_1
+  - Name: DETACHED_HOUSE_floorplan_0
     Item: {fileID: 21300000, guid: 76a50af625ec72e43a6468d694db5eeb, type: 3}
-  - Name: Contract2_Floorplan_2
+  - Name: DETACHED_HOUSE_floorplan_1
     Item: {fileID: 21300000, guid: d3deb06bc9e867644937b82a61fda58a, type: 3}
   textures: []
 --- !u!4 &214173334
@@ -332,19 +326,19 @@ MonoBehaviour:
   - type: 3
     gameObject: {fileID: 2494304725582189324, guid: 068df7ba68f73264e917938e2d4d08bc,
       type: 3}
-    sprite: {fileID: 21300000, guid: d65b7b20997f6d54cbac73237e391f22, type: 3}
+    sprite: {fileID: 21300000, guid: 7d2460011d8c6f447a6abc543de4e444, type: 3}
   - type: 4
     gameObject: {fileID: 1245405305174779341, guid: c277a3204c379854ea2a69fcdf5875ba,
       type: 3}
-    sprite: {fileID: 21300000, guid: 7e488b832ccc7ea489ae7bfe9e278a81, type: 3}
+    sprite: {fileID: 21300000, guid: 0945d7f216fd37744a5d758c040a9b8a, type: 3}
   - type: 5
     gameObject: {fileID: 9118505704318960489, guid: 08843903aab79784fb1b92a501a4820f,
       type: 3}
-    sprite: {fileID: 21300000, guid: 6a69f1a99348a134f9b4260fbcf19076, type: 3}
+    sprite: {fileID: 21300000, guid: 6345f128c62866b439bccdfe839d47cf, type: 3}
   - type: 6
     gameObject: {fileID: 1245405305174779341, guid: c277a3204c379854ea2a69fcdf5875ba,
       type: 3}
-    sprite: {fileID: 21300000, guid: 7e488b832ccc7ea489ae7bfe9e278a81, type: 3}
+    sprite: {fileID: 21300000, guid: 0945d7f216fd37744a5d758c040a9b8a, type: 3}
   - type: 7
     gameObject: {fileID: -927199367670048503, guid: 4e5d19bfa14ea9641b0fc97c035f99ca,
       type: 3}
@@ -352,7 +346,7 @@ MonoBehaviour:
   - type: 8
     gameObject: {fileID: 8803081450030942699, guid: 36cc3dee285942849ac55092c1446d4d,
       type: 3}
-    sprite: {fileID: 21300000, guid: 9ec702398b276604fb8a60dae934aee7, type: 3}
+    sprite: {fileID: 21300000, guid: 395c17097a16f8b42aaae33bf211ac70, type: 3}
   - type: 9
     gameObject: {fileID: 0}
     sprite: {fileID: 21300000, guid: 8a4329ff1b1a30041a1af4cf3ae140c5, type: 3}
@@ -385,11 +379,11 @@ MonoBehaviour:
   - type: 17
     gameObject: {fileID: 6751729719619182444, guid: ae006649580f48040bcc12810dd5e2a7,
       type: 3}
-    sprite: {fileID: 21300000, guid: 4d9e02ed731ebd74c86d008328e16e77, type: 3}
+    sprite: {fileID: 21300000, guid: e9aba7928218a704c96cd5a78d7f48e9, type: 3}
   - type: 18
     gameObject: {fileID: 8236854989739452013, guid: 11fa9f7b2e57b9042b2d3dd346cafa14,
       type: 3}
-    sprite: {fileID: 21300000, guid: 41810c9ac46272a4e9d6215bd696e7e0, type: 3}
+    sprite: {fileID: 21300000, guid: 62c0a3740e50b644888dbcb7d4dcc12c, type: 3}
   - type: 19
     gameObject: {fileID: 5459536747895321906, guid: e89606722fc99244790837f4393f7003,
       type: 3}
@@ -413,7 +407,7 @@ MonoBehaviour:
   - type: 24
     gameObject: {fileID: 6078423507953033034, guid: f06e2b7f148fe0244906249884556307,
       type: 3}
-    sprite: {fileID: 21300000, guid: 9ec702398b276604fb8a60dae934aee7, type: 3}
+    sprite: {fileID: 21300000, guid: 395c17097a16f8b42aaae33bf211ac70, type: 3}
   - type: 25
     gameObject: {fileID: 1956450627101961720, guid: e84c166d43cb37046b24389edb37df9a,
       type: 3}
@@ -425,11 +419,11 @@ MonoBehaviour:
   - type: 27
     gameObject: {fileID: 5721468401633243739, guid: a494f44e806b26d42b315ec39f82949c,
       type: 3}
-    sprite: {fileID: 21300000, guid: be31c45626fea904fb195c7e1e999d51, type: 3}
+    sprite: {fileID: 21300000, guid: 3261d7f2f35bead44a1e589dae5a2529, type: 3}
   - type: 28
     gameObject: {fileID: 8135763503311388850, guid: 74a1f386668226a4b8addd302c80c22a,
       type: 3}
-    sprite: {fileID: 21300000, guid: 4273e8ddf74ad68459180885472d8442, type: 3}
+    sprite: {fileID: 21300000, guid: 8d56f501cc7defd478c66cc0039833e0, type: 3}
   - type: 29
     gameObject: {fileID: 8714806150586898952, guid: 88309f3fc6e0bcf43a5a003c6905b00c,
       type: 3}
@@ -457,7 +451,7 @@ MonoBehaviour:
   - type: 35
     gameObject: {fileID: 8532895567036263039, guid: 3c22825b6d10fd54c9928c684e955ad9,
       type: 3}
-    sprite: {fileID: 21300000, guid: 41810c9ac46272a4e9d6215bd696e7e0, type: 3}
+    sprite: {fileID: 21300000, guid: 62c0a3740e50b644888dbcb7d4dcc12c, type: 3}
 --- !u!1 &1470395317
 GameObject:
   m_ObjectHideFlags: 0

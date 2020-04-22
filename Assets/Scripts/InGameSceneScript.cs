@@ -44,7 +44,7 @@ public class InGameSceneScript : MonoBehaviour
 
     Dictionary<FLOORTYPE, Dictionary<Vector3, int>> intersectionMapping = new Dictionary<FLOORTYPE, Dictionary<Vector3, int>>();
     Dictionary<Vector3, Intersection> intersections = new Dictionary<Vector3, Intersection>();
-    public Image pbBlueprint;
+    public Image[] pbBlueprints;
     public Image pbHouse;
 
     public bool AddIntersection(FLOORTYPE floor, Vector3 position, out Intersection intersection)
@@ -173,18 +173,23 @@ public class InGameSceneScript : MonoBehaviour
         ConstructionUtil util;
         if (SingletonUtil.InstanceAvailable(out util))
         {
-            if (pbBlueprint != null)
+            for(int i = 0; i < pbBlueprints.Length; i++)
             {
-                Sprite blueprint;
-                if (ResourceManager.GetItem(util.Contract.name + "_Blueprint", out blueprint))
-                {
-                    pbBlueprint.sprite = blueprint;
-                }
+                SetFloorPlan(util.Contract.finishedConstruction, i, pbBlueprints[i]);
             }
-            else
-            {
-                Logger.Log("pbBlueprint is null.");
-            }
+
+            //if (pbBlueprint != null)
+            //{
+            //    Sprite blueprint;
+            //    if (ResourceManager.GetItem(util.Contract.name + "_Blueprint", out blueprint))
+            //    {
+            //        pbBlueprint.sprite = blueprint;
+            //    }
+            //}
+            //else
+            //{
+            //    Logger.Log("pbBlueprint is null.");
+            //}
 
             if (pbHouse != null)
             {
@@ -204,6 +209,21 @@ public class InGameSceneScript : MonoBehaviour
             //{
             //    environment.SetActive(true);
             //}
+        }
+    }
+
+    void SetFloorPlan(FINISHED_CONSTRUCTION conType, int floor, Image pbFloorPlan)
+    {
+        string strFloor = "{0}_floorplan_{1}".FormatText(conType, floor);
+        Sprite sprite;
+        if (ResourceManager.GetItem(strFloor, out sprite))
+        {
+            pbFloorPlan.sprite = sprite;
+        }
+        else
+        {
+            pbFloorPlan.gameObject.SetActive(false);
+            Logger.Log("{0} not found in resource manager.", LogType.Warning, strFloor);
         }
     }
 

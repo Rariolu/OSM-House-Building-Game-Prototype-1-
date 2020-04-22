@@ -14,6 +14,9 @@ using UnityEngine;
 public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 {
     #region MemberVariables_N_Properties
+
+    //Animator animator;
+
     GameObject bottomHalf;
 
     bool dropped = false;
@@ -39,6 +42,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     }
 
     Vector3 originalScale;
+
+    PrefabPlacementScript prefabPlacementScript;
 
     private Vector3 roundedPosition;
     public Vector3 RoundedPosition
@@ -166,9 +171,9 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
 
         //Get the PrefabPlacementScript component or add one if there is none.
-        PrefabPlacementScript pps = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
-        pps.parentPrefabInstance = this;
-        pps.PrefabPlacementDeleted += () =>
+        prefabPlacementScript = gameObject.GetComponent<PrefabPlacementScript>() ?? gameObject.AddComponent<PrefabPlacementScript>();
+        prefabPlacementScript.parentPrefabInstance = this;
+        prefabPlacementScript.PrefabPlacementDeleted += () =>
         {
             RemoveInstance(instID);
         };
@@ -191,6 +196,8 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         {
             Drop(dropWallButton.Dropped);
         }
+
+        //animator = gameObject.GetComponent<Animator>();
     }
 
     void AddIntersection(Vector2 offset, SNAP_POINT_TYPE sType)
@@ -273,7 +280,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
     /// </summary>
     public void Destroy()
     {
-        Object.Destroy(gameObject);
+        //Object.Destroy(gameObject);
         Object.Destroy(bottomHalf);
 
         foreach (Vector3 intersection in intersectionPoints)
@@ -305,7 +312,11 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
         SnapPointTrigger.Snapped = false;
 
-        RemoveInstance(instID);
+        //animator.SetBool("Exterior_Wall_Des", true);
+
+        prefabPlacementScript.DestructionAnimation();
+
+        //RemoveInstance(instID);
     }
 
     public void Drop(bool drop)
@@ -317,7 +328,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
 
     public void Implode(float force, Vector3 explosionCentre)
     {
-        const float explosionDistance = 50f;
+        const float explosionDistance = 35f;
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
         rigidBody.AddExplosionForce(-force, explosionCentre, explosionDistance);
     }

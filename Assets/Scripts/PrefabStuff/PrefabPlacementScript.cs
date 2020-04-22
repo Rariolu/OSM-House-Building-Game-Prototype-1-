@@ -18,6 +18,14 @@ public class PrefabPlacementScript : MonoBehaviour
     }
     float holdDown = 0.5f;
     bool held = false;
+    Animator animator;
+    Animator Animator
+    {
+        get
+        {
+            return animator ?? (animator = GetComponent<Animator>());
+        }
+    }
     IEnumerator DestroyOnHold()
     {
         float t = 0;
@@ -61,5 +69,22 @@ public class PrefabPlacementScript : MonoBehaviour
         {
             PrefabPlacementDeleted();
         }
+    }
+
+    public void DestructionAnimation()
+    {
+     
+        if (Animator != null)
+        {
+            StartCoroutine(Destruct());
+        }
+    }
+    const float delay = 1f;
+    IEnumerator Destruct()
+    {
+        Animator.SetBool("Exterior_Wall_Des", true);
+        yield return new WaitForSeconds(delay);
+        IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.DESTRUCTION_0);
+        Destroy(gameObject);
     }
 }

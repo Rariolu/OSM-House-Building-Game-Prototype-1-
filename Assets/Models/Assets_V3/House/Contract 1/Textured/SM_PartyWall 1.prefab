@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1236150598765072751}
   - component: {fileID: 4763463706737421718}
   - component: {fileID: 1262974056686647955}
+  - component: {fileID: 6295068358359141440}
   m_Layer: 0
   m_Name: SM_PartyWall 1
   m_TagString: Untagged
@@ -93,6 +94,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.041500002, y: 1.0000002, z: 1.0000002}
   m_Center: {x: 0, y: 0, z: 0.5000001}
+--- !u!95 &6295068358359141440
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496423824087488842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6322406760240901585
 PrefabInstance:
   m_ObjectHideFlags: 0
