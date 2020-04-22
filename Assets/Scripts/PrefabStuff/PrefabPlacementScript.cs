@@ -73,13 +73,13 @@ public class PrefabPlacementScript : MonoBehaviour
 
     public void DestructionAnimation()
     {
-     
+        StartCoroutine(Destruct());
         if (Animator != null)
         {
-            StartCoroutine(Destruct());
+           
         }
     }
-    const float delay = 1f;
+    const float delay = 2f;
     const float vibRange = 1f;
     float dur = 0.1f;
     IEnumerator Destruct()
@@ -89,10 +89,12 @@ public class PrefabPlacementScript : MonoBehaviour
         while (t < delay)
         {
             t += Time.deltaTime;
-            Shake(1f, 2f, ogPos);
+            Shake(1f, 0.5f, ogPos);
+            yield return 0;
         }
+        transform.position = ogPos;
         //Animator.SetBool("Exterior_Wall_Des", true);
-        yield return new WaitForSeconds(delay);
+        //yield return new WaitForSeconds(delay);
         IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.DESTRUCTION_0);
         Destroy(gameObject);
     }
@@ -100,11 +102,11 @@ public class PrefabPlacementScript : MonoBehaviour
     {
         System.Func<float> randomnum = () =>
         {
-            return (float)System.Math.Round(Util.rand.NextDouble(-1d, 2d), 3);
+            return (float)System.Math.Round(Util.rand.NextDouble(-1d, 1d), 3);
         };
-        float offsetX = maxOffset * shake * randomnum();
+        float offsetX = Prefab.snapType == SNAP_POINT_TYPE.CENTRE? 0 : maxOffset * shake * randomnum();
         float offsetY = maxOffset * shake * randomnum();
-        float offsetZ = maxOffset * shake * randomnum();
+        float offsetZ = Prefab.snapType == SNAP_POINT_TYPE.EDGE ? 0 : maxOffset * shake * randomnum();
         transform.position = ogPos + new Vector3(offsetX, offsetY, offsetZ);
     }
 }
