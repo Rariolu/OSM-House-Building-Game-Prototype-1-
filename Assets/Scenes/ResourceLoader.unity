@@ -279,9 +279,9 @@ MonoBehaviour:
   sprites:
   - Name: start
     Item: {fileID: 21300000, guid: b0d2ec7258682ea46963dbeb66d09c93, type: 3}
-  - Name: Detached House_Blueprint
+  - Name: DETACHED_HOUSE_floorplan_0
     Item: {fileID: 21300000, guid: 76a50af625ec72e43a6468d694db5eeb, type: 3}
-  - Name: Detached House_Blueprint2
+  - Name: DETACHED_HOUSE_floorplan_1
     Item: {fileID: 21300000, guid: d3deb06bc9e867644937b82a61fda58a, type: 3}
   textures: []
 --- !u!4 &214173334
