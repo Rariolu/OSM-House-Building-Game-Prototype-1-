@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 690166738}
   - component: {fileID: 690166740}
   - component: {fileID: 690166739}
+  - component: {fileID: 690166741}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -555,6 +556,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690166737}
   m_CullTransparentMesh: 0
+--- !u!114 &690166741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690166737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 9.4, y: -8.7}
+  m_UseGraphicAlpha: 1
 --- !u!1 &945067998
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +624,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.75
+  orthographic size: 4.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
