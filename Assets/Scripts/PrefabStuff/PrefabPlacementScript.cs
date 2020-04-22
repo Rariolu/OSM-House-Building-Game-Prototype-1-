@@ -85,25 +85,26 @@ public class PrefabPlacementScript : MonoBehaviour
     IEnumerator Destruct()
     {
         Vector3 ogPos = transform.position;
-        float minX = ogPos.x - vibRange;
-        float maxX = ogPos.x + vibRange;
-        float minY = ogPos.y - vibRange;
-        float maxY = ogPos.y + vibRange;
-        float minZ = ogPos.z - vibRange;
-        float maxZ = ogPos.z + vibRange;
         float t = 0;
         while (t < delay)
         {
             t += Time.deltaTime;
-            float x = ogPos.x + Mathf.PerlinNoise(ogPos.x, t*100f);
-            float y = ogPos.y + Mathf.PerlinNoise(ogPos.y, t*100f);
-            float z = ogPos.z + Mathf.PerlinNoise(ogPos.z, t*100f);
-            Logger.Log("X: {0}; Y: {1}; Z: {2};", x, y, z);
-            transform.position = new Vector3(x, y, z);
+            Shake(1f, 2f, ogPos);
         }
         //Animator.SetBool("Exterior_Wall_Des", true);
         yield return new WaitForSeconds(delay);
         IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.DESTRUCTION_0);
         Destroy(gameObject);
+    }
+    void Shake(float maxOffset, float shake, Vector3 ogPos)
+    {
+        System.Func<float> randomnum = () =>
+        {
+            return (float)System.Math.Round(Util.rand.NextDouble(-1d, 2d), 3);
+        };
+        float offsetX = maxOffset * shake * randomnum();
+        float offsetY = maxOffset * shake * randomnum();
+        float offsetZ = maxOffset * shake * randomnum();
+        transform.position = ogPos + new Vector3(offsetX, offsetY, offsetZ);
     }
 }
