@@ -488,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &181087296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1122,7 +1122,8 @@ AudioSource:
   m_GameObject: {fileID: 631559326}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2244508845833836414, guid: 778f022e8ac28d04fb57d32ab94bf657,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: caa4b645d4c58db47945d36846adc0aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
@@ -1360,7 +1361,7 @@ MonoBehaviour:
   contracts:
   - budget: 40
     finishedConstruction: 3
-    fixtures: 25
+    fixtures: 48
     name: Detached House
     positionsTaken: []
     prefabCollections:
@@ -1494,7 +1495,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: 270, y: 90, z: 0}
@@ -1508,7 +1509,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: 270, y: 180, z: 0}
@@ -1522,7 +1523,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 2.5, y: -2.36665, z: -0.13}
           offsetRotation: {x: 270, y: 90, z: 0}
@@ -1634,7 +1635,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: 270, y: 90, z: 0}
@@ -1648,7 +1649,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: 270, y: 180, z: 0}
@@ -1662,7 +1663,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 2.5, y: -2.3665, z: -0.13}
           offsetRotation: {x: 270, y: 90, z: 0}
@@ -1718,7 +1719,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: -0.128, y: -2.3665, z: -2.5}
           offsetRotation: {x: 270, y: 180, z: 0}
@@ -1732,7 +1733,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: -0.128, y: -2.3665, z: -2.5}
           offsetRotation: {x: 270, y: 180, z: 0}
@@ -1771,7 +1772,7 @@ MonoBehaviour:
     time: 0
   - budget: 40
     finishedConstruction: 2
-    fixtures: 37
+    fixtures: 27
     name: Semi-Detached House
     positionsTaken: []
     prefabCollections:
@@ -1882,7 +1883,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -1899,7 +1900,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3556, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -2016,7 +2017,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -2032,7 +2033,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 2.5, y: -2.3665, z: -0.13}
           offsetRotation: {x: -90, y: 90, z: 0}
@@ -2048,7 +2049,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 0, y: -2.3665, z: 0}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -2064,7 +2065,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 1
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: -0.128, y: -2.3665, z: -2.5}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -2080,7 +2081,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: -0.128, y: -2.3665, z: -2.45}
           offsetRotation: {x: -90, y: 180, z: 0}
@@ -2095,7 +2096,7 @@ MonoBehaviour:
       prefab:
         compart: 1
         floorType: 0
-        material: 0
+        material: 1
         offset:
           offsetPosition: {x: 2.5, y: -2.3665, z: -0.13}
           offsetRotation: {x: -90, y: 90, z: 0}

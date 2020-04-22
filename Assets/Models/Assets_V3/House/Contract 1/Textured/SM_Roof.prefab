@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5508335727051160568}
   - component: {fileID: 3542798640751116750}
   - component: {fileID: 7067843247518711095}
+  - component: {fileID: 4170330471656276348}
+  - component: {fileID: 7269035050120432900}
   m_Layer: 0
   m_Name: SM_Roof
   m_TagString: Untagged
@@ -85,3 +87,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &4170330471656276348
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803081450030942699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &7269035050120432900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803081450030942699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.402693, y: 4.18091, z: 0.85765857}
+  m_Center: {x: -0.50708383, y: -0.0032812364, z: 0.40555564}

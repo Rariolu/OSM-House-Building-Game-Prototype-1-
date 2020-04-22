@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 223600492055533860}
   - component: {fileID: 4897646330559787665}
   - component: {fileID: 3551986332432156150}
+  - component: {fileID: -4664877640642904715}
   m_Layer: 0
-  m_Name: B_Window_Left 1
+  m_Name: B_Window_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 1956450627101961720}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e630c0f70c00c4a4d9a33d8856717e14, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf5dc14e315dbca4187e6db24caad370, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,6 +117,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09210908, y: 1.0000007, z: 1.0000002}
   m_Center: {x: 0.0000000037252903, y: -0.00000032782555, z: -0.000000029802322}
+--- !u!111 &-4664877640642904715
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956450627101961720}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ffb419a87acd11f49a4d9fe2592b0765, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &2008468214674605585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,6 +139,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3278036284971835371}
     m_Modifications:
+    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
+        type: 3}
+      propertyPath: m_Name
+      value: SandDustPart 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6684454031446462208, guid: b863e3a1e330ef848b602de7b45e85ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,11 +198,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687366034849969816, guid: b863e3a1e330ef848b602de7b45e85ba,
-        type: 3}
-      propertyPath: m_Name
-      value: SandDustPart 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b863e3a1e330ef848b602de7b45e85ba, type: 3}
