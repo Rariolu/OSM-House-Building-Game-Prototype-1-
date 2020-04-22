@@ -156,6 +156,22 @@ public class SnapPoint
         {
             SetActive(false);
         };
+        trigger.SnapPointUnTriggered += () =>
+        {
+            PrefabCounter c;
+            if (SingletonUtil.InstanceAvailable(out c))
+            {
+                Prefab temp;
+                if (c.PrefabAvailable(out temp))
+                {
+                    if (temp.snapType == snapType)
+                    {
+                        SetActive(true);
+                    }
+                }
+            }
+  
+        };
 
         gameObject.SetActive(false);
     }
