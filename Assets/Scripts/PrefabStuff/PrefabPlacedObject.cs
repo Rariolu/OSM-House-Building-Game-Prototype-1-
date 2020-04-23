@@ -279,7 +279,7 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
             counter.IncrementCount(Prefab);
         }
 
-        //gameScene.RemovePlacedPrefab(this);
+        gameScene.PrefabDestroy();
 
         SnapPointTrigger.Snapped = false;
 
