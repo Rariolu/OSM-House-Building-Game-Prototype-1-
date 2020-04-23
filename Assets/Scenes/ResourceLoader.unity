@@ -283,6 +283,10 @@ MonoBehaviour:
     Item: {fileID: 21300000, guid: 76a50af625ec72e43a6468d694db5eeb, type: 3}
   - Name: DETACHED_HOUSE_floorplan_1
     Item: {fileID: 21300000, guid: d3deb06bc9e867644937b82a61fda58a, type: 3}
+  - Name: SEMI_DETACHED_HOUSE_floorplan_0
+    Item: {fileID: 21300000, guid: 3a5664be345d2234994816f34a365f9e, type: 3}
+  - Name: SEMI_DETACHED_HOUSE_floorplan_1
+    Item: {fileID: 21300000, guid: d7b56cf33799aef4f8fb19f710436959, type: 3}
   textures: []
 --- !u!4 &214173334
 Transform:

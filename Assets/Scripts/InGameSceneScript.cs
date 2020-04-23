@@ -10,6 +10,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public delegate void FixturesChanged(int fixtures);
+public delegate void PrefabDestroyed();
+public delegate void PrefabPlaced();
 
 /// <summary>
 /// A script attached to a GameObject in the main game scene which manages its
@@ -82,6 +84,8 @@ public class InGameSceneScript : MonoBehaviour
 #endif
     }
 
+    public PrefabPlaced PrefabPlaced;
+
     public void MaterialPlaced(MATERIAL material)
     {
         if (matQuantities.ContainsKey(material))
@@ -89,6 +93,10 @@ public class InGameSceneScript : MonoBehaviour
             int soundNum = Util.rand.Next(matQuantities[material]);
             string name = "{0}_{1}".FormatText(material, soundNum);
             IntegratedSoundManager.PlaySoundAsync(name);
+        }
+        if (PrefabPlaced != null)
+        {
+            PrefabPlaced();
         }
     }
 
@@ -153,6 +161,14 @@ public class InGameSceneScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Y))
         {
             Util.SetExitState(EndConditionUtil.Pass());
+        }
+    }
+    public PrefabDestroyed PrefabDestroyed;
+    public void PrefabDestroy()
+    {
+        if (PrefabDestroyed != null)
+        {
+            PrefabDestroyed();
         }
     }
 }
