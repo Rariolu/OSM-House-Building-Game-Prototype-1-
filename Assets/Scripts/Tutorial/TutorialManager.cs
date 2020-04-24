@@ -17,6 +17,7 @@ public class TutorialManager : MonoBehaviour
     public Tutorial brochureTutorial;
     public Tutorial turnTutorial;
     public Tutorial subtaskTutorial;
+    public Tutorial fixingsTutorial;
 
     private void Awake()
     {
@@ -46,7 +47,8 @@ public class TutorialManager : MonoBehaviour
                 if (!swiped)
                 {
                     buildTutorial.Activate();
-                    buildTutorial.TutorialClosed += BuildClosed;
+                    buildButton.Click += BuildClick;
+                    //buildTutorial.TutorialClosed += BuildClosed;
                     swiped = true;
                 }
             };
@@ -56,29 +58,35 @@ public class TutorialManager : MonoBehaviour
 
     bool buildClick = false;
     bool wallClick = false;
+    void BuildClick(UIButton sender)
+    {
+        if (!buildClick)
+        {
+            buildTutorial.Destroy();
+            prefabTutorial.Activate();
+            wallButton.Click += (s) =>
+            {
+                if (!wallClick)
+                {
+                    prefabTutorial.Destroy();
+                    prefab2Tutorial.Activate();
+                    PrefabCounter counter;
+                    if (SingletonUtil.InstanceAvailable(out counter))
+                    {
+                        counter.NewPrefabSelected += PrefabSelected;
+                    }
+                    wallClick = true;
+                }
+            };
+            buildClick = true;
+        }
+    }
+
     void BuildClosed()
     {
         buildButton.Click += (sender) =>
         {
-            if (!buildClick)
-            {
-                prefabTutorial.Activate();
-                wallButton.Click += (s) =>
-                {
-                    if (!wallClick)
-                    {
-                        prefabTutorial.Destroy();
-                        prefab2Tutorial.Activate();
-                        PrefabCounter counter;
-                        if (SingletonUtil.InstanceAvailable(out counter))
-                        {
-                            counter.NewPrefabSelected += PrefabSelected;
-                        }
-                        wallClick = true;
-                    }
-                };
-                buildClick = true;
-            }
+           
         };
     }
 
@@ -128,30 +136,39 @@ public class TutorialManager : MonoBehaviour
             brochureClick = true;
         }
     }
-
+    bool intersectionSpawn = false;
+    bool intersectionClick = false;
     void TurnClosed()
     {
         subtaskTutorial.Activate();
         subtaskButton.Click += (sender) =>
         {
             subtaskTutorial.Destroy();
+            InGameSceneScript gameScene;
+            if (SingletonUtil.InstanceAvailable(out gameScene))
+            {
+                gameScene.IntersectionSpawned += () =>
+                {
+                    if (!intersectionSpawn)
+                    {
+                        fixingsTutorial.Activate();
+                        gameScene.IntersectionClicked += () =>
+                        {
+                            if (!intersectionClick)
+                            {
+                                fixingsTutorial.Destroy();
+                            }
+                        };
+                        intersectionSpawn = true;
+                    }
+                };
+            }
         };
-    }
-
-    void Prefab2Closed()
-    {
-
     }
 
     // Use this for initialization
     void Start()
     {
         BeginTutorial();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

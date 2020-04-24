@@ -3,7 +3,7 @@
 	<name>Detached House</name>
 	<finishedconstruction>DETACHED_HOUSE</finishedconstruction>
 	<budget>40</budget>
-	<fixtures>25</fixtures>
+	<fixtures>48</fixtures>
 	<positionstaken />
 	<prefabcollections>
 		<prefabcollection>
@@ -181,7 +181,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>7</quantity>
@@ -199,7 +199,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -217,7 +217,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -361,7 +361,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>4</quantity>
@@ -379,7 +379,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>5</quantity>
@@ -397,7 +397,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>2</quantity>
@@ -469,7 +469,7 @@
 				<floortype>GROUND_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>4</quantity>
@@ -487,7 +487,7 @@
 				<floortype>FIRST_FLOOR</floortype>
 				<compart>WALL</compart>
 				<prefabposition>INTERIOR</prefabposition>
-				<material>GENERIC</material>
+				<material>WOOD</material>
 			</prefab>
 			<positions />
 			<quantity>3</quantity>
