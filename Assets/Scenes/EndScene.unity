@@ -390,8 +390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 287, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchoredPosition: {x: 288.5, y: -94.9}
+  m_SizeDelta: {x: 459, y: 676.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208942408
 MonoBehaviour:
@@ -412,19 +412,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 1545d35aee266ce42aeae7fa32e6b84a, type: 3}
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_MinSize: 0
+    m_MaxSize: 89
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You took {0} weeks.
+  m_Text: 'It only took {0} weeks to complete your contract!
+
+
+'
 --- !u!222 &208942409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -592,7 +595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395.9, y: 440.4}
+  m_AnchoredPosition: {x: -418, y: 440.4}
   m_SizeDelta: {x: 791.9, y: 199.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690166739
@@ -615,18 +618,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1545d35aee266ce42aeae7fa32e6b84a, type: 3}
-    m_FontSize: 130
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 136
+    m_MaxSize: 152
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completed
+  m_Text: Finished
 --- !u!222 &690166740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -951,6 +954,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376656770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376656771}
+  - component: {fileID: 1376656773}
+  - component: {fileID: 1376656772}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1376656771
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376656770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1594567947}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 288.5, y: -179.09998}
+  m_SizeDelta: {x: 459, y: 410.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376656772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376656770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 1545d35aee266ce42aeae7fa32e6b84a, type: 3}
+    m_FontSize: 49
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 64
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: This exact same house could take more than 4 months with traditional building!
+--- !u!222 &1376656773
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376656770}
+  m_CullTransparentMesh: 0
 --- !u!1 &1512373296
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lblExitState: {fileID: 0}
   lblWeeks: {fileID: 208942408}
-  timeFormat: You took {0} weeks.
+  timeFormat: It only took {0} weeks to complete your contract!
 --- !u!1 &1594567943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1173,7 @@ RectTransform:
   - {fileID: 157769092}
   - {fileID: 690166738}
   - {fileID: 208942407}
+  - {fileID: 1376656771}
   m_Father: {fileID: 270077341}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
