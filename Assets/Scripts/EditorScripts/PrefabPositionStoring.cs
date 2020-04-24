@@ -18,7 +18,7 @@ public class PrefabPositionStoring : ScriptableObject
     [MenuItem("Tools/Prefabs/SavePrefabsC2")]
     static void SavePrefabPositionsC2()
     {
-        string xmlFile = "Assets\\Contracts\\{0}\\.xml".FormatText("Detached House_DETACHED_HOUSE_0");
+        string xmlFile = "Assets\\Contracts\\{0}.xml".FormatText("Detached House_DETACHED_HOUSE_0");
         SavePrefabPositions(xmlFile);
     }
 
@@ -79,7 +79,7 @@ public class PrefabPositionStoring : ScriptableObject
     [MenuItem("Tools/Prefabs/ResetC2Prefabs")]
     static void ResetPrefabPositionsC2()
     {
-        string xmlFile = "Assets\\Contracts\\{0}\\.xml".FormatText("Detached House_DETACHED_HOUSE_0");
+        string xmlFile = "Assets\\Contracts\\{0}.xml".FormatText("Detached House_DETACHED_HOUSE_0");
         ResetPrefabPositions(xmlFile);
     }
 
