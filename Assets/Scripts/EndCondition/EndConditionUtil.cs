@@ -85,7 +85,7 @@ public static class EndConditionUtil
         Intersection[] intersections = Intersection.Values;
         foreach(Intersection intersection in intersections)
         {
-            if (intersection.FixingSections.Count < 1)
+            if (intersection.FixingSections.Count != 3)
             {
                 return false;
             }
