@@ -47,7 +47,8 @@ public class TutorialManager : MonoBehaviour
                 if (!swiped)
                 {
                     buildTutorial.Activate();
-                    buildTutorial.TutorialClosed += BuildClosed;
+                    buildButton.Click += BuildClick;
+                    //buildTutorial.TutorialClosed += BuildClosed;
                     swiped = true;
                 }
             };
@@ -57,29 +58,35 @@ public class TutorialManager : MonoBehaviour
 
     bool buildClick = false;
     bool wallClick = false;
+    void BuildClick(UIButton sender)
+    {
+        if (!buildClick)
+        {
+            buildTutorial.Destroy();
+            prefabTutorial.Activate();
+            wallButton.Click += (s) =>
+            {
+                if (!wallClick)
+                {
+                    prefabTutorial.Destroy();
+                    prefab2Tutorial.Activate();
+                    PrefabCounter counter;
+                    if (SingletonUtil.InstanceAvailable(out counter))
+                    {
+                        counter.NewPrefabSelected += PrefabSelected;
+                    }
+                    wallClick = true;
+                }
+            };
+            buildClick = true;
+        }
+    }
+
     void BuildClosed()
     {
         buildButton.Click += (sender) =>
         {
-            if (!buildClick)
-            {
-                prefabTutorial.Activate();
-                wallButton.Click += (s) =>
-                {
-                    if (!wallClick)
-                    {
-                        prefabTutorial.Destroy();
-                        prefab2Tutorial.Activate();
-                        PrefabCounter counter;
-                        if (SingletonUtil.InstanceAvailable(out counter))
-                        {
-                            counter.NewPrefabSelected += PrefabSelected;
-                        }
-                        wallClick = true;
-                    }
-                };
-                buildClick = true;
-            }
+           
         };
     }
 
