@@ -48,7 +48,7 @@ public static class EndConditionUtil
         foreach (PrefabPlacedObject placedPrefab in placedPrefabs)
         {
             Prefab prefab = placedPrefab.Prefab;
-            Vector3 placedPosition = placedPrefab.RoundedPosition;
+            Vector3 placedPosition = placedPrefab.InitialiserPosition;
 
             //Check if the prefab is in the contract
             //and check if the contract has that specific placed position.
