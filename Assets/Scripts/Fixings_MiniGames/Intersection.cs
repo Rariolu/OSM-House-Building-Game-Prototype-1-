@@ -49,7 +49,16 @@ public class Intersection : MultitonClass<Intersection,int>
         set
         {
             snapPointsSnapped = value;
-            SetActive(snapPointsSnapped == snapPointTriggers.Count);
+            bool active = snapPointsSnapped == snapPointTriggers.Count;
+            SetActive(active);
+            if (active)
+            {
+                InGameSceneScript gameScene;
+                if (SingletonUtil.InstanceAvailable(out gameScene))
+                {
+                    gameScene.IntersectionSpawn();
+                }
+            }
         }
     }
 
@@ -121,6 +130,11 @@ public class Intersection : MultitonClass<Intersection,int>
         IntersectionComponent ic = gameObject.GetComponent<IntersectionComponent>() ?? gameObject.AddComponent<IntersectionComponent>();
         ic.Click += () =>
         {
+            InGameSceneScript gameScene;
+            if (SingletonUtil.InstanceAvailable(out gameScene))
+            {
+                gameScene.IntersectionClick();
+            }
             //PrefabCounter counter;
             //Prefab p;
             bool apply = true;

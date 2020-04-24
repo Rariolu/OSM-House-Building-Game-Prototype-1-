@@ -12,6 +12,8 @@ using UnityEngine.UI;
 public delegate void FixturesChanged(int fixtures);
 public delegate void PrefabDestroyed();
 public delegate void PrefabPlaced();
+public delegate void IntersectionSpawned();
+public delegate void IntersectionClicked();
 
 /// <summary>
 /// A script attached to a GameObject in the main game scene which manages its
@@ -43,6 +45,7 @@ public class InGameSceneScript : MonoBehaviour
 
     Contract currentContract;
     public FixturesChanged FixturesChanged;
+    public IntersectionSpawned IntersectionSpawned;
     Dictionary<MATERIAL, int> matQuantities = new Dictionary<MATERIAL, int>();
 
     public Image[] pbBlueprints;
@@ -169,6 +172,23 @@ public class InGameSceneScript : MonoBehaviour
         if (PrefabDestroyed != null)
         {
             PrefabDestroyed();
+        }
+    }
+
+    public void IntersectionSpawn()
+    {
+        if (IntersectionSpawned != null)
+        {
+            IntersectionSpawned();
+        }
+    }
+
+    public IntersectionClicked IntersectionClicked;
+    public void IntersectionClick()
+    {
+        if (IntersectionClicked != null)
+        {
+            IntersectionClicked();
         }
     }
 }

@@ -17,6 +17,7 @@ public class TutorialManager : MonoBehaviour
     public Tutorial brochureTutorial;
     public Tutorial turnTutorial;
     public Tutorial subtaskTutorial;
+    public Tutorial fixingsTutorial;
 
     private void Awake()
     {
@@ -128,30 +129,39 @@ public class TutorialManager : MonoBehaviour
             brochureClick = true;
         }
     }
-
+    bool intersectionSpawn = false;
+    bool intersectionClick = false;
     void TurnClosed()
     {
         subtaskTutorial.Activate();
         subtaskButton.Click += (sender) =>
         {
             subtaskTutorial.Destroy();
+            InGameSceneScript gameScene;
+            if (SingletonUtil.InstanceAvailable(out gameScene))
+            {
+                gameScene.IntersectionSpawned += () =>
+                {
+                    if (!intersectionSpawn)
+                    {
+                        fixingsTutorial.Activate();
+                        gameScene.IntersectionClicked += () =>
+                        {
+                            if (!intersectionClick)
+                            {
+                                fixingsTutorial.Destroy();
+                            }
+                        };
+                        intersectionSpawn = true;
+                    }
+                };
+            }
         };
-    }
-
-    void Prefab2Closed()
-    {
-
     }
 
     // Use this for initialization
     void Start()
     {
         BeginTutorial();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
