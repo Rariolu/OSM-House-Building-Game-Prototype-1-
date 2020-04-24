@@ -1924,8 +1924,7 @@ MonoBehaviour:
     name: Semi-Detached House
     positionsTaken: []
     prefabCollections:
-    - positionsTakenWithinContract:
-      - {x: 5, y: 2.6335, z: -15}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -1939,8 +1938,7 @@ MonoBehaviour:
         snapType: 0
         type: 22
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: -7.57, y: 2.6335, z: -10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -1954,8 +1952,7 @@ MonoBehaviour:
         snapType: 0
         type: 25
       quantity: 2
-    - positionsTakenWithinContract:
-      - {x: 0, y: 2.6335, z: -15}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -1969,17 +1966,7 @@ MonoBehaviour:
         snapType: 0
         type: 12
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: 7.5, y: 2.6335, z: -12.5}
-      - {x: 7.5, y: 2.6335, z: -7.5}
-      - {x: 7.5, y: 2.6335, z: -2.5}
-      - {x: 7.5, y: 2.6335, z: 2.5}
-      - {x: 7.5, y: 2.6335, z: 7.5}
-      - {x: -12.5, y: 2.6335, z: 7.5}
-      - {x: -12.5, y: 2.6335, z: -2.5}
-      - {x: -12.5, y: 2.6335, z: 2.5}
-      - {x: -12.5, y: 2.6335, z: -7.5}
-      - {x: -2.5, y: 2.6335, z: -12.5}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -1993,10 +1980,7 @@ MonoBehaviour:
         snapType: 1
         type: 2
       quantity: 10
-    - positionsTakenWithinContract:
-      - {x: -10, y: 5, z: 10}
-      - {x: -5, y: 5, z: 10}
-      - {x: 5, y: 5, z: 10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -2010,8 +1994,7 @@ MonoBehaviour:
         snapType: 0
         type: 19
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: 0.6025, y: 2.499, z: 10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -2026,8 +2009,13 @@ MonoBehaviour:
         type: 21
       quantity: 1
     - positionsTakenWithinContract:
-      - {x: 5, y: 2.6335, z: 0}
-      - {x: 5, y: 2.6335, z: -10}
+      - {x: 0, y: 2.6335, z: 5}
+      - {x: 5, y: 2.6335, z: 5}
+      - {x: 10, y: 2.6335, z: 0}
+      - {x: -10, y: 2.6335, z: 0}
+      - {x: -10, y: 2.6335, z: -5}
+      - {x: 15, y: 2.6335, z: 5}
+      - {x: 15, y: 2.6335, z: 0}
       prefab:
         compart: 1
         floorType: 0
@@ -2042,9 +2030,8 @@ MonoBehaviour:
         type: 20
       quantity: 2
     - positionsTakenWithinContract:
-      - {x: -2.5, y: 2.6444, z: 7.5}
-      - {x: -2.5, y: 2.6444, z: 2.5}
-      - {x: -2.5, y: 2.6444, z: -7.5}
+      - {x: -2.5, y: 2.6335, z: 7.5}
+      - {x: -2.5, y: 2.6335, z: 2.5}
       prefab:
         compart: 1
         floorType: 0
@@ -2059,7 +2046,7 @@ MonoBehaviour:
         type: 20
       quantity: 3
     - positionsTakenWithinContract:
-      - {x: 5, y: 2.74, z: 0.003000021}
+      - {x: 0, y: 2.74, z: 5.003}
       prefab:
         compart: 2
         floorType: 0
@@ -2074,23 +2061,28 @@ MonoBehaviour:
         type: 17
       quantity: 1
     - positionsTakenWithinContract:
-      - {x: 0, y: 2.74, z: -9.997}
-      - {x: 5, y: 2.74, z: -9.997}
-      - {x: 5, y: 2.74, z: -4.997}
-      - {x: 0, y: 2.74, z: -4.997}
+      - {x: -10, y: 2.74, z: -9.997}
+      - {x: -5, y: 2.74, z: -9.997}
+      - {x: -5, y: 2.74, z: -4.997}
+      - {x: -10, y: 2.74, z: -4.997}
+      - {x: -10, y: 2.74, z: 0.003000021}
+      - {x: -5, y: 2.74, z: 0.003000021}
       - {x: 0, y: 2.74, z: 0.003000021}
-      - {x: 0, y: 2.74, z: 5.003}
       - {x: 5, y: 2.74, z: 5.003}
+      - {x: 5, y: 2.74, z: 0.003000021}
+      - {x: 10, y: 2.74, z: 0.003000021}
+      - {x: 15, y: 2.74, z: 0.003000021}
+      - {x: 15, y: 2.74, z: 5.003}
+      - {x: 10, y: 2.74, z: 5.003}
+      - {x: 10, y: 2.74, z: 10.003}
+      - {x: 15, y: 2.74, z: 10.003}
       - {x: 5, y: 2.74, z: 10.003}
       - {x: 0, y: 2.74, z: 10.003}
+      - {x: 0, y: 2.74, z: 15.003}
       - {x: -5, y: 2.74, z: 10.003}
       - {x: -10, y: 2.74, z: 10.003}
       - {x: -10, y: 2.74, z: 5.003}
       - {x: -5, y: 2.74, z: 5.003}
-      - {x: -10, y: 2.74, z: 0.003000021}
-      - {x: -5, y: 2.74, z: 0.003000021}
-      - {x: -5, y: 2.74, z: -4.997}
-      - {x: -10, y: 2.74, z: -4.997}
       prefab:
         compart: 2
         floorType: 0
@@ -2104,9 +2096,7 @@ MonoBehaviour:
         snapType: 2
         type: 3
       quantity: 17
-    - positionsTakenWithinContract:
-      - {x: 0, y: 7.74, z: -9.997}
-      - {x: 5, y: 7.74, z: -9.997}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 3
         floorType: 1
@@ -2120,8 +2110,7 @@ MonoBehaviour:
         snapType: 2
         type: 18
       quantity: 2
-    - positionsTakenWithinContract:
-      - {x: 5, y: 7.6335, z: -10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
@@ -2135,15 +2124,7 @@ MonoBehaviour:
         snapType: 0
         type: 22
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: 7.5, y: 7.6335, z: 7.5}
-      - {x: 7.5, y: 7.6335, z: 2.5}
-      - {x: 7.5, y: 7.6335, z: -2.5}
-      - {x: 7.5, y: 7.6335, z: -7.5}
-      - {x: -12.5, y: 7.6335, z: 7.5}
-      - {x: -12.5, y: 7.6335, z: 2.5}
-      - {x: -12.5, y: 7.6335, z: -2.5}
-      - {x: -12.5, y: 7.6335, z: -7.5}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
@@ -2158,10 +2139,10 @@ MonoBehaviour:
         type: 2
       quantity: 8
     - positionsTakenWithinContract:
+      - {x: 0, y: 7.6335, z: 0}
+      - {x: 10, y: 7.6335, z: 5}
+      - {x: -10, y: 7.6335, z: -5}
       - {x: -10, y: 7.6335, z: 0}
-      - {x: -5, y: 7.6335, z: 0}
-      - {x: 5, y: 7.6335, z: 5}
-      - {x: 5, y: 7.6335, z: -5}
       prefab:
         compart: 1
         floorType: 1
@@ -2176,8 +2157,8 @@ MonoBehaviour:
         type: 20
       quantity: 4
     - positionsTakenWithinContract:
-      - {x: 2.5, y: 7.6335, z: 4.87}
-      - {x: 2.5, y: 7.6335, z: -5.13}
+      - {x: -2.5, y: 7.6335, z: -0.13}
+      - {x: 7.5, y: 7.6335, z: 4.87}
       prefab:
         compart: 1
         floorType: 1
@@ -2192,8 +2173,11 @@ MonoBehaviour:
         type: 23
       quantity: 2
     - positionsTakenWithinContract:
-      - {x: -2.5, y: 7.6335, z: -7.5}
-      - {x: -2.5, y: 7.6335, z: 7.5}
+      - {x: 2.5, y: 7.6335, z: 2.5}
+      - {x: -7.5, y: 7.6335, z: 7.5}
+      - {x: -2.5, y: 7.6335, z: -2.5}
+      - {x: 12.5, y: 7.6335, z: 2.5}
+      - {x: 12.5, y: 7.6335, z: -2.5}
       prefab:
         compart: 1
         floorType: 1
@@ -2208,8 +2192,9 @@ MonoBehaviour:
         type: 20
       quantity: 2
     - positionsTakenWithinContract:
-      - {x: -2.628, y: 7.6335, z: -5}
-      - {x: -2.628, y: 7.6335, z: 0}
+      - {x: -7.628, y: 7.6335, z: 0}
+      - {x: -7.628, y: 7.6335, z: -5}
+      - {x: 7.372, y: 7.6335, z: 5}
       prefab:
         compart: 1
         floorType: 1
@@ -2224,8 +2209,10 @@ MonoBehaviour:
         type: 23
       quantity: 2
     - positionsTakenWithinContract:
-      - {x: -2.628, y: 2.6335, z: -5}
-      - {x: 2.372, y: 2.6335, z: -15}
+      - {x: -7.628, y: 2.6335, z: -5}
+      - {x: 7.372, y: 2.6335, z: -5}
+      - {x: 7.372, y: 2.6335, z: 0}
+      - {x: 12.372, y: 2.6335, z: 0}
       prefab:
         compart: 1
         floorType: 0
@@ -2240,7 +2227,8 @@ MonoBehaviour:
         type: 23
       quantity: 2
     - positionsTakenWithinContract:
-      - {x: 2.5, y: 2.6335, z: -0.13}
+      - {x: -2.5, y: 2.63335, z: -0.13}
+      - {x: -2.5, y: 2.63335, z: -5.13}
       prefab:
         compart: 1
         floorType: 0
@@ -2255,21 +2243,27 @@ MonoBehaviour:
         type: 23
       quantity: 1
     - positionsTakenWithinContract:
-      - {x: 0, y: 7.6335, z: -4.997}
-      - {x: 5, y: 7.6335, z: -4.997}
-      - {x: 5, y: 7.6335, z: 5.003}
-      - {x: 0, y: 7.6335, z: 0.003000021}
-      - {x: 0, y: 7.6335, z: 5.003}
-      - {x: 5, y: 7.6335, z: 10.003}
-      - {x: 0, y: 7.6335, z: 10.003}
-      - {x: -10, y: 7.6335, z: 5.003}
-      - {x: -10, y: 7.6335, z: 10.003}
-      - {x: -5, y: 7.6335, z: 10.003}
-      - {x: -5, y: 7.6335, z: 5.003}
-      - {x: -5, y: 7.6335, z: 0.003000021}
-      - {x: -10, y: 7.6335, z: 0.003000021}
-      - {x: -10, y: 7.6335, z: -4.997}
-      - {x: -5, y: 7.6335, z: -4.997}
+      - {x: -10, y: 7.74, z: -15.003}
+      - {x: -5, y: 7.74, z: -15.003}
+      - {x: -5, y: 7.74, z: -10.003}
+      - {x: -10, y: 7.74, z: -10.003}
+      - {x: -10, y: 7.74, z: -5.003}
+      - {x: -10, y: 7.74, z: -0.003000021}
+      - {x: -5, y: 7.74, z: -0.003000021}
+      - {x: -5, y: 7.74, z: -5.003}
+      - {x: 0, y: 7.74, z: -5.003}
+      - {x: 15, y: 7.74, z: -5.003}
+      - {x: 10, y: 7.74, z: -5.003}
+      - {x: 5, y: 7.74, z: -5.003}
+      - {x: 5, y: 7.74, z: -0.003000021}
+      - {x: 10, y: 7.74, z: -0.003000021}
+      - {x: 15, y: 7.74, z: -0.003000021}
+      - {x: 15, y: 7.74, z: 4.997}
+      - {x: 10, y: 7.74, z: 4.997}
+      - {x: 5, y: 7.74, z: 4.997}
+      - {x: 0, y: 7.74, z: 4.997}
+      - {x: -5, y: 7.74, z: 4.997}
+      - {x: -10, y: 7.74, z: 4.997}
       prefab:
         compart: 2
         floorType: 1
@@ -2283,8 +2277,7 @@ MonoBehaviour:
         snapType: 2
         type: 3
       quantity: 15
-    - positionsTakenWithinContract:
-      - {x: -5.78, y: 12.6335, z: 0.04}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 3
         floorType: 2
@@ -2298,8 +2291,7 @@ MonoBehaviour:
         snapType: 3
         type: 8
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: -3.092, y: 2.6335, z: -10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 0
@@ -2313,9 +2305,7 @@ MonoBehaviour:
         snapType: 0
         type: 26
       quantity: 2
-    - positionsTakenWithinContract:
-      - {x: 0, y: 7.6335, z: 10}
-      - {x: 0, y: 7.6335, z: -10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
@@ -2329,12 +2319,7 @@ MonoBehaviour:
         snapType: 0
         type: 2
       quantity: 2
-    - positionsTakenWithinContract:
-      - {x: -10, y: 10.131, z: -10}
-      - {x: -5, y: 10.131, z: -10}
-      - {x: -10, y: 10.131, z: 10}
-      - {x: -5, y: 10.131, z: 10}
-      - {x: 5, y: 10.131, z: 10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
@@ -2348,12 +2333,7 @@ MonoBehaviour:
         snapType: 0
         type: 19
       quantity: 1
-    - positionsTakenWithinContract:
-      - {x: -10, y: 10.131, z: -10}
-      - {x: -5, y: 10.131, z: -10}
-      - {x: -10, y: 10.131, z: 10}
-      - {x: -5, y: 10.131, z: 10}
-      - {x: 5, y: 10.131, z: 10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
@@ -2367,12 +2347,7 @@ MonoBehaviour:
         snapType: 0
         type: 25
       quantity: 2
-    - positionsTakenWithinContract:
-      - {x: -10, y: 10.131, z: -10}
-      - {x: -5, y: 10.131, z: -10}
-      - {x: -10, y: 10.131, z: 10}
-      - {x: -5, y: 10.131, z: 10}
-      - {x: 5, y: 10.131, z: 10}
+    - positionsTakenWithinContract: []
       prefab:
         compart: 1
         floorType: 1
