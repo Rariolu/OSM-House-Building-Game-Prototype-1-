@@ -33,12 +33,6 @@ public class TutorialManager : MonoBehaviour
     void IntroClosed()
     {
         swipeTutorial.Activate();
-        swipeTutorial.TutorialClosed += SwipeClosed;
-    }
-
-    bool swiped = false;
-    void SwipeClosed()
-    {
         CameraMovementScript cam;
         if (SingletonUtil.InstanceAvailable(out cam))
         {
@@ -46,6 +40,7 @@ public class TutorialManager : MonoBehaviour
             {
                 if (!swiped)
                 {
+                    swipeTutorial.Destroy();
                     buildTutorial.Activate();
                     buildButton.Click += BuildClick;
                     //buildTutorial.TutorialClosed += BuildClosed;
@@ -53,7 +48,27 @@ public class TutorialManager : MonoBehaviour
                 }
             };
         }
+        //swipeTutorial.TutorialClosed += SwipeClosed;
     }
+
+    bool swiped = false;
+    //void SwipeClosed()
+    //{
+    //    CameraMovementScript cam;
+    //    if (SingletonUtil.InstanceAvailable(out cam))
+    //    {
+    //        cam.CameraMoved += (sender) =>
+    //        {
+    //            if (!swiped)
+    //            {
+    //                buildTutorial.Activate();
+    //                buildButton.Click += BuildClick;
+    //                //buildTutorial.TutorialClosed += BuildClosed;
+    //                swiped = true;
+    //            }
+    //        };
+    //    }
+    //}
 
 
     bool buildClick = false;
