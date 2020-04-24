@@ -151,7 +151,9 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="5" y="5" z="0" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -169,7 +171,11 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-2.5" y="5" z="-2.5" />
+				<vec3 x="-2.5" y="5" z="7.5" />
+				<vec3 x="-2.5" y="5" z="2.5" />
+			</positions>
 			<quantity>3</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -383,7 +389,10 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="-12.5" y="5" z="-2.5" />
+				<vec3 x="-2.5" y="5" z="-7.5" />
+			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -401,7 +410,9 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions />
+			<positions>
+				<vec3 x="0" y="5" z="0" />
+			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -497,7 +508,6 @@
 			<positions>
 				<vec3 x="0" y="10.00002" z="10" />
 				<vec3 x="5" y="10.00002" z="-10" />
-				<vec3 x="0" y="10.00002" z="10" />
 			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
@@ -517,7 +527,6 @@
 				<material>BRICK</material>
 			</prefab>
 			<positions>
-				<vec3 x="5" y="10.00002" z="10" />
 				<vec3 x="5" y="10.00002" z="10" />
 			</positions>
 			<quantity>1</quantity>
@@ -540,8 +549,6 @@
 			<positions>
 				<vec3 x="-5" y="10.00002" z="10" />
 				<vec3 x="-10" y="10.00002" z="-10" />
-				<vec3 x="-5" y="10.00002" z="10" />
-				<vec3 x="-10" y="10.00002" z="-10" />
 			</positions>
 			<quantity>2</quantity>
 		</prefabcollection>
@@ -561,8 +568,6 @@
 				<material>BRICK</material>
 			</prefab>
 			<positions>
-				<vec3 x="-10" y="10.00002" z="10" />
-				<vec3 x="-5" y="10.00002" z="-10" />
 				<vec3 x="-10" y="10.00002" z="10" />
 				<vec3 x="-5" y="10.00002" z="-10" />
 			</positions>
