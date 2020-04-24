@@ -70,12 +70,21 @@ public class PrefabPlacedObject : MultitonClass<PrefabPlacedObject,int>
         }
     }
 
+    Vector3 initialiserPos;
+    public Vector3 InitialiserPosition
+    {
+        get
+        {
+            return initialiserPos;
+        }
+    }
+
     #endregion
 
     public PrefabPlacedObject(Prefab prefab, Vector3 position, FINISHED_CONSTRUCTION construction = FINISHED_CONSTRUCTION.SEMI_DETACHED_HOUSE)
     {
         //Logger.Log("Construction: {0};", construction);
-
+        initialiserPos = position;
         instID = instCount++;
         SetInstance(instID, this);
 

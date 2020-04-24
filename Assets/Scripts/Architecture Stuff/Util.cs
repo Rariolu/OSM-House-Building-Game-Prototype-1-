@@ -487,6 +487,26 @@ public static class Util
         }
     }
 
+    public static List<Vector3> MergeLists(List<Vector3> vec1, List<Vector3> vec2)
+    {
+        List<Vector3> vec3 = new List<Vector3>();
+        foreach (Vector3 pos in vec1)
+        {
+            if (!vec3.Contains(pos))
+            {
+                vec3.Add(pos);
+            }
+        }
+        foreach(Vector3 pos in vec2)
+        {
+            if (!vec3.Contains(pos))
+            {
+                vec3.Add(pos);
+            }
+        }
+        return vec3;
+    }
+
     public static void SellHouse()
     {
         IntegratedSoundManager.PlaySoundAsync(SOUNDNAME.SELL_HOUSE);

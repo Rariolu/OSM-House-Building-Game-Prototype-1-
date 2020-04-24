@@ -5,10 +5,22 @@ using UnityEditor;
 
 public class ContractAssembly : ScriptableObject
 {
-    [MenuItem("Tools/Contract/AutoAssembly")]
-    static void AutoAssembleContract()
+    [MenuItem("Tools/Contract/AutoAssemblyC1")]
+    static void AutoAssembleContract1()
     {
-        const string xmlFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
+        string xmlFile = "Assets\\Contracts\\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml";
+        AutoAssembleContract(xmlFile);
+    }
+
+    [MenuItem("Tools/Contract/AutoAssemblyC2")]
+    static void AutoAssembleContract2()
+    {
+        string xmlFile = "Assets\\Contracts\\Detached House_DETACHED_HOUSE_0.xml";
+        AutoAssembleContract(xmlFile);
+    }
+    
+    static void AutoAssembleContract(string xmlFile)
+    {
         Contract contract = null;
         if(EditorUtility.DisplayDialog("Load XML?", "Load contract from XML file?", "YES", "NO"))
         {
@@ -29,6 +41,11 @@ public class ContractAssembly : ScriptableObject
                 foreach(Vector3 pos in prefab.positionsTakenWithinContract)
                 {
                     PrefabPlacedObject ppo = new PrefabPlacedObject(prefab.prefab, pos);
+                    PrefabCounter counter;
+                    if (SingletonUtil.InstanceAvailable(out counter))
+                    {
+                        counter.DecrementCount(prefab.prefab);
+                    }
                 }
             }
         }
