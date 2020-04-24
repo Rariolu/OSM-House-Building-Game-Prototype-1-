@@ -633,9 +633,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Contracts\Detached House_DETACHED_HOUSE_0.xml" />
-    <None Include="Assets\Contracts\Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\Contracts\Semi-Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\Deprecated\Bungalow_TOWNHOUSE_0.xml" />
+    <None Include="Assets\Deprecated\Detached House_SEMI_DETACHED_HOUSE_0.xml" />
     <None Include="Assets\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
     <None Include="Assets\IconGenerator\HowToUse.txt" />
     <None Include="Assets\IconGenerator\Readme.txt" />
