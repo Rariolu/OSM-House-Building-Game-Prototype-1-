@@ -29,6 +29,11 @@ public class ContractAssembly : ScriptableObject
                 foreach(Vector3 pos in prefab.positionsTakenWithinContract)
                 {
                     PrefabPlacedObject ppo = new PrefabPlacedObject(prefab.prefab, pos);
+                    PrefabCounter counter;
+                    if (SingletonUtil.InstanceAvailable(out counter))
+                    {
+                        counter.DecrementCount(prefab.prefab);
+                    }
                 }
             }
         }

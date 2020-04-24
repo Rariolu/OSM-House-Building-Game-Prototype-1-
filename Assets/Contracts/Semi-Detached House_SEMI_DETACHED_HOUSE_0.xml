@@ -129,15 +129,7 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="0" y="2.6335" z="5" />
-				<vec3 x="5" y="2.6335" z="5" />
-				<vec3 x="10" y="2.6335" z="0" />
-				<vec3 x="-10" y="2.6335" z="0" />
-				<vec3 x="-10" y="2.6335" z="-5" />
-				<vec3 x="15" y="2.6335" z="5" />
-				<vec3 x="15" y="2.6335" z="0" />
-			</positions>
+			<positions />
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -155,10 +147,7 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-2.5" y="2.6335" z="7.5" />
-				<vec3 x="-2.5" y="2.6335" z="2.5" />
-			</positions>
+			<positions />
 			<quantity>3</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -177,7 +166,7 @@
 				<material>WOOD</material>
 			</prefab>
 			<positions>
-				<vec3 x="0" y="2.74" z="5.003" />
+				<vec3 x="5" y="2.74" z="0.003000021" />
 			</positions>
 			<quantity>1</quantity>
 		</prefabcollection>
@@ -197,28 +186,23 @@
 				<material>WOOD</material>
 			</prefab>
 			<positions>
-				<vec3 x="-10" y="2.74" z="-9.997" />
-				<vec3 x="-5" y="2.74" z="-9.997" />
+				<vec3 x="0" y="2.74" z="10.003" />
+				<vec3 x="-10" y="2.74" z="5.003" />
+				<vec3 x="-10" y="2.74" z="10.003" />
+				<vec3 x="-5" y="2.74" z="10.003" />
+				<vec3 x="5" y="2.74" z="10.003" />
+				<vec3 x="5" y="2.74" z="5.003" />
+				<vec3 x="0" y="2.74" z="5.003" />
+				<vec3 x="-5" y="2.74" z="5.003" />
+				<vec3 x="-5" y="2.74" z="0.003000021" />
+				<vec3 x="-10" y="2.74" z="0.003000021" />
+				<vec3 x="0" y="2.74" z="0.003000021" />
+				<vec3 x="5" y="2.74" z="-4.997" />
+				<vec3 x="0" y="2.74" z="-4.997" />
+				<vec3 x="5" y="2.74" z="-9.997" />
+				<vec3 x="0" y="2.74" z="-9.997" />
 				<vec3 x="-5" y="2.74" z="-4.997" />
 				<vec3 x="-10" y="2.74" z="-4.997" />
-				<vec3 x="-10" y="2.74" z="0.003000021" />
-				<vec3 x="-5" y="2.74" z="0.003000021" />
-				<vec3 x="0" y="2.74" z="0.003000021" />
-				<vec3 x="5" y="2.74" z="5.003" />
-				<vec3 x="5" y="2.74" z="0.003000021" />
-				<vec3 x="10" y="2.74" z="0.003000021" />
-				<vec3 x="15" y="2.74" z="0.003000021" />
-				<vec3 x="15" y="2.74" z="5.003" />
-				<vec3 x="10" y="2.74" z="5.003" />
-				<vec3 x="10" y="2.74" z="10.003" />
-				<vec3 x="15" y="2.74" z="10.003" />
-				<vec3 x="5" y="2.74" z="10.003" />
-				<vec3 x="0" y="2.74" z="10.003" />
-				<vec3 x="0" y="2.74" z="15.003" />
-				<vec3 x="-5" y="2.74" z="10.003" />
-				<vec3 x="-10" y="2.74" z="10.003" />
-				<vec3 x="-10" y="2.74" z="5.003" />
-				<vec3 x="-5" y="2.74" z="5.003" />
 			</positions>
 			<quantity>17</quantity>
 		</prefabcollection>
@@ -291,12 +275,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="0" y="7.6335" z="0" />
-				<vec3 x="10" y="7.6335" z="5" />
-				<vec3 x="-10" y="7.6335" z="-5" />
-				<vec3 x="-10" y="7.6335" z="0" />
-			</positions>
+			<positions />
 			<quantity>4</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -314,10 +293,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-2.5" y="7.6335" z="-0.13" />
-				<vec3 x="7.5" y="7.6335" z="4.87" />
-			</positions>
+			<positions />
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -335,13 +311,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="2.5" y="7.6335" z="2.5" />
-				<vec3 x="-7.5" y="7.6335" z="7.5" />
-				<vec3 x="-2.5" y="7.6335" z="-2.5" />
-				<vec3 x="12.5" y="7.6335" z="2.5" />
-				<vec3 x="12.5" y="7.6335" z="-2.5" />
-			</positions>
+			<positions />
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -359,11 +329,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-7.628" y="7.6335" z="0" />
-				<vec3 x="-7.628" y="7.6335" z="-5" />
-				<vec3 x="7.372" y="7.6335" z="5" />
-			</positions>
+			<positions />
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -381,12 +347,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-7.628" y="2.6335" z="-5" />
-				<vec3 x="7.372" y="2.6335" z="-5" />
-				<vec3 x="7.372" y="2.6335" z="0" />
-				<vec3 x="12.372" y="2.6335" z="0" />
-			</positions>
+			<positions />
 			<quantity>2</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -404,10 +365,7 @@
 				<prefabposition>INTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-2.5" y="2.63335" z="-0.13" />
-				<vec3 x="-2.5" y="2.63335" z="-5.13" />
-			</positions>
+			<positions />
 			<quantity>1</quantity>
 		</prefabcollection>
 		<prefabcollection>
@@ -425,29 +383,7 @@
 				<prefabposition>EXTERIOR</prefabposition>
 				<material>WOOD</material>
 			</prefab>
-			<positions>
-				<vec3 x="-10" y="7.74" z="-15.003" />
-				<vec3 x="-5" y="7.74" z="-15.003" />
-				<vec3 x="-5" y="7.74" z="-10.003" />
-				<vec3 x="-10" y="7.74" z="-10.003" />
-				<vec3 x="-10" y="7.74" z="-5.003" />
-				<vec3 x="-10" y="7.74" z="-0.003000021" />
-				<vec3 x="-5" y="7.74" z="-0.003000021" />
-				<vec3 x="-5" y="7.74" z="-5.003" />
-				<vec3 x="0" y="7.74" z="-5.003" />
-				<vec3 x="15" y="7.74" z="-5.003" />
-				<vec3 x="10" y="7.74" z="-5.003" />
-				<vec3 x="5" y="7.74" z="-5.003" />
-				<vec3 x="5" y="7.74" z="-0.003000021" />
-				<vec3 x="10" y="7.74" z="-0.003000021" />
-				<vec3 x="15" y="7.74" z="-0.003000021" />
-				<vec3 x="15" y="7.74" z="4.997" />
-				<vec3 x="10" y="7.74" z="4.997" />
-				<vec3 x="5" y="7.74" z="4.997" />
-				<vec3 x="0" y="7.74" z="4.997" />
-				<vec3 x="-5" y="7.74" z="4.997" />
-				<vec3 x="-10" y="7.74" z="4.997" />
-			</positions>
+			<positions />
 			<quantity>15</quantity>
 		</prefabcollection>
 		<prefabcollection>
